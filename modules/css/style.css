@@ -6,6 +6,10 @@ body {
   background-color: yellow;
 }
 
+.codeHi {
+  color: magenta;
+}
+
 img {
     max-width: 75%;
 }
@@ -39,14 +43,14 @@ div.remark-slide-content.title {
 }
 
 .remark-slide-content h1 {
-  font-size: 4em;
+  font-size: 3em;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
   color: cyan;
 }
 
 .remark-slide-content h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   border-bottom: 2px solid magenta;
 }
 

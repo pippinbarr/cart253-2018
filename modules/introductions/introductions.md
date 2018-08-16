@@ -1,4 +1,4 @@
-###### CART 253 / Fall 2018 / Pippin Barr
+### Introductions / CART 253 / Fall 2018 / Pippin Barr
 
 # Introductions
 
@@ -15,9 +15,9 @@
 
 ## Course website
 
-- The course is hosted on [GitHub](https://www.github.com/)
-- Code related to the course will be at https://www.github.com/pippinbarr/cart253-2018/
-- Documentation related to the course will be at https://www.github.com/pippinbarr/cart253-2018/wiki
+- The course is hosted on [GitHub](https://www.github.com/) at
+
+### https://www.github.com/pippinbarr/cart253-2018/wiki
 
 ---
 
@@ -46,10 +46,21 @@
 ## Course evaluation
 
 - The course will be evaluated as per the elements listed in the [Course Outline](https://www.github.com/pippinbarr/cart253-2018/wiki/Course-Outline#Evaluation)
-- 8 one-week assignments worth a total of 20%
-- 1 mid-term project worth a total of 15%
-- 1 final project worth a total of 45%
+- 10 one-week assignments worth a total of 20%
+- 3 projects
+  - Project 1 is worth 10%
+  - Project 2 is worth 20%
+  - Project 3 is worth 30%
 - A participation grade worth a total of 20%
+
+---
+
+## Course software
+
+- Atom (a free text-editor)
+- p5.js (a free JavaScript library)
+- Chrome (a free web browser)
+- GitHub Desktop (a free version control application)
 
 ---
 
@@ -75,6 +86,8 @@
 
 ### My programming experience is ...............
 
-### My reason for doing Computation Arts is ...............
+### I'm excited about programming because ...............
 
 ---
+
+# Fin.

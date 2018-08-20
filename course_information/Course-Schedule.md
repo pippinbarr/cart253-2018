@@ -4,17 +4,17 @@
 
 ## Why? ([Slides](https://pippinbarr.github.io/cart253-2018/modules/why/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/why/why.md))
 
-## Tools 1 - The tools of the trade ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-1/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/tools-1/tools-1.md))
+## Tools 1 - The tools of the trade ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-1/index.html), [Notes](../modules/tools-1/tools-1.md))
 
-## Graphics 1 - Drawing shapes ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-1/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/graphics-1/graphics-1.md))
+## Graphics 1 - Drawing shapes ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-1/index.html), [Notes](../modules/graphics-1/graphics-1.md))
 
-## Best Practice 1 - Commenting ([Slides](https://pippinbarr.github.io/cart253-2018/modules/best-practice-1/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/best-practice-1/best-practice-1.md))
+## Best Practice 1 - Commenting ([Slides](https://pippinbarr.github.io/cart253-2018/modules/best-practice-1/index.html), [Notes](../modules/best-practice-1/best-practice-1.md))
 
-## Debugging 1 - The JavaScript console ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-1/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/debugging-1/debugging-1.md))
+## Debugging 1 - The JavaScript console ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-1/index.html), [Notes](../modules/debugging-1/debugging-1.md))
 
-## Best Practice 2 - Reading the Manual  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/best-practice-2/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/best-practice-2/best-practice-2.md))
+## Best Practice 2 - Reading the Manual  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/best-practice-2/index.html), [Notes](../modules/best-practice-2/best-practice-2.md))
 
-## [[Exercise 0]] - Spiritual Self-Portrait
+## [Exercise 0](../exercises/Exercise-0.md) - Spiritual Self-Portrait
 
 ---
 

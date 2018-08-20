@@ -14,7 +14,7 @@ Department of Design and Computation Arts
 (Please send emails with a subject line of "[CART 253] Your subject here")  
 [www.pippinbarr.com](http://www.pippinbarr.com/)  
 
-Office: 6.745  
+Office: EV 6.745  
 Office hours: ???
 
 

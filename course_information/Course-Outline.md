@@ -103,11 +103,11 @@ The practical work done in this class will take place in the computer lab EV 5.8
 You are of course welcome to use your own laptops and computers to the extent that you are able to install and manage the appropriate software on it, and the instructor will work to support that within reason.
 
 
-## [[Course Schedule]]
+## [Course Schedule](./Course-Schedule.md)
 
 (Click through for week-by-week information about what we will cover in the course.)
 
 
-## [[Design and Computation Arts Syllabus]]
+## [Design and Computation Arts Syllabus](./Design-and-Computation-Arts-Syllabus.md)
 
 (Click through for the standard information from D/CART that is to be included as part of all course outlines.)

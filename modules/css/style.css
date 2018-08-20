@@ -10,6 +10,10 @@ body {
   color: magenta;
 }
 
+.red {
+  color: red;
+}
+
 img {
     max-width: 75%;
 }

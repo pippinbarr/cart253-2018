@@ -21,15 +21,22 @@
 # Week 2 - Week of 10 September 2018
 
 ## Review
-## Graphics 2 - Images
-## Tools 2 - Version control
-## Core 2 - Variables (and math)
-## Core 3 - Time
-## Debugging 2 - Variables
-## Debugging 3 - Time
-## Physics 1 - Position and velocity
 
-## Exercise 1 - Moving Pictures
+## Tools 2 - Version control
+
+## Core 2 - Time ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-2/index.html), [Notes](../modules/graphics-2/core-2.md))
+
+## Core 3 - Variables (and math!)  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-3/index.html), [Notes](../modules/core-3/core-3.md))
+
+## Debugging 2 - Variables
+
+## Graphics 2 - Displaying images  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-2/index.html), [Notes](../modules/graphics-2/graphics-2.md))
+
+## Debugging 3 - Time
+
+## Physics 1 - Motion
+
+## [Exercise 1](../exercises/Exercise-1.md) - Moving Pictures
 
 ---
 

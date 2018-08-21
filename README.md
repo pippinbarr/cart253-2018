@@ -13,5 +13,5 @@ Office: EV 6.745
 
 ## Important pages
 
-- [Course Outline](course_information/Course-Outline.md)
-- [Course Schedule](course_information/Course-Schedule.md)
+#### [Course Outline](course_information/Course-Outline.md)
+#### [Course Schedule](course_information/Course-Schedule.md)

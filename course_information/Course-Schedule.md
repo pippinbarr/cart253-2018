@@ -14,7 +14,10 @@
 
 ## Best Practice 2 - Reading the Manual  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/best-practice-2/index.html), [Notes](../modules/best-practice-2/best-practice-2.md))
 
-## [Exercise 0](../exercises/Exercise-0.md) - Spiritual Self-Portrait
+## Homework
+### [Exercise 0](../exercises/Exercise-0.md) - Spiritual Self-Portrait
+### [Register for an account on GitHub](https://github.com/join) (please use your real name as your username or at least set your real name in Profile)
+### [Install GitHub Desktop](https://desktop.github.com/) if you are using your own computer for this class
 
 ---
 
@@ -22,37 +25,37 @@
 
 ## Review
 
-## Tools 2 - Version control
-
 ## Core 2 - Time ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-2/index.html), [Notes](../modules/graphics-2/core-2.md))
 
 ## Core 3 - Variables (and math!)  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-3/index.html), [Notes](../modules/core-3/core-3.md))
 
-## Debugging 2 - Variables
+## Debugging 2 - Variables ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-2/index.html), [Notes](../modules/debugging-2/debugging-2.md))
 
 ## Graphics 2 - Displaying images  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-2/index.html), [Notes](../modules/graphics-2/graphics-2.md))
 
-## Debugging 3 - Time
+## Tools 2 - Version control ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-2/index.html), [Notes](../modules/tools-2/tools-2.md))
 
-## Physics 1 - Motion
-
-## [Exercise 1](../exercises/Exercise-1.md) - Moving Pictures
+## Homework
+### [Exercise 1](../exercises/Exercise-1.md) - Moving Pictures
 
 ---
 
 # Week 3 - Week of 17 September 2018
 
 ## Review
-## Tools 3 - Commit messages
-## Input 1 - Mouse input
+## Physics 1 - Motion
 ## Core 4 - Conditionals
+## Input 1 - Mouse input
+## Physics 2 - Wrapping and collisions
 ## Game 1 - Click the moving thing
 ## Input 2 - Keyboard input
 ## Game 2 - Reaction time test
-## Debugging 4 - Events
+## Debugging 3 - Time
+## Tools 3 - Commit messages
 
-## Exercise 2 - ...
-## Project 1 assigned
+## Homework
+### Exercise 2 - ...
+### Project 1
 
 ---
 
@@ -64,7 +67,7 @@
 ## Core 5 - `while` loops
 ## Core 6 - `for` loops
 ## Game 4 - Where's Wally?
-## Debugging 5 - Loops
+## Debugging 4 - Loops
 ## Exercise 3 - ...
 
 ---
@@ -73,7 +76,7 @@
 
 ## Review
 ## Core 7 - Functions
-## Debugging 6 - Functions
+## Debugging 5 - Functions
 ## Sound 1 - Basic sound
 ## Game 5 - Sound game
 
@@ -94,7 +97,7 @@
 ## Core 8 - JavaScript Objects
 ## Core 9 - Thinking in Objects
 ## Core 10 - Classes and instances
-## Debugging 8 - Object Oriented Programming
+## Debugging 6 - Object Oriented Programming
 ## Game 6 - Multiple avatars
 ## Exercise 5 - ...
 
@@ -108,8 +111,8 @@
 ## Review
 ## Core 11 - Arrays
 ## Core 12 - `for` loops and arrays
-## Debugging 8 - Arrays
-## Debugging 9 - Review
+## Debugging 7 - Arrays
+## Debugging 8 - Review
 ## Game 7 -
 ## Exercise 6 - ...
 

@@ -260,36 +260,6 @@ meaningOfLife = 42;
 
 ---
 
-## `console.log()` and variables
-
-- Last week we saw `console.log()` as a way to print to the JavaScript console
-- We can also use it to print out the values of variables, which can be very helpful
-
-```javascript
-var meaningOfLife = 42;
-console.log(meaningOfLife);
-```
---
-
-- Pop quiz: what would happen if we _didn't_ give a value to `meaningOfLife` and then tried to `console.log()` it?
-
-???
-
-- Let's try out the Pop quiz...
-
-```javascript
-function setup() {
-  var meaningOfLife;
-  console.log(meaningOfLife);
-}
-```
-
-- So `meaningOfLife` is `undefined`
-- Aside from being very appropriate, this is another _type_ of thing that can be inside a variable
-- It means that the variable is... not defined yet!
-
----
-
 ## Using variables...
 
 - The thing about variable is that you can use them __as if they are the value inside them__
@@ -298,9 +268,6 @@ function setup() {
 ```javascript
 var meaningOfLife = 42;
 rect(meaningOfLife,meaningOfLife,50,50);
-
-var helloWorld = "Hello, World!";
-console.log(helloWorld);
 ```
 
 ???
@@ -318,7 +285,7 @@ console.log(helloWorld);
 
 ```javascript
 var meaningOfLife = 21 + 21; // addition
-console.log(meaningOfLife - 2); // subtraction
+stroke(meaningOfLife - 2); // subtraction
 fill(meaningOfLife * 5,0,0); // multiplication
 rect(meaningOfLife/2,0,50,50); // division
 ```

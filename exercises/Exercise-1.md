@@ -1,5 +1,8 @@
 # Exercise 1 - Moving Pictures
 
+__Grade__: 2.5% of final grade (see grading guidelines at bottom)  
+__Deadline__: 11:59PM on the day of class on week of 30 October 2017.
+
 ## Brief
 
 Create an even more bizarre and surreal collection of moving images by adding your own images and motions to the existing set.
@@ -97,10 +100,30 @@ function draw() {
 }
 ```
 
+
 ## Submission
 
 You will submit this exercise as an "Issue" on the course repository here:
 
+https://github.com/pippinbarr/cart253-2018/issues
+
+(Click on the Issue with the name of the exercise and follow the instructions.)
+
+
 ## Grading
 
-This exercise is not graded, it's just for practice!
+Grading for exercises will consider the following categories equally:
+
+- __Runs__ and __implements the challenges required__
+- Has __suitable commenting for all added/changed code__
+- Includes a minimum of one initial commit of the template code, and __one commit message per challenge addressed__, all commits must have a descriptive message
+- Uses __good naming__ for added variables
+- Is __well structured__, with new code added in sensible places in sensible orders
+
+Each element is equally weighted in your the grade for the exercise and will be graded as follows:
+
+- __Excellent__ (A / 100%) - Meets requirements perfectly
+- __Good__ (B / 75%) - Meets requirements with some minor issues
+- __Adequate__ (C / 50%) - Meets requirements but with clear issues
+- __Poor__ (D / 25%) - Barely meets requirements
+- Non-submission / Unacceptable (F / 0%)

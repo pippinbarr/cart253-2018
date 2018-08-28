@@ -48,7 +48,7 @@
 ## Input 1 - Mouse input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-1/index.html), [Notes](../modules/input-1/input-1.md))
 ## Game 1 - Click the circle ([Game](https://pippinbarr.github.io/cart253-2018/games/game-1-click-the-circle/index.html), [Source Code](../games/game-1-click-the-circle/))
 ## Input 2 - Keyboard input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-2/index.html), [Notes](../modules/input-2/input-2.md))
-## Game 2 - The artful dodger ([Game](https://pippinbarr.github.io/cart253-2018/games/game-2-the-artful-dodger/index.html), [Source Code](../games/game-1-the-artful-dodger/))
+## Game 2 - The artful dodger ([Game](https://pippinbarr.github.io/cart253-2018/games/game-2-the-artful-dodger/index.html), [Source Code](../games/game-2-the-artful-dodger/))
 ## Core 5 - Time 2
 ## Debugging 3 - Time
 ## Input 3 - Touch input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-3/index.html), [Notes](../modules/input-3/input-3.md))

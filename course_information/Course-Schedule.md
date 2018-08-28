@@ -2,7 +2,7 @@
 
 ## Introductions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/introductions/index.html), [Notes](../modules/introductions/introductions.md))
 
-## Why? ([Slides](https://pippinbarr.github.io/cart253-2018/modules/why/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/why/why.md))
+## Core 1 - Why? ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-1/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/core-1/core-1.md))
 
 ## Tools 1 - The tools of the trade ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-1/index.html), [Notes](../modules/tools-1/tools-1.md))
 
@@ -25,7 +25,7 @@
 
 ## Review
 
-## Core 2 - Time ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-2/index.html), [Notes](../modules/graphics-2/core-2.md))
+## Core 2 - Time ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-2/index.html), [Notes](../modules/core-2/core-2.md))
 
 ## Core 3 - Variables (and math!)  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-3/index.html), [Notes](../modules/core-3/core-3.md))
 
@@ -43,15 +43,16 @@
 # Week 3 - Week of 17 September 2018
 
 ## Review
-## Physics 1 - Motion
-## Core 4 - Conditionals
-## Input 1 - Mouse input
-## Physics 2 - Wrapping and collisions
-## Game 1 - Click the moving thing
-## Input 2 - Keyboard input
+## Physics 1 - Motion ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-1/index.html), [Notes](../modules/physics-1/physics-1.md))
+## Core 4 - Conditionals ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-4/index.html), [Notes](../modules/core-4/core-4.md))
+## Input 1 - Mouse input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-1/index.html), [Notes](../modules/input-1/input-1.md))
+## Game 1 - Click the circle ([Game](https://pippinbarr.github.io/cart253-2018/games/game-1-click-the-circle/index.html), [Source Code](../games/game-1-click-the-circle/))
+## Input 2 - Keyboard input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-2/index.html), [Notes](../modules/input-2/input-2.md))
 ## Game 2 - Reaction time test
+## Core 5 - Time 2
 ## Debugging 3 - Time
-## Tools 3 - Commit messages
+## Input 3 - Touch input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-3/index.html), [Notes](../modules/input-3/input-3.md))
+## Tools 3 - Committing
 
 ## Homework
 ### Exercise 2 - ...

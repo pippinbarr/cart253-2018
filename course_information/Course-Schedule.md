@@ -33,6 +33,8 @@
 
 ## Graphics 2 - Displaying images  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-2/index.html), [Notes](../modules/graphics-2/graphics-2.md))
 
+## Graphics 3 - Displaying text  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-3/index.html), [Notes](../modules/graphics-3/graphics-3.md))
+
 ## Tools 2 - Version control ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-2/index.html), [Notes](../modules/tools-2/tools-2.md))
 
 ## Homework

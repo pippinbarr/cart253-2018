@@ -8,6 +8,7 @@
 
 - Why images?
 - `loadImage()`
+- `preload()`
 - `image()`
 - `.width` and `.height`
 - `imageMode()`
@@ -38,8 +39,8 @@
 - To display an image we need to load it and store it in a variable
 - It is mercifully simple:
 
-```
-var exampleImage = loadImage('assets/images/exampleImage.png');
+```javascript
+var exampleImage = loadImage("assets/images/exampleImage.png");
 ```
 --
 
@@ -49,14 +50,42 @@ var exampleImage = loadImage('assets/images/exampleImage.png');
 
 ---
 
+## `preload()`
+
+- But wait, it's not as simple as we thought
+- When we load from files, there's a delay while the file loads
+- This could ruin our program if it keeps running before the file is ready!
+- To avoid this, __load files inside a special function called `preload()`__
+
+```javascript
+var exampleImage;
+
+function preload() {
+  exampleImage = loadImage("assets/images/exampleImage.png");
+}
+```
+
+- This is another one of those special functions p5 already knows about, like `setup()` and `draw()`
+- It gets run at the start of our program before anything else happens
+
+---
+
 ## `image(img, x, y)`
 
-```
-var exampleImage = loadImage('assets/images/exampleImage.png');
-image(exampleImage, 0, 0);
+- The `image()` function allows us to display an image stored in a variable
+
+```javascript
+var exampleImage;
+
+function preload() {
+  exampleImage = loadImage("assets/images/exampleImage.png");
+}
+
+function setup() {
+  image(exampleImage, 0, 0);
+}
 ```
 
-- The `image()` function allows us to display an image stored in a variable
 - The first parameter is the _variable_ the image is stored in
 - The second two parameters are the (x,y) coordinates we want the image to display at
 - By default the image will display with its _top left corner_ at that (x,y) coordinate
@@ -65,9 +94,16 @@ image(exampleImage, 0, 0);
 
 ## `image(img, x, y, w, h)`
 
-```
-var exampleImage = loadImage('assets/images/exampleImage.png');
-image(exampleImage, 0, 0, 50, 50);
+```javascript
+var exampleImage;
+
+function preload() {
+  exampleImage = loadImage("assets/images/exampleImage.png");
+}
+
+function setup() {
+  image(exampleImage, 0, 0, 50, 50);
+}
 ```
 
 - We can add two more parameters to the `image()` function to specify the _width_ and _height_ we want to display the image at
@@ -80,7 +116,6 @@ image(exampleImage, 0, 0, 50, 50);
 - If we want to know what the _original_ width and height of the a loaded image are, we can use `.width` and `.height` to "ask" the image itself
 
 ```
-var exampleImage = loadImage('assets/images/exampleImage.png');
 console.log("The width of the image is " + exampleImage.width);
 console.log("The height of the image is " + exampleImage.height);
 ```
@@ -91,10 +126,18 @@ console.log("The height of the image is " + exampleImage.height);
 
 - With access to the original width and height of an image, we can scale it and maintain its proportions
 
+```javascript
+var exampleImage;
+
+function preload() {
+  exampleImage = loadImage("assets/images/exampleImage.png");
+}
+
+function setup() {
+  image(exampleImage, 0, 0, exampleImage.width/2, exampleImage.height/2);
+}
 ```
 var exampleImage = loadImage('assets/images/exampleImage.png');
-image(exampleImage, 0, 0, exampleImage.width/2, exampleImage.height/2);
-```
 
 - Now the image is displayed at half its original size
 
@@ -102,8 +145,7 @@ image(exampleImage, 0, 0, exampleImage.width/2, exampleImage.height/2);
 
 ## imageMode(CENTER)
 
-```
-var exampleImage = loadImage('assets/images/exampleImage.png');
+```javascript
 imageMode(CENTER);
 image(exampleImage, 0, 0);
 ```
@@ -117,8 +159,7 @@ image(exampleImage, 0, 0);
 
 - As with `rect()` there is also `imageMode(CORNERS)`
 
-```
-var exampleImage = loadImage('assets/images/exampleImage.png');
+```javascript
 imageMode(CORNERS);
 image(exampleImage, 0, 0, 10, 50);
 ```

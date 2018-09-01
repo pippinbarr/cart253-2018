@@ -1,4 +1,4 @@
-### Input 1 / CART 253 / Fall 2018 / Pippin Barr
+### Input / CART 253 / Fall 2018 / Pippin Barr
 
 # Mouse input
 

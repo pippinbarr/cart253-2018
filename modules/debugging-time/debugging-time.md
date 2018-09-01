@@ -1,4 +1,4 @@
-### Debugging 3 / CART 253 / Fall 2018 / Pippin Barr
+### Debugging / CART 253 / Fall 2018 / Pippin Barr
 
 # Time
 

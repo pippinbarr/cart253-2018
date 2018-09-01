@@ -1,4 +1,4 @@
-### Graphics 3 / CART 253 / Fall 2018 / Pippin Barr
+### Graphics / CART 253 / Fall 2018 / Pippin Barr
 
 # Displaying text
 

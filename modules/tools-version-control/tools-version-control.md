@@ -1,4 +1,4 @@
-### Tools 2 / CART 253 / Fall 2018 / Pippin Barr
+### Tools / CART 253 / Fall 2018 / Pippin Barr
 
 # Version control
 

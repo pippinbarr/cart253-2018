@@ -1,4 +1,4 @@
-### Best Practice 2 / CART 253 / Fall 2018 / Pippin Barr
+### Best Practice / CART 253 / Fall 2018 / Pippin Barr
 
 # Reading the manual
 

@@ -1,4 +1,4 @@
-### Best Practice 1 / CART 253 / Fall 2018 / Pippin Barr
+### Best Practice / CART 253 / Fall 2018 / Pippin Barr
 
 # Commenting
 

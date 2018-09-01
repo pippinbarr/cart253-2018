@@ -133,7 +133,7 @@ A variable has three key qualities:
 ## A value
 
 - A variable has a value in it, the thing that variable is storing
-- This value will be of a specific _type_ (like a number or a string of text)
+- This value will be of a specific __type__ (like a number or a string of text)
 - The variable will keep it safe until we need to __use it or change it__
 - Ah, change!
 
@@ -141,8 +141,9 @@ A variable has three key qualities:
 
 ## `var meaningOfLife = 42;`
 
-- This is a _variable declaration_ in JavaScript
-- This line is saying "I want a _variable_ called _meaningOfLife_, and put the number `42` in it to start with, thanks"
+- This is a __variable declaration__ in JavaScript
+- When we __create__ a variable we call it __declaring a variable__
+- So this line is saying "I want to create __variable__ called `meaningOfLife`, and put the number `42` in it to start with, thanks"
 - Let's go through the pieces of this
 
 ---
@@ -150,7 +151,9 @@ A variable has three key qualities:
 ## .hi[`var`] `meaningOfLife = 42;`
 
 - First we write the special word `var`
-- Just like `function` means we're going to make a function, `var` means we're going to make a _variable_
+- Just like `function` means we're going to make a function, `var` means we're __declaring a variable__
+- This tells JavaScript we need it to create a new variable (and that we're about to tell it the information it needs to do this)
+- We __only use `var` when we're declaring the variable__ - when we use the variable later, we don't need to write `var` in front of it
 
 ---
 
@@ -495,15 +498,6 @@ Notice how we can
 
 ---
 
-## Why are the variables up there?
-
-- Did you notice how the variable declarations were at the __top of the script__?
-- This is a standard place to put variables you're going to use __everywhere__ in your program
-- They are called __global variables__ because they can be used inside any function
-- Given that the whole program is "about" this avatar, it makes sense that the variables would be declared at the top like this
-
----
-
 ## Variables can change
 
 __What if we added something to the `draw()` function that changed one of the variables?__
@@ -511,6 +505,8 @@ __What if we added something to the `draw()` function that changed one of the va
 --
 
 `avatarX = avatarX + 1;`
+
+- Again, remember that when we __use__ a variable after having __declared__ it, we don't use `var` anymore
 
 ???
 

@@ -493,9 +493,20 @@ Notice how we can
 - Understand the code significantly better __just because of the names__
 - Easily adjust the way the avatar appears by changing the variables at the top
 
---
+---
 
-_What if we added something to the `draw()` function that changed one of the variables?_
+## Why are the variables up there?
+
+- Did you notice how the variable declarations were at the __top of the script__?
+- This is a standard place to put variables you're going to use __everywhere__ in your program
+- They are called __global variables__ because they can be used inside any function
+- Given that the whole program is "about" this avatar, it makes sense that the variables would be declared at the top like this
+
+---
+
+## Variables can change
+
+__What if we added something to the `draw()` function that changed one of the variables?__
 
 --
 
@@ -507,7 +518,7 @@ _What if we added something to the `draw()` function that changed one of the var
 - Which can be written as `avatarX += 1;`
 - Which can also be written as `avatarX++;` (add one to `avatarX`)
 - But there are others of course!
-- __Why does it leave a trail?__
+- Q: __Why does it leave a trail?__
 
 ---
 
@@ -587,7 +598,6 @@ avatarY = random(0,height);
 ## Follow that mouse!
 
 - What if we wanted to make the face follow our mouse around?
-
 --
 
 - That's right, we'd use `mouseX` and `mouseY`
@@ -600,7 +610,7 @@ avatarY = mouseY;
 ---
 
 
-## Follow that mouse! Slower!
+## Advanced: Follow that mouse! Slower!
 
 - What if we wanted to make a shape move toward the mouse cursor over time instead of instantly?
 --
@@ -685,4 +695,4 @@ function draw() {
 
 ---
 
-## Fin.
+# Fin.

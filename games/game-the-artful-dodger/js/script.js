@@ -1,6 +1,6 @@
 /******************************************************
 
-Game 2 - The Artful Dodger
+Game - The Artful Dodger
 Pippin Barr
 
 A simple dodging game with keyboard controls

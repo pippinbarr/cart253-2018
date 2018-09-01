@@ -1,6 +1,6 @@
 /******************************************************
 
-Game 1 - Click the Circle
+Game - Click the Circle
 Pippin Barr
 
 A simple game of clicking a moving circle before it

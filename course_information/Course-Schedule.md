@@ -2,17 +2,17 @@
 
 ## Introductions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/introductions/index.html), [Notes](../modules/introductions/introductions.md))
 
-## Core 1 - Why? ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-1/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/core-1/core-1.md))
+## Core - Why? ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-why/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/core-why/core-why.md))
 
-## Tools 1 - The tools of the trade ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-1/index.html), [Notes](../modules/tools-1/tools-1.md))
+## Tools - The tools of the trade ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-tools-of-the-trade/index.html), [Notes](../modules/tools-tools-of-the-trade/tools-tools-of-the-trade.md))
 
-## Graphics 1 - Drawing shapes ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-1/index.html), [Notes](../modules/graphics-1/graphics-1.md))
+## Graphics - Drawing shapes ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-drawing-shapes/index.html), [Notes](../modules/graphics-drawing-shapes/graphics-drawing-shapes.md))
 
-## Best Practice 1 - Commenting ([Slides](https://pippinbarr.github.io/cart253-2018/modules/best-practice-1/index.html), [Notes](../modules/best-practice-1/best-practice-1.md))
+## Best Practice - Commenting ([Slides](https://pippinbarr.github.io/cart253-2018/modules/best-practice-commenting/index.html), [Notes](../modules/best-practice-commenting/best-practice-commenting.md))
 
-## Debugging 1 - The JavaScript console ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-1/index.html), [Notes](../modules/debugging-1/debugging-1.md))
+## Debugging - The JavaScript console ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-the-javascript-console/index.html), [Notes](../modules/debugging-the-javascript-console/debugging-the-javascript-console.md))
 
-## Best Practice 2 - Reading the Manual  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/best-practice-2/index.html), [Notes](../modules/best-practice-2/best-practice-2.md))
+## Best Practice - Reading the Manual  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/best-practice-reading-the-manual/index.html), [Notes](../modules/best-practice-reading-the-manual/best-practice-reading-the-manual.md))
 
 ## Homework
 ### [Exercise 0](../exercises/Exercise-0.md) - Spiritual Self-Portrait
@@ -25,17 +25,17 @@
 
 ## Review
 
-## Core 2 - Time ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-2/index.html), [Notes](../modules/core-2/core-2.md))
+## Core - Time ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-2/index.html), [Notes](../modules/core-2/core-2.md))
 
-## Core 3 - Variables (and math!)  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-3/index.html), [Notes](../modules/core-3/core-3.md))
+## Core - Variables (and math!)  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-variables-and-math/index.html), [Notes](../modules/core-variables-and-math/core-variables-and-math.md))
 
-## Debugging 2 - Variables ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-2/index.html), [Notes](../modules/debugging-2/debugging-2.md))
+## Debugging - Variables ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-variables/index.html), [Notes](../modules/debugging-variables/debugging-variables.md))
 
-## Graphics 2 - Displaying images  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-2/index.html), [Notes](../modules/graphics-2/graphics-2.md))
+## Graphics - Displaying images  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-displaying-images/index.html), [Notes](../modules/graphics-displaying-images/graphics-displaying-images.md))
 
-## Graphics 3 - Displaying text  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-3/index.html), [Notes](../modules/graphics-3/graphics-3.md))
+## Graphics - Displaying text  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-displaying-text/index.html), [Notes](../modules/graphics-displaying-text/graphics-displaying-text.md))
 
-## Tools 2 - Version control ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-2/index.html), [Notes](../modules/tools-2/tools-2.md))
+## Tools - Version control ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-version-control/index.html), [Notes](../modules/tools-version-control/tools-version-control.md))
 
 ## Homework
 ### [Exercise 1](../exercises/Exercise-1.md) - Moving Pictures
@@ -45,43 +45,52 @@
 # Week 3 - Week of 17 September 2018
 
 ## Review
-## Physics 1 - Motion ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-1/index.html), [Notes](../modules/physics-1/physics-1.md))
-## Core 4 - Conditionals ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-4/index.html), [Notes](../modules/core-4/core-4.md))
-## Input 1 - Mouse input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-1/index.html), [Notes](../modules/input-1/input-1.md))
-## Game 1 - Click the circle ([Game](https://pippinbarr.github.io/cart253-2018/games/game-1-click-the-circle/index.html), [Source Code](../games/game-1-click-the-circle/))
-## Input 2 - Keyboard input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-2/index.html), [Notes](../modules/input-2/input-2.md))
-## Game 2 - The artful dodger ([Game](https://pippinbarr.github.io/cart253-2018/games/game-2-the-artful-dodger/index.html), [Source Code](../games/game-2-the-artful-dodger/))
-## Core 5 - Time 2
-## Debugging 3 - Time
-## Input 3 - Touch input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-3/index.html), [Notes](../modules/input-3/input-3.md))
-## Tools 3 - Committing
+## Physics - Motion ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-motion/index.html), [Notes](../modules/physics-motion/physics-motion.md))
+
+## Core - Conditionals ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-conditionals/index.html), [Notes](../modules/core-conditionals/core-conditionals.md))
+
+## Input - Mouse input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-mouse/index.html), [Notes](../modules/input-mouse/input-mouse.md))
+
+## Game - Click the circle ([Game](https://pippinbarr.github.io/cart253-2018/games/game-click-the-circle/index.html), [Source Code](../games/game-click-the-circle/))
+
+## Input - Keyboard input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-keyboard/index.html), [Notes](../modules/input-keyboard/input-keyboard.md))
+
+## Game - The artful dodger ([Game](https://pippinbarr.github.io/cart253-2018/games/game-the-artful-dodger/index.html), [Source Code](../games/game-the-artful-dodger/))
+
+## Core - Time part II ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-time-part-ii/index.html), [Notes](../modules/core-time-part-ii/core-time-part-ii.md))
+
+## Debugging - Time ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-time/index.html), [Notes](../modules/debugging-time/debugging-time.md))
+
+## Input - Touch input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-touch/index.html), [Notes](../modules/input-touch/input-touch.md))
+
+## Tools - Committing ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-committing/index.html), [Notes](../modules/tools-committing/tools-committing.md))
 
 ## Homework
-### Exercise 2 - ...
-### Project 1
+### Exercise 2 (coming soon)
+### Project 1 (coming soon)
 
 ---
 
 # Week 4 - Week of 24 September 2018
 
 ## Review
-## Physics 2 - Collisions
-## Game 3 - Pong
-## Core 5 - `while` loops
-## Core 6 - `for` loops
-## Game 4 - Where's Wally?
-## Debugging 4 - Loops
-## Exercise 3 - ...
+## Physics - Collisions
+## Game - Pong
+## Core - `while` loops
+## Core - `for` loops
+## Game - Where's Wally?
+## Debugging - Loops
+## Exercise - ...
 
 ---
 
 # Week 5 - Week of 1 October 2018
 
 ## Review
-## Core 7 - Functions
-## Debugging 5 - Functions
-## Sound 1 - Basic sound
-## Game 5 - Sound game
+## Core - Functions
+## Debugging - Functions
+## Sound - Basic sound
+## Game - Sound game
 
 ---
 
@@ -97,11 +106,11 @@
 # Week 7 - Week of 15 October 2018
 
 ## Review
-## Core 8 - JavaScript Objects
-## Core 9 - Thinking in Objects
-## Core 10 - Classes and instances
-## Debugging 6 - Object Oriented Programming
-## Game 6 - Multiple avatars
+## Core - JavaScript Objects
+## Core - Thinking in Objects
+## Core - Classes and instances
+## Debugging - Object Oriented Programming
+## Game - Multiple avatars
 ## Exercise 5 - ...
 
 ## Project 2 assigned
@@ -112,11 +121,11 @@
 
 
 ## Review
-## Core 11 - Arrays
-## Core 12 - `for` loops and arrays
-## Debugging 7 - Arrays
-## Debugging 8 - Review
-## Game 7 -
+## Core - Arrays
+## Core - `for` loops and arrays
+## Debugging - Arrays
+## Debugging - Review
+## Game - ...
 ## Exercise 6 - ...
 
 ---
@@ -124,10 +133,10 @@
 # Week 9 - Week of 29 October 2018
 
 ## Review
-## Core 13 - Nested Arrays
-## Graphics 3 - Transformations
-## Physics 3 - Polar coordinates and velocity
-## Game 8 - Spaceship / Spacelove
+## Core - Nested Arrays
+## Graphics - Transformations
+## Physics - Polar coordinates and velocity
+## Game - Spaceship / Spacelove
 ## Other
 
 ---
@@ -146,11 +155,11 @@
 # Week 11 - Week of 12 November 2018
 
 ## Review
-## Libraries 1 - Introducing Libraries
-## Libraries 2 - Library workflow
-## Libraries 3 - Finding libraries
-## Sound 2 - Howler
-## Sound 3 - Gibber
+## Libraries - Introducing Libraries
+## Libraries - Library workflow
+## Libraries - Finding libraries
+## Sound - Howler
+## Sound - Gibber
 ## Exercise 8 - ...
 
 ---
@@ -158,9 +167,9 @@
 # Week 12 - Week of 19 November 2018
 
 ## Review
-## Release 1 - Full screen
-## Release 2 - Integrating with HTML
-## Release 3 - Electron
+## Release - Full screen
+## Release - Integrating with HTML
+## Release - Electron
 
 ---
 

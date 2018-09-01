@@ -27,9 +27,10 @@
 
 ---
 
-## The grid
 background-image: url(images/grid-plain.png)
 background-style: contain
+
+## The grid
 
 ---
 

@@ -29,6 +29,8 @@
 
 ## Core - Variables (and math!)  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-variables-and-math/index.html), [Notes](../modules/core-variables-and-math/core-variables-and-math.md))
 
+## Core - Variables and scope  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-variables-and-scope/index.html), [Notes](../modules/core-variables-and-scope/core-variables-and-scope.md))
+
 ## Debugging - Variables ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-variables/index.html), [Notes](../modules/debugging-variables/debugging-variables.md))
 
 ## Graphics - Displaying images  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-displaying-images/index.html), [Notes](../modules/graphics-displaying-images/graphics-displaying-images.md))

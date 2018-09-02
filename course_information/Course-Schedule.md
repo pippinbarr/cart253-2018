@@ -2,17 +2,15 @@
 
 ## Introductions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/introductions/index.html), [Notes](../modules/introductions/introductions.md))
 
-## Core - Why? ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-why/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/core-why/core-why.md))
+## Core - Why and how? ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-why-and-how/index.html), [Notes](https://github.com/pippinbarr/cart253-2018/blob/master/modules/core-why-and-how/core-why-and-how.md))
 
 ## Tools - The tools of the trade ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-tools-of-the-trade/index.html), [Notes](../modules/tools-tools-of-the-trade/tools-tools-of-the-trade.md))
 
 ## Graphics - Drawing shapes ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-drawing-shapes/index.html), [Notes](../modules/graphics-drawing-shapes/graphics-drawing-shapes.md))
 
-## Best Practice - Commenting ([Slides](https://pippinbarr.github.io/cart253-2018/modules/best-practice-commenting/index.html), [Notes](../modules/best-practice-commenting/best-practice-commenting.md))
+## Core - Commenting ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-commenting/index.html), [Notes](../modules/core-commenting/core-commenting.md))
 
 ## Debugging - The JavaScript console ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-the-javascript-console/index.html), [Notes](../modules/debugging-the-javascript-console/debugging-the-javascript-console.md))
-
-## Best Practice - Reading the Manual  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/best-practice-reading-the-manual/index.html), [Notes](../modules/best-practice-reading-the-manual/best-practice-reading-the-manual.md))
 
 ## Homework
 ### [Exercise 0](../exercises/Exercise-0.md) - Spiritual Self-Portrait

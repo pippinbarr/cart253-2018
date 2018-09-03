@@ -30,7 +30,7 @@
 - JavaScript is a great learning language because so many people use it for so many tasks. For any question you have, there is likely an answer online. For any genre of program you want to write, there is probably a community online.
 - Perhaps most importantly for learning, JavaScript is a modern language with the standard suite of features we expect to see. Your knowledge of JavaScript will allow you to learn other languages much, much more easily.
 - JavaScript has been around for a long time and has had many, many libraries and extensions created for it that give you greater power with less work! (More on this later in the course.)
-- JavaScript isn't limited to programming for the web. With technologies like [Node](https://nodejs.org/en/) and [Electron](https://electronjs.org/) you can build your own applications in JavaScript
+- JavaScript isn't limited to programming for the web. With technologies like [Node](https://nodejs.org/en/) and [Electron](https://electronjs.org/) you can build your own applications in JavaScript.
 
 ---
 
@@ -51,13 +51,46 @@
 
 ---
 
+## How do I learn programming? By being taught.
+
+- This is a course designed to teach you programming in JavaScript
+- From the ground up
+- With the specific aim of giving you a solid foundation in the fundamentals
+- And therefore the ability to expand your abilities moving forward
 
 
 ---
 
-## How do you know?
+## How do I learn programming? By practicing.
 
-- As we delve into programming question arises: "How the heck am I supposed to _know_ the names and parameters and effects of all this stuff???"
+- Programming can often make perfectly good sense when someone explains it to you
+- It's logical, there aren't that many scary concepts (really!)
+- But the only way you really learn is to practice
+- You should __spend a lot of time programming__
+
+???
+
+- Unsurprisingly it's not unlike learning anything practical
+- When you learn the guitar, it's one thing to listen to someone tell you the different strings and how frets work and then watch them play a song using that information
+- But it's very different getting your brain to understand how to __do__ that
+- So you have to practice
+
+---
+
+## How do I learn programming? By experimenting.
+
+- Programming can be intimidating because it's easy for things to go wrong
+- That can scare us away from just playing around with it
+- But playing around with code is extremely fun, and a great way to learn what's possible
+- When you're just starting you can't really just "make stuff up", but you can definitely play around with __numbers__, for example
+- Whenever we use a number, why not try using some ridiculous numbers instead and see what happens?
+- It's a great way to learn more about how programming behaves in the real world
+
+---
+
+## How do I learn p5?
+
+- As we delve into programming a question will arise: "How the heck am I supposed to _know_ the names and parameters and effects of all this stuff???"
 --
 
 - It's a good question, and the answer is: __documentation__
@@ -108,20 +141,40 @@
 
 ---
 
-## The Reference!
+## How can I learn JavaScript more generally?
 
-- Don't forget you don't have to memorise everything!
-- Use the reference!
-- Be happy!
+- p5 is a very specific way of thinking about JavaScript
+- In particular the reference doesn't actually tell you about the fundamentals of programming
+- Apart from this course, there are __many__ resources online, maybe __too many__
+- Check out the [Course Resources](../../course_information/Course-Resources.md) page for some suggestions
 
-https://p5js.org/reference/
+---
 
-???
+## Don't use the internet too much!
 
-- With the reference in mind, I will spend a lot less time laboring over every detail of every function we learn
-- Instead, if you have any doubts
-  - you can look things up and check for yourself!
-  - And of course you can ask me or the TA or anyone in shouting distance!
+- There's so much information about programming on the internet
+- Try to resist diving all the way in before you quite know what you're doing
+- For this course you hopefully won't __need__ other resources, even though they can of course be helpful
+- Most especially __please resist taking code from online and using it in your own projects__
+- Naturally people do this in the real world, but when we're learning it tends to cause more trouble than its worth
+
+---
+
+## Why?
+
+- Because knowing how to program is probably one of the single most important skills you can have today
+- Because making art and interactive experiences and websites and videogames is incredibly fun and rewarding
+
+---
+
+## How?
+
+- Follow the course
+- Practice
+- Experiment
+- Read the p5 reference
+- Read online resources about programming
+- __Don't rely too much on finding solutions online__
 
 ---
 

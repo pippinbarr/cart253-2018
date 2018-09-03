@@ -15,3 +15,4 @@ Office: EV 6.745
 
 #### [Course Outline](course_information/Course-Outline.md)
 #### [Course Schedule](course_information/Course-Schedule.md)
+#### [Course Resources](course_information/Course-Resources.md)

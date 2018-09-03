@@ -66,7 +66,7 @@ Additionally, students will create their own repository on GitHub to save, track
 Specific evaluation requirements will be provided when assigned.
 
 * Weekly exercises (20%)
-   * 10 exercises worth 2% each
+   * 8 exercises worth 2.5% each
 * Projects (60%)
   * Project 1 (10%)
   * Project 2 (20%)

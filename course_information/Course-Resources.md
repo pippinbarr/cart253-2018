@@ -4,6 +4,7 @@ __Note:__
 - CART 253 is designed to be more or less a complete introduction to programming
 - Some of the resources may help with different explanations or more information
 - If something feels like it's just confusing you __stop reading it__ and just come to class and ask questions
+- __If you find something amazing to add to this then let us know!__
 
 ## p5
 

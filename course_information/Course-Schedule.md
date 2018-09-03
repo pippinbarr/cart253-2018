@@ -51,11 +51,11 @@
 
 ## Input - Mouse input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-mouse/index.html), [Notes](../modules/input-mouse/input-mouse.md))
 
-## Game - Click the circle ([Game](https://pippinbarr.github.io/cart253-2018/games/game-click-the-circle/index.html), [Source Code](../games/game-click-the-circle/))
+## Game - Click the circle ([Game](https://pippinbarr.github.io/cart253-2018/games/game-click-the-circle/index.html), [Source Code](../games/game-click-the-circle/), [ZIP of Source Code](../games/game-click-the-circle.zip))
 
 ## Input - Keyboard input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-keyboard/index.html), [Notes](../modules/input-keyboard/input-keyboard.md))
 
-## Game - The artful dodger ([Game](https://pippinbarr.github.io/cart253-2018/games/game-the-artful-dodger/index.html), [Source Code](../games/game-the-artful-dodger/))
+## Game - The artful dodger ([Game](https://pippinbarr.github.io/cart253-2018/games/game-the-artful-dodger/index.html), [Source Code](../games/game-the-artful-dodger/), [ZIP of Source Code](../games/game-the-artful-dodger.zip))
 
 ## Core - Time part II ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-time-part-ii/index.html), [Notes](../modules/core-time-part-ii/core-time-part-ii.md))
 

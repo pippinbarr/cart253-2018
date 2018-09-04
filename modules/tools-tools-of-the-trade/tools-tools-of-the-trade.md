@@ -25,7 +25,9 @@
 ## Atom
 
 - __Launch Atom__
-  - Find it in Applications,
+- There are various ways, use one you like
+  - Find it in your Applications folder or in Program Files
+  - It might be on the Dock at the bottom of your screen
   - Mac OS X: use Command+Space and type "Atom"
   - Windows: use Windows+S and type "Atom"
 
@@ -48,24 +50,32 @@
 - Close the Telemetry and Welcome tabs so you just have the `untitled` tab open
 - Click in the text area and type some words
 - That's called __text editing__!
+--
+
+- Programming is just fancy text editing with special words, right?
 
 ---
 
 ## Template project
 
 - When we write JavaScript in this class there will be a basic structure of files and folders we will use every time
-- Download the template project from the course website: https://www.github.com/pippinbarr/cart253-2018/templates/template-p5-project.zip
-- Unzip it on your desktop (or whever you like)
+- Download the template project from the course website: https://pippinbarr.github.io/cart253-2018/templates/template-p5-project.zip
+- Unzip it on your desktop (or wherever you like)
 - You should now have a folder called `template-p5-project`
+- You can see it has a bunch of files and folders in it
 
 ---
 
 ## Template project
 
 - We want to open the template project in Atom, so
-  - In Atom go to `File > Open...` and select the _folder_ called `template-p5-project` wherever you put it and choose `Open`
+  - In Atom go to `File > Open...` and select the __folder__ called `template-p5-project` wherever you put it and choose `Open` (you want to select the __folder__, not a single file)
   - Or _drag_ the folder onto the Atom icon in the Dock at the bottom of your screen (Mac)
   - Or _drag_ the folder into the Atom window itself
+
+???
+
+- Technically, you __can__ also open one of the files in the main folder like `index.html`, which will open the entire project by default, __but__ this can get confusing if you already have another project open, so I wouldn't.
 
 ---
 
@@ -116,13 +126,14 @@ template-p5-project/
 
 ## `p5.min.js`
 
-- In amongst the various files in the template project is `p5.min.js`
-- This file contains the code for the __p5 library__
+- In the `js/` folder is a folder called `libraries/` and in that folder is `p5.min.js`
+- This file contains the __code for the p5 library__
 - You can take a look at it, but it probably looks like nonsense
 - Part of that is because of the `min` part of the name, it means __min__-ified which means it has been compressed and is not so readable anymore
 - Notice that in `index.html`
   - there is a `<script>` tag that includes `p5.min.js` so that we can use it in our code in `script.js`
   - there is a `<script>` tag that includes `script.js` so that we can write our code in there and have it do things on the web page
+- These two `<script>` tags are connecting the JavaScript to the HTML page being displayed
 
 ---
 
@@ -131,7 +142,7 @@ template-p5-project/
 - Because we're using JavaScript, we will run our programs in a web browser
 - To do this, we _could_ upload our project to a web server such as our user account at CDA, but this would get old fast when we're working
 - Instead we will use a _package_ for Atom called atom-live-server
-- Make sure a file in the project is selected on the left, probably either `index.html` or `script.js` make the most sense
+- Make sure a file in the project is selected on the left, probably `script.js` makes the most sense for us since that's what we'll usually be editing
 - Go to `Packages > atom-live-server > Start server` (note the shortcut)
 
 ---
@@ -153,7 +164,7 @@ template-p5-project/
 - It will also keep the version in the browser _up to date_ with what we do
 - For now let's prove this by selecting the `index.html` file and writing some text inside the `<body></body>` tags, such as
 
-```
+```html
 ...
 <body>
 Hello, World!

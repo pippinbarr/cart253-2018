@@ -2,6 +2,8 @@
 
 Some of you may want to use your own computer either in class or at home. Here are instructions for getting your system ready to follow along with the core tools we use in the course.
 
+__You don't need to do any of this if you're only using the CDA lab computers as they already have this software installed.__
+
 ## Atom
 
 We use __Atom__ as our text editor. It's a nice, free, open-source text editor. Even if you prefer some other text editor, you should use Atom in CART 253.
@@ -17,7 +19,7 @@ That was pretty easy.
 One great thing about __Atom__ is that it's highly extensible with what it calls __packages__. The key package we will use is called __atom-live-server__. It allows us to run a web server on our computer to try out our work very efficiently.
 
 1. Run Atom on your computer
-1. Go to Preferences (on Mac OS X it's under `Atom > Preferences`)
+1. Go to Preferences (on Mac OS X it's under `Atom > Preferences`, in Windows I'm guess it's in the `File` menu as either `Preferences` or `Settings`)
 1. Select `Install` from the vertical menu that appears in the editor
 1. Type `atom-live-server` into the search bar
 1. Click `Install` next to the search result called `atom-live-server`

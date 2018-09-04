@@ -45,7 +45,7 @@
 
 ## Why games and playful interaction?
 
-- Because games and playful interaction are __computation intensive__
+- Because games and playful interaction are __computationally intensive__
 - Because if we can program a game, we can __program pretty much anything__
 - Because __it's just more fun__ to practice programming with games and play
 
@@ -58,6 +58,15 @@
 - With the specific aim of giving you a solid foundation in the fundamentals
 - And therefore the ability to expand your abilities moving forward
 
+---
+
+## How do I learn programming? By asking questions.
+
+- This is a classroom where we absolutely welcome questions at any time
+- If you're ever slightly confused, getting lost, have something to contribute: speak
+- Class is far more interesting when people are asking questions
+- If you have a question there is a high, high probability someone else is wishing someone would ask it too
+- (For another thing it's part of your participation grade!)
 
 ---
 
@@ -88,12 +97,22 @@
 
 ---
 
+## How do I learn programming? By helping others.
+
+- Like any classroom, there will be different abilities distributed among you
+- If you can help someone else with something, do it - it will help you learn the concepts better too
+- But do remember that everyone here is trying to learn, so give people space to work things out for themselves
+
+---
+
 ## How do I learn p5?
 
 - As we delve into programming a question will arise: "How the heck am I supposed to _know_ the names and parameters and effects of all this stuff???"
 --
 
 - It's a good question, and the answer is: __documentation__
+--
+
 - __Nobody "just knows"__ all the possible functions and their parameters
 - All of us are _constantly_ looking things up to remember them or to find new things
 - Getting used to reading documentation is a crucial skill
@@ -125,7 +144,7 @@
 
 ## Use the reference!
 
-- It's not rocket science to say that if you're uncertain about how a function works your _first_ action should be to read the appropriate page in the reference
+- It's not rocket science to say that if you're uncertain about how a function works your __first__ action should be to read the appropriate page in the reference
 - Unsure of what the first two numbers you give the `ellipse()` function mean?
 --
  Go to the [`ellipse()`](https://p5js.org/reference/#/p5/ellipse) page in the reference and find out they are the (x,y) coordinates for the ellipse!
@@ -154,20 +173,20 @@
 
 - There's so much information about programming on the internet
 - Try to resist diving all the way in before you quite know what you're doing
-- For this course you hopefully won't __need__ other resources, even though they can of course be helpful
+- For this course you hopefully shouldn't __need__ other resources, even though they can of course be helpful
 - Most especially __please resist taking code from online and using it in your own projects__
-- Naturally people do this in the real world, but when we're learning it tends to cause more trouble than its worth
+- Naturally people do this in the real world, but when we're learning it tends to cause far more trouble than it's worth
 
 ---
 
-## Why?
+## So... why?
 
 - Because knowing how to program is probably one of the single most important skills you can have today
 - Because making art and interactive experiences and websites and videogames is incredibly fun and rewarding
 
 ---
 
-## How?
+## And... how?
 
 - Follow the course
 - Practice

@@ -50,15 +50,15 @@ background-style: contain
 - Just like on a graph we have an _x-axis_ and a _y-axis_
 --
 
-- The x-axis starts at the _left_ of the screen (or canvas)
+- The x-axis starts at the _left_ of the screen (or canvas) and goes from left to right
 --
 
 - The y-axis starts at the...
 --
-_top_ of the screen (or canvas)
+_top_ of the screen (or canvas) and goes from top to bottom
 --
 
-- And we count pixels along the axes from _zero_ up
+- And we count pixels along the axes from _zero_
 
 ---
 
@@ -81,6 +81,11 @@ background-style: contain
 - And where would (525,100) be?
 --
  _Uh-huh_. _526_ pixels to the right from the left edge and _101_ pixels down from the top edge
+
+???
+
+- At least on our simple 10x10 grid image from earlier, a pixel drawn at (525,100) wouldn't actually be displayed
+- Does it still exist???
 
 ---
 
@@ -132,12 +137,13 @@ function draw() {
 ```
 
 - We will come back to the various words and symbols used
-- For now, just remember we're writing code inside the curly brackets of `setup()` so that it will run _once_ at the beginning of our program
+- For now, just remember we're writing code inside the curly brackets of `setup()` and this means it will run _once_ at the beginning of our program
 
 ---
 
 ## Getting to the `point()`
 
+- Follow along in the version of the template project you downloaded earlier, editing the `setup()` function inside `script.js`
 - Let's use the `point()` function to tell p5 to draw a single pixel in a specific location
 - Here's some code to draw a pixel at (5,2) in a tiny little canvas!
 
@@ -169,17 +175,17 @@ function setup() {
 - The function is called `point` and we _call_ it to ask it to draw a point (makes sense)
 --
 
-- Let's look at how the function works in some detail...
+- Let's look at how the function call works in some detail...
 
 ---
 
 ## `point(x,y);`
 
-- So this is the _function_ for drawing a point in our canvas at location (x,y)
+- So this is the __function call__ for drawing a point in our canvas at location (x,y)
 
 ---
 
-## .codeHi[`point`]`(x,y);`
+## .hi[`point`]`(x,y);`
 
 - First we have the _name_ of the function, which is `point`
 - In a perfect world the name of the function tells us what it does!
@@ -188,7 +194,7 @@ function setup() {
 
 ---
 
-## `point`.codeHi[`(`]`x,y`.codeHi[`)`]`;`
+## `point`.hi[`(`]`x,y`.hi[`)`]`;`
 
 - Next we have _parentheses_ (or _brackets_ if you prefer)
 - These tell p5 we are giving it the information it needs to carry out the function
@@ -201,23 +207,23 @@ function setup() {
 
 ---
 
-## `point(`.codeHi[`x`]`,y);`
+## `point(`.hi[`x`]`,y);`
 
-- Inside the parentheses we give the function the first piece of information it needs to draw the point, a _parameter_
+- Inside the parentheses we give the function the first piece of information it needs to draw the point, the first _parameter_
 - In this case it's the _x coordinate_ of our point
 - We would need to replace this `x` with an actual number, like `10`
-- I'm writing it as `x` here because it better shows us what the nature of this parameter is
+- I'm writing it as `x` here because it better shows us what the nature of this parameter is and it's pretty common practice in documentation you'll see
 
 ---
 
-## `point(x`.codeHi[`,`]`y);`
+## `point(x`.hi[`,`]`y);`
 
 - Because we have _multiple parameters_ (an x _and_ a y) we need a _comma_ next
 - The parameters of a function are always separated by commas like this
 
 ---
 
-## `point(x,`.codeHi[`y`]`);`
+## `point(x,`.hi[`y`]`);`
 
 - Now we give the function the final piece of information it needs to draw the point, the second _parameter_
 - Which is the _y coordinate_
@@ -225,7 +231,7 @@ function setup() {
 
 ---
 
-## `point(x,y)`.codeHi[`;`]
+## `point(x,y)`.hi[`;`]
 
 - Now we meet an aspect of coding that nobody really enjoys
 - The semicolon or `;`
@@ -239,6 +245,13 @@ function setup() {
 
 - But you will. And that's okay.
 
+???
+
+- Okay, real talk: JavaScript doesn't __actually__ always need you to put a semicolon at the end of instructions
+- There are rules for when you have to and when it's optional
+- But __other programming languages require them__ so it's much better to build up the habit now
+- Use semicolons
+
 ---
 
 ## `point(x,y);`
@@ -249,7 +262,7 @@ function setup() {
 - So now we can read something like `point(10,15);` and know that it means...
 --
 
-- _Draw a point at position (10,15) in the canvas!_
+- _Draw a point at position (10,15) on the canvas!_
 
 ---
 
@@ -275,6 +288,7 @@ function setup() {
 - Try out a new canvas size...
 - Like `createCanvas(640,480);`
 - or `createCanvas(1,1000);`!
+- Where we're going, we don't need aspect ratios...
 
 ---
 
@@ -382,7 +396,7 @@ function setup() {
 
 ## Different ways to draw the same shapes
 
-- As we saw a few times, there are different ways to specify something like a rectangle
+- As we saw a few times, there are conceptually different ways to specify something like a rectangle
 - You might give the top-left corner and width and height
 - But you might also give the center and width and height
 - Or you might even give the top-left corner and the bottom-right corner
@@ -414,16 +428,16 @@ We can do all the same things with the same results to set different ways of dra
 The _default_ we're used to (draw from the center)
 
 `ellipseMode(CORNER);`  
-Specify the top-left 'corner' of the ellipse
+Specify the top-left 'corner' of the ellipse, then the width and height
 
 `ellipseMode(CORNERS);`  
-Specity the top-left and bottom-right 'corners' of the ellipse
+Specify the top-left and bottom-right 'corners' of the ellipse
 
 ---
 
 ## Pop-quiz, hotshots!
 
-- Why does `ellipse(0,0,50,50)` look the same with both `CORNERS` and `CORNER`?
+- Why does `rect(0,0,50,50)` look the same with both `rectMode(CORNERS)` and `rectMode(CORNER)`?
 
 - How can we draw a rectangle in the center of the canvas?
 
@@ -431,13 +445,28 @@ Specity the top-left and bottom-right 'corners' of the ellipse
 
 ???
 
-- Remember that we need to know the dimensions of our canvas to do this, either by using `size()` or remembering the default size is 100x100
+- `rect(0,0,50,50)` looks the same in both modes because because with `CORNERS` activated it draws the top-left at (0,0) and the bottom-right at (50,50), yielding a rectangle with it's top-left at (0,0) that is 50x50 - exactly what the `CORNER` mode specifies
+- To draw a rectangle in the center we need to know where it is - either by using `createCanvas()` or remembering the default size is 100x100
+- It it's 500x500 then we could use:
+
+```javascript
+rectMode(CENTER);
+rect(250,250,100,100);
+```
+
+- To center an ellipse at the bottom-right of the same canvas
+
+```javascript
+ellipse(500,500);
+```
+
+- Note that we don't need to change `ellipseMode()` because the default is `CENTER`
 
 ---
 
 ## Make it grey
 
-- All the points, lines, and shapes we've drawn have had a black outline and a white fill on a grey background
+- All the points, lines, and shapes we've drawn have had a black outline and a white fill on a white background
 - But we can specify what shade of grey p5 will use for these things with more functions!
 
 `background(shade);` sets the background shade
@@ -456,6 +485,7 @@ Specity the top-left and bottom-right 'corners' of the ellipse
 - `255` means _white_ (all the white!)
 - `127` means a _mid-grey_ (half-way between black and white)
 - (Notice how our old friend 'counting from zero' is making an appearance again!)
+- (Notice how the computer-y idea of 'everything can be represented as number!' is showing up as well)
 
 ---
 
@@ -478,10 +508,36 @@ Let's try!
 
 ---
 
+```javascript
+createCanvas(500,500);
+background(0);
+stroke(50);
+fill(50);
+ellipse(250,250,400,400);
+stroke(100);
+fill(100);
+ellipse(250,250,300,300);
+stroke(150);
+fill(150);
+ellipse(250,250,200,200);
+stroke(200);
+fill(200);
+ellipse(250,250,100,100);
+```
+
+---
+
 ## Colourful nights
 
 - We're not actually limited to making arthouse movie-style things in black and white
-- If we use _three_ numbers instead of one, we can set colours instead
+- If we use _three_ numbers to specify our `background()`, `stroke()` and `fill()` instead of one, we can set colours instead:
+
+```javascript
+background(255,0,0);
+stroke(0,255,0);
+fill(255,100,100);
+```
+
 - What do you think the three numbers refer to?
 --
 
@@ -512,17 +568,19 @@ Let's try!
 
 - You probably already have a way of finding out the RGB values of a colour
 - Maybe you use an application like Photoshop, which may also give you an 'eyedropper' to pick colours from your screen
-- You can also Google 'RGB colour picker' and it will bring one up
-- Plenty of ways to find colours
+- You can also just Google 'RGB colour picker' and it will bring one up
+- Plenty of ways to find the RGB values for colours
 
 ---
 
 ## Hexadecimal colours
 
-- You might notice in many color selectors you see colour values displayed as a set of letters and numbers after a hash, like  `#12FF08`.
-- This is called the _hexadecimal_ representation of the colour and you can use it in your code too if you want, as in
+- You might notice in many color selectors you see colour values displayed as a set of letters and numbers after a hash sign, like  `#12FF08`.
+- This is called the _hexadecimal_ representation of the colour and you can use it in your code too if you want, as in:
 
-`background('#00FF00');` sets a pure green background
+`background("#00FF00");` sets a pure green background
+
+- Note how the hexadecimal code is __inside double quotes__, that's important
 
 ---
 
@@ -540,19 +598,26 @@ Let's try!
 ## See-through colours
 
 - On computers colours often have an _alpha_ value which refers to how transparent the colour should be
-- In p5 we can set this by adding an extra number to our RGB colours
+- In p5 we can set this by adding yet another number to our RGB colours, bringing the total to four
 - `0` means completely transparent, `255` means completely opaque
-- So `fill(255,0,0,127);` will give us a semi-transparent red
-- And `stroke(0,0,0,0);` will give us an invisible black line!
+- So `fill(255,0,0,127);` will give us...
+--
+ a half-transparent red fill
+--
+
+- And `stroke(0,0,0,0);` will give us
+--
+ an invisible black line! What a concept!
 
 ---
 
 ## Pop-quiz
 
-What will we see on our screen with this code? (Try not to cheat by typing it in!)
+- What will we see on our screen with this code?
+- (Try not to cheat by typing it in, reason through it!)
 
-```
-createCanvas(640,480);
+```javascript
+createCanvas(500,500);
 background(100,0,0);
 fill(255);
 rect(0,0,250,250);
@@ -572,8 +637,10 @@ background(0,100,0);
 ## Food for thought
 
 - We're now able to see "behind the scenes" of software
-- One thing we know now is that p5 doesn't really know about "rectangles", it just knows how to set a particular set of pixels to a particular colour
-- If we wanted that rectangle to move, _we_ would have to write the code to move it
+- We are writing lines of code that make actual stuff happen in a browser
+- We see the Matrix!
+- We know, for instance, that p5 doesn't really know about "rectangles", it just knows how to set a particular set of pixels to a particular color...
+- We know that p5 represents colors as numbers...
 - As Spiderman's uncle said, "_With great power comes an excruciating amount of time and effort!_"
 
 ---

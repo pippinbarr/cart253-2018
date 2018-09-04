@@ -6,7 +6,7 @@
 
 ## Code is hard to read...
 
-```
+```javascript
 function setup() {
   createCanvas(500,500);
   background(255,200,200);
@@ -38,12 +38,12 @@ function draw() {
 - A comment is an addition to our code that lets us write notes in plain language
 - A comment is written in our code by beginning a line with two forward-slashes: `//`
 
-```
+```javascript
 // The next line draws an ellipse (this is a comment)
 ellipse(0,0,100,100);
 ```
 
-- The comment allowed us to _explain_ what a line of code was doing
+- This comment allows us to _explain_ what a line of code does
 - Even someone who doesn't know how to program could at least read the comment and know what's going on
 - And importantly, the computer _ignores_ the comments when it runs the code, so it doesn't try to read human language, only programming language
 
@@ -80,7 +80,8 @@ ellipse(0,0,100,100);
 
 ## Comment your files
 
-- You should always write a comment at the top of every file (JavaScript most obviously, but this is true of HTML, CSS, etc. too)
+- You should always write a comment at the top of your script files
+- (Technically it's good practice to comment at the top of HTML and CSS files too.)
 
 ---
 
@@ -112,7 +113,7 @@ function draw() {
 ## Comment your functions
 
 - At the moment we have two functions, `setup()` and `draw()`
-- It is very good practice two write a comment before every function in your code to summarise what it is there to do
+- Always write a comment before every function in your code to summarise what it is there to do
 - This is especially true when you start writing your own functions
 - Which you will be doing in this course
 - Obviously, the more complicated the function, the more detailed the summary will need to be (this is a reason to have simple functions!)

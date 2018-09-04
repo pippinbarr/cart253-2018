@@ -25,6 +25,7 @@
 
 - The [Course Outline](../../course-information/Course-Outline.md) is on GitHub
 - It gives the basic information for the course and serves as a kind of 'contract' between us
+- Let's look at it...
 
 ---
 

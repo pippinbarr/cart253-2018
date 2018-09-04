@@ -10,9 +10,10 @@
 - You will notice this happens all the time
 - You will notice that the default state of a program is: not working
 - And if it's working its default state is: not doing what you wanted
+
 --
 
-We constantly need to _debug_ our work
+__We constantly need to _debug_ our work__
 
 ---
 
@@ -26,12 +27,11 @@ We constantly need to _debug_ our work
 
 ## Debugging!
 
-- Debugging it the process of going through our code and getting rid of all the bugs
-- In some ways, programming basically _is_ debugging
-- Controversial take: __Debugging is actually pretty fun__ once you get used to it
+- Debugging is the process of going through our code and getting rid of all the bugs
+- Controversial: __Debugging is actually pretty fun__ once you get used to it
 - It's like solving a puzzle or, you know, hunting for a fugitive in a dark forest with only a flashlight and your wits to guide you
 - One big part of debugging is just knowing the kinds of things that can go wrong
-- Another big part of debugging is have strategies for finding where those things are
+- Another big part of debugging is having strategies for finding where those things are
 
 ---
 
@@ -45,7 +45,7 @@ We constantly need to _debug_ our work
 
 ## A program
 
-```
+```javascript
 function setup() {
   createCanvas(500,500);
   background(255,200,200);
@@ -134,12 +134,12 @@ Uncaught ReferenceError: bckground is not defined
 
 - This error message tells us a lot
 - Critically, it tells us _where_ it thinks the error is: `script.js:3`
-- That means _line 3 of the file script.js_
+- That means "line 3 of the file `script.js`"
 - The fact that Atom numbers your lines is very helpful now!
-- You can even type `Control-G` to specify a line to jump to if you have a big program
 
 ???
 
+- You can type `Control-G` to specify a line to jump to if you have a big program
 - You can see that the answer to "Where?" is actually more detailed than this
 - After `at setup (script.js:3)`, which is the part that tells us where in _our code_ the problem was, it also tells us the chain of places in other code that _led to our code_
 - Right now this chain isn't all that helpful to us because it leads into the p5 library which we don't want to look at, but it can help us later on, so we'll come back to it
@@ -174,6 +174,48 @@ Uncaught ReferenceError: bckground is not defined
 
 ---
 
+## `console.log()`
+
+- One last thing, that will become much more helpful as we move forward
+- It is possible to send ourselves __messages__ in the JavaScript console from inside our program
+- We use a function called `console.log()` to do it, like this:
+
+```javascript
+console.log("Help! I'm stuck inside a program!");
+```
+
+- If we put that in our program, we will see that message pop up when it runs!
+
+---
+
+```javascript
+function setup() {
+  console.log("In setup() function.");
+  console.log("Creating the canvas.");
+  createCanvas(500,500);
+  console.log("Setting the background and fill.");
+  background(255,200,200);
+  fill(0);
+  console.log("Drawing a circle.");
+  ellipseMode(CENTER);
+  ellipse(250,250,200,200);
+}
+
+function draw() {
+}
+```
+
+---
+
+## `console.log()`
+
+- So `console.log()` gives us a way of sending ourselves messages about what's going on
+- While the program is actually running
+- Pretty neat!
+- This will be a major ally in debugging down the line, so stay tuned
+
+---
+
 ## Debugging!
 
 - We now know the basic process for debugging in JavaScript
@@ -183,6 +225,7 @@ Uncaught ReferenceError: bckground is not defined
 - We interpret the errors
 - We fix the errors
 - We win at life
+- (We use `console.log()`!)
 
 ---
 

@@ -1,35 +1,3 @@
-# Exercise 0 - Spiritual Self-Portrait
-
-## Brief
-
-Starting from scratch or with the starter code provided, create a "spiritual self-portrait" using p5's various drawing functions such as `ellipse()`, `rect()`, `line()` and so on. Don't forget to [read the p5 reference](https://p5js.org/reference/) to discover more drawing possibilities! (By "spiritual self-portrait" I just mean that the face you draw should somehow "feel like" it's you, even though it obviously will be hard to make it look exactly like you!)
-
-This exercise is not going to be submitted or graded but __it is not optional__!
-
-## Learning objectives
-
-- Writing JavaScript in Atom
-- Testing your work with atom-live-server
-- Writing instructions in a program that lead to visual results
-- Using numbers to specify positions, sizes, and colors
-- Using comments to explain your code
-- Figuring out how to be create and interesting with primitive shapes
-
-## Challenges
-
-1. __Create a face__ (and body if desired) that is clearly distinct from the starter code and that spiritually resembles you.
-1. __Use at least one drawing function not used in the starter code__ (it already uses `ellipse()`, `rect()`, and `line()` so you could use `triangle()`, `curve()`, `point()`, and so on).
-1. Make sure you __change/add/subtract comments__ to make your program clear and easy for someone else to understand
-
-## Starter Code
-
-You can download a JavaScript p5 project with the starter code already in it here:  
-https://pippinbarr.github.io/cart253-2018/exercises/exercise0.zip
-
-Here is the script file, for your references.
-
-`script.js`:
-```javascript
 // Exercise 0 - Spiritual Self-Portrait
 // Pippin Barr
 // 20 August 2018
@@ -118,12 +86,3 @@ function setup() {
 function draw() {
   // Nothing here for now.
 }
-```
-
-## Submission
-
-This exercise does not need to be submitted, it's just for practice!
-
-## Grading
-
-This exercise is not graded, it's just for practice!

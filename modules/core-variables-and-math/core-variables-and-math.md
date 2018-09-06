@@ -394,7 +394,7 @@ var the_letter_a = 'A';
 
 ## Built-in variables
 
-- We met `mouseX` and `mouseY` last week - they are _built-in variables_ that store the current coordinates of the mouse
+- We met `mouseX` and `mouseY` earlier - they are _built-in variables_ that store the current coordinates of the mouse
 - p5 has other helpful variables like this, including:
 
 - `width` and `height`: the width and height of the window

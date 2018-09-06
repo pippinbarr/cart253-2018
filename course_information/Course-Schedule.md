@@ -23,7 +23,7 @@
 
 ## Review
 
-## Core - Time ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-2/index.html), [Notes](../modules/core-2/core-2.md))
+## Core - Time ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-time/index.html), [Notes](../modules/core-time/core-time.md))
 
 ## Core - Variables (and math!)  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-variables-and-math/index.html), [Notes](../modules/core-variables-and-math/core-variables-and-math.md))
 

@@ -23,7 +23,7 @@
 
 ## Course outline
 
-- The [Course Outline](../../course-information/Course-Outline.md) is on GitHub
+- The [Course Outline](../../course_information/Course-Outline.md) is on GitHub
 - It gives the basic information for the course and serves as a kind of 'contract' between us
 - Let's look at it...
 
@@ -31,7 +31,7 @@
 
 ## Course schedule
 
-- The [Course Schedule](../../course-information/Course-Schedule.md/) is on GitHub
+- The [Course Schedule](../../course_information/Course-Schedule.md/) is on GitHub
 - There is a section for each week that will contain slides, notes, resources, assignments, etc.
 - These slides are written in [remark.js](https://github.com/gnab/remark) which allows text written in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) to be displayed as slides
 
@@ -39,7 +39,7 @@
 
 ## Slides and notes
 
-- You are encouraged to follow along with the slides on your own computer, just click the appropriate link in the [Course Schedule](../../course-information/Course-Schedule.md/)
+- You are encouraged to follow along with the slides on your own computer, just click the appropriate link in the [Course Schedule](../../course_information/Course-Schedule.md/)
 - When viewing the slides, press `F` for full-screen and `P` for presenter view
 - You can also view the information from the slides as __notes__ by clicking on the appropriate link - when you view them as notes the presenter notes are visible by default
 
@@ -51,7 +51,7 @@
 
 ## Course resources
 
-- The [Course Resources](../../course-information/Course-Schedule.md) page is... on GitHub
+- The [Course Resources](../../course_information/Course-Resources.md) page is... on GitHub
 - It contains a bunch of links to external resources you may find helpful during the course
 - However the course is designed to be self-sufficient so don't feel like you have to read them all
 
@@ -59,7 +59,7 @@
 
 ## Course software setup
 
-- There is a page about [Course Software Setup](../../course-information/Course-Software-Setup.md) on... what? GitHub? That's right!
+- There is a page about [Course Software Setup](../../course_information/Course-Software-Setup.md) on... what? GitHub? That's right!
 - This is intended to help those of you who want to use your own computers to do so
 - Hopefully you've already done this
 - If you haven't, do it now quietly while still listening to the class

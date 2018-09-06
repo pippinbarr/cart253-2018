@@ -32,8 +32,6 @@ After completing this course, students should be able to:
 * Use programming as a way to create interactive digital media that explores and expresses their ideas
 
 
-## [[Course Philosophy]]
-
 ## Key activities
 
 ### Lecture
@@ -58,7 +56,7 @@ Students are _not_ expected to have any programming background at all. Instead, 
 
 GitHub will replace the Moodle for this course. You are on GitHub now! The course GitHub repository will contain example code, slides, a wiki with course information, and more. Students will be able to edit the wiki as well as register issues with GitHub's issue tracker as needed.
 
-Additionally, students will create their own repository on GitHub to save, track, and submit their coursework. We will address this officially in class, but if you want a head start see the [[Git Introductory Tutorial]].
+Additionally, students will create their own repository on GitHub to save, track, and submit their coursework.
 
 
 ## Evaluation
@@ -108,6 +106,6 @@ You are of course welcome to use your own laptops and computers to the extent th
 (Click through for week-by-week information about what we will cover in the course.)
 
 
-## [Design and Computation Arts Syllabus](./Design-and-Computation-Arts-Syllabus.md)
+## [Design and Computation Arts Syllabus](http://www.concordia.ca/content/dam/finearts/design/docs/DCART_syllabus.pdf)
 
 (Click through for the standard information from D/CART that is to be included as part of all course outlines.)

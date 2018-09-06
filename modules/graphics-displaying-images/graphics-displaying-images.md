@@ -137,7 +137,6 @@ function setup() {
   image(exampleImage, 0, 0, exampleImage.width/2, exampleImage.height/2);
 }
 ```
-var exampleImage = loadImage('assets/images/exampleImage.png');
 
 - Now the image is displayed at half its original size
 

@@ -37,6 +37,9 @@
 
 ## Tools - Version control ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-version-control/index.html), [Notes](../modules/tools-version-control/tools-version-control.md))
 
+## Core - The Computation Lab (CLAB) ([Homepage](https://clab.concordia.ca/))
+Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce herself and show us the lab.
+
 ## Homework
 ### [Exercise 1](../exercises/Exercise-1.md) - Moving Pictures
 

@@ -272,7 +272,7 @@ function setup() {
 - That's kind of small
 --
 
-- Fortunately we can specify the size of canvas we want with a command called...
+- Fortunately we can specify the size of canvas we want with a function called...
 --
  `createCanvas();`
 --
@@ -390,7 +390,7 @@ function setup() {
 
 ???
 
-- Let's try these out just to make sure we get this idea of typing in commands (functions) and getting results!
+- Let's try these out just to make sure we get this idea of typing in instructions (calling functions) and getting results!
 
 ---
 

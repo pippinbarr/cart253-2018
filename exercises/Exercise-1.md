@@ -1,7 +1,7 @@
 # Exercise 1 - Moving Pictures
 
 __Grade__: 2.5% of final grade (see grading guidelines at bottom)  
-__Deadline__: 11:59PM on the day of class on week of 30 October 2017.
+__Deadline__: 11:59PM on the day of class on week of 17 September 2018.
 
 ## Brief
 

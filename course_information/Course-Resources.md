@@ -8,7 +8,7 @@ __Note:__
 
 ## Templates
 
-- [template-p5-project.zip](templates/template-p5-project.zip) - The standard project template
+- [template-p5-project.zip](../templates/template-p5-project.zip) - The standard project template
 
 ## p5
 

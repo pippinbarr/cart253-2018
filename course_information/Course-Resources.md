@@ -6,6 +6,10 @@ __Note:__
 - If something feels like it's just confusing you __stop reading it__ and just come to class and ask questions
 - __If you find something amazing to add to this then let us know!__
 
+## Templates
+
+- [template-p5-project.zip](templates/template-p5-project.zip) - The standard project template
+
 ## p5
 
 - [The p5 Homepage](https://p5js.org/) - The homepage... of p5

@@ -1,14 +1,11 @@
-/*****************
+// Exercise 1 - Moving pictures
+// Pippin Barr
+//
+// Starter code for exercise 1.
+// It moves two pictures around on the canvas.
+// One moves linearly down the screen.
+// One moves toward the mouse cursor.
 
-Exercise 1 - Moving pictures
-Pippin Barr
-
-Starter code for exercise 1.
-It moves two pictures around on the canvas.
-One moves linearly down the screen.
-One moves toward the mouse cursor.
-
-******************/
 
 // The image of a clown face
 var clownImage;
@@ -57,21 +54,25 @@ function setup() {
 // draw()
 //
 // Moves the felt image linearly
-// Moves the clown face by lerping it toward the mouse location
+// Moves the clown face toward the current mouse location
 
 function draw() {
 
   // Move the felt image down by increasing its y position
   feltTextureImageY += 1;
 
-  // Move the clown by lerping it toward the mouse
-  // Calculate the current distance between the clown and the mouse
-  var clownDistance = dist(clownImageX,clownImageY,mouseX,mouseY);
-  // Lerp the clown's x and y toward the mouse based on the distance
-  clownImageX = lerp(clownImageX,mouseX,1/clownDistance);
-  clownImageY = lerp(clownImageY,mouseY,2/clownDistance);
-
-  // Display the two images at their locations
+  // Display the felt image
   image(feltTextureImage,feltTextureImageX,feltTextureImageY);
+
+  // Move the clown by moving it 1/10th of its current distance from the mouse
+
+  // Calculate the distance in X and in Y
+  var xDistance = mouseX - clownImageX;
+  var yDistance = mouseY - clownImageY;
+  // Add 1/10th of the x and y distance to the clown's current (x,y) location
+  clownImageX = clownImageX + xDistance/10;
+  clownImageY = clownImageY + yDistance/10;
+
+  // Display the clown image
   image(clownImage,clownImageX,clownImageY);
 }

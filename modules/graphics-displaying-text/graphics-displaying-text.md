@@ -16,10 +16,14 @@
 
 - They say a thousand words is worth a picture...
 - Also being able to display text means we can display __language__
-- Which is a pretty important way to convey information in a program
+- Which can be a pretty important way to convey information in a program
 --
 
-- __Sometimes when you want to say something, you should just write it on screen.__
+- As Freud said, __sometimes a cigar is just the word "cigar".__
+
+???
+
+- Freud didn't say that
 
 ---
 
@@ -28,14 +32,15 @@
 - Most fundamentally, to display text on screen we use the `text()` command
 
 ```javascript
-text("Hello, World!", width/2, height/2);
+var helloWorld = "Hello, Word!";
+text(helloWorld, width/2, height/2);
 ```
 --
 
 - `text()` takes __three parameters__:
-  - The __string__ of text to display
-  - The __x coordinate__ to display it at
-  - The __y coordinate__ to display it at
+- The __string__ of text to display
+- The __x coordinate__ to display it at
+- The __y coordinate__ to display it at
 
 ---
 
@@ -45,8 +50,9 @@ text("Hello, World!", width/2, height/2);
 - And for this we use `textSize()`
 
 ```javascript
+var helloWorld = "Hello, Word!";
 textSize(64);
-text("Hello, World!", width/2, height/2);
+text(helloWorld, width/2, height/2);
 ```
 --
 
@@ -94,7 +100,8 @@ textAlign(LEFT,BOTTOM);
 
 ```javascript
 textAlign(CENTER,CENTER);
-text("Stuck in the middle with you.", width/2, height/2);
+var appropriateText = "Stuck in the middle with you.";
+text(appropriateText, width/2, height/2);
 ```
 --
 
@@ -103,7 +110,8 @@ text("Stuck in the middle with you.", width/2, height/2);
 
 ```javascript
 textAlign(RIGHT, BOTTOM);
-text("Stuck in the bottom-right with you.", width, height);
+var appropriateText = "Stuck in the bottom-right with you.";
+text(appropriateText, width, height);
 ```
 
 ---
@@ -117,17 +125,25 @@ text("Stuck in the bottom-right with you.", width, height);
 textSize(24);
 textLeading(24);
 textAlign(LEFT,CENTER);
-text("1\n2\n\3", width/2, height/2);
+text("Line 1\nLine 2\nLine 3", width/2, height/2);
 ```
 --
 
 - Naturally it's related to the setting we use in `textSize()`
 - So if we wanted 1.5 line-heights we'd use...
 --
- `textLeading(32)`
+`textLeading(32)`
 --
 
 - Or perhaps more conveniently `textLeading(24 * 1.5)`
+
+???
+
+- Notice how the string of text has those `\n` characters in it?
+- `\n` is a special code for "carriage return"
+- There are other special codes - feel free to look them up
+- This is called "character escaping"
+https://stackoverflow.com/questions/21672334/javascript-how-to-show-escape-characters-in-a-string
 
 ---
 
@@ -135,7 +151,7 @@ text("1\n2\n\3", width/2, height/2);
 
 - By default `text()` will use a sans-serif font
 - But we can use other fonts using `textFont()`
-- The easiest way is just to use the name of a websafe font
+- The easiest way is just to use the name of a websafe font, in which case we just use its name in `textFont()`
 
 ```javascript
 textFont("Courier");
@@ -153,7 +169,7 @@ text("Hello, Courier!", 0, height/2);
 
 ## `loadFont()`
 
-- We can also load fonts from font files in our project
+- We can also load fonts from font files in our project if we have them
 - The formats accepted are `.ttf` and `.otf`
 
 ```javascript
@@ -173,9 +189,22 @@ function preload() {
 - Once we've loaded our font, we can use the variable we saved it in with `textFont()`
 
 ```javascript
-textFont(myFont);
-textSize(32);
-text("Hello, My Cool Font!", 0, height/2);
+var myFont;
+
+function preload() {
+  myFont = loadFont("assets/fonts/myCoolFont.ttf");
+}
+
+function setup() {
+  createCanvas(500,500);
+  textFont(myFont);
+  textSize(32);
+  textAlign(CENTER,CENTER);
+}
+
+function draw() {
+  text("Hello, My Cool Font!", width/2, height/2);
+}
 ```
 
 ---

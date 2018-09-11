@@ -23,14 +23,15 @@
 - Not to mention if you want, say, a photo
 --
 
-- __Sometimes when you want an image, you should just use an image.__
+- As Freud said, __sometimes an image of a cigar should just be an image of a cigar.__
 
 ???
 
-- Note that using primitive shapes _can_ be really interesting especially as we learn more programming skills
-- We can use things like loops and conditionals to create _generative art_ out of primitive shapes
-- We can use code to create _fractals_ out of primitive points
-- And of course there are some graphical styles where we might _want_ to use primitive shapes (as a kind of minimalism, for example)
+- (Freud didn't say that.)
+- Note that using primitive shapes __can__ be really interesting especially as we learn more programming skills (drawing a cigar out of shapes would teach us things about geometry)
+- We can use things like loops and conditionals to create __generative art__ out of primitive shapes
+- We can use code to create __fractals__ out of primitive geometry
+- And of course there are some graphical styles where we might __want__ to use primitive shapes (as a kind of minimalism, for example)
 
 ---
 
@@ -45,17 +46,22 @@ var exampleImage = loadImage("assets/images/exampleImage.png");
 --
 
 - Now the variable `exampleImage` has our image stored inside it
+- This is __another__ kind of value that can go inside a variable, an image
 - Note that in this example our image file is stored in the `assets/images` folder to keep everything nicely organised
-- Note that when we specify where the image is we're using a _relative path_ that gives the folders _relative to the project folder_
+- Note that when we specify where the image is we're using a __relative path__ that gives the folders __relative to the project folder__
+
+???
+
+- Actually when we store the image in our variable what we are really storing is a __JavaScript Object__ and we will talk more about these later
 
 ---
 
 ## `preload()`
 
-- But wait, it's not as simple as we thought
-- When we load from files, there's a delay while the file loads
-- This could ruin our program if it keeps running before the file is ready!
-- To avoid this, __load files inside a special function called `preload()`__
+- But wait, it's not quite as simple as we thought
+- When we load from files, there's a __delay__ while the file loads
+- This could ruin our program if it is running before the file is ready!
+- To avoid this, we __load files inside a special function called `preload()`__
 
 ```javascript
 var exampleImage;
@@ -66,7 +72,8 @@ function preload() {
 ```
 
 - This is another one of those special functions p5 already knows about, like `setup()` and `draw()`
-- It gets run at the start of our program before anything else happens
+- It gets run at the start of our program __before anything else happens__
+- And __nothing happens until it finishes__
 
 ---
 
@@ -86,9 +93,9 @@ function setup() {
 }
 ```
 
-- The first parameter is the _variable_ the image is stored in
-- The second two parameters are the (x,y) coordinates we want the image to display at
-- By default the image will display with its _top left corner_ at that (x,y) coordinate
+- The first parameter is the __variable__ the image is stored in
+- The second two parameters are the __(x,y) coordinates__ we want the image to display at
+- Like a `rect()`, by default the image will display with its __top left corner__ at that (x,y) coordinate
 
 ---
 
@@ -106,16 +113,16 @@ function setup() {
 }
 ```
 
-- We can add two more parameters to the `image()` function to specify the _width_ and _height_ we want to display the image at
-- Note that depending on the values we use, we can _stretch_ the image out of its original aspect ratio
+- We can add two more parameters to the `image()` function to specify the __width__ and __height__ we want to display the image at
+- Note that depending on the values we use, we can __stretch__ the image out of its original aspect ratio
 
 ---
 
 ## `.width` and `.height`
 
-- If we want to know what the _original_ width and height of the a loaded image are, we can use `.width` and `.height` to "ask" the image itself
+- If we want to know what the __original__ width and height of the a loaded image are, we can use `.width` and `.height` to "ask" the image itself
 
-```
+```javascript
 console.log("The width of the image is " + exampleImage.width);
 console.log("The height of the image is " + exampleImage.height);
 ```
@@ -128,13 +135,14 @@ console.log("The height of the image is " + exampleImage.height);
 
 ```javascript
 var exampleImage;
+var scale = 0.5;
 
 function preload() {
   exampleImage = loadImage("assets/images/exampleImage.png");
 }
 
 function setup() {
-  image(exampleImage, 0, 0, exampleImage.width/2, exampleImage.height/2);
+  image(exampleImage, 0, 0, exampleImage.width * scale, exampleImage.height * scale);
 }
 ```
 
@@ -146,7 +154,7 @@ function setup() {
 
 ```javascript
 imageMode(CENTER);
-image(exampleImage, 0, 0);
+image(exampleImage, width/2, height/2);
 ```
 
 - As with `rect()` and `rectMode()` we can use `imageMode(CENTER)` to specify we want the (x,y) coordinates in `image()` to refer to the `CENTER` of our image when positioning it
@@ -160,11 +168,16 @@ image(exampleImage, 0, 0);
 
 ```javascript
 imageMode(CORNERS);
-image(exampleImage, 0, 0, 10, 50);
+image(exampleImage, 0, 0, width, height);
 ```
 
 - Here the image will be drawn so that its top left corner is at the first (x,y) coordinate, which are (0,0) in this case...
-- ... and with its bottom right corner at the second (x,y) coordinates, which are (10,50) in this case
+- ... and with its bottom right corner at the second (x,y) coordinates, which are (width,height) in this case
+- ... so what does this do?
+--
+
+- It __stretches__ the image to fill the whole canvas, ignoring the image's aspect ratio
+- Crude but effective
 
 ---
 

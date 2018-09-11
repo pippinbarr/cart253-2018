@@ -25,7 +25,9 @@
 
 ## Core - Time ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-time/index.html), [Notes](../modules/core-time/core-time.md))
 
-## Core - Variables (and math!)  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-variables-and-math/index.html), [Notes](../modules/core-variables-and-math/core-variables-and-math.md))
+## Core - Variables ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-variables/index.html), [Notes](../modules/core-variables/core-variables.md))
+
+## Core - Variables and change ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-variables-and-change/index.html), [Notes](../modules/core-variables-and-change/core-variables-and-change.md))
 
 ## Core - Variables and scope  ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-variables-and-scope/index.html), [Notes](../modules/core-variables-and-scope/core-variables-and-scope.md))
 
@@ -68,22 +70,25 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Tools - Committing ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-committing/index.html), [Notes](../modules/tools-committing/tools-committing.md))
 
+## Tools - GitHub Pages
+
 ## Homework
 ### Exercise 2 (coming soon)
-### Project 1 (coming soon)
 
 ---
 
 # Week 4 - Week of 24 September 2018
 
 ## Review
-## Physics - Collisions
-## Game - Pong
-## Core - `while` loops
-## Core - `for` loops
-## Game - Where's Wally?
-## Debugging - Loops
-## Exercise - ...
+## Core - `while` loops ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-while-loops/index.html), [Notes](../modules/core-while-loops/core-while-loops.md))
+## Core - `for` loops ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-for-loops/index.html), [Notes](../modules/core-for-loops/core-for-loops.md))
+## Game - Where's Sausage Dog? ([Game](https://pippinbarr.github.io/cart253-2018/games/game-wheres-sausage-dog/index.html), [Source Code](../games/game-wheres-sausage-dog/), [ZIP of Source Code](../games/game-wheres-sausage-dog.zip))
+## Physics - Collisions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-collisions/index.html), [Notes](../modules/physics-collisions/physics-collisions.md))
+## Game - Basic Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/game-basic-pong/index.html), [Source Code](../games/game-basic-pong/), [ZIP of Source Code](../games/game-basic-pong.zip))
+
+## Homework
+### Exercise 3 (coming soon)
+### Project 1 (coming soon)
 
 ---
 
@@ -100,9 +105,11 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 # Week 6 - Week of 8 October 2018
 
 ## Project 1 due tonight
-## Exercise 4 - ...
 
 ## Review
+
+## Homework
+### Exercise 4 (coming soon)
 
 ---
 
@@ -114,9 +121,9 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Core - Classes and instances
 ## Debugging - Object Oriented Programming
 ## Game - Multiple avatars
-## Exercise 5 - ...
-
-## Project 2 assigned
+## Homework
+### Exercise 5 (coming soon)
+### Project 2 (coming soon))
 
 ---
 

@@ -1,12 +1,13 @@
 ### Core / CART 253 / Fall 2018 / Pippin Barr
 
-# Variables (and math!)
+# Variables and scope
 
 ---
 
 ## In this module
 
-- ...
+- Where to declare variables in your program
+- When to assign values to variables
 
 ---
 
@@ -22,18 +23,20 @@
 ```javascript
 var x;
 var y;
+var speed;
 var circleSize = 50;
 
 function setup() {
   createCanvas(500,500);
   x = width/2;
   y = height/2;
+  speed = random(1,10);
   var circleColor = random(255);
   fill(circleColor);
 }
 
 function draw() {
-  x = x + 1;
+  x += speed;
   ellipse(x,y,circleSize,circleSize);
 }
 ```
@@ -58,6 +61,24 @@ function draw() {
 - If we try to use `circleColor` inside `draw()`, for example, it won't exist!
 - When you declare a variable inside a function you should imagine it popping out of existence when the program reaches the bottom of that function
 - So after `setup()` finishes, `circleColor` is gone forever
+- We do it this way because we only need to calculate `circleColor` right at the beginning, we don't need it again in this program
+
+---
+
+## Declared at the top, assigned later
+
+- Notice how both `x` and `y` are __declared__ at the top of the program with no value
+- We __wait__ to assign their values until `setup()` - why?
+--
+
+- Because it's only in `setup()` that `width` and `height` actually have values (thanks to `createCanvas()` which specifies them)
+--
+
+- It's common to __declare__ variables at the top of the program but only assign values later on
+
+???
+
+- The same thing goes for `speed` - we wait until `setup()` to calculate its __random__ value
 
 ---
 
@@ -81,7 +102,7 @@ function draw() {
 ```
 
 - That's because if you don't use `var` to create a new variable, JavaScript creates it as a __global variable__ (like the ones declared at the top of the script)
-- __Please avoid this__, it can lead to a lot of confusion
+- __Don't do this__, it can lead to a lot of confusion
 
 ---
 

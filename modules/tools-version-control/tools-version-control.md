@@ -29,15 +29,15 @@
 
 ## Git, GitHub, and GitHub Desktop
 
-- There are many forms of versions control and many version control applications
+- There are many forms of version control and many version control applications
 - We will be using a very popular tool called __Git__ and a very popular Git server called __GitHub__
 - To make things simpler, we will use an application called __GitHub Desktop__ to interface with Git, so that we don't have to use scary command-line tools
 
 ???
 
-- Yes, GitHub was bought by Microsoft which makes it part of a scary corporate juggernaut
-- In an ideal world we would use something less tied up in corporate interests, but GitHub remains a fantastic service and a good place to start with version control
-- There are other services such as BitBucket and other applications such as SourceTree that you should feel free to look into in your own time
+- Yes, GitHub was bought by Microsoft which makes it part of a scary corporate juggernaut that doesn't particularly support free and open software
+- In an ideal world we would use something less tied up in corporate interests, but GitHub remains a fantastic service and a good place for us to start with version control
+- There are other services such as GitLab and BitBucket and other applications such as SourceTree that you should feel free to look into in your own time
 
 ---
 
@@ -45,10 +45,10 @@
 
 - When we work on a project with Git we create a __repository__ for that project
 - The repository will basically just keep track of all your files over time
-- On your computer the repository for this course will just be the __folder__ containing all your course work
+- On your computer the repository for this course will just be a __folder__ containing all your course work
 - Using Git and GitHub Desktop we will keep that folder __synchronised__ with an online version on GitHub
-- For this course we'll just use _one repository_ the whole time, as if the whole course is a project
-- But usually people have a repository for _each project_ they do
+- For this course we'll just use __one repository__ the whole time, as if the whole course is a project
+- But usually people have a repository for __each project__ they do
 
 ---
 
@@ -57,22 +57,22 @@
 - Let's create our repository!
 --
 
-- Go to [github.com](https://www.github.com/) and log in (you've already have registered, right?)
+- Go to [github.com](https://www.github.com/) and log in (you've already have registered, RIGHT?)
 --
 
 - Once you're logged in click on the green "New repository" button
 --
 
-- Name it __`cart253-2018`__ (note the lowercase, the hyphen, etc.)
+- Name your repository __`cart253-2018`__ (note the lowercase, the hyphen, etc.)
 --
 
-- Make sure it's __public__
+- Make sure it's set to __public__
 --
 
 - Select __Initialize this repository with a README__
 --
 
-- Ignore the `.gitignore` and license options
+- Ignore the `.gitignore` and license options for now
 - Click the green `Create repository` button
 
 ---
@@ -81,10 +81,10 @@
 
 - You now have a repository called `cart253-2018`
 - Right now it exists __only on GitHub__ though, and not on your computer
-- We need to __clone__ it to our local computer
+- We need to __clone__ it to our local computer (cloning just means __downloading__)
 --
 
-- Launch __GitHub Desktop__
+- Launch __GitHub Desktop__ (log in to GitHub here)
 --
 
 - Go to `File > Clone Repository...`
@@ -108,7 +108,7 @@
 - Now you see the standard GitHub Desktop interface
 - This is the interface we will be using to deal with our repositories from now on
 - If you check your Desktop you'll see a __folder__ with the same name as your repository
-- That __is__ your repository!
+- That __is__ your __local copy__ of the repository!
 
 ---
 
@@ -122,10 +122,10 @@
 
 ## A version control workflow
 
-The simplest workflow using Git and GitHub is something like this:
+The simplest workflow using Git and GitHub is this:
 --
 
-1. You __make some changes to your project in your local folder__. Something like an hour's work, say, reaching some sort of defined goal perhaps.
+1. You __make some changes to your project in your local folder__. Something like an hour's work, say, reaching some sort of defined goal perhaps. (Mostly in Atom, but also includes adding files, renaming folders, etc.)
 --
 
 2. You __commit your changes to the local repository__ using GitHub Desktop. This stores this newest version of the project in the repository.
@@ -137,7 +137,7 @@ The simplest workflow using Git and GitHub is something like this:
 
 So basically you develop a rhythm of doing a chunk of work, committing and pushing it, doing another chunk of work, committing and pushing it, etc.
 
-Let's try it.
+Let's try it...
 
 ---
 
@@ -156,7 +156,7 @@ Let's try it.
 
 This is the repository for the course CART 253 for Pippin Barr.
 It is going to contain __exciting exercises__, __passionate projects__,
-and __succulent sandboxes__.
+and a __succulent sandbox__.
 
 - [My homepage](https://www.pippinbarr.com/)
 - [Twitter](https://www.twitter.com/pippinbarr)
@@ -184,7 +184,7 @@ and __succulent sandboxes__.
 - Notice how the interface has changed!
 --
 
-- The left-hand pane should be showing you a list of __changes__ detected in your repository (if it's not, select the __Changes__ tab on the left!)
+- The left-hand pane should be showing you a list of __changes__ detected in your repository (if it's not selected, select the __Changes__ tab on the left!)
 --
 
 - The right-hand pane is probably showing you the changes made to the only file we've changed, `README.md` (it shows insertions in green and deletions in red)
@@ -203,10 +203,10 @@ and __succulent sandboxes__.
 --
 
 - There's a __Summary__ which you use to describe the changes you made
-- So __write something sensible__ in there like "Wrote first version of README"
+- So __write what you did__ in there, e.g. "Wrote first version of README"
 --
 
-- There's also a __Description__ where you can write more detailed notes about what you did if you want to expand on it (this can be super helpful)
+- There's also a __Description__ where you can write more detailed notes about what you did if you want to expand on it (this can be super helpful to other people)
 --
 
 - Finally there's the blue __Commit to master__ button
@@ -216,7 +216,7 @@ and __succulent sandboxes__.
 
 ## Committed
 
-- Now the __Changes__ area goes blank because there are _no new changes_ to the repository since our last commit (just now)
+- Now the __Changes__ area goes blank because there are __no new changes__ to the repository since our last commit (just now)
 - That means those changes are __stored in the local repository__
 --
 
@@ -229,7 +229,7 @@ and __succulent sandboxes__.
 
 ???
 
-- Note that if you go and check your repository on GitHub the changes are _not there yet_ because we've only committed to the __local__ repository
+- Note that if you go and check your repository on GitHub the changes are __not there yet__ because we've only committed to the __local__ repository
 
 ---
 
@@ -237,13 +237,17 @@ and __succulent sandboxes__.
 
 - In order to upload our updated repository to the cloud on GitHub we need to __push__ the changes
 - Notice that there's a __Push origin__ button at the top of the window
-- It probably has a little number 1 with an up arrow next to it, indicate there is one commit to be pushed
+- It should have a little number 1 with an up arrow next to it, indicating there is one commit to be pushed
 - Click it
 --
 
 - You'll see a few updating messages appear on the button as GitHub Desktop uploads the repository
 - And the messages about it fetching the repository again to synchronise it...
 - And then it's done and the name has changed to __Fetch origin__ because there's nothing to push
+
+???
+
+- It is hopefully obvious that if you're not connected to the internet, you can't __push__
 
 ---
 
@@ -260,6 +264,10 @@ and __succulent sandboxes__.
 --
 
 - It worked!
+
+???
+
+- You can use the fact that the file called `README.md` is automatically displayed in any folder to add READMEs to other folders if you want to
 
 ---
 
@@ -283,7 +291,7 @@ and __succulent sandboxes__.
 
 ## "When should I commit?"
 
-- There's no single answer to the question of _when_ you should commit and push changes
+- There's no single answer to the question of __when__ you should commit and push changes
 - A simple answer is just to commit __when you've made some important change__ that was work to do and you want to save it as part of the history of development
 - Another answer is that __you probably can't commit too often__, it's almost always a good thing to do and you're more likely to do it too little than too much
 
@@ -322,16 +330,38 @@ and __succulent sandboxes__.
 ???
 
 - If you work on your own computer then this won't happen to you and you'll be able to just keep using the same folder as if nothing had happened
-- You _could_ try keeping your `cart253-2018` repository folder inside your hosted folder on the CDA computers, which would mean it won't be deleted
-- _But_ your GitHub Desktop settings _will_ still be deleted and so it's probably just easier to clone your repository each time you sit down to work
+- You __could__ try keeping your `cart253-2018` repository folder inside your hosted folder on the CDA computers, which would mean it won't be deleted
+- __But__ your GitHub Desktop settings __will__ still be deleted and so it's probably just easier to clone your repository each time you sit down to work
+
+---
+
+## Ignorance is bliss
+
+- There are certain kinds of files that you __never__ want to commit to your repository
+- For example, on a Mac there is that stupid secret file called `.DS_Store` that gets created in every folder - we don't need it in our repository
+- Fortunately, there is a special kind of file in Git-based version called `.gitignore`
+- For now let's tell our GitHub Desktop to ignore `.DS_Score`
+
+---
+
+## Ignore `.DS_Store`
+
+- In __GitHub Desktop__
+- Make sure you `cart253-2018` repository is the Current Repository selected in the top left
+- Go to `Repository > Repository Settings...`
+- Selected the `Ignored Files` tab
+- Type `.DS_Store` in the text field
+- Click `Save`
+- Notice that doing this __changes your repository__ (because it adds a `.gitignore` file)
+- So you need to now __commit__ and __push__ the file
 
 ---
 
 ## Activity
 
-Given that we have done [Exercise 0](../../exercises/Exercise-0.md) we have a JavaScript project we could put into our repository! So:
+Given that we have done [Exercise 0](../../exercises/Exercise-0.md) (RIGHT?) we have a JavaScript project we could put into our repository! So:
 
-1. Name your Exercise 0 folder `exercise0`
+1. Find your Exercise 0 folder and rename it to `exercise0`
 2. Create a folder called `exercises` inside your `cart253-2018` repository folder
 3. Put the `exercise0` folder into the `exercises` folder
 4. Go to GitHub Desktop and check that it sees the changes
@@ -339,7 +369,7 @@ Given that we have done [Exercise 0](../../exercises/Exercise-0.md) we have a Ja
 6. Commit the changes
 7. Push the changes
 
-(Normally our changes won't be adding a whole project at once, they'll be more incremental, but this is good practice.)
+(Normally our changes won't be adding a whole project at once, they'll be more incremental.)
 
 ---
 

@@ -7,17 +7,25 @@ __Deadline__: 11:59PM on the day of class on week of 30 October 2017.
 
 Create an even more bizarre and surreal collection of moving images by adding your own images and motions to the existing set.
 
+## Learning objectives
+
+- Get comfortable adding code to an existing script
+- Remember to add comments when you add/change code
+- Using Git, GitHub Desktop, and GitHub to track and submit your code
+
 ![](images/exercise-1.png)
 
 ## Challenges
 
-1. Add an image that starts off the left side of the canvas and moves 2 pixels per frame from left to right across the canvas when the program runs.
-2. Add an image that is always displayed at the current mouse location.
-3. Add an image that follows the mouse but at a different speed from the clown face.
+1. __Add an image or shape__ that starts off the left side of the canvas and moves from left to right across the canvas when the program runs.
+2. __Add an image__ that is always displayed at the current mouse location.
+3. __Add an image or shape__ that also follows the mouse but at a different speed from the clown face.
 
 (Optional challenge: add an image that moves across the screen according to a sine wave.)
 
 ## Starter Code
+
+[exercise1.zip](exercise1.zip)
 
 `script.js`:
 ```javascript
@@ -87,15 +95,19 @@ function draw() {
   // Move the felt image down by increasing its y position
   feltTextureImageY += 1;
 
-  // Move the clown by lerping it toward the mouse
-  // Calculate the current distance between the clown and the mouse
-  var clownDistance = dist(clownImageX,clownImageY,mouseX,mouseY);
-  // Lerp the clown's x and y toward the mouse based on the distance
-  clownImageX = lerp(clownImageX,mouseX,1/clownDistance);
-  clownImageY = lerp(clownImageY,mouseY,2/clownDistance);
-
-  // Display the two images at their locations
+  // Display the felt image
   image(feltTextureImage,feltTextureImageX,feltTextureImageY);
+
+  // Move the clown by moving it 1/10th of its current distance from the mouse
+
+  // Calculate the distance in X and in Y
+  var xDistance = mouseX - clownImageX;
+  var yDistance = mouseY - clownImageY;
+  // Add 1/10th of the x and y distance to the clown's current location
+  clownImageX = clownImageX + xDistance/10;
+  clownImageY = clownImageY + yDistance/10;
+
+  // Display the clown image
   image(clownImage,clownImageX,clownImageY);
 }
 ```
@@ -103,11 +115,11 @@ function draw() {
 
 ## Submission
 
-You will submit this exercise as an "Issue" on the course repository here:
+You will submit this exercise as a __comment__ on an __Issue__ on the course repository here:
 
 https://github.com/pippinbarr/cart253-2018/issues
 
-(Click on the Issue with the name of the exercise and follow the instructions.)
+(Click on the Issue with the name of the exercise and your section letter and follow the instructions.)
 
 
 ## Grading
@@ -116,7 +128,7 @@ Grading for exercises will consider the following categories equally:
 
 - __Runs__ and __implements the challenges required__
 - Has __suitable commenting for all added/changed code__
-- Includes a minimum of one initial commit of the template code, and __one commit message per challenge addressed__, all commits must have a descriptive message
+- Includes a minimum of one initial commit of the template code, and __one commit message per challenge addressed__, all commits must have a __descriptive message__
 - Uses __good naming__ for added variables
 - Is __well structured__, with new code added in sensible places in sensible orders
 

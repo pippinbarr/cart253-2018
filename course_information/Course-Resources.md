@@ -8,7 +8,7 @@ __Note:__
 
 ## Templates
 
-- [template-p5-project.zip](../templates/template-p5-project.zip) - The standard project template
+- [template-p5-project.zip](https://github.com/pippinbarr/cart253-2018/raw/master/templates/template-p5-project.zip) - The standard project template
 
 ## p5
 

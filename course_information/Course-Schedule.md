@@ -95,7 +95,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 # Week 5 - Week of 1 October 2018
 
 ## Review
-## Core - Functions
+## Core - Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-functions/index.html), [Notes](../modules/core-functions/core-functions.md))
 ## Debugging - Functions
 ## Core - JavaScript Objects
 ## Sound - Basic sound

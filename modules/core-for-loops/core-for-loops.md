@@ -257,4 +257,40 @@ function draw() {
 
 ---
 
+## Food for thought
+
+- Loops reveal a kind of scary, Terminator-like aspect of computation
+- The program is prepared to go on forever, until the end of the world, _it will not be stopped_
+- If you say, "Hey, Processing, let's print all the numbers starting from zero, one each frame", then Processing will go ahead and do that
+- Until you die.
+
+---
+
+```javascript
+var counter = 0;
+
+function setup() {
+  createCanvas(1000,500);
+  fill(255);
+  stroke(255);
+}
+
+function draw() {
+  background(0);
+  textSize(100);
+  textAlign(CENTER,CENTER);
+  textFont("Helvetica");
+  text(counter,width/2,height/2);
+  counter++;
+}
+```
+
+???
+
+- Here is some code to keep you company...
+- ... FOREVER!!
+- (Although the variable `counter` will also reach its maximum value at a certain point and roll over... but that will take a while.)
+
+---
+
 # Fin.

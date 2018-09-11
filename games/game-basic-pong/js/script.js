@@ -11,7 +11,7 @@
 var bgColor = 0;
 var fgColor = 255;
 
-// Ball
+// BALL
 
 // Position and size
 var ballX;
@@ -23,7 +23,7 @@ var ballVX;
 var ballVY;
 var ballSpeed = 5;
 
-// Left paddle
+// LEFT PADDLE
 
 // Position and size
 var leftPaddleX;
@@ -35,7 +35,7 @@ var leftPaddleHeight = 70;
 var leftPaddleVY;
 var leftPaddleSpeed = 5;
 
-// Right paddle
+// RIGHT PADDLE
 
 // Position and size
 
@@ -56,19 +56,23 @@ var rightPaddleSpeed = 5;
 // Sets initial values for paddle and ball positions
 // and velocities.
 function setup() {
+  // Create canvas and set drawing modes
   createCanvas(640,480);
   rectMode(CENTER);
   noStroke();
   fill(fgColor);
 
+  // Initialise the left paddle
   leftPaddleX = 50;
   leftPaddleY = height/2;
   leftPaddleVY = 0;
 
+  // Initialise the right paddle
   rightPaddleX = width - 50;
   rightPaddleY = height/2;
   rightPaddleVY = 0;
 
+  // Initialise the ball
   ballX = width/2;
   ballY = height/2;
   ballVX = ballSpeed;
@@ -85,74 +89,125 @@ function draw() {
   // Fill the background
   background(bgColor);
 
+  // MOVING THE PADDLES
+
   // Move the left paddle based on the location of the mouse
+  // If the mouse is above the left paddle...
   if (mouseY < leftPaddleY - leftPaddleHeight/2) {
+    // Move up
     leftPaddleVY = -leftPaddleSpeed;
   }
+  // Otherwise if the mouse is below the paddle
   else if (mouseY > leftPaddleY + leftPaddleHeight/2) {
+    // Move down
     leftPaddleVY = leftPaddleSpeed;
   }
   else {
+    // Otherwise stop moving
     leftPaddleVY = 0;
   }
 
   // Move the right paddle based on the keyboard arrows
+  // If the up arrow is being pressed
   if (keyIsDown(UP_ARROW)) {
+    // Move up
     rightPaddleVY = -rightPaddleSpeed;
   }
+  // Otherwise if the down arrow is being pressed
   else if (keyIsDown(DOWN_ARROW)) {
+    // Move down
     rightPaddleVY = rightPaddleSpeed;
   }
   else {
+    // Otherwise stop moving
     rightPaddleVY = 0;
   }
 
-  // Update the paddles' positions based on their velocity and draw them
+  // Update the paddles' positions based on their velocity
   leftPaddleY += leftPaddleVY;
-  rect(leftPaddleX,leftPaddleY,leftPaddleWidth,leftPaddleHeight);
-
   rightPaddleY += rightPaddleVY;
-  rect(rightPaddleX,rightPaddleY,rightPaddleWidth,rightPaddleHeight);
 
-  // Update the ball's position based on velocity and draw it
+  // MOVING THE BALL
+
+  // Update the ball's position based on velocity
   ballX += ballVX;
   ballY += ballVY;
-  rect(ballX,ballY,ballSize,ballSize);
+
+  // VARIABLES FOR CHECKING COLLISIONS
+
+  // We will calculate the top, bottom, left, and right of each of the
+  // paddles and the ball to make our conditionals easier to read
+
+  var ballTop = ballY - ballSize/2;
+  var ballBottom = ballY + ballSize/2;
+  var ballLeft = ballX - ballSize/2;
+  var ballRight = ballX + ballSize/2;
+
+  var leftPaddleTop = leftPaddleY - leftPaddleHeight/2;
+  var leftPaddleBottom = leftPaddleY + leftPaddleHeight/2;
+  var leftPaddleLeft = leftPaddleX - leftPaddleWidth/2;
+  var leftPaddleRight = leftPaddleX + leftPaddleWidth/2;
+
+  var rightPaddleTop = rightPaddleY - rightPaddleHeight/2;
+  var rightPaddleBottom = rightPaddleY + rightPaddleHeight/2;
+  var rightPaddleLeft = rightPaddleX - rightPaddleWidth/2;
+  var rightPaddleRight = rightPaddleX + rightPaddleWidth/2;
+
+
+  // CHECKING FOR WALL COLLISIONS
 
   // Check for ball colliding with top and bottom
-  if (ballY < 0 || ballY > height) {
+  if (ballTop < 0 || ballBottom > height) {
     // If it touched the top or bottom, reverse its vy
     ballVY = -ballVY;
   }
 
+  // CHECKING FOR OUT OF BOUNDS
+
   // Check for ball going off the sides
-  if (ballX < 0 || ballX > width) {
+  if (ballRight < 0 || ballLeft > width) {
     // If it went off either side, reset it to the centre
     ballX = width/2;
     ballY = height/2;
     // This is where we would count points etc!
   }
 
+  // CHECKING FOR PADDLE COLLISIONS
+
   // Check for ball hitting the left paddle
 
   // First check it is in the vertical range of the paddle
-  if (ballY > leftPaddleY - leftPaddleHeight/2 && ballY < leftPaddleY + leftPaddleHeight/2) {
+  if (ballBottom > leftPaddleTop && ballTop < leftPaddleBottom) {
     // Then check if it is touching the paddle horizontally
-    if (ballX < leftPaddleX + leftPaddleWidth/2 && ballX > leftPaddleX - leftPaddleWidth/2) {
-      // Then the ball is touch the paddle so rever its vx
+    if (ballLeft < leftPaddleRight && ballRight > leftPaddleLeft) {
+      // Then the ball is touching the paddle so reverse its vx
       ballVX = -ballVX;
+      // And for aesthetics let's make the ball be perfectly aligned with the paddle
+      ballX = leftPaddleX + leftPaddleWidth/2 + ballSize/2;
     }
   }
 
   // Check for ball hitting the right paddle
 
   // First check it is in the vertical range of the paddle
-  if (ballY > rightPaddleY - rightPaddleHeight/2 && ballY < rightPaddleY + rightPaddleHeight/2) {
+  if (ballBottom > rightPaddleTop && ballTop < rightPaddleBottom) {
     // Then check if it is touching the paddle horizontally
-    if (ballX < rightPaddleX + rightPaddleWidth/2 && ballX > rightPaddleX - rightPaddleWidth/2) {
-      // Then the ball is touch the paddle so rever its vx
+    if (ballRight > rightPaddleLeft && ballLeft < rightPaddleRight) {
+      // Then the ball is touching the paddle so reverse its vx
       ballVX = -ballVX;
+      // And for aesthetics let's make the ball be perfectly aligned with the paddle
+      ballX = rightPaddleX - rightPaddleWidth/2 - ballSize/2;
     }
   }
+
+  // DRAWING THE PADDLES AND BALL
+
+  // Draw the paddles
+  rect(leftPaddleX,leftPaddleY,leftPaddleWidth,leftPaddleHeight);
+  rect(rightPaddleX,rightPaddleY,rightPaddleWidth,rightPaddleHeight);
+
+  // Draw the ball
+  rect(ballX,ballY,ballSize,ballSize);
+
 
 }

@@ -97,6 +97,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Review
 ## Core - Functions
 ## Debugging - Functions
+## Core - JavaScript Objects
 ## Sound - Basic sound
 ## Game - Sound game
 
@@ -116,7 +117,6 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 # Week 7 - Week of 15 October 2018
 
 ## Review
-## Core - JavaScript Objects
 ## Core - Thinking in Objects
 ## Core - Classes and instances
 ## Debugging - Object Oriented Programming

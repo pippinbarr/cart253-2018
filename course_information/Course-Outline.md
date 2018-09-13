@@ -20,7 +20,7 @@ Office hours: Fridays, 13:30-15:30 (exceptions notified by email)
 ## TAs
 
 Section A: Samuelle Bourgault <[samuelle.bourgault@gmail.com](mailto:samuelle.bourgault@gmail.com)>  
-Section B: Michael Hemingway <[mpghemingway@gmail.com](mpghemingway@gmail.com)>
+Section B: Michael Hemingway <[michael.hemingway@concordia.ca](michael.hemingway@concordia.ca)>
 
 
 ## Description

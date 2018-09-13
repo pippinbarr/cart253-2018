@@ -1,6 +1,6 @@
 ### Core / CART 253 / Fall 2018 / Pippin Barr
 
-# Variables (and math!)
+# Variables
 
 ---
 

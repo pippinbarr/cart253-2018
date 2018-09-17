@@ -6,7 +6,9 @@
 
 ## In this module
 
-- ...
+- Velocity
+- Acceleration
+- Constraints
 
 ---
 
@@ -31,8 +33,8 @@ function draw() {
 
 - That is, if we have a variable that determines the __position__ of something (like `x`)...
 - ... and if we __change that position__ each frame
-- ... and then draw the thing in question each frame
-- ... it will __move__
+- ... and then __draw the thing__ in question each frame
+- ... it will (appear to) __move__
 
 ---
 
@@ -42,7 +44,6 @@ function draw() {
 - And there is a __name__ for the quantity you add to a position each time-step (frame) to make it move
 - That name is...
 --
-
  __velocity__
 --
 
@@ -75,6 +76,13 @@ function draw() {
 }
 ```
 
+???
+
+- Notice again how the code is now __longer__ than it used to be when we introduce velocity as a variable (instead of as a hard coded number)
+- But notice now how the velocity can __change__ while the program is running!
+- That means that things can __change direction while they move__ for instance!
+- Or __accelerate__
+
 ---
 
 ## Velocity can be negative
@@ -87,8 +95,8 @@ function draw() {
 
 ## Speed
 
-- While __velocity__ is positive or negative based on direction, the __speed__ something travels at is only ever positive (it doesn't have a direction)
-- Rather than hard-coding velocity, we could have a variable called `speed`
+- While __velocity__ is positive or negative based on direction, the __speed__ something travels at is only ever positive (it doesn't have a direction, just a magnitude)
+- Rather than hard-coding it, we should have a variable called `speed`
 - And we can set the velocity to __positive or negative `speed`__ based on the direction we want our object to go
 
 ---
@@ -119,9 +127,8 @@ function draw() {
 
 ---
 
-## Acceleration!
+## (Advanced-ish) Acceleration!
 
-- More advanced is to use the concept of acceleration too
 - __Acceleration__ determines the __rate__ that an object's __velocity__ changes
 
 ---
@@ -143,11 +150,18 @@ function setup() {
 }
 
 function draw() {
+  // Change velocity based on acceleration
   vx = vx + ax;
+  // Change position based on velocity
   x = x + vx;
   ellipse(x,y,50,50);
 }
 ```
+
+???
+
+- Note that we're limiting to the x-axis just to keep the code a little smaller
+- What happens if you start with a positive velocity and a negative acceleration?
 
 ---
 
@@ -182,7 +196,7 @@ function draw() {
 2. The lower limit. This is the smallest possible value you want the expression to result in.
 3. The upper limit. This is the highest possible value you want the experience to result in.
 
-- By constraining our velocity calculation to be between `-speed` and `speed` we're guaranteeing that the the object won't accelerate to a velocity faster than it's maximum speed
+- By constraining our velocity calculation to be between `-speed` and `speed` we're guaranteeing that the the object won't accelerate to a velocity faster than its maximum speed
 
 ---
 

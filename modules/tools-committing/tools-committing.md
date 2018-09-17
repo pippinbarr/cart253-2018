@@ -36,7 +36,7 @@
 
 - The simple answer to this is: __write what you did__
 - If you added new code that lets the player control their avatar with the mouse, then "Added mouse controls for avatar"
-- If you removed a bunch of `console.log()` messages you don't need any more, then "Removed excess debug messages"
+- If you removed a bunch of `console.log()` messages you don't need any more, then "Removed excess debugging messages"
 - If you changed a method that controls the probability of a bomb exploding, then "Changed bomb explosion probabilities"
 - ... and so on.
 

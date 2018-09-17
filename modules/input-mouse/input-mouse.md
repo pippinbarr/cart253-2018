@@ -6,7 +6,9 @@
 
 ## In this module
 
-- ...
+- `mouseX` and `mouseY`
+- `mouseIsPressed`
+- `mousePressed()` and friends
 
 ---
 
@@ -45,10 +47,10 @@ function setup() {
 
 function draw() {
   if (mouseIsPressed) {
-    background(255,0,0);
+    background(255);
   }
   else {
-    background(255,0,0);
+    background(0);
   }
 }
 ```
@@ -66,8 +68,8 @@ function mousePressed() {
 - If we include the function `mousePressed()` in our code then we can react when a mouse button is pressed down
 - This function is __called__ at the moment the user clicks a mouse button down
 - This kind of function is called an __event handler__ or __callback__ because it is called automatically when something happens
-- Notice this is __different__ from `mouseIsPressed` because `mousePressed()` is called __when the press happens__...
-- ... whereas `mouseIsPressed` is just `true` or `false` based on the state of the button
+- Notice this is __different__ from `mouseIsPressed`, which is `true` or `false` at any moment
+- `mousePressed()` is called __when the press happens__...
 
 ---
 
@@ -96,8 +98,8 @@ function mousePressed() {
 - When we click the mouse in our window, a little rectangle gets drawn at the click location
 --
 
-- Notice how mouse-based event handlers like `mousePressed()` work really well with `mouseX` and `mouseY`
-- Because __when__ the mouse is clicked we often want to know __where__ it was
+- Notice how mouse-based event handlers like `mousePressed()` often use `mouseX` and `mouseY`
+- Because __when__ the mouse is clicked we very often want to know __where__ it was
 
 ---
 
@@ -110,7 +112,7 @@ function mouseReleased() {
 ```
 
 - The obvious counterpart to `mousePressed()` is `mouseReleased()`
-- It gets called whenever p5 detects the mouse button being released!
+- Same kind of thing, but it gets called whenever p5 detects the mouse button being released!
 
 ---
 
@@ -155,13 +157,15 @@ function mouseClicked() {
 
 - `mouseClicked()` is called when the mouse is pressed and then released, a click
 - As you can read in the manual, this is handled less predictably by different browsers and only definitely works for the left mouse button
+- As such it can make sense to use `mousePressed()` and `mouseReleased()` if you want definite control
 
 ---
 
 ## `mouseButton`
 
 - We've been talking about "a button" being pressed and released, but how do you know which one?
-- Well, when `mousePressed()` and `mouseReleased()` are called, the variable `mouseButton` will have a string in it which indicates __which button was just pressed or released__
+- The variable `mouseButton` has a string in it which indicates __which button was most recently pressed__
+- So when `mousePressed()` and `mouseReleased()` are called, `mouseButton` will tell you which mouse button is was
 - It will be either `"left"`, `"right"`, or `"center"`
 - You can also use the special variables `LEFT`, `RIGHT` and `CENTER` to check against...
 
@@ -211,6 +215,11 @@ function mouseDragged() {
 - `mouseDragged()` is called whenever the mouse moves with a button held down
 - We can imagine how we could program that ourselves using `mouseMoved()` right?
 
+???
+
+- Inside `mouseMoved()` we would check to make sure `mouseIsDown` is true using...
+- ... an `if` statement
+
 ---
 
 ## mouseWheel()
@@ -225,7 +234,13 @@ function mouseWheel(event) {
 - `mouseWheel()` is called whenever the mouse wheel is moved
 - This __includes touch-based scrolling on a trackpad__
 - Notice that this function takes a __parameter__ called `event`
-- The variable `event.delta` tells us how much the wheel moved in this frame
+- Inside the function, the variable `event.delta` tells us __how much the wheel moved in this frame__
+- It's positive if it scrolled down and negative if it scrolled up
+
+???
+
+- `delta` comes from physics, where that Greek symbol (Δ) is used to represent change over time
+- You'll see if often in programming for the same reason
 
 ---
 

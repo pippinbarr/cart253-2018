@@ -6,7 +6,9 @@
 
 ## In this module
 
-- ...
+- `mouseX` and `mouseY` for touch
+- Mouse functions in general for touch
+- Specialised touch functions
 
 ---
 
@@ -32,7 +34,7 @@
 - `mousePressed()` will be called when a finger is touched onto the screen
 - `mouseReleased()` will be called when a finger is lifted off the screen
 - `mouseClicked()` will be called when a finger is tapped on the screen
-- `mouseMoved()` will be called when a finger is draggged on the screen
+- `mouseMoved()` will be called when a finger is dragged on the screen
 
 ---
 

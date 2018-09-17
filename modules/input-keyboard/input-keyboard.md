@@ -6,15 +6,17 @@
 
 ## In this module
 
-- ...
+- `keyIsPressed`
+- `keyPressed()`, `key`, and `keyCode`
+- `keyReleased()` and `keyTyped()`
 
 ---
 
 
 ## p5 knows the keyboard!
 
-- But p5 has a number of special functions and variables that let us react to the keys on the keyboard
-- They are remarkably similar to the functions for reacting to the mouse buttons
+- p5 has a number of special functions and variables that let us react to the keys on the keyboard
+- They are quite similar to the functions for reacting to the mouse buttons
 - Because... keys are just buttons
 
 ---
@@ -31,7 +33,7 @@ function draw() {
 }
 ```
 
-- The variable `keyIsPressed` is `true` when a key is pressed down and `false` otherwise
+- The variable `keyIsPressed` is `true` when any key is pressed down and `false` otherwise
 - It gives us a simple way of checking the keyboard
 
 ---
@@ -45,10 +47,10 @@ function setup() {
 
 function draw() {
   if (keyIsPressed) {
-    background(255,0,0);
+    background(255);
   }
   else {
-    background(255,0,0);
+    background(0);
   }
 }
 ```
@@ -74,7 +76,7 @@ function keyPressed() {
 function setup() {
   createCanvas(640,480);
   rectMode(CENTER);
-  fill(255,0,0);
+  fill(0);
   noStroke();
 }
 
@@ -94,7 +96,7 @@ function keyPressed() {
 
 ---
 
-## What happened?
+## But...
 
 - With `mousePressed()` we used `mouseX` and `mouseY` to get important information about the mouse press
 - So with `keyPressed()` what do we probably want to know?
@@ -110,7 +112,7 @@ function keyPressed() {
 ## `keyCode` and `key`
 
 - The variable `keyCode` always stores the __ASCII code__ of the most recently pressed key on the keyboard. It's a __number__
-- The variable `key` always stores the __character__ of the most recently pressed key on the keyboard. It's the symbol for the actual key.
+- The variable `key` always stores the __character__ of the most recently pressed key on the keyboard. It's a __string__.
 - Let's try this...
 
 ```javascript
@@ -126,6 +128,10 @@ function keyPressed() {
   console.log("keyCode=" + keyCode + ", key=" + key);
 }
 ```
+
+???
+
+- Note how this simple program is actually a pretty useful way to find out the keycodes of the various keys on the keyboard!
 
 ---
 
@@ -217,16 +223,36 @@ function keyTyped() {
 ---
 
 ```javascript
+var typedText = "";
+
 function setup() {
   createCanvas(500,500);
+  textSize(24);
+  textAlign(CENTER,CENTER);
 }
 
 function draw() {
-
+  text(typedText,width/2,height/2);
 }
 
 function keyTyped() {
-  console.log("key=" + key);
+  typedText += key;
+}
+```
+
+???
+
+- Wow, displaying keys as they are typed!
+- We've practically programmed Microsoft Word!
+- Notice how "return" doesn't work though... what would we need?
+- We'd need to use `keyPressed()` and check for `RETURN` in there in order to make our program respond to it properly
+- Specifically we'd need to add
+
+```javascript
+function keyPressed() {
+  if (keyCode === RETURN) {
+    typedText += "\n";
+  }
 }
 ```
 
@@ -280,6 +306,22 @@ function draw() {
 
 - So we can handle this idea of moving an avatar around using `keyIsDown()` in `draw()` instead of using `keyPressed()` for example...
 - Note how this makes it easy for us to stop our avatar when a movement key __is not down__
+- Quite often programming for this style of controls uses something like `keyIsDown()` instead of event handlers
+- What would we add to be able to control our avatar up and down?
+
+```javascript
+if (keyIsDown(UP_ARROW)) {
+  vy = -speed;
+}
+else if (keyIsDown(DOWN_ARROW)) {
+  vy = speed;
+}
+else {
+  vy = 0;
+}
+
+y += vy;
+```
 
 ---
 

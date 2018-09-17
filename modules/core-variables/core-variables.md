@@ -297,7 +297,7 @@ console.log(anotherMeaningOfLife);
 ???
 
 - Note how variable names are important?
-- Processing doesn't care that you're positioning a rectangle with its top-left corner at coordinates (`meaningOfLife`,`meaningOfLife`)
+- p5 doesn't care that you're positioning a rectangle with its top-left corner at coordinates (`meaningOfLife`,`meaningOfLife`)
 - But anyone reading your code would find it rather confusing!
 
 ---

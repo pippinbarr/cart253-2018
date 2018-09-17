@@ -60,7 +60,7 @@ function keyTyped() {
 
 ## Did that thing happen or not?
 
-- Using `console.log()` to accounce when things happen is especially useful when you can't tell from looking at the program
+- Using `console.log()` to announce when things happen is especially useful when you can't tell from looking at the program
 - What if you use a random number to decide whether to change a variable like this:
 
 ```javascript
@@ -108,7 +108,7 @@ function mousePressed() {
 
 ---
 
-## Breakpoints
+## (Advanced) Breakpoints
 
 - The developer tools in Chrome include a special debugging concept called _breakpoints_
 - Setting a breakpoint in our code _pauses the program_ when the it hits that line of code
@@ -173,11 +173,11 @@ function mousePressed() {
 
 ## Stepping in style
 
-- If you really want to follow your program line by line you should step breakpoints:
+- If you really want to follow your program line by line you should set breakpoints:
   - At the top of `preload()`
   - At the top of `setup()`
   - At the top of `draw()`
-  - At the top of each __event handler__
+  - At the top of each __event handler__ (e.g. `mousePressed()`)
 - Then when a breakpoint is hit you should __step__ until the bottom of the function and then hit __play__ to avoid the p5 library code
 - Let's try that now...
 

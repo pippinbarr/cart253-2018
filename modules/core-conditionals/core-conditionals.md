@@ -6,7 +6,10 @@
 
 ## In this module
 
-- ...
+- `true`, `false`, and making decisions
+- Conditional operators
+- `if` statements
+- Logic operators
 
 ---
 
@@ -51,7 +54,7 @@
 - In programming we talk about things that can be `true` or `false` as _conditional expressions_ and they're often kind of like maths:
 
 `23 < 24` is `true`  
-`1 + 1 == 3` is `false`
+`1 + 1 === 3` is `false`
 
 - We use these kinds of expressions to _check what's happening_ in our code, and then react to it
 - Usually it's better if we use variables!
@@ -76,12 +79,16 @@ avatarX > width
 2 > 1 // Greater than
 1 <= 2 // Less than or equal to
 2 >= 1 // Greater than or equal to
-1 !== 2 // Inequality
 1 === 1 // Equality
+1 !== 2 // Inequality
 ```
 
 - See? Maths. All the above are `true`
 - Note that this means we are very often checking __numbers__ with these operators
+
+???
+
+- Note that you will often see equality written as `==` instead of `===`. Both work, but they are subtly different. Generally speaking, until you learn the difference at some point it's better to use `===` to avoid potential trouble.
 
 ---
 
@@ -104,6 +111,14 @@ if (mouseX > width/2) {
 - This is an `if` statement that checks whether the mouse is in the right-hand side of the window
 - And if the mouse __is__ over there, it makes the background of the window black
 - Let's break it down...
+
+???
+
+- If you put this into the a project template you should put it inside the `draw()` function
+- Why?
+- Because you want this "question" the `if` statement represents to be asked over and over, each frame, so that the program will react when the truth value of the expression changes
+- If we put it in `setup()` it will only run once!
+- Sometimes we might have `if` statements in `setup()`, too, but if they're meant to help our program react to live events, then they should be in `draw()`
 
 ---
 
@@ -148,7 +163,8 @@ if (mouseX > width/2) {
 - __Inside the parentheses__ we have our __condition__: .hi[`mouseX > width/2`]
 - This is __the thing we want to check__
 - We want to know if it's `true` or `false`
-- In this case we're asking "is the mouse's x coordinate in the right-hand side of the window?"
+- In English we're asking "is the mouse's x coordinate in the right-hand side of the window?"
+- This is also known as a __conditional expression__
 
 ---
 
@@ -190,14 +206,15 @@ if (mouseX > width/2) {
 }
 ```
 
-- And that's an `if`-statement
+- And that's an `if` statement
 - You start with __`if`__
-- You specify the __condition__ to check inside __parentheses__
+- You specify the __conditional expression__ to check inside __parentheses__
 - Then you specify the __instructions__ to run if the condition is `true` inside __curly brackets__
 
 ???
 
 - Now we have plenty of brackets to think about, both parentheses __and__ curly brackets
+- And these parentheses and curly brackets can belong to functions or to if statements (and later to other things)
 - This means we need to get used to being careful about making sure they match correctly
 - The parentheses go around the __condition__ only, and then the curly brackets come __right after that__ and go around the __instructions__
 - Any slight mistakes here will break the program, so be careful when you're starting out
@@ -247,7 +264,7 @@ else {
 
 - When `mouseX <= width/2`
 - That is, when the mouse is on the __left-hand side__ the window
-- It's good to practice __seeing__ the mathematical condition, but __thinking__ what it __means__
+- Practice __seeing__ the mathematical condition, but __thinking__ what it __means__
 
 ---
 
@@ -334,10 +351,10 @@ else {
 ## An `if else if` statement
 
 ```javascript
-if (mouseX < 50) {
+if (mouseX < width/3) {
   background(0);
 }
-else if (mouseX < 100) {
+else if (mouseX < 2*width/3) {
   background(255);
 }
 else {
@@ -348,27 +365,27 @@ else {
 - So what would this do you figure this will do?
 --
 
-- Yeah, it will make the background black if the mouse is less that 50 pixels from the left margin, white if it's between 50 pixels and 100 pixels from the left margin, and red if it's 100 or more pixels from the left margin...
+- Yeah, it will make the background black if the mouse is one third of the canvas from from the left margin, white if it's between one third and two thirds from the left margin, and red if it's more than two thirds from the left margin...
 --
 
 - It's interesting how the code is kind of __easier to read__ than that
-- Programming is really good at concisely expressing these kinds of technical ideas
+- Code is great for concisely expressing these kinds of technical ideas
 
 ---
 
 ## `if else if else if else if...`
 
 ```javascript
-if (mouseX < 50) {
+if (mouseX < width/5) {
   background(0);
 }
-else if (mouseX < 100) {
+else if (mouseX < 2*width/5) {
   background(255);
 }
-else if (mouseX < 150) {
+else if (mouseX < 3*width/5) {
   background(0,255,0);
 }
-else if (mouseX < 200) {
+else if (mouseX < 4*width/5) {
   background(0,0,255);
 }
 else {
@@ -382,10 +399,10 @@ else {
 
 ## What if also this other thing?
 
-- We can put whatever instructions we want inside the curly brackets of an `if`-statement...
+- We can put whatever instructions we want inside the curly brackets of an `if` statement...
 --
 
-- ... Including another `if`-statement!
+- ... Including another `if` statement!
 
 ---
 
@@ -399,7 +416,7 @@ if (mouseX > width/2) {
 }
 ```
 
-- Putting an `if`-statement inside an `if`-statement is called __nesting__ the `if`s
+- Putting an `if` statement inside an `if` statement is called __nesting__ the `if`s
 - Now the `background(0);` instruction will only happen if __both conditions are `true`__
 - So the mouse has to be in the right half of the window
 - __And__ it has to be in the bottom half of the window
@@ -437,10 +454,10 @@ if (mouseX > width/2) {
 ## Logically speaking...
 
 .hi[`(a && b)`]  
-This is `true` if _both_ `a` and `b` are `true`, otherwise it is `false`.
+This is `true` if __both__ `a` and `b` are `true`, otherwise it is `false`.
 
 .hi[`(a || b)`]  
-This is `true` if _either_ `a` _or_ `b` are `true`, otherwise it is `false`.
+This is `true` if __either__ `a` __or__ `b` are `true`, otherwise it is `false`.
 
 .hi[`(!a)`]  
 This is `true` if `a` is `false`, and `false` if it's `true`.
@@ -515,7 +532,7 @@ JavaScript will:
 
 ???
 
-- When people talk about this conversion process it is often called __coercion__
+- When people talk about this conversion process it is usually called __coercion__
 - Read more here: https://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/
 
 ---
@@ -552,6 +569,7 @@ if (!(10 > 0 && 9 < 10)) {
 ???
 
 - __Hint:__ I'm a Dallas Cowboys fan.
+- Also: don't use a bunch of hard coded values like this of course!
 
 ---
 
@@ -560,17 +578,15 @@ if (!(10 > 0 && 9 < 10)) {
 - So far we've mostly looked at conditions involve hardcoded numbers
 - But the true value of `if` statements is in checking the values of _variables_
 
-++ do some kind of a button hover thing
-
-++ do some kind of simple moving shape thing that changes colour when past half-way
-
 ---
 
-## Changing colours
+## Changing colours based on position
 
 ```javascript
 var circleX;
 var circleY;
+var circleSpeed = 2;
+var circleVX = circleSpeed;
 var circleSize = 100;
 
 function setup() {
@@ -587,37 +603,45 @@ function draw() {
   else {
     fill(0,255,0);
   }
+
+  circleX += circleVX;
+
   ellipse(circleX,circleY,circleSize,circleSize);
-  circleX += 2;
 }
 ```
 
 ---
 
-## Hover effect...
+## Hover effect
 
 ```javascript
-var buttonX;
-var buttonY;
-var buttonSize = 100;
+var circleX;
+var circleY;
+var circleSize = 100;
 
 function setup() {
   createCanvas(500,500);
-  buttonX = width/2;
-  buttonY = height/2;
+  circleX = width/2;
+  circleY = height/2;
 }
 
 function draw() {
   background(255);
-  if (dist(mouseX,mouseY,buttonX,buttonY) < buttonSize/2) {
+  if (dist(mouseX,mouseY,circleX,circleY) < circleSize/2) {
     fill(255,0,0);
   }
   else {
     fill(255);
   }
-  ellipse(buttonX,buttonY,buttonSize,buttonSize);
+  ellipse(circleX,circleY,circleSize,circleSize);
 }
 ```
+
+???
+
+- The `dist()` function returns the distance between two sets of (x,y) coordinates
+- In the case above, it's returning the distance between the __mouse position__ and the __centre of the circle__
+- We then check that distance to find whether it's __inside the circle__ by checking it against the __radius__ of the circle (the distance from the centre of the circle to its perimeter), which is __half the diameter__ of the circle
 
 ---
 
@@ -638,10 +662,10 @@ if (avatarX < 0 || avatarX > width || avatarY < 0 || avatarY > height) {
 
 - Now we can make __decisions__ in our code based on __context__
 - This is a huge step because it means our programs can __behave differently__ based on what happens
-- But be aware that this is a double-edged (+10) sword... can you think of a danger?
+- But be aware that this is a double-edged (+10) sword...
 --
 
-- Exactly. It can be very tempting to think of programming as
+- It can be very tempting to think of programming as
 
 _if this then that otherwise that but if this then that other thing unless this in which case that and then that..._
 
@@ -652,15 +676,16 @@ _if this then that otherwise that but if this then that other thing unless this 
 _If the player smiles then make the sun get brighter, if the player tries to shave with their broadsword check their shaving skill tree and if they have at least 4 shave points and the sun is up and they talked to the priest then the shave is successful but otherwise they cut their own head off and if they climb a mountain and if the mountain is actually a giant then the giant wakes up if the sun is in its eyes and otherwise there is a five percent chance it wakes up but only if the player prayed at the Homunculus altar at the start of the game and if..._
 
 - This is the problem of __content generation__ in games in particular
+- But really any dynamic, richly interactive system
 - And this is why the actual things you can do in games is __so limited__
 
 ???
 
-- A big part of the solution concerns not modeling games at the level of “action and reaction” but creating the underlying systems.
+- A big part of the solution concerns not modeling games at the level of specifying “action and reaction” but creating the underlying systems.
 - So you make a physics system rather than “what happens if they jump off a mountain, what about off a chair?”
 - Procedural content modeling is a major area of research here, too.
 - Ultimately this is a very serious issue in creating games/worlds.
 
 ---
 
-## Fin.
+# Fin.

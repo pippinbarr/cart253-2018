@@ -6,7 +6,8 @@
 
 ## In this module
 
-- ...
+- Set up, update, handle events
+- Seeing time
 
 ---
 
@@ -71,7 +72,9 @@ function setup() {
 function draw() {
   noStroke();
   fill(255);
-  rect(random(0,width),random(0,height),50,50);
+  var x = random(0,width);
+  var y = random(0,height);
+  rect(x,y,50,50);
 }
 
 function mousePressed() {
@@ -91,7 +94,7 @@ function keyTyped() {
 - `setup()` is used to specify the various qualities of the program, in this case just the canvas size
 - `draw()` is used to have something happening all the time - in this case white squares drawn onto the canvas which interact with the display of the image and text in the event handlers
 - `mousePressed()` (an event handler, remember) is used to have an action performed when the user clicks (the image is displayed there)
-- `keyTyped()` (also an event handler) is use to have an action performed when the user types a key on the keyboard (that character is displayed at the location of the mouse)
+- `keyTyped()` (also an event handler) is used to have an action performed when the user types a key on the keyboard (that character is displayed at the location of the mouse)
 - Clearly we will want to do more meaningful things than this, having the different elements of time work together to create something cohesive and interesting
 - But we can already see how they interact even here - the squares in `draw()` gradually erase the actions performed in the event handlers, the text event could be used to write on top of the image in the mouse event, etc.
 

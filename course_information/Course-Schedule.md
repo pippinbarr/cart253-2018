@@ -68,9 +68,9 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Input - Touch input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-touch/index.html), [Notes](../modules/input-touch/input-touch.md))
 
-## Tools - Committing ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-committing/index.html), [Notes](../modules/tools-committing/tools-committing.md))
+## Tools - Committing Refresher ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-committing/index.html), [Notes](../modules/tools-committing/tools-committing.md))
 
-## Tools - GitHub Pages
+## Tools - GitHub Pages ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-github-pages/index.html), [Notes](../modules/tools-github-pages/tools-github-pages.md))
 
 ## Homework
 ### Exercise 2 (coming soon)

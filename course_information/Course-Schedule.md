@@ -80,10 +80,15 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 # Week 4 - Week of 24 September 2018
 
 ## Review
+
 ## Core - `while` loops ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-while-loops/index.html), [Notes](../modules/core-while-loops/core-while-loops.md))
+
 ## Core - `for` loops ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-for-loops/index.html), [Notes](../modules/core-for-loops/core-for-loops.md))
+
 ## Game - Where's Sausage Dog? ([Game](https://pippinbarr.github.io/cart253-2018/games/game-wheres-sausage-dog/index.html), [Source Code](../games/game-wheres-sausage-dog/), [ZIP of Source Code](../games/game-wheres-sausage-dog.zip))
+
 ## Physics - Collisions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-collisions/index.html), [Notes](../modules/physics-collisions/physics-collisions.md))
+
 ## Game - Basic Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/game-basic-pong/index.html), [Source Code](../games/game-basic-pong/), [ZIP of Source Code](../games/game-basic-pong.zip))
 
 ## Homework
@@ -95,10 +100,15 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 # Week 5 - Week of 1 October 2018
 
 ## Review
+
 ## Core - Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-functions/index.html), [Notes](../modules/core-functions/core-functions.md))
-## Debugging - Functions
-## Core - JavaScript Objects
-## Sound - Basic sound
+
+## Debugging - Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-functions/index.html), [Notes](../modules/debugging-functions/debugging-functions.md))
+
+## Core - JavaScript Objects ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-javascript-objects/index.html), [Notes](../modules/core-javascript-objects/core-javascript-objects.md))
+
+## Sound - Basic sound ([Slides](https://pippinbarr.github.io/cart253-2018/modules/sound-basic-sound/index.html), [Notes](../modules/sound-basic-sound/sound-basic-sound.md))
+
 ## Game - Sound game
 
 ---

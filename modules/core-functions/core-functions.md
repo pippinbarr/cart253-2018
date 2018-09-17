@@ -716,7 +716,7 @@ function convertFahrenheitToCelcius(temperature) {
 
 ---
 
-## `convertFahrenheitToCelcius` sucks right now
+## `convertFahrenheitToCelcius()` sucks right now
 
 ```javascript
 function convertFahrenheitToCelcius(temperature) {
@@ -731,7 +731,7 @@ function convertFahrenheitToCelcius(temperature) {
 
 ---
 
-## `convertFahrenheitToCelcius` sucks less...
+## `convertFahrenheitToCelcius()` sucks less...
 
 ```javascript
 function convertFahrenheitToCelcius(temperature) {
@@ -746,7 +746,7 @@ function convertFahrenheitToCelcius(temperature) {
 
 ---
 
-## Damn it `convertFahrenheitToCelcius`!!!
+## Damn it `convertFahrenheitToCelcius()`!!!
 
 ```javascript
 function setup() {
@@ -776,7 +776,7 @@ function convertFahrenheitToCelcius(temperature) {
 
 ---
 
-## `tripleTheWidth` you beautiful function you!
+## `convertFahrenheitToCelcius()` you beautiful function you!
 
 ```javascript
 function setup() {
@@ -802,7 +802,7 @@ function convertFahrenheitToCelcius(temperature) {
 
 ---
 
-## `tripleTheWidth` you beautiful function you!
+## `convertFahrenheitToCelcius()` you beautiful function you!
 
 ```javascript
 function setup() {

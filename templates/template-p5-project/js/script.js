@@ -8,6 +8,15 @@ author, and this description to match your project!
 
 ******************/
 
+// preload()
+//
+// Description of preload
+
+function preload() {
+
+}
+
+
 // setup()
 //
 // Description of setup

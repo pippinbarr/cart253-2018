@@ -1,11 +1,11 @@
-/******************************************************
+/*********************************************************
 
-Game - The Artful Dodger
+Exercise 2 - The Artful Dodger
 Pippin Barr
 
-A simple dodging game with keyboard controls
+Starter code for exercise 2.
 
-******************************************************/
+*********************************************************/
 
 // The position and size of our avatar circle
 var avatarX;
@@ -21,10 +21,14 @@ var avatarVY = 0;
 var enemyX;
 var enemyY;
 var enemySize = 50;
+// How much bigger the enemy circle gets with each successful dodge
+var enemySizeIncrease = 5;
 
 // The speed and velocity of our enemy circle
 var enemySpeed = 5;
 var enemyVX = 5;;
+// How much bigger the enemy circle gets with each successful dodge
+var enemySpeedIncrease = 0.5;
 
 // How many dodges the player has made
 var dodges = 0;
@@ -84,7 +88,7 @@ function draw() {
   avatarX = avatarX + avatarVX;
   avatarY = avatarY + avatarVY;
 
-  // The enemy always moves at enemySpeed
+  // The enemy always moves at enemySpeed (which increases)
   enemyVX = enemySpeed;
   // Update the enemy's position based on its velocity
   enemyX = enemyX + enemyVX;
@@ -98,6 +102,9 @@ function draw() {
     // Reset the enemy's position
     enemyX = 0;
     enemyY = random(0,height);
+    // Reset the enemy's size and speed
+    enemySize = 50;
+    enemySpeed = 5;
     // Reset the avatar's position
     avatarX = width/2;
     avatarY = height/2;
@@ -111,6 +118,8 @@ function draw() {
     console.log("YOU LOSE!");
     enemyX = 0;
     enemyY = random(0,height);
+    enemySize = 50;
+    enemySpeed = 5;
     avatarX = width/2;
     avatarY = height/2;
     dodges = 0;
@@ -125,10 +134,13 @@ function draw() {
     // Reset the enemy's position to the left at a random height
     enemyX = 0;
     enemyY = random(0,height);
+    // Increase the enemy's speed and size to make the game harder
+    enemySpeed = enemySpeed + enemySpeedIncrease;
+    enemySize = enemySize + enemySizeIncrease;
   }
 
-  // Display the number of successful dodges in the console
-  console.lgo(dodges);
+  // Display the current number of successful in the console
+  console.log(dodges);
 
   // The player is black
   fill(0);

@@ -10,7 +10,7 @@ Department of Design and Computation Arts
 (Send emails with a subject line of "[CART 253] Your subject here")  
 [www.pippinbarr.com](http://www.pippinbarr.com/)  
 Office: EV 6.745  
-Office hours: Fridays, 13:30-15:30 (exceptions notified by email)
+Office hours: Fridays, 13:00-15:30 (exceptions notified by email)
 
 ## TAs
 

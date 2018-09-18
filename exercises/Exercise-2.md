@@ -29,7 +29,7 @@ Optional challenge: After doing all this, are you able to turn this into a mobil
 
 ## Starter Code
 
-[exercise1.zip](exercise1.zip)
+[exercise2.zip](exercise2.zip)
 
 
 ## Submission

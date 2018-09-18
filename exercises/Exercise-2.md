@@ -14,7 +14,7 @@ Modify the Artful Dodger game to add some extra elements to the gameplay.
 - Changing visuals
 - Using conditionals to change gameplay
 
-![](images/exercise2.png)
+![](images/exercise-2.png)
 
 ## Challenges
 

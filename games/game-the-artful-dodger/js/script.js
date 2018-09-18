@@ -24,7 +24,7 @@ var enemySize = 50;
 
 // The speed and velocity of our enemy circle
 var enemySpeed = 5;
-var enemyVX = 5;;
+var enemyVX = 5;
 
 // How many dodges the player has made
 var dodges = 0;
@@ -128,7 +128,7 @@ function draw() {
   }
 
   // Display the number of successful dodges in the console
-  console.lgo(dodges);
+  console.log(dodges);
 
   // The player is black
   fill(0);

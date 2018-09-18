@@ -26,7 +26,7 @@ var enemySizeIncrease = 5;
 
 // The speed and velocity of our enemy circle
 var enemySpeed = 5;
-var enemyVX = 5;;
+var enemyVX = 5;
 // How much bigger the enemy circle gets with each successful dodge
 var enemySpeedIncrease = 0.5;
 

@@ -68,7 +68,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Input - Touch input ([Slides](https://pippinbarr.github.io/cart253-2018/modules/input-touch/index.html), [Notes](../modules/input-touch/input-touch.md))
 
-## Tools - Committing Refresher ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-committing/index.html), [Notes](../modules/tools-committing/tools-committing.md))
+## Tools - Committing (Refresher) ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-committing/index.html), [Notes](../modules/tools-committing/tools-committing.md))
 
 ## Tools - GitHub Pages ([Slides](https://pippinbarr.github.io/cart253-2018/modules/tools-github-pages/index.html), [Notes](../modules/tools-github-pages/tools-github-pages.md))
 
@@ -87,9 +87,11 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Game - Where's Sausage Dog? ([Game](https://pippinbarr.github.io/cart253-2018/games/game-wheres-sausage-dog/index.html), [Source Code](../games/game-wheres-sausage-dog/), [ZIP of Source Code](../games/game-wheres-sausage-dog.zip))
 
-## Physics - Collisions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-collisions/index.html), [Notes](../modules/physics-collisions/physics-collisions.md))
+## Physics - Wraps and Overlaps ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-wraps-and-overlaps/index.html), [Notes](../modules/physics-wraps-and-overlaps/physics-wraps-and-overlaps.md))
 
-## Game - Basic Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/game-basic-pong/index.html), [Source Code](../games/game-basic-pong/), [ZIP of Source Code](../games/game-basic-pong.zip))
+## Core - Randomness, Probability and Perlin Noise
+
+## Game - Chaser
 
 ## Homework
 ### Exercise 3 (coming soon)
@@ -105,11 +107,15 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Debugging - Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-functions/index.html), [Notes](../modules/debugging-functions/debugging-functions.md))
 
+## Core - Timers
+
 ## Core - JavaScript Objects ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-javascript-objects/index.html), [Notes](../modules/core-javascript-objects/core-javascript-objects.md))
+
+## Physics - Collisions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-collisions/index.html), [Notes](../modules/physics-collisions/physics-collisions.md))
 
 ## Sound - Basic sound ([Slides](https://pippinbarr.github.io/cart253-2018/modules/sound-basic-sound/index.html), [Notes](../modules/sound-basic-sound/sound-basic-sound.md))
 
-## Game - Sound game
+## Game - Basic Pong <<< add sound, convert to JS Objects? ([Game](https://pippinbarr.github.io/cart253-2018/games/game-basic-pong/index.html), [Source Code](../games/game-basic-pong/), [ZIP of Source Code](../games/game-basic-pong.zip))
 
 ---
 

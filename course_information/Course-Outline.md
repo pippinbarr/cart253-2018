@@ -15,7 +15,7 @@ Department of Design and Computation Arts
 [www.pippinbarr.com](http://www.pippinbarr.com/)  
 
 Office: EV 6.745  
-Office hours: Fridays, 13:30-15:30 (exceptions notified by email)
+Office hours: Fridays, 13:00-15:30 (exceptions notified by email)
 
 ## TAs
 

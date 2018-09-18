@@ -14,16 +14,17 @@ Modify the Artful Dodger game to add some extra elements to the gameplay.
 - Changing visuals
 - Using conditionals to change gameplay
 
-![]()
+![](images/exercise2.png)
 
 ## Challenges
 
 As always, begin by downloading the start code ([exercise2.zip](exercise2.zip)). Add it to your repository and commit it as "Ex2: Started exercise 2". Then complete and commit each challenge below separately with a descriptive commit messages. Remember to comment your work.
 
 1. Change the game to display the number of successful dodges in the game itself (use the `text()` function for this) with nice typography (e.g. use `textAlign()`, `textSize()`, etc.)
-2. Change the game so that the enemy changes size and speed by a set amount (use variables) each time you successfully dodge it, make sure you reset the size and speed of the enemy when the player loses
+2. ~~Change the game so that the enemy changes size and speed by a set amount (use variables) each time you successfully dodge it, make sure you reset the size and speed of the enemy when the player loses~~ __CANCELLED BECAUSE I LEFT THIS CODE IN ALREADY LIKE AN IDIOT__
 3. Change the visuals of the game using shapes and/or images, including changing the background, the enemy, and the player
 4. Change the game to add at least one more new `if` statement that changes the game further (could be based on enemy and player positions, keyboard commands, mouse buttons, etc. and could change the graphics, speeds, positions, scores, etc.)
+5. Change the game so that the player changes size and speed too, but by a __random amount__ after each successful dodge, the amount should be able to be positive or negative. Speed and size should never become less than zero, however.
 
 Optional challenge: After doing all this, are you able to turn this into a mobile-friendly game? You'll have to replace the keyboard controls with touch controls and think about the aspect ratio.
 

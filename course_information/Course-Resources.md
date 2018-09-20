@@ -10,6 +10,10 @@ __Note:__
 
 - [template-p5-project.zip](https://github.com/pippinbarr/cart253-2018/raw/master/templates/template-p5-project.zip) - The standard project template
 
+## Software Shortcuts
+
+- [A list of software shortcuts(https://github.com/pippinbarr/cart253-2018/blob/master/course_information/Software-Shortcuts.md) that might come in handy (feel free to suggest additions)
+
 ## p5
 
 - [The p5 Homepage](https://p5js.org/) - The homepage... of p5

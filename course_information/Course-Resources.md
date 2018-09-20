@@ -12,7 +12,7 @@ __Note:__
 
 ## Software Shortcuts
 
-- [A list of software shortcuts(https://github.com/pippinbarr/cart253-2018/blob/master/course_information/Software-Shortcuts.md) that might come in handy (feel free to suggest additions)
+- https://github.com/pippinbarr/cart253-2018/blob/master/course_information/Software-Shortcuts.md - A list of software shortcuts that might come in handy (feel free to suggest additions)
 
 ## p5
 

@@ -89,7 +89,9 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Physics - Wraps and Overlaps ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-wraps-and-overlaps/index.html), [Notes](../modules/physics-wraps-and-overlaps/physics-wraps-and-overlaps.md))
 
-## Core - Randomness, Probability and Perlin Noise
+## Core - Randomness, Probability and Perlin Noise ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-randomness-probability-and-perlin-noise/index.html), [Notes](../modules/core-randomness-probability-and-perlin-noise/core-randomness-probability-and-perlin-noise.md))
+
+## Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-functions/index.html), [Notes](../modules/core-functions/core-functions.md))
 
 ## Game - Chaser
 
@@ -103,7 +105,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Review
 
-## Core - Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-functions/index.html), [Notes](../modules/core-functions/core-functions.md))
+## Core - Functions with parameters and return values ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-functions-with-parameters-and-return-values/index.html), [Notes](../modules/core-functions-with-parameters-and-return-values/core-functions-with-parameters-and-return-values.md))
 
 ## Debugging - Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-functions/index.html), [Notes](../modules/debugging-functions/debugging-functions.md))
 

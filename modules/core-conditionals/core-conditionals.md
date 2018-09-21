@@ -331,10 +331,10 @@ else {
 ## An `if else if` statement
 
 ```javascript
-if (mouseX > width/2) {
+if (mouseX < width/3) {
   background(0);
 }
-else if (mouseX > width/4) {
+else if (mouseX < 2*width/3) {
   background(255);
 }
 else {
@@ -471,17 +471,17 @@ var x = 10;
 var y = 150;
 ```
 
-- `(x < y && x * y == 1500)` is...
+- `(x < y && x * y === 1500)` is...
 --
  `true`
 --
 
-- `(x < y && y / x == 14)` is...
+- `(x < y && y / x === 14)` is...
 --
  `false`
 --
 
-- `(x < y || y / x == 14)` is...
+- `(x < y || y / x === 14)` is...
 --
  `true`
 --
@@ -491,7 +491,7 @@ var y = 150;
  `true`
 --
 
-- `(x + y == 160 && !((y < x) || (y / 50) > 100))` is...
+- `(x + y === 160 && !((y < x) || (y / 50) > 100))` is...
 --
  `true`
 --
@@ -655,6 +655,56 @@ if (avatarX < 0 || avatarX > width || avatarY < 0 || avatarY > height) {
 
 - This would whether an imagined avatar has gone off the screen
 - Maybe it should... die for this!
+
+---
+
+## `true` and `false` are values
+
+- We've seen that conditional expressions evaluate as either `true` or `false`
+- And in fact `true` and `false` are __values__ we can store in __variables__
+- This __type__ of value is called a __boolean__
+- Storing a boolean in a variable can be a useful way to track the state of things in a program...
+
+---
+
+```javascript
+var hasEnteredCircle = false;
+var circleX;
+var circleY;
+var circleRadius = 50;
+
+function setup() {
+  createCanvas(500,500);
+  circleX = width/2;
+  circleY = height/2;
+}
+
+function draw() {
+  background(200);
+
+  var d = dist(mouseX,mouseY,circleX,circleY);
+  console.log(d);
+  if (d < circleRadius) {
+    hasEnteredCircle = true;
+  }
+
+  if (hasEnteredCircle) {
+    fill(255,0,0);
+  }
+  else {
+    fill(0);
+  }
+
+  ellipse(circleX,circleY,circleRadius*2);
+}
+```
+
+???
+
+- So here we're able to __remember__ that whether or not the mouse has ever been inside the circle
+- Rather than checking each frame
+- This basic concept can be very helpful when our program needs to remember whether something has happened at some point in the past, rather than always "living in the now"
+- We might want to remember if our game has started, whether the user has clicked a specific button in the past, etc.
 
 ---
 

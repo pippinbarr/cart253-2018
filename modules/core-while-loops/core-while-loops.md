@@ -6,7 +6,9 @@
 
 ## In this module
 
--
+- Repetition
+- Repetition
+- Repetition
 
 ---
 
@@ -17,37 +19,40 @@
 
 ---
 
-## Building the fence...
+## Drawing a caterpillar...
 
 ```javascript
-var boardWidth = 20;
-var boardHeight = 200;
+var startX;
+var startY;
+var segmentRadius = 20;
 
-createCanvas(640,480);
-background(100,200,100);
-fill(100,80,80);
+function setup() {
+  createCanvas(640,480);
+  noStroke();
+  fill(80,200,80);
+  startX = width/5;
+  startY = height/2;
+}
 
-rect(0,height-boardHeight,boardWidth,boardHeight);
-rect(1*boardWidth,height-boardHeight,boardWidth,boardHeight);
-rect(2*boardWidth,height-boardHeight,boardWidth,boardHeight);
-rect(3*boardWidth,height-boardHeight,boardWidth,boardHeight);
-rect(4*boardWidth,height-boardHeight,boardWidth,boardHeight);
-rect(5*boardWidth,height-boardHeight,boardWidth,boardHeight);
-...
+function draw() {
+  background(200,250,200);
+  ellipse(startX,startY,segmentRadius*2);
+  ellipse(startX + segmentRadius*1.5,startY,segmentRadius*2);
+  ellipse(startX + segmentRadius*3,startY,segmentRadius*2);
+  ellipse(startX + segmentRadius*4.5,startY,segmentRadius*2);
+  ellipse(startX + segmentRadius*6,startY,segmentRadius*2);
+  ...
+}
 ```
 --
 And then you die of boredom.
 
-???
-
-__Note:__ We use `height-boardHeight` as the y coordinate of each board to make it align with the bottom of the screen. If we drew it at `height` its top-left corner would be at the bottom (and we wouldn't see it), so we subtract `boardHeight` to draw it perfectly aligned.
-
 ---
 
-## But I don't want to die of boredom...
+## But I don't _want_ to die of boredom...
 
 - This feels too much like work, and computers are meant to do that!
-- Can't we just tell JavaScript how to draw __one__ board, and have it understand how to draw all of them?
+- Can't we just tell JavaScript how to draw __one__ segment of the caterpillar, and have it understand how to draw __all__ of them?
 - Yes, we can do that
 - And it's called a __loop__
 
@@ -57,7 +62,7 @@ __Note:__ We use `height-boardHeight` as the y coordinate of each board to make 
 
 ```javascript
 while (condition) {
-  // Do something, like draw a board!
+  // Do something, like draw a caterpillar segment!
 }
 ```
 
@@ -67,11 +72,11 @@ while (condition) {
 
 ---
 
-## Building that fence...
+## Drawing that caterpillar...
 
 ```javascript
-while (theFenceIsNotBuilt) {
-  // Add a board
+while (theCaterpillarIsNotFinished) {
+  // Add a segment
 }
 ```
 
@@ -84,81 +89,144 @@ while (theFenceIsNotBuilt) {
 
 - There are three main things we need to know when we write a loop:
 
-- A ___starting condition___ that defines the way things are before the loop starts. (The fence is not drawn.)
-- A ___stopping condition___ that defines when we should stop our loop. (The fence is drawn.)
-- One or more ___actions___ that are carried out inside the loop that eventually cause it to stop. (Draw one board.)
+- A ___starting condition___ that defines the way things are before the loop starts. (The caterpillar is not drawn.)
+- A ___stopping condition___ that defines when we should stop our loop. (The caterpillar is drawn.)
+- One or more ___actions___ that are carried out inside the loop that eventually cause it to stop. (Draw one segment.)
 
 ---
 
-## Painting the fence with a loop
+## Caterpillar with a loop
 
 ```javascript
-var boardX = 0;
-var boardWidth = 20;
-var boardHeight = 200;
+var startX;
+var startY;
+var segmentRadius = 20;
+var numSegments = 10;
 
 function setup() {
-  createCanvas(640, 480);
-  background(100,200,100);
-  fill(100,80,80);
+  createCanvas(640,480);
+  noStroke();
+  fill(80,200,80);
+  startX = width/5;
+  startY = height/2;
 }
 
 function draw() {
-  while (boardX < width) {
-    rect(boardX, height-boardHeight, boardWidth, boardHeight);
-    boardX += boardWidth;
+  background(200,250,200);
+  var segmentsDrawn = 0;
+  var x = startX;
+  while (segmentsDrawn < numSegments) {
+    ellipse(x,startY,segmentRadius*2);
+    x += segmentRadius * 1.5;
+    segmentsDrawn++;
   }
 }
 ```
 
 ???
 
-- Here we have a loop version of building the fence!
+- Here we have a loop version of drawing the caterpillar!
 - The start conditions are the variables along with the size of the window
-- The stopping condition is when `boardX` is greater than the width (we've filled the window)
-- The actions are to draw a board in the current location, and then __move__ the location to the right
+- The stopping condition is when `segmentsDrawn` is equal to `numSegments` (e.g. we've drawn the caterpillar)
+- The actions are to draw a segment in the current location, and then __move__ the location to the right
 
 ---
 
 ## The loop
 
 ```javascript
-while (boardX < width) {
-  rect(boardX, height-boardHeight, boardWidth, boardHeight);
-  boardX += boardWidth;
+while (segmentsDrawn < numSegments) {
+  ellipse(x,startY,segmentRadius*2);
+  x += segmentRadius * 1.5;
+  segmentsDrawn++;
 }
 ```
 
-- The loop __ends__ when `boardX` is greater than the width (e.g. we've drawn a fence all the way across the window)
-- Notice that we need to __change__ `boardX` in the loop or it would __never end__
-- So we need that condition to become __false__ at some point
+- The loop __ends__ when `segmentsDrawn` is equal to `numSegments` (e.g. all the segments have been drawn)
+- Notice that we need to __change__ `segmentsDrawn` in the loop or it would __never end__
+- Because we need the condition to become __false__ at some point
+- Note we also change `x` each time through to move the drawing position of the segments
+
+---
+
+## Cutening step
+
+- See slide notes for adding a face to the caterpillar
+
+???
+
+- Code below
+- Note how we have the go __back__ by one step for `x` in order to get the right position
+
+```javascript
+var startX;
+var startY;
+var segmentRadius = 20;
+var numSegments = 10;
+
+function setup() {
+  createCanvas(640,480);
+  startX = width/5;
+  startY = height/2;
+}
+
+function draw() {
+  background(200,250,200);
+  fill(80,200,80);
+  noStroke();
+  var segmentsDrawn = 0;
+  var x = startX;
+  while (segmentsDrawn < numSegments) {
+    ellipse(x,startY,segmentRadius*2);
+    x += segmentRadius * 1.5;
+    segmentsDrawn++;
+  }
+  x -= segmentRadius * 1.5;
+  fill(0);
+  stroke(0);
+  ellipse(x - segmentRadius/2,startY,5);
+  ellipse(x + segmentRadius/2,startY,5);
+  line(x - segmentRadius/2,startY + segmentRadius/4,x + segmentRadius/2,startY + segmentRadius/4)
+}
+```
 
 ---
 
 ## So what does this do?
 
 ```javascript
+var x;
+var y;
+var startRadius = 100;
+var startFill = 0;
+
 function setup() {
-  createCanvas(640,480);
+  createCanvas(500,500);
   noStroke();
-  fill(255,0,0,50);
+  x = width/2;
+  y = height/2;
 }
 
 function draw() {
-  var currentLocation = 0;
-  while (currentLocation < mouseX) {
-    ellipse(currentLocation,mouseY,30,30);
-    currentLocation += 20;
+  background(255);
+  var radius = startRadius;
+  var currentFill = startFill;
+  while (radius > 0) {
+    fill(currentFill);
+    ellipse(x,y,radius);
+    radius--;
+    currentFill = map(radius,0,startRadius,255,0);
   }
 }
 ```
 
 ???
 
-- It draws a series of circles between the left side of the canvas and wherever the mouse is
-- Importantly, it draws the squares __all at once each frame__
-- You don't see them animate toward the mouse position
-- Because the __whole while loop runs each frame__ and only after the instructions are finished do we see the rendered graphics
+- It draws a sphere!
+- Kind of.
+- It drawns diminishing circles that also change their fill color relative to their size (using `map`)
+- The result looks uncannily like a sphere, but we know better!
+- But when is a sphere a sphere, anyway?
 
 ---
 
@@ -189,7 +257,9 @@ _And they'll continue singing it forever, just because..._
 
 ???
 
-- The song that doesn't end from Lamb Chop Play-ALong: https://www.youtube.com/watch?v=HNTxr2NJHa0
+- The song that doesn't end from Lamb Chop Play-Along:
+- https://www.youtube.com/watch?v=HNTxr2NJHa0
+- You're welcome.
 
 ---
 
@@ -225,9 +295,11 @@ function draw() {
 ???
 
 - What happens here?
-- It kind of looks like the code from earlier and that it should draw squares between the left of the window and the mouse position
-- But there's a trap here, which is that `mouseX` will __never change__ because we don't ever repeat the `draw()` loop
+- It kind of looks like it should be okay... like it should draw circles to the mouse location if the mouse is to the left of the canvas...
+- But there's a trap here, which is that `mouseX` will __never change__
 - `mouseX` will always be `0`, and so the `while` condition will always be `true`
+- `mouseX` never changes, because we __never escape from that `while` loop__... it goes on forever
+- It's called an __infinite loop__
 
 ---
 
@@ -259,7 +331,65 @@ function draw() {
 
 - Much easier than drawing each of 1000 stars individually right?
 - What happens if you move the while loop (including the starting condition) into the `draw()` loop?
+- Yeah, we get TV static!
+- Kind of a bummer if you wanted to maintain that same star-field
+- We'll see ways to maintain it in code later, but really you should likely just use a background image if you want a fixed star field (or similar randomly generated image)
 
+---
+
+## Bonus wiggling
+
+- See slide notes
+
+???
+
+- Here we're using `sin()` to calculate a `y` value for each segment based on a sine function
+- Because we incrementally change the angle (`theta`) going into the sine function per segment, we get a wave effect
+- Don't worry if this is a bit much right now, keep it in your back pocket
+
+```javascript
+var startX;
+var startY;
+var segmentRadius = 20;
+var numSegments = 10;
+var wiggleRange = 20;
+
+function setup() {
+  createCanvas(640,480);
+  startX = width/5;
+  startY = height/2;
+}
+
+function draw() {
+  background(200,250,200);
+  fill(80,200,80);
+  noStroke();
+  var segmentsDrawn = 0;
+  var x = startX;
+  // See in the loop for an explanation of this line - we're doing it here
+  // to calculate the starting position of the caterpillar based on sine
+  var y = startY + (sin(theta) * wiggleRange);
+  var theta = 0;
+  while (segmentsDrawn < numSegments) {
+    // Calculate y based on a sine wave
+    // Remember that sin() gives back a number between -1 and 1
+    // So we'll be adding a number between -wiggleRange and wiggleRange to the base startY position
+    ellipse(x,y,segmentRadius*2);
+    x += segmentRadius * 1.5;
+    y = startY + (sin(theta) * wiggleRange);
+    // By incrementing theta we're changing the angle we're calculating the sine of
+    // that will change the output, and we'll see a sine wave
+    theta += 1;
+    segmentsDrawn++;
+  }
+  x -= segmentRadius * 1.5;
+  fill(0);
+  stroke(0);
+  ellipse(x - segmentRadius/2,y,5);
+  ellipse(x + segmentRadius/2,y,5);
+  line(x - segmentRadius/2,y + segmentRadius/4,x + segmentRadius/2,y + segmentRadius/4)
+}
+```
 
 ---
 

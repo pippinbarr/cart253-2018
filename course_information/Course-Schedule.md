@@ -93,7 +93,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-functions/index.html), [Notes](../modules/core-functions/core-functions.md))
 
-## Game - Chaser
+## Game - Chaser ([Game](https://pippinbarr.github.io/cart253-2018/games/game-chaser/index.html), [Source Code](../games/game-chaser/), [ZIP of Source Code](../games/game-chaser.zip))
 
 ## Homework
 ### Exercise 3 (coming soon)

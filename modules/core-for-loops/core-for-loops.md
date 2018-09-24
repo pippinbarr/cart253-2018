@@ -29,7 +29,7 @@ for (var i = 0; i < 10; i++) {
 
 - This `for` loop counts from `0` to `9` in the variable `i` and prints out the value of `i` each time
 - So we will see 0, 1, 2, 3... etc.
-- Let's look at this syntax, which is a bit odd...
+- Let's look at this syntax...
 
 ---
 
@@ -42,7 +42,8 @@ for (var i = 0; i < 10; i++) {
 ```
 
 - First we have the word .hi[`for`]
-- It means, "this is a `for` loop", somewhat unsurprisingly
+- It means, "this is a `for` loop"
+- We're deeply familiar with this idea now, a special word for a special effect
 
 ---
 
@@ -55,8 +56,8 @@ for (var i = 0; i < 10; i++) {
 ```
 
 - Next we have .hi[`( ... )`], a set of parenthesis around some information
-- We know these days that this means "here is the information needed to do this"
-- Unlike a `while` loop, though, we give __three pieces of information__ in here
+- We know from other examples that this means "here is the information needed to do this"
+- Unlike a `while` loop we give __three pieces of information__ in here
 
 ---
 
@@ -103,6 +104,7 @@ for (var i = 0; i < 10; i++) {
 - This is the __condition__ for this `for` loop
 - While the condition is `true` the `for` loop keeps going, once it's `false` the `for` loop ends
 - This is __checked at the start of the loop every time through__
+- This is just like the condition in a `while` loop
 
 ---
 
@@ -132,7 +134,6 @@ for (var i = 0; i < 10; i++) {
 - In this case we are adding `1` to `i` each time through the loop
 - So the first time `i` is `0`, then it's `1`, then it's `2`, and so on
 - Adding `1` is the most common update step by far
-- But you can do other things if you want
 
 ---
 
@@ -182,37 +183,50 @@ for (var i = 0; i <= 100; i += 10) {
 ```javascript
 var i = 0;
 while (i < 10) {
-  println(i);
+  console.log(i);
   i++;
 }
 ```
 
 ```javascript
 for (var i = 0; i < 10; i++) {
-  println(i);
+  console.log(i);
 }
 ```
 
 - These are exactly the same thing
 - `for` is just a bit shorter to write for the specific situation of __counting__
+- People often prefer it in these situations and you'll see it a lot
+
+???
+
+- Later, when we get to __arrays__ you'll see `for` loops doing this counting job a lot
 
 ---
 
-## Draw that fence with `for`!
+## Draw that caterpillar with `for`!
 
 ```javascript
-var boardWidth = 20;
-var boardHeight = 200;
+var startX;
+var startY;
+var segmentRadius = 20;
+var numSegments = 10;
 
 function setup() {
-  createCanvas(1024, 480);
-  background(100,200,100);
-  fill(100,80,80);
+  createCanvas(640,480);
+  noStroke();
+  fill(80,200,80);
+  startX = width/5;
+  startY = height/2;
 }
 
 function draw() {
-  for (var x = 0; x < width; x += boardWidth) {
-    rect(x, height-boardHeight, boardWidth, boardHeight);
+  background(200,250,200);
+  var segmentsDrawn = 0;
+  var x = startX;
+  for (var i = 0; i < numSegments; i++) {
+    ellipse(x,startY,segmentRadius*2);
+    x += segmentRadius * 1.5;
   }
 }
 ```
@@ -253,7 +267,7 @@ function draw() {
 - Again, loops are all about getting the computer to do the heavy lifting when it comes to repetitive instructions
 - `for` loops and `while` loops are equivalent to one another
 - You will most often see `for` loops when it's simply a matter of counting up (or down) in set increments
-- `while` loops are often used more like repeating `if` statements that, for example, keep adjusting a value until it's in the right range
+- `while` loops are often used more like repeating `if` statements that, for example, keep adjusting a value until it's in the right range, or doing something until a more complex condition occurs than just a count
 
 ---
 
@@ -273,16 +287,17 @@ function setup() {
   createCanvas(1000,500);
   fill(255);
   stroke(255);
+  textSize(100);
+  textAlign(CENTER,CENTER);
+  textFont("Helvetica");
 }
 
 function draw() {
   background(0);
-  textSize(100);
-  textAlign(CENTER,CENTER);
-  textFont("Helvetica");
-  text(counter,width/2,height/2);
+  text("You are\n" + counter + "\nframes closer to your death.",width/2,height/2);
   counter++;
 }
+
 ```
 
 ???
@@ -290,6 +305,7 @@ function draw() {
 - Here is some code to keep you company...
 - ... FOREVER!!
 - (Although the variable `counter` will also reach its maximum value at a certain point and roll over... but that will take a while.)
+- Note of course that this is using the `draw()` loop rather than `while` or `for` because we want the looping thing (the `counter` going up) to take place over time
 
 ---
 

@@ -1,12 +1,14 @@
-// Where's Sausage Dog?
-// by Pippin Barr
-//
-// An algorithmic version of a Where's Wally searching game where you
-// need to click on the sausage dog you're searching for in amongst all
-// the visual noise of other animals.
-//
-// Animal images from:
-// https://creativenerds.co.uk/freebies/80-free-wildlife-icons-the-best-ever-animal-icon-set/
+/******************************************************************************
+Where's Sausage Dog?
+by Pippin Barr
+
+An algorithmic version of a Where's Wally searching game where you
+need to click on the sausage dog you're searching for in amongst all
+the visual noise of other animals.
+
+Animal images from:
+https://creativenerds.co.uk/freebies/80-free-wildlife-icons-the-best-ever-animal-icon-set/
+******************************************************************************/
 
 // Position and image of the sausage dog we're searching for
 var targetX;
@@ -28,6 +30,9 @@ var decoyImage10;
 // The number of decoys to show on the screen, randomly
 // chosen from the decoy images
 var numDecoys = 100;
+
+// Keep track of whether they've won
+var gameOver = false;
 
 // preload()
 //
@@ -65,6 +70,7 @@ function setup() {
     var r = random();
     // Use the random number to display one of the ten decoy
     // images, each with a 10% chance of being shown
+    // We'll talk more about this nice quality of random soon enough
     if (r < 0.1) {
       image(decoyImage1,x,y);
     }
@@ -105,7 +111,21 @@ function setup() {
 }
 
 function draw() {
+  if (gameOver) {
+    // Prepare our typography
+    textFont("Helvetica");
+    textSize(128);
+    textAlign(CENTER,CENTER);
+    noStroke();
+    fill(random(255));
+    // Tell them they won!
+    text("YOU WINNED!",width/2,height/2);
 
+    noFill();
+    stroke(random(255));
+    strokeWeight(10);
+    ellipse(targetX,targetY,targetImage.width,targetImage.height);
+  }
 }
 
 // mousePressed()
@@ -116,13 +136,7 @@ function mousePressed() {
   if (mouseX > targetX - targetImage.width/2 && mouseX < targetX + targetImage.width/2) {
     // Check if the mouse is also in the y range of the target
     if (mouseY > targetY - targetImage.height/2 && mouseY < targetY + targetImage.height/2) {
-      // Prepare our typography
-      textFont("Helvetica");
-      textSize(128);
-      textAlign(CENTER,CENTER);
-      fill("#000000cc");
-      // Tell them they won!
-      text("You win!",width/2,height/2);
+      gameOver = true;
     }
   }
 }

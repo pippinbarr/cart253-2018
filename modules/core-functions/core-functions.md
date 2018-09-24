@@ -47,7 +47,8 @@
 - In programming we only want to know as much as we __need__ to know to get our work done
 - Computation is all about __hiding__ the details when they're irrelevant
 - This ability to ignore those details frees us up to do more, better, and more creative work
-- Now, of course, we know more than we used to - we know about the code level
+- Now, of course, we know more than we used to
+- We know about the code level, we see the Matrix
 
 ---
 
@@ -55,7 +56,7 @@
 
 - Given how helpful it is to have all the details of `rect()` hidden...
 - ... it would be nice if we could use this trick of hiding stuff ourselves
-- We already do this with variables in some sense, hiding changing numbers inside names
+- We already do this with variables in some sense, hiding numbers inside names
 - But we could think more clearly about our code if we could tidy it up based on what it does
 
 ---
@@ -68,171 +69,65 @@
 
 ---
 
-## So you want to draw an avatar
+## Resetting the game
+
+- Consider the code for resetting the game in __The Artful Dodger__
 
 ```javascript
-function setup() {
-  createCanvas(640,480);
-}
-
-function draw() {
-  var avatarX = width/2;
-  var avatarY = height/2;
-  var avatarSize = 100;
-  fill(255);
-  ellipse(avatarX,avatarY,avatarSize,avatarSize);
-  fill(0);
-  ellipse(avatarX - avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse(avatarX + avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse (avatarX,avatarY + avatarSize/4,avatarSize/4,avatarSize/4);
-}
+// Reset the enemy's position
+enemyX = 0;
+enemyY = random(0,height);
+// Reset the avatar's position
+avatarX = width/2;
+avatarY = height/2;
+// Reset the dodge counter
+dodges = 0;
 ```
 
 ---
 
-## So you want to draw two avatars...
+## Resetting twice
 
-```javascript
-function setup() {
-  createCanvas(640,480);
-}
-
-function draw() {
-  var avatarX = width/4;
-  var avatarY = height/2;
-  var avatarSize = 100;
-  fill(255);
-  ellipse(avatarX,avatarY,avatarSize,avatarSize);
-  fill(0);
-  ellipse(avatarX - avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse(avatarX + avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse (avatarX,avatarY + avatarSize/4,avatarSize/4,avatarSize/4);
-
-  var avatar2X = 3*width/4;
-  var avatar2Y = height/2;
-  var avatar2Size = 100;
-  fill(255);
-  ellipse(avatar2X,avatar2Y,avatar2Size,avatar2Size);
-  fill(0);
-  ellipse(avatar2X - avatar2Size/4,avatar2Y,avatar2Size/8,avatar2Size/8);
-  ellipse(avatar2X + avatar2Size/4,avatar2Y,avatar2Size/8,avatar2Size/8);
-  ellipse (avatar2X,avatar2Y + avatar2Size/4,avatar2Size/4,avatar2Size/4);
-}
-```
+- The resetting instructions appear __twice__ in the code, and it's exactly the same both times
+- That's because, semantically, we want to do the same thing: reset the game
+- Resetting the game is a kind of higher level __instruction__ for us
+- We should always be suspicious of doing the __same thing in more than one place__
 
 ---
 
-## Well, that worked, but...
+## Defining a function
 
-- As soon as we wanted to basically do the same thing twice our code started looking pretty stupid
-- We're so obviously doing __almost__ the same thing twice, shouldn't there just be a way to call `drawAvatar()`?
-- Well yes there is, ___obviously___.
+- Whenever we want to group a set of instructions together so we can use them in more than one place easily, we __define a function__
 
 ```javascript
-function setup() {
-  createCanvas(640,480);
-}
-
-function draw() {
-  drawAvatar();
+function reset() {
+  // Reset the enemy's position
+  enemyX = 0;
+  enemyY = random(0,height);
+  // Reset the avatar's position
+  avatarX = width/2;
+  avatarY = height/2;
+  // Reset the dodge counter
+  dodges = 0;
 }
 ```
 
----
-
-## Okay, fine.
-
-- Apparently our `drawAvatar()` doesn't exist as a function in Processing
---
-
-- __Yet!__
---
-
-- We're going to have to define it ourselves so we can use it
+- Exactly the same code, but now __inside a function definition__
 
 ---
 
 ## Defining a function
 
 ```javascript
-function setup() {
-  createCanvas(640,480);
-}
-
-function draw() {
-  drawAvatar();
-}
-
-function drawAvatar() {
-  var avatarX = width/2;
-  var avatarY = height/2;
-  var avatarSize = 100;
-  fill(255);
-  ellipse(avatarX,avatarY,avatarSize,avatarSize);
-  fill(0);
-  ellipse(avatarX - avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse(avatarX + avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse (avatarX,avatarY + avatarSize/4,avatarSize/4,avatarSize/4);
-}
-```
-
-- Here is a function definition for our avatar
-
----
-
-## Defining a function
-
-```javascript
-function setup() {
-  createCanvas(640,480);
-}
-
-function draw() {
-  drawAvatar();
-}
-
-function drawAvatar() {
-  var avatarX = width/2;
-  var avatarY = height/2;
-  var avatarSize = 100;
-  fill(255);
-  ellipse(avatarX,avatarY,avatarSize,avatarSize);
-  fill(0);
-  ellipse(avatarX - avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse(avatarX + avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse (avatarX,avatarY + avatarSize/4,avatarSize/4,avatarSize/4);
-}
-```
-
-- It comes __after__ our `draw()` function
-
-???
-
-- This is a stylistic choice - you __can__ put the function __above__ where it is called, but people tend not to do that
-
----
-
-## Defining a function
-
-```javascript
-function setup() {
-  createCanvas(640,480);
-}
-
-function draw() {
-  drawAvatar();
-}
-
-function drawAvatar() {
-  var avatarX = width/2;
-  var avatarY = height/2;
-  var avatarSize = 100;
-  fill(255);
-  ellipse(avatarX,avatarY,avatarSize,avatarSize);
-  fill(0);
-  ellipse(avatarX - avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse(avatarX + avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse (avatarX,avatarY + avatarSize/4,avatarSize/4,avatarSize/4);
+function reset() {
+  // Reset the enemy's position
+  enemyX = 0;
+  enemyY = random(0,height);
+  // Reset the avatar's position
+  avatarX = width/2;
+  avatarY = height/2;
+  // Reset the dodge counter
+  dodges = 0;
 }
 ```
 
@@ -243,28 +138,19 @@ function drawAvatar() {
 ## Defining a function
 
 ```javascript
-function setup() {
-  createCanvas(640,480);
-}
-
-function draw() {
-  drawAvatar();
-}
-
-function drawAvatar() {
-  var avatarX = width/2;
-  var avatarY = height/2;
-  var avatarSize = 100;
-  fill(255);
-  ellipse(avatarX,avatarY,avatarSize,avatarSize);
-  fill(0);
-  ellipse(avatarX - avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse(avatarX + avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse (avatarX,avatarY + avatarSize/4,avatarSize/4,avatarSize/4);
+function reset() {
+  // Reset the enemy's position
+  enemyX = 0;
+  enemyY = random(0,height);
+  // Reset the avatar's position
+  avatarX = width/2;
+  avatarY = height/2;
+  // Reset the dodge counter
+  dodges = 0;
 }
 ```
 
-- Next we have the __name__ of the function, .hi[`drawAvatar`]
+- Next we have the __name__ of the function, .hi[`reset`]
 
 ???
 
@@ -275,24 +161,15 @@ function drawAvatar() {
 ## Defining a function
 
 ```javascript
-function setup() {
-  createCanvas(640,480);
-}
-
-function draw() {
-  drawAvatar();
-}
-
-function drawAvatar() {
-  var avatarX = width/2;
-  var avatarY = height/2;
-  var avatarSize = 100;
-  fill(255);
-  ellipse(avatarX,avatarY,avatarSize,avatarSize);
-  fill(0);
-  ellipse(avatarX - avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse(avatarX + avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse (avatarX,avatarY + avatarSize/4,avatarSize/4,avatarSize/4);
+function reset() {
+  // Reset the enemy's position
+  enemyX = 0;
+  enemyY = random(0,height);
+  // Reset the avatar's position
+  avatarX = width/2;
+  avatarY = height/2;
+  // Reset the dodge counter
+  dodges = 0;
 }
 ```
 
@@ -303,24 +180,15 @@ function drawAvatar() {
 ## Defining a function
 
 ```javascript
-function setup() {
-  createCanvas(640,480);
-}
-
-function draw() {
-  drawAvatar();
-}
-
-function drawAvatar() {
-  var avatarX = width/2;
-  var avatarY = height/2;
-  var avatarSize = 100;
-  fill(255);
-  ellipse(avatarX,avatarY,avatarSize,avatarSize);
-  fill(0);
-  ellipse(avatarX - avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse(avatarX + avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse (avatarX,avatarY + avatarSize/4,avatarSize/4,avatarSize/4);
+function reset() {
+  // Reset the enemy's position
+  enemyX = 0;
+  enemyY = random(0,height);
+  // Reset the avatar's position
+  avatarX = width/2;
+  avatarY = height/2;
+  // Reset the dodge counter
+  dodges = 0;
 }
 ```
 
@@ -331,48 +199,53 @@ function drawAvatar() {
 ## Defining a function
 
 ```javascript
-function setup() {
-  createCanvas(640,480);
-}
-
-function draw() {
-  drawAvatar();
-}
-
-function drawAvatar() {
-  var avatarX = width/2;
-  var avatarY = height/2;
-  var avatarSize = 100;
-  fill(255);
-  ellipse(avatarX,avatarY,avatarSize,avatarSize);
-  fill(0);
-  ellipse(avatarX - avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse(avatarX + avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse (avatarX,avatarY + avatarSize/4,avatarSize/4,avatarSize/4);
+function reset() {
+  // Reset the enemy's position
+  enemyX = 0;
+  enemyY = random(0,height);
+  // Reset the avatar's position
+  avatarX = width/2;
+  avatarY = height/2;
+  // Reset the dodge counter
+  dodges = 0;
 }
 ```
 
-- Inside, we have the 9 lines of code that execute the function! (Could be more! Could be less!)
+## Calling a function
+
+- Now that we've __defined__ it, anywhere in our code that we want code in `reset()` to be run we can __call__ our `reset()` function
+- By just including the code
+
+```javascript
+reset();
+```
+
+---
+
+## Where?
+
+- Generally speaking, when we add our own functions to our programs we'll put them __below `draw()`__
 
 ---
 
 ## It works!
 
-- We have now __abstracted__ the idea of "draw an avatar" into our function
-- Notice how our `draw()` now looks __far more clear than before__
-- It literally says what it is going to do: draw an avatar
+- We have now __abstracted__ the idea of "reset the game" into a function
+- When we include it in the game code it looks __far more clear than before__
+- It literally says what it is going to do: __reset__ the game
 - This idea of moving blocks of related code into functions to make your programs clearer is a huge win
 
 ---
 
 ## Flow...
 
-- The program starts with `setup()` and runs the code there
-- Then it jumps to `draw()` and starts running that code
-- It gets to `drawAvatar()`, our function, and jumps to __that__ function
-- It runs the code inside `drawAvatar()` then jumps __back__ to where it was in `draw()`
-- Then it hits the end of `draw()` and jumps back to the top of `draw()` for the next frame
-- And on it goes...
+- Now we have added complexity to the __control flow__ of our program
+- It starts in `setup()`
+- Moves to `draw()`
+- When it encounters our function it jumps to `reset()`
+- Then back to where it was in `draw()`
+- When it finishes `draw()` it jumps back to the top of `draw()` for another frame
+- And so on!
 
 ---
 

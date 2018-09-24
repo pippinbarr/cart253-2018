@@ -44,7 +44,7 @@ function draw() {
 ## And they go off the screen...
 
 - Going off the screen is potentially an important __event__ in a program
-- If the avatar goes off the screen in a game, it might mean we should load a new area
+- If the avatar goes off the screen in a game, it might mean we should load a new area (or kill them! Kill! Kill!)
 - If an enemy goes off the screen in a game, it might mean we missed our opportunity to destroy it, or that we successfully avoided it
 - So it would be good to detect this situation
 --
@@ -107,7 +107,7 @@ function draw() {
   x = x + vx;
   y = y + vy;
 
-  if (x - radius < 0 || x + radius > width || y - radius < 0 || y + radius > width) {
+  if (x + radius < 0 || x - radius > width || y + radius < 0 || y - radius > width) {
     console.log("Off-screen!");
   }
 
@@ -118,26 +118,26 @@ function draw() {
 ???
 
 - If we want to check if the __whole circle__ is off the screen, we have to account for its size, not just its center point
-- This is easy with a circle as we can just use its radius
 - With rectangles it means we adjust by the rectangle's width and height
-- With irregular shapes we usually adjust by its __bounding box__ (the imaginary rectangle that would surround the whole shape)
+- With non-rectangular shapes (like ellipses) we usually adjust by its __bounding box__ (the imaginary rectangle that would surround the whole shape)
+- In the case of an ellipse, we can define its bounding box by its radius
 
 ---
 
 ## Wrapping
 
 ```javascript
-if (x - radius < 0) {
+if (x + radius < 0) {
   x += width;
 }
-else if (x + radius > width) {
+else if (x - radius > width) {
   x -= width;
 }
 
-if (y - radius < 0) {
+if (y + radius < 0) {
   y += height;
 }
-else if (y + radius > width) {
+else if (y - radius > height) {
   y -= height;
 }
 ```
@@ -152,18 +152,20 @@ else if (y + radius > width) {
 
 ```javascript
 var x;
+var y;
 var vx;
 var x2;
+var y2;
 var vx2;
-var y;
 var radius = 25;
 var speed = 2;
 
 function setup() {
   createCanvas(500,500);
   x = width/4;
+  y = height/2 - radius/2;
   x2 = 3*width/4;
-  y = height/2;
+  y2 = height/2 + radius/2;
   vx = speed;
   vx2 = -speed;
 }
@@ -173,14 +175,9 @@ function draw() {
   x2 = x2 + vx2;
 
   ellipse(x,y,radius * 2);
-  ellipse(x2,y,radius * 2);
+  ellipse(x2,y2,radius * 2);
 }
 ```
-
-???
-
-- Note that both shapes are __sharing__ the use of the `y` variable to determine their y position
-- This is helpful in this case because we want them to run into each other and so they should be vertically aligned if they're moving horizontally
 
 ---
 
@@ -198,7 +195,7 @@ function draw() {
 ---
 
 ```javascript
-var d = dist(x,y,x2,y);
+var d = dist(x,y,x2,y2);
 
 if (d < radius * 2) {
   console.log("Overlap!");
@@ -213,7 +210,7 @@ if (d < radius * 2) {
 - What mathematical formula do you think it uses?
 --
 
-- Pythagoras! Specifically, the Pythagoreum Theorem
+- Pythagoras! Specifically, the Pythagorean Theorem
 
 ???
 
@@ -225,7 +222,7 @@ if (d < radius * 2) {
 ## Do something with it
 
 ```javascript
-var d = dist(x,y,x2,y);
+var d = dist(x,y,x2,y2);
 
 if (d < radius * 2) {
   fill(255,0,0);
@@ -246,8 +243,10 @@ if (d < radius * 2) {
 
 ```javascript
 var x;
+var y;
 var vx;
 var x2;
+var y2;
 var vx2;
 var y;
 var radius = 25;
@@ -257,17 +256,19 @@ var drawCircles = true;
 function setup() {
   createCanvas(500,500);
   x = width/4;
+  y = height/2 - radius/2;
   x2 = 3*width/4;
-  y = height/2;
+  y2 = height/2 + radius/2;
   vx = speed;
   vx2 = -speed;
 }
 
 function draw() {
+  background(255);
   x = x + vx;
   x2 = x2 + vx2;
 
-  var d = dist(x,y,x2,y);
+  var d = dist(x,y,x2,y2);
 
   if (d < radius * 2) {
     drawCircles = false;
@@ -275,10 +276,18 @@ function draw() {
 
   if (drawCircles) {
     ellipse(x,y,radius * 2);
-    ellipse(x2,y,radius * 2);
+    ellipse(x2,y2,radius * 2);
   }
 }
 ```
+
+---
+
+## Getting physical!
+
+- Now we can not only have things that move through the space of our canvas
+- But also that can react to "touching" one another
+- What we decide to do based on those contacts can lead to interesting and dynamic effects!
 
 ---
 

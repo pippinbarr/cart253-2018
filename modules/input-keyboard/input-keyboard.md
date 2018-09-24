@@ -232,6 +232,7 @@ function setup() {
 }
 
 function draw() {
+  background(255);
   text(typedText,width/2,height/2);
 }
 

@@ -627,7 +627,8 @@ function setup() {
 
 function draw() {
   background(255);
-  if (dist(mouseX,mouseY,circleX,circleY) < circleSize/2) {
+  var d = dist(mouseX,mouseY,circleX,circleY);
+  if (dist < circleSize/2) {
     fill(255,0,0);
   }
   else {

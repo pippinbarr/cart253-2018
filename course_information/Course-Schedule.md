@@ -121,6 +121,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Homework
 ### Continue Project 1
+### Submit questions to Pippin he could cover next week
 
 ---
 
@@ -128,7 +129,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Project 1 due tonight
 
-## Review
+## Questions and answers
 
 ## Homework
 ### Exercise 4 (coming soon)
@@ -138,10 +139,13 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 # Week 7 - Week of 15 October 2018
 
 ## Review
-## Core - Thinking in Objects
-## Core - Classes and instances
+
+## Core - Object Oriented Programming ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-object-oriented-programming/index.html), [Notes](../modules/core-object-oriented-programming/core-object-oriented-programming.md))
+
 ## Debugging - Object Oriented Programming
-## Game - Multiple avatars
+
+## Game - ... ?
+
 ## Homework
 ### Exercise 5 (coming soon)
 ### Project 2 (coming soon))

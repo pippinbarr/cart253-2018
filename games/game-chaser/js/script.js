@@ -6,7 +6,7 @@ Pippin Barr
 A simple game of cat and mouse.
 
 Physics-based movement, keyboard controls, health/stamina,
-sprinting, random movement, screen wrap.
+random movement, screen wrap.
 
 ******************************************************/
 

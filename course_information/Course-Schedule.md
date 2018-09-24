@@ -96,8 +96,8 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Game - Chaser ([Game](https://pippinbarr.github.io/cart253-2018/games/game-chaser/index.html), [Source Code](../games/game-chaser/), [ZIP of Source Code](../games/game-chaser.zip))
 
 ## Homework
-### [Exercise 3](../exercises/Exercise-3.md) -  
-### [Project 1](../projects/Project-1.md) - 
+### [Exercise 3](../exercises/Exercise-3.md) - Where's Sausage Dog Plus
+### [Project 1](../projects/Project-1.md) - Build a Better Chaser
 
 ---
 

@@ -96,8 +96,8 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Game - Chaser ([Game](https://pippinbarr.github.io/cart253-2018/games/game-chaser/index.html), [Source Code](../games/game-chaser/), [ZIP of Source Code](../games/game-chaser.zip))
 
 ## Homework
-### Exercise 3 (coming soon)
-### Project 1 (coming soon)
+### [Exercise 3](../exercises/Exercise-3.md) -  
+### [Project 1](../projects/Project-1.md) - 
 
 ---
 
@@ -118,6 +118,9 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Sound - Basic sound ([Slides](https://pippinbarr.github.io/cart253-2018/modules/sound-basic-sound/index.html), [Notes](../modules/sound-basic-sound/sound-basic-sound.md))
 
 ## Game - Basic Pong <<< add sound, convert to JS Objects? ([Game](https://pippinbarr.github.io/cart253-2018/games/game-basic-pong/index.html), [Source Code](../games/game-basic-pong/), [ZIP of Source Code](../games/game-basic-pong.zip))
+
+## Homework
+### Continue Project 1
 
 ---
 

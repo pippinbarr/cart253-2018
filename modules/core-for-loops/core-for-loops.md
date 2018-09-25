@@ -6,7 +6,8 @@
 
 ## In this module
 
--
+- Loops `for` counting
+- The Terminator
 
 ---
 

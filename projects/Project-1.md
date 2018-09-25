@@ -25,7 +25,8 @@ As always, begin by downloading the start code ([project1.zip](project1.zip)). A
 4. Tune the values of the game's variables to make the gameplay more interesting to play (is the prey too slow? Should it move more erratically? Should the player be faster? Slower? Etc.)
 5. Change the visuals of the game and add sounds so that the game is no longer abstract but conveys an idea through both its gameplay and through its aesthetics (maybe it could be about politics, or relationships, or cooking, or playing chess, or anything else!). The new visuals and sounds should __match__ the gameplay you created in step two
 
-Make sure you use functions to better organise your code!
+- Make sure you use functions to better organise your code!
+- Don't limit yourself to the above five challenges, if you've got the time, make the game even better!
 
 ## Starter Code (Chaser)
 

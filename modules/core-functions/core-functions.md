@@ -211,6 +211,8 @@ function reset() {
 }
 ```
 
+---
+
 ## Calling a function
 
 - Now that we've __defined__ it, anywhere in our code that we want code in `reset()` to be run we can __call__ our `reset()` function

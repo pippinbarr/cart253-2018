@@ -25,7 +25,7 @@
 ## Random movement
 
 - We've mostly used random to directly set the position of things
-- Or to create flashing, changing colours
+- Or to create flashing, changing colors
 - But of course `random()` can apply in any situation when we want to vary numbers in our code in a surprising way
 - Such as for motion...
 
@@ -96,11 +96,12 @@ var currentText = "";
 
 function setup() {
   createCanvas(500,500);
-  textAlign(CENTER,TOP);
+  textAlign(CENTER,BOTTOM);
 }
 
 function draw() {
-  text(currentText,width/2,0);
+  background(255);
+  text(currentText,width/2,height);
 }
 
 function mousePressed() {

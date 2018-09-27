@@ -276,7 +276,7 @@ function draw() {
 
 - Loops reveal a kind of scary, Terminator-like aspect of computation
 - The program is prepared to go on forever, until the end of the world, _it will not be stopped_
-- If you say, "Hey, Processing, let's print all the numbers starting from zero, one each frame", then Processing will go ahead and do that
+- If you say, "Hey, JavaScript, let's print all the numbers starting from zero, one each frame", then JavaScript will go ahead and do that
 - Until you die.
 
 ---

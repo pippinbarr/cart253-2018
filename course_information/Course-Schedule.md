@@ -127,9 +127,9 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Project 1 due tonight
 
-## Core - Timers
+## Extra - Timers ([Slides](https://pippinbarr.github.io/cart253-2018/modules/extra-time-timers/index.html), [Notes](../modules/extra-time-timers/extra-time-timers.md))
 
-## `constrain()` and `map()`
+## Extra - `constrain()` and `map()` ([Slides](https://pippinbarr.github.io/cart253-2018/modules/extra-constrain-and-map/index.html), [Notes](../modules/extra-constrain-and-map/extra-constrain-and-map.md))
 
 ## Homework
 ### Exercise 4 (coming soon)

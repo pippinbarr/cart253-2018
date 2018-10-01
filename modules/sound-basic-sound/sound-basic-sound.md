@@ -44,7 +44,7 @@ var exampleSound = new Audio("assets/sounds/exampleSound.mp3");
 
 ???
 
-- Actually when we store the image in our variable what we are really storing is an __object__ and we will talk more about these later
+- Actually when we store the sound in our variable what we are really storing is an __object__
 
 ---
 
@@ -92,6 +92,25 @@ function setup() {
 ```javascript
 exampleSound.pause();
 ```
+
+- The sound pauses and when you next call `play()` it will resume from where it was
+
+---
+
+## `.currentTime`
+
+- To __rewind__ your sound so it plays from the beginning when you call `play()` use
+
+```javascript
+exampleSound.currentTime = 0;
+```
+
+- This will reset it so that the next time `play()` is called it plays from the start
+
+???
+
+- This is notably useful if you want to force the sound to play from the start even if it's already playing
+- Otherwise if you call `play()` when a sound is already playing, it will have no effect
 
 ---
 

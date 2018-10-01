@@ -13,42 +13,57 @@ var fgColor = 255;
 
 // BALL
 
-// Position and size
-var ballX;
-var ballY;
-var ballSize = 20;
+// Basic definition of a ball object with its key properties of
+// position, size, velocity, and speed
+var ball = {
+  x: 0,
+  y: 0,
+  size: 20,
+  vx: 0,
+  vy: 0,
+  speed: 5
+}
 
-// Velocity and speed
-var ballVX;
-var ballVY;
-var ballSpeed = 5;
+// PADDLES
+
+// How far in from the walls the paddles should be drawn on x
+var paddleInset = 50;
 
 // LEFT PADDLE
 
-// Position and size
-var leftPaddleX;
-var leftPaddleY;
-var leftPaddleWidth = 20;
-var leftPaddleHeight = 70;
-
-// Velocity and speed
-var leftPaddleVY;
-var leftPaddleSpeed = 5;
+// Basic definition of a left paddle object with its key properties of
+// position, size, velocity, and speed
+var leftPaddle = {
+  x: 0,
+  y: 0,
+  w: 20,
+  h: 70,
+  vy: 0,
+  speed: 5
+}
 
 // RIGHT PADDLE
 
-// Position and size
+// Basic definition of a left paddle object with its key properties of
+// position, size, velocity, and speed
+var rightPaddle = {
+  x: 0,
+  y: 0,
+  w: 20,
+  h: 70,
+  vy: 0,
+  speed: 5
+}
 
-var rightPaddleX;
-var rightPaddleY;
-var rightPaddleWidth = 20;
-var rightPaddleHeight = 70;
+// A variable to hold the beep sound we will play on bouncing
+var beepSFX;
 
-// Velocity and speed
-
-var rightPaddleVY;
-var rightPaddleSpeed = 5;
-
+// preload()
+//
+// Loads the beep audio for the sound of bouncing
+function preload() {
+  beepSFX = new Audio("assets/sounds/beep.wav");
+}
 
 // setup()
 //
@@ -63,95 +78,114 @@ function setup() {
   fill(fgColor);
 
   // Initialise the left paddle
-  leftPaddleX = 50;
-  leftPaddleY = height/2;
-  leftPaddleVY = 0;
+  leftPaddle.x = paddleInset;
+  leftPaddle.y = height/2;
 
   // Initialise the right paddle
-  rightPaddleX = width - 50;
-  rightPaddleY = height/2;
-  rightPaddleVY = 0;
+  rightPaddle.x = width - paddleInset;
+  rightPaddle.y = height/2;
 
   // Initialise the ball
-  ballX = width/2;
-  ballY = height/2;
-  ballVX = ballSpeed;
-  ballVY = ballSpeed;
+  ball.x = width/2;
+  ball.y = height/2;
+  ball.vx = ball.speed;
+  ball.vy = ball.speed;
 }
 
 // draw()
 //
-// Handles the logic for controlling the paddles' velocity,
-// updating the paddles and ball based on their velocity,
-// drawing the paddles and ball, and checking for collisions
-// and the ball going off the screen
+// Calls the appropriate functions to run the game
 function draw() {
   // Fill the background
   background(bgColor);
 
+  handleInput();
+  updatePositions();
+  checkCollisions();
+  displayPaddlesAndBall();
+}
+
+// handleInput()
+//
+// Checks the mouse and keyboard input to set the velocities of the
+// left and right paddles respectively.
+function handleInput() {
   // MOVING THE PADDLES
 
   // Move the left paddle based on the location of the mouse
   // If the mouse is above the left paddle...
-  if (mouseY < leftPaddleY - leftPaddleHeight/2) {
+  if (mouseY < leftPaddle.y - leftPaddle.h/2) {
     // Move up
-    leftPaddleVY = -leftPaddleSpeed;
+    leftPaddle.vy = -leftPaddle.speed;
   }
   // Otherwise if the mouse is below the paddle
-  else if (mouseY > leftPaddleY + leftPaddleHeight/2) {
+  else if (mouseY > leftPaddle.y + leftPaddle.h/2) {
     // Move down
-    leftPaddleVY = leftPaddleSpeed;
+    leftPaddle.vy = leftPaddle.speed;
   }
   else {
     // Otherwise stop moving
-    leftPaddleVY = 0;
+    leftPaddle.vy = 0;
   }
 
   // Move the right paddle based on the keyboard arrows
   // If the up arrow is being pressed
   if (keyIsDown(UP_ARROW)) {
     // Move up
-    rightPaddleVY = -rightPaddleSpeed;
+    rightPaddle.vy = -rightPaddle.speed;
   }
   // Otherwise if the down arrow is being pressed
   else if (keyIsDown(DOWN_ARROW)) {
     // Move down
-    rightPaddleVY = rightPaddleSpeed;
+    rightPaddle.vy = rightPaddle.speed;
   }
   else {
     // Otherwise stop moving
-    rightPaddleVY = 0;
+    rightPaddle.vy = 0;
   }
+}
 
+// updatePositions()
+//
+// Sets the positions of the paddles and ball based on their velocities
+function updatePositions() {
   // Update the paddles' positions based on their velocity
-  leftPaddleY += leftPaddleVY;
-  rightPaddleY += rightPaddleVY;
+  leftPaddle.y += leftPaddle.vy;
+  rightPaddle.y += rightPaddle.vy;
 
   // MOVING THE BALL
 
   // Update the ball's position based on velocity
-  ballX += ballVX;
-  ballY += ballVY;
+  ball.x += ball.vx;
+  ball.y += ball.vy;
+}
 
+// checkCollisions()
+//
+// Checks for collisions between:
+// - ball and top and bottom wall
+// - ball out of bounds
+// - ball and paddles
+function checkCollisions() {
   // VARIABLES FOR CHECKING COLLISIONS
 
   // We will calculate the top, bottom, left, and right of each of the
   // paddles and the ball to make our conditionals easier to read
 
-  var ballTop = ballY - ballSize/2;
-  var ballBottom = ballY + ballSize/2;
-  var ballLeft = ballX - ballSize/2;
-  var ballRight = ballX + ballSize/2;
+  var ballTop = ball.y - ball.size/2;
+  var ballBottom = ball.y + ball.size/2;
+  var ballLeft = ball.x - ball.size/2;
+  var ballRight = ball.x + ball.size/2;
 
-  var leftPaddleTop = leftPaddleY - leftPaddleHeight/2;
-  var leftPaddleBottom = leftPaddleY + leftPaddleHeight/2;
-  var leftPaddleLeft = leftPaddleX - leftPaddleWidth/2;
-  var leftPaddleRight = leftPaddleX + leftPaddleWidth/2;
+  var leftPaddleTop = leftPaddle.y - leftPaddle.h/2;
+  var leftPaddleBottom = leftPaddle.y + leftPaddle.h/2;
+  var leftPaddleLeft = leftPaddle.x - leftPaddle.w/2;
+  var leftPaddleRight = leftPaddle.x + leftPaddle.w/2;
 
-  var rightPaddleTop = rightPaddleY - rightPaddleHeight/2;
-  var rightPaddleBottom = rightPaddleY + rightPaddleHeight/2;
-  var rightPaddleLeft = rightPaddleX - rightPaddleWidth/2;
-  var rightPaddleRight = rightPaddleX + rightPaddleWidth/2;
+  var rightPaddleTop = rightPaddle.y - rightPaddle.h/2;
+  var rightPaddleBottom = rightPaddle.y + rightPaddle.h/2;
+  var rightPaddleLeft = rightPaddle.x - rightPaddle.w/2;
+  var rightPaddleRight = rightPaddle.x + rightPaddle.w/2;
 
 
   // CHECKING FOR WALL COLLISIONS
@@ -159,7 +193,10 @@ function draw() {
   // Check for ball colliding with top and bottom
   if (ballTop < 0 || ballBottom > height) {
     // If it touched the top or bottom, reverse its vy
-    ballVY = -ballVY;
+    ball.vy = -ball.vy;
+    // Play our bouncing sound effect by rewinding and then playing
+    beepSFX.currentTime = 0;
+    beepSFX.play();
   }
 
   // CHECKING FOR OUT OF BOUNDS
@@ -167,8 +204,8 @@ function draw() {
   // Check for ball going off the sides
   if (ballRight < 0 || ballLeft > width) {
     // If it went off either side, reset it to the centre
-    ballX = width/2;
-    ballY = height/2;
+    ball.x = width/2;
+    ball.y = height/2;
     // This is where we would count points etc!
   }
 
@@ -181,9 +218,12 @@ function draw() {
     // Then check if it is touching the paddle horizontally
     if (ballLeft < leftPaddleRight && ballRight > leftPaddleLeft) {
       // Then the ball is touching the paddle so reverse its vx
-      ballVX = -ballVX;
+      ball.vx = -ball.vx;
       // And for aesthetics let's make the ball be perfectly aligned with the paddle
-      ballX = leftPaddleX + leftPaddleWidth/2 + ballSize/2;
+      ball.x = leftPaddle.x + leftPaddle.w/2 + ball.size/2;
+      // Play our bouncing sound effect by rewinding and then playing
+      beepSFX.currentTime = 0;
+      beepSFX.play();
     }
   }
 
@@ -194,20 +234,25 @@ function draw() {
     // Then check if it is touching the paddle horizontally
     if (ballRight > rightPaddleLeft && ballLeft < rightPaddleRight) {
       // Then the ball is touching the paddle so reverse its vx
-      ballVX = -ballVX;
+      ball.vx = -ball.vx;
+      // Play our bouncing sound effect by rewinding and then playing
+      beepSFX.currentTime = 0;
+      beepSFX.play();
       // And for aesthetics let's make the ball be perfectly aligned with the paddle
-      ballX = rightPaddleX - rightPaddleWidth/2 - ballSize/2;
+      ball.x = rightPaddle.x - rightPaddle.w/2 - ball.size/2;
     }
   }
+}
 
-  // DRAWING THE PADDLES AND BALL
-
+// displayPaddlesAndBall()
+//
+// Draws the paddles and ball on screen as rectangles as defined
+// by their properties
+function displayPaddlesAndBall() {
   // Draw the paddles
-  rect(leftPaddleX,leftPaddleY,leftPaddleWidth,leftPaddleHeight);
-  rect(rightPaddleX,rightPaddleY,rightPaddleWidth,rightPaddleHeight);
+  rect(leftPaddle.x,leftPaddle.y,leftPaddle.w,leftPaddle.h);
+  rect(rightPaddle.x,rightPaddle.y,rightPaddle.w,rightPaddle.h);
 
   // Draw the ball
-  rect(ballX,ballY,ballSize,ballSize);
-
-
+  rect(ball.x,ball.y,ball.size,ball.size);
 }

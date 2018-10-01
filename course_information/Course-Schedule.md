@@ -109,19 +109,17 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Debugging - Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-functions/index.html), [Notes](../modules/debugging-functions/debugging-functions.md))
 
-## Core - Timers
+## Physics - Collisions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-collisions/index.html), [Notes](../modules/physics-collisions/physics-collisions.md))
 
 ## Core - JavaScript Objects ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-javascript-objects/index.html), [Notes](../modules/core-javascript-objects/core-javascript-objects.md))
 
-## Physics - Collisions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-collisions/index.html), [Notes](../modules/physics-collisions/physics-collisions.md))
-
 ## Sound - Basic sound ([Slides](https://pippinbarr.github.io/cart253-2018/modules/sound-basic-sound/index.html), [Notes](../modules/sound-basic-sound/sound-basic-sound.md))
 
-## Game - Basic Pong <<< add sound, convert to JS Objects? ([Game](https://pippinbarr.github.io/cart253-2018/games/game-basic-pong/index.html), [Source Code](../games/game-basic-pong/), [ZIP of Source Code](../games/game-basic-pong.zip))
+## Game - Basic Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/game-basic-pong/index.html), [Source Code](../games/game-basic-pong/), [ZIP of Source Code](../games/game-basic-pong.zip))
 
 ## Homework
 ### Continue Project 1
-### Submit questions to Pippin he could cover next week
+### Submit ideas for small ideas Pippin could cover next week
 
 ---
 
@@ -129,7 +127,9 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Project 1 due tonight
 
-## Questions and answers
+## Core - Timers
+
+## `constrain()` and `map()`
 
 ## Homework
 ### Exercise 4 (coming soon)

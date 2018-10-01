@@ -66,7 +66,7 @@ function draw() {
 ## Two things hit each other...
 
 - What should we do when an object collides with something?
-- Essentially we should __reverse its velocity__ on the axis the collision to place on
+- Essentially we should __reverse its velocity__ on the axis of the collision to place on
 - So if it hit something on its left or right side, we should reverse its __x velocity__
 - And it it hit something on its top or bottom, we should reverse its __y velocity__
 
@@ -118,7 +118,7 @@ if (y < 0 || y > height) {
 }
 ```
 
-- If we insert this into our `draw()` loop after calculating the latest value of `x` then our circle will appear to __bounce__ off the walls
+- If we insert this into our `draw()` loop after calculating the latest value of `x` then our rectangle will appear to __bounce__ off the walls
 
 ---
 
@@ -134,15 +134,22 @@ if (y - squareSize/2 < 0 || y + squareSize/2 > height) {
 }
 ```
 
-- Here we __adjust__ our calculate to account for the idea that it is the __edge__ of the circle that actually bounces, not its __centre__
+- Here we __adjust__ our calculate to account for the idea that it is the __edge__ of the rectangle that actually bounces, not its __centre__
 
 ---
 
 ## Collision with other objects
 
 - It gets more complicated in terms of logic when we want to check whether two __objects__ hit each other, especially if they're moving objects
+- Even for irregular shapes in programming we often think of their collisions in terms of imaginary containing boxes: hitboxes
+- Because calculating overlaps for rectangles is a __lot__ easier than for irregular shapes
+- So the basic idea to check if two shapes hit each other is to see if their hitboxes overlap
 - In fact, at that point we're basically talking about the game Pong
 - Or many other arcade games
+
+???
+
+- See: the sample code for Pong!
 
 ---
 

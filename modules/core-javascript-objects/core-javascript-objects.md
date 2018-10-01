@@ -7,7 +7,7 @@
 ## In this module
 
 - JavaScript objects with data
-- JavaScript objects with functions
+- (Advanced) JavaScript objects with functions
 
 ---
 
@@ -19,6 +19,7 @@
   - A y position
   - An x velocity
   - A y velocity
+  - A size
   - ... and so on
 - But so far we're have to have all of these parts in separate variables
 
@@ -56,7 +57,7 @@ function draw() {
 
 - Rather than track each piece of important data about our red circle in a separate variable it would be nice to keep them all together
 - And we can with JavaScript Objects!
-- A JavaScript Object is kind of variable that has a set of __properties__, each of which is just like another variable
+- A JavaScript Object is kind of variable that has a set of __properties__, each of which is just like another variable (almost like a "subvariable")
 - So we could have a circle variable that would contain __all the properties of our circle__ (like position, velocity, radius, and speed)
 
 ---
@@ -76,7 +77,7 @@ var circle = {
 
 - This is a JavaScript Object version of our circle
 - It's __just another type of value__ that goes into a variable
-- But it's a special type of value that allows us to collect information together and store it
+- But it's a special type of value that allows us to collect data together and store it in a single variable
 
 ---
 
@@ -175,6 +176,28 @@ circle.x += circle.vx;
 ellipse(circle.x, circle.y, circle.radius * 2);
 ```
 
+???
+
+- This might seem a little familiar from when we were display images
+- We were able to get the dimensions of an image using dot notation
+
+```javascript
+var myImage;
+
+function preload() {
+  myImage = loadImage("assets/images/myImage.png");
+}
+
+function setup() {
+  var myImageWidth = myImage.width;
+  var myImageHeight = myImage.height;
+  console.log("Width of myImage is " + myImageWidth);
+  console.log("Height of myImage is " + myImageHeight);
+}
+```
+
+- This is because the image is an object!
+
 ---
 
 ## Objects within Objects
@@ -196,8 +219,8 @@ var circle = {
     y: 0
   },
   velocity: {
-    vx: 0,
-    vy: 0
+    x: 0,
+    y: 0
   }
   maxSpeed: 1,
   radius: 25
@@ -212,10 +235,11 @@ ellipse(circle.x, circle.y, circle.radius * 2);
 
 - This is getting close to some of the basics of how game engines represent physical objects
 - All the data is carefully organised to that it's sensibly named and so that the structure of the data helps us to write cleaner, better code
+- It can also lead to very long code, so there are tradeoffs involved here in terms of how deeply you want to nest information...
 
 ---
 
-## There's one more weird thing
+## (Advanced for now) There's one more weird thing
 
 - We'll deal with this much more next week, but just so we know...
 - ... JavaScript Objects can also have __functions__ in their properties
@@ -243,7 +267,18 @@ var circle = {
 
 ---
 
-## Using an object's properties in its functions
+## (Advanced for now) Calling an object's function
+
+- Once again, we use dot notation to call those functions:
+
+```javascript
+circle.sayHello();
+circle.sayGoodbye();
+```
+
+---
+
+## (Advanced for now) Using an object's properties in its functions
 
 ```javascript
 var circle = {
@@ -270,9 +305,9 @@ var circle = {
 
 ---
 
-## Using the functions inside an object
+## (Advanced for now) Using the functions inside an object
 
-- If we have the circle variable with the object from the last slide then we can __call__ its functions using dot notation as well!
+- So if we have the circle variable with the object from the last slide then we can __call__ its functions using dot notation as well!
 
 ```javascript
 var circle = { ... };
@@ -289,7 +324,7 @@ function draw() {
 }
 ```
 
-- How nice that looks!
+- How nice and organised that is!
 
 ---
 
@@ -298,7 +333,7 @@ function draw() {
 - JavaScript Objects are excellent because they allow us to keep a bunch of related data together in one place instead of in separate variables
 - They allow us to think of a variable as containing a complex entity in our code (like a moving circle) instead of "just" a number or a string or a truth value
 - And this allows us to build much richer ideas about what we're representing in our code
-- They are also the Gateway Drug to Object-Oriented Programming, which we will talk about next week!
+- They are also the Gateway Drug to Object-Oriented Programming, which we will talk about soon!
 
 ---
 

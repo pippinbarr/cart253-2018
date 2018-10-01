@@ -6,104 +6,199 @@
 
 ## In this module
 
-- ...
+- Giving functions parameters
+- Returning values from functions
 
 ---
 
-## Okay, but I still want those two avatars...
+## Basic functions are great
+
+- Last we we saw the idea of creating a function as a way to abstract away an idea in our code and give it a name, such as the idea of a `reset()` function
 
 ```javascript
+function reset() {
+  enemyX = 0;
+  enemyY = random(0,height);
+  avatarX = width/2;
+  avatarY = height/2;
+  dodges = 0;
+}
+```
+
+- This allows us to call `reset()` anywhere its relevant in our code but only __change__ what it means to reset in __one place__
+- It also allows us to __hide the details__ of resetting the game inside the function, so we don't always have to see it
+
+---
+
+## Drawing a caterpillar is so great!
+
+```javascript
+var startX;
+var startY;
+var segmentRadius = 20;
+var numSegments = 10;
+
 function setup() {
   createCanvas(640,480);
+  noStroke();
+  fill(80,200,80);
+  startX = width/5;
+  startY = height/2;
 }
 
 function draw() {
-  drawAvatar();
-  drawAvatar();
-}
-
-function drawAvatar() {
-  var avatarX = width/2;
-  var avatarY = height/2;
-  var avatarSize = 100;
-  fill(255);
-  ellipse(avatarX,avatarY,avatarSize,avatarSize);
-  fill(0);
-  ellipse(avatarX - avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse(avatarX + avatarSize/4,avatarY,avatarSize/8,avatarSize/8);
-  ellipse (avatarX,avatarY + avatarSize/4,avatarSize/4,avatarSize/4);
+  background(200,250,200);
+  var segmentsDrawn = 0;
+  var x = startX;
+  while (segmentsDrawn < numSegments) {
+    ellipse(x,startY,segmentRadius*2);
+    x += segmentRadius * 1.5;
+    segmentsDrawn++;
+  }
 }
 ```
 
 ---
 
-## Oh, right.
+## We should make it a function!
 
-- We can call `drawAvatar()` twice, and it works
-- But it draws the avatar in the __same place__ both times
+```javascript
+var startX;
+var startY;
+var segmentRadius = 20;
+var numSegments = 10;
+
+function setup() {
+  createCanvas(640,480);
+  noStroke();
+  fill(80,200,80);
+  startX = width/5;
+  startY = height/2;
+}
+
+function draw() {
+  background(200,250,200);
+  drawCaterpillar();
+}
+
+function drawCaterpillar() {
+  var segmentsDrawn = 0;
+  var x = startX;
+  while (segmentsDrawn < numSegments) {
+    ellipse(x,startY,segmentRadius*2);
+    x += segmentRadius * 1.5;
+    segmentsDrawn++;
+  }
+}
+```
 
 ---
 
-## Information
+## We should draw more than one caterpillar!
 
-- Lots of functions only make sense if you can give them __information__
+```javascript
+var startX;
+var startY;
+var segmentRadius = 20;
+var numSegments = 10;
+
+function setup() {
+  createCanvas(640,480);
+  noStroke();
+  fill(80,200,80);
+  startX = width/5;
+  startY = height/2;
+}
+
+function draw() {
+  background(200,250,200);
+  drawCaterpillar();
+  drawCaterpillar();
+}
+
+...
+```
+--
+
+- Oh no.
+
+---
+
+## What happened?
+
+--
+- That classic problem: drawing the same thing in the same place.
+
+--
+- The caterpillar function only knows how to draw the caterpillar according to a set of values we define __outside the function__
+- `startX`, `startY`, `segmentRadius`, `numSegments` are all defined at the top of the code
+- It would be nice to be able to tell `drawCaterpillar()` how to draw each caterpillar differently
+
+---
+
+## Parameters
+
+- Lots of functions only make sense if you can give them __parameters__
 - We don't get a rectangle if we just call `rect();` because it doesn't make sense
 - We call `rect(0,0,100,100);` and specify __where__ the rectangle should be and what __dimensions__ it should have
-- We want something like that for `drawAvatar()`
+- We want something like that for `drawCaterpillar()`
 
 ---
 
-## Defining functions with arguments
+## Defining functions with information
 
 ```javascript
-function drawAvatar(x, y, size) {
-  fill(255);
-  ellipse(x,y,size,size);
-  fill(0);
-  ellipse(x - size/4,y,size/8,size/8);
-  ellipse(x + size/4,y,size/8,size/8);
-  ellipse (x,y + size/4,size/4,size/4);
+function drawCaterpillar(x,y) {
+  var segmentsDrawn = 0;
+  var nextX = x;
+  while (segmentsDrawn < numSegments) {
+    ellipse(nextX,y,segmentRadius*2);
+    nextX += segmentRadius * 1.5;
+    segmentsDrawn++;
+  }
 }
 ```
 
-- Here is `drawAvatar()` again, this time with __arguments__
+- Here is `drawCaterpillar()` again, this time with two basic pieces of information
 
 ---
 
-## Defining functions with arguments
+## Defining functions with information
 
 ```javascript
-function drawAvatar(x, y, size) {
-  fill(255);
-  ellipse(x,y,size,size);
-  fill(0);
-  ellipse(x - size/4,y,size/8,size/8);
-  ellipse(x + size/4,y,size/8,size/8);
-  ellipse (x,y + size/4,size/4,size/4);
+function drawCaterpillar(x,y) {
+  var segmentsDrawn = 0;
+  var nextX = x;
+  while (segmentsDrawn < numSegments) {
+    ellipse(nextX,y,segmentRadius*2);
+    nextX += segmentRadius * 1.5;
+    segmentsDrawn++;
+  }
 }
 ```
 
-- It's exactly the same, but now we have something __inside the parentheses__
-- And the code in the function has changed a bit too
+- It's exactly the same syntax, but now we have something __inside the parentheses__: the information this function takes in order to do its job, basically a set of variables we can specify
+- And the code in the function has changed a bit too to accommodate the information, since now we need to draw our ellipses based on the `x` and `y` specified
 
 ---
 
 ## Defining functions with arguments
 
 ```javascript
-function drawAvatar(x, y, size) {
-  fill(255);
-  ellipse(x,y,size,size);
-  fill(0);
-  ellipse(x - size/4,y,size/8,size/8);
-  ellipse(x + size/4,y,size/8,size/8);
-  ellipse (x,y + size/4,size/4,size/4);
+function drawCaterpillar(x,y) {
+  var segmentsDrawn = 0;
+  var nextX = x;
+  while (segmentsDrawn < numSegments) {
+    ellipse(nextX,y,segmentRadius*2);
+    nextX += segmentRadius * 1.5;
+    segmentsDrawn++;
+  }
 }
 ```
 
 - Inside the parentheses we have a __comma-separated list of the parameters this function takes__
 - These are called the __arguments__ when we're defining a function
-- We can see that this function expects some parameters called `x`, `y`, and `size`
+- We can see that this function expects some parameters called `x` and a `y`
 - Because they're well-named, they're pretty self-explanatory, right?
 - They refer to the position and size of the avatar to be drawn
 
@@ -117,13 +212,14 @@ function drawAvatar(x, y, size) {
 ## Defining functions with arguments
 
 ```javascript
-function drawAvatar(x, y, size) {
-  fill(255);
-  ellipse(x,y,size,size);
-  fill(0);
-  ellipse(x - size/4,y,size/8,size/8);
-  ellipse(x + size/4,y,size/8,size/8);
-  ellipse (x,y + size/4,size/4,size/4);
+function drawCaterpillar(x,y) {
+  var segmentsDrawn = 0;
+  var nextX = x;
+  while (segmentsDrawn < numSegments) {
+    ellipse(nextX,y,segmentRadius*2);
+    nextX += segmentRadius * 1.5;
+    segmentsDrawn++;
+  }
 }
 ```
 
@@ -138,7 +234,8 @@ function drawAvatar(x, y, size) {
 
 ```javascript
 function draw() {
-  drawAvatar();
+  background(200,250,200);
+  drawCaterpillar();
 }
 ```
 
@@ -148,8 +245,7 @@ function draw() {
 - Yep. Doesn't work.
 - Unfortunately it doesn't __crash__ our program, it just doesn't do what we want
 - That's because in JavaScript if we don't include a parameter in a function call, it will just get set to `undefined`
-- And when we try to use `undefined` as a number in, for example `rect()` it will use it like it's a `0`
-- So it's drawing an avatar at (0,0) of size 0. Huh.
+- And if a parameter for `ellipse()` is undefined, it just doesn't draw the ellipse (and doesn't complain!)
 
 --
 
@@ -161,11 +257,12 @@ __So we need to put parameters into our function call__
 
 ```javascript
 function draw() {
-  drawAvatar(width/2,height/2,100);
+  background(200,250,200);
+  drawCaterpillar(100,100);
 }
 ```
 
-- Voilà! Now we can draw an avatar!
+- Voilà! Now we can draw a caterpillar at that location!
 
 ---
 
@@ -173,13 +270,14 @@ function draw() {
 
 ```javascript
 function draw() {
-  drawAvatar(width/4,height/2,100);
-  drawAvatar(3*width/4,height/2,200);
+  background(200,250,200);
+  drawCaterpillar(100,100);
+  drawCaterpillar(100,200);
 }
 ```
 
-- Even better! We can draw __two__ avatars in different places using the parameters!
-- Notice, too, how we don't need to be able to __see__ the `drawAvatar()` function definition itself
+- Even better! We can draw __two__ caterpillars in different places using the parameters!
+- Notice, too, how we don't need to be able to __see__ the `drawCaterpillar()` function definition itself to use it
 - So long as we __know how it works__
 - This is a strong case for __good documentation__ like sensible comments that explain your functions!
 
@@ -189,17 +287,82 @@ function draw() {
 
 ```javascript
 function draw() {
-  for (var i = 0; i < 100; i++) {
+  background(200,250,200);
+  for (var i = 0; i < 10; i++) {
     var x = random(0,width);
     var y = random(0,height);
-    var size = random(10,100);
-    drawAvatar(x,y,size);
+    drawCaterpillar(x,y);
   }
+  noLoop();
 }
 ```
 
 - This works in all kinds of different situations
 - We can call functions in loops, in conditionals, from inside other functions, and so on
+- Whenever we want to draw a caterpillar, it's just `drawCaterpillar(x,y)`
+
+???
+
+- See that `noLoop()` thing at the end of `draw()`?
+- If you call the `noLoop()` function it means that `draw()` will stop being called!
+- Can be useful if you want to just halt your program and stop it animating
+- If you want `draw()` to start up again, you can call... `loop()`
+---
+
+## As many arguments as you want!
+
+- Currently there are other aspects of drawing a caterpillar we probably want to control
+- Like how many segments it is, maybe what size the segments should be...
+
+```javascript
+function drawCaterpillar(x,y,segments,radius) {
+  var segmentsDrawn = 0;
+  var nextX = x;
+  while (segmentsDrawn < segments) {
+    ellipse(nextX,y,radius*2);
+    nextX += radius * 1.5;
+    segmentsDrawn++;
+  }
+  noLoop();
+}
+```
+
+???
+
+- We could include the color too:
+
+```javascript
+function drawCaterpillar(x,y,segments,radius,fillColor) {
+  fill(fillColor);
+  var segmentsDrawn = 0;
+  var nextX = x;
+  while (segmentsDrawn < segments) {
+    ellipse(nextX,y,radius*2);
+    nextX += radius * 1.5;
+    segmentsDrawn++;
+  }
+  noLoop();
+}
+```
+
+- But now we need to be able to store a color as a single value
+- We could use a number between 0 and 255 to have greyscale caterpillars
+- But if we want colors we could either use hexadecimal colors (e.g. `"#aabbcc"`)
+- Or we could use p5's `color` function
+
+```javascript
+function draw() {
+  background(200,250,200);
+  for (var i = 0; i < 10; i++) {
+    var x = random(0,width);
+    var y = random(0,height);
+    var segments = random(1,20);
+    var radius = random(10,20);
+    var fillColor = color(random(255),random(255),random(255));
+    drawCaterpillar(x,y,segments,radius,fillColor);
+  }
+}
+```
 
 ---
 
@@ -229,7 +392,7 @@ function convertFahrenheitToCelcius(temperature) {
 ???
 
 - Not what we want!
-- Even though we __seem__ to be changing `temperature` to its fahrenheit equivalent, when we print it out on the canvas, it hasn't changed...
+- Even though we __seem__ to be converting `temperature` to its fahrenheit equivalent, when we print it out on the canvas, it hasn't changed...
 
 ---
 
@@ -259,6 +422,9 @@ function convertFahrenheitToCelcius(temperature) {
 ???
 
 - That is, it's converting the __argument__ `temperature` that only exists in the function definition, not outside it
+- This is that idea of __scope__ we talked about with variables
+- If you declare a variable with `var` it will only exist inside any surrounding curly brackets
+- Because `var temperature = 23;` is inside the curly brackets of `draw()` it doesn't exist for `convertFahrenheitToCelcius()`
 
 ---
 
@@ -315,13 +481,13 @@ function convertFahrenheitToCelcius(temperature) {
 
 ```javascript
 function convertFahrenheitToCelcius(temperature) {
-  temperature = (temperature - 32) / 1.8;
-  return temperature;
+  var result = (temperature - 32) / 1.8;
+  return result;
 }
 ```
 
 - In order to give something back we need to `return` it inside the function
-- We do this by writing `return` and then the thing we want to return, like the resulting argument `temperature`
+- We do this by writing `return` and then the thing we want to return, like the resulting variable called `result`
 - The thing we `return` should be the __type__ of value appropriate to the function (since this one calculates a number, we should make sure we're returning a number)
 
 ---
@@ -342,8 +508,8 @@ function draw() {
 }
 
 function convertFahrenheitToCelcius(temperature) {
-  temperature = (temperature - 32) / 1.8;
-  return temperature;
+  var result = (temperature - 32) / 1.8;
+  return result;
 }
 ```
 
@@ -372,8 +538,8 @@ function draw() {
 }
 
 function convertFahrenheitToCelcius(temperature) {
-  temperature = (temperature - 32) / 1.8;
-  return temperature;
+  var result = (temperature - 32) / 1.8;
+  return result;
 }
 ```
 
@@ -397,8 +563,8 @@ function draw() {
 }
 
 function convertFahrenheitToCelcius(temperature) {
-  temperature = (temperature - 32) / 1.8;
-  return temperature;
+  var result = (temperature - 32) / 1.8;
+  return result;
 }
 ```
 
@@ -409,9 +575,9 @@ function convertFahrenheitToCelcius(temperature) {
 
 ## Modularity and reuse!
 
-There are two main reasons why functions are so great, and they have special names!
+Again, are two main reasons why functions are so great, and they have special names!
 
-Functions are ___modular___. We can tidy our code into separate, self-contained blocks that make sense as a unit. Our code becomes more organised, more readable, easier to fix.
+Functions are ___modular___. We can tidy our code into separate, self-contained blocks that make sense as a unit. Our code becomes more organised, more readable, easier to fix. (Often we also talk about this as __encapsulation__.)
 
 Functions are ___reusable___. We can use a function over and over again without writing out all the code in it. This makes our programming more efficient and less lengthy. It's like free code!
 

@@ -103,10 +103,11 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 # Week 5 - Week of 1 October 2018
 
+## [Exercise 3](../exercises/Exercise-3.md) due before midnight on day of class
+
 ## Exercise 2 Notes
 - Please read the exercise carefully, some people simply missed doing one or more of the challenges
 - Be careful with your variable naming: `image` and `string` are not good variable names, the name should describe specifically what the variable is for
-
 
 ## Core - Functions with parameters and return values ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-functions-with-parameters-and-return-values/index.html), [Notes](../modules/core-functions-with-parameters-and-return-values/core-functions-with-parameters-and-return-values.md))
 
@@ -121,14 +122,14 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Game - Basic Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/game-basic-pong/index.html), [Source Code](../games/game-basic-pong/), [ZIP of Source Code](../games/game-basic-pong.zip))
 
 ## Homework
-### Continue Project 1
+### Continue [Project 1](../projects/Project-1.md)
 ### Submit ideas for small ideas Pippin could cover next week
 
 ---
 
 # Week 6 - Week of 8 October 2018
 
-## Project 1 due tonight
+## [Project 1](../projects/Project-1.md) due before midnight on day of class
 
 ## Extra - Timers ([Slides](https://pippinbarr.github.io/cart253-2018/modules/extra-time-timers/index.html), [Notes](../modules/extra-time-timers/extra-time-timers.md))
 

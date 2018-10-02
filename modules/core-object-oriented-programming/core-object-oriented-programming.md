@@ -12,6 +12,96 @@
 
 ---
 
+
+## (Advanced for now) There's one more weird thing
+
+- We'll deal with this much more next week, but just so we know...
+- ... JavaScript Objects can also have __functions__ in their properties
+
+```javascript
+var circle = {
+  position: {
+    x: 0,
+    y: 0
+  },
+  velocity: {
+    vx: 0,
+    vy: 0
+  }
+  maxSpeed: 1,
+  radius: 25,
+  sayHello: function () {
+    console.log("Hello, world!");
+  },
+  sayGoodbye: function () {
+    console.log("Goodbye, world!");
+  }
+}
+```
+
+---
+
+## (Advanced for now) Calling an object's function
+
+- Once again, we use dot notation to call those functions:
+
+```javascript
+circle.sayHello();
+circle.sayGoodbye();
+```
+
+---
+
+## (Advanced for now) Using an object's properties in its functions
+
+```javascript
+var circle = {
+  position: {
+    x: 0,
+    y: 0
+  },
+  velocity: {
+    vx: 0,
+    vy: 0
+  }
+  maxSpeed: 1,
+  radius: 25,
+  move: function () {
+    this.position.x += this.velocity.x;
+  },
+  display: function () {
+    ellipse(this.position.x,this.position.y,this.radius * 2);
+  }
+}
+```
+
+- We use a magical word called `this` inside a JavaScript object's functions to refer to __the object itself__
+
+---
+
+## (Advanced for now) Using the functions inside an object
+
+- So if we have the circle variable with the object from the last slide then we can __call__ its functions using dot notation as well!
+
+```javascript
+var circle = { ... };
+
+function setup() {
+  createCanvas(500,500);
+  circle.velocity.x = circle.maxSpeed;
+  circle.position.y = height/2;
+}
+
+function draw() {
+  circle.move();
+  circle.display();
+}
+```
+
+- How nice and organised that is!
+
+---
+
 ## OOP
 
 - Let's look at this idea of object oriented programming

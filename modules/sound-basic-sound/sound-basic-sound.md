@@ -1,6 +1,6 @@
-### Graphics / CART 253 / Fall 2018 / Pippin Barr
+### Sound / CART 253 / Fall 2018 / Pippin Barr
 
-# Displaying images
+# Basic sound
 
 ---
 

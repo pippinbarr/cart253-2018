@@ -103,7 +103,10 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 # Week 5 - Week of 1 October 2018
 
-## Review
+## Exercise 2 Notes
+- Please read the exercise carefully, some people simply missed doing one or more of the challenges
+- Be careful with your variable naming: `image` and `string` are not good variable names, the name should describe specifically what the variable is for
+
 
 ## Core - Functions with parameters and return values ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-functions-with-parameters-and-return-values/index.html), [Notes](../modules/core-functions-with-parameters-and-return-values/core-functions-with-parameters-and-return-values.md))
 

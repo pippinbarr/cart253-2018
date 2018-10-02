@@ -303,6 +303,49 @@ function draw() {
 
 ---
 
+## This is what infinite loops looks like
+
+```javascript
+var x;
+var y;
+
+function setup() {
+  createCanvas(500,500);
+  x = 0;
+  y = height/2;
+}
+
+function draw() {
+  while (x > width/2) {
+    rect(random(width),random(height),40,40);
+  }
+
+  stroke(random(255));
+  fill(random(255));
+  ellipse(x,y,100,100);
+  x++;
+}
+
+function mousePressed() {
+  ellipse(random(width),random(height),40,40);
+}
+```
+
+???
+
+- Importantly, notice that `x > width/2` starts out false, because `x` starts at `0`
+- So the program runs
+- But `x` goes up by one per frame, which means that at some point it's going to end up being `250` and `250` is __not less than__ `width/2` (which is also `250`)
+- On the frame that happens, the while loop becomes an __infinite loop__
+- We can tell while watching the program run that something has gone wrong because
+  - We see the ellipse stop moving across the screen
+  - The `mousePressed()` function no longer responds to our mouse
+- Importantly we __won't__ see anything wrong in the JavaScript console
+- To the program nothing is "wrong", it's just busy going through that `while` loop... forever
+- But for us, the program has effectively crashed
+
+---
+
 ## Star field
 
 ```javascript

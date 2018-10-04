@@ -106,11 +106,24 @@ exampleSound.currentTime = 0;
 ```
 
 - This will reset it so that the next time `play()` is called it plays from the start
+- (You can also set `.currentTime` to other numbers - it represents the position in the sound file in __seconds__ to jump to.)
 
 ???
 
 - This is notably useful if you want to force the sound to play from the start even if it's already playing
 - Otherwise if you call `play()` when a sound is already playing, it will have no effect
+
+---
+
+## `.loop`
+
+- To __loop__ your sound so it plays over and over when you call `play()` use
+
+```javascript
+exampleSound.loop = true;
+```
+
+- Now when you play the sound, it will loop forever
 
 ---
 

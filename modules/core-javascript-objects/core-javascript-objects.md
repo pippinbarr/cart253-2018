@@ -227,8 +227,8 @@ var circle = {
 };
 
 circle.velocity.x = circle.maxSpeed;
-circle.x += circle.velocity.x;
-ellipse(circle.x, circle.y, circle.radius * 2);
+circle.position.x += circle.velocity.x;
+ellipse(circle.position.x, circle.position.y, circle.radius * 2);
 ```
 
 ???

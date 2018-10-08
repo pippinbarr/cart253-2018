@@ -160,7 +160,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Review
 ## Core - Arrays ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-arrays/index.html), [Notes](../modules/core-arrays/core-arrays.md))
 ## Debugging - Summary
-## Game - ...
+## Game - Predator
 ## Exercise 6 - ...
 
 ---
@@ -168,10 +168,9 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 # Week 9 - Week of 29 October 2018
 
 ## Review
-## Core - Nested Arrays
 ## Graphics - Transformations
 ## Physics - Polar coordinates and velocity
-## Game - Spaceship / Spacelove
+## Game - Spacelove!
 ## Other
 
 ---
@@ -183,7 +182,6 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Review
 ## Project 3 assigned
 ## Exercise 7 - ...
-
 
 ---
 

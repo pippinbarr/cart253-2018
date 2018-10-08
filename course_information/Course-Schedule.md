@@ -148,6 +148,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Core - Object Oriented Programming ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-object-oriented-programming/index.html), [Notes](../modules/core-object-oriented-programming/core-object-oriented-programming.md))
 
+
 ## Homework
 ### Exercise 5 (Something with OOP Pong)
 ### Project 2 (Something else with OOP Pong and Arrays from next week)
@@ -158,9 +159,13 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 
 ## Review
+
 ## Core - Arrays ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-arrays/index.html), [Notes](../modules/core-arrays/core-arrays.md))
+
 ## Debugging - Summary
-## Game - Predator
+
+## Game - Predator Prey ([Game](https://pippinbarr.github.io/cart253-2018/games/game-predator-prey/index.html), [Source Code](../games/game-predator-prey/), [ZIP of Source Code](../games/game-predator-prey.zip))
+
 ## Exercise 6 - ...
 
 ---

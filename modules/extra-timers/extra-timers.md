@@ -8,7 +8,7 @@
 
 - It would be nice to keep track of time
 - A timer using `setTimeout()`
-- Writing our own timer using `millis()`
+- (More complicated) Writing our own timer using `millis()`
 
 ---
 
@@ -108,7 +108,14 @@ function keyPressed() {
 
 ---
 
-## A timer with `millis()`
+## A disadvantage of `setTimeout()`
+
+- One thing that `setTimeout()` does allow us to do easily is check how much time __remains__ in the timer
+- Clearly that's a problem if we want to display a timer on the screen while it's running
+
+---
+
+## (More complicated) A timer with `millis()`
 
 - p5 provides a function called `millis()` that always returns the number of milliseconds that have passed __since the program started__
 - This is clearly a representation of time

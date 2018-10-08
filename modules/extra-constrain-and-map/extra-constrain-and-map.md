@@ -23,7 +23,7 @@
 
 ## `constrain()`
 
-- The `constrain()` function takes there __parameters__
+- The `constrain()` function takes __three parameters__
   - The __value__ to be constrained
   - And the __two ends of the range to constrain it within__
 - It __returns__ the constrained version of the value
@@ -33,10 +33,10 @@
 ## Basic examples
 
 - `constrain(100,0,50)` returns `50`
-  - because `100` is __above the upper bound__ of the range
+  - because `100` is __above the highest bound__ of the range (`50`)
   - and so the return value is the highest number __within__ the range
 - `constrain(-1000,100,150)` returns `100`
-  - because `-1000` is __below the lower bound__ of the range
+  - because `-1000` is __below the lowest bound__ of the range (`100`)
   - and so the return value is the lowest number __within__ the range
 - `constrain(50,0,200)` returns `50`
   - because `50` is __within the range__
@@ -60,6 +60,8 @@ vx = constrain(vx,-maxSpeed,maxSpeed);
 vy = constrain(vy,-maxSpeed,maxSpeed);
 ```
 
+- Note how we __assign__ the result of `constrain()` back into the variable we are constraining
+
 ---
 
 ## In context
@@ -67,22 +69,26 @@ vy = constrain(vy,-maxSpeed,maxSpeed);
 - Generally speaking the process is that we update some variable, then constrain it to make sure it doesn't end up with a too-extreme value, such as:
 
 ```javascript
+// Update velocity with acceleration
 vx += ax;
 vy += ay;
 
+// Constrain velocity to be within maxSpeed
 vx = constrain(vx,-maxSpeed,maxSpeed);
 vy = constrain(vy,-maxSpeed,maxSpeed);
 
+// Update position with velocity
 x += vx;
 y += vy;
 
+// Constrain position to be on screen
 x = constrain(x,0,width);
 y = constrain(y,0,height);
 ```
 
 ???
 
-- Even more pithy might be:
+- Even shorter version:
 
 ```javascript
 vx = constrain(vx + ax,-maxSpeed,maxSpeed);
@@ -91,6 +97,9 @@ vy = constrain(vy + ay,-maxSpeed,maxSpeed);
 x = constrain(x + vx,0,width);
 y = constrain(y + vy,0,height);
 ```
+
+- Here we're combining the update step (e.g. `vx + ax` with the `constrain()` function)
+- It's a little harder to read, so it's up to you whether you want to write it this way
 
 ---
 
@@ -101,6 +110,8 @@ y = constrain(y + vy,0,height);
 - An x position might be between `0` and `width`
 - A velocity might be between `-maxSpeed` and `maxSpeed`
 - A color value might be between `0` and `255`
+- A percentage might be between `0` and `1` (if specified as a fraction)
+- A health variable might be between `0` and `100`
 
 ---
 
@@ -108,16 +119,17 @@ y = constrain(y + vy,0,height);
 
 - It can be fun and interesting to use a variable from one range to influence the behaviour of something that uses a different range
 - Like using the x position of the mouse (between `0` and `width`) to set the colour of the background (between `0` and `255`)
+- Or like mapping the alpha value of an onscreen agent's color based on its health so it gets more transparent as it gets closer to dying
 - We could do the math for this ourselves, but we don't need to because `map()` does it for us
 
 ---
 
 ## `map()`
 
-- `map()` takes five parameters
+- `map()` takes __five parameters__
   - The __value__ to convert from one range to another
   - The __bounds__ of the range the value is originally __from__
-  - The __bounds__ of the range to convert the value __to__
+  - The __bounds__ of the range to convert the value __into__
 - `map()` returns the value __converted to the new range__
 ---
 
@@ -126,14 +138,14 @@ y = constrain(y + vy,0,height);
 - `map(0,0,100,0,255)` returns `0`
   - Because both ranges start at `0` and the value is `0`
 - `map(100,0,100,0,255)` returns `255`
-  - Because the first range ends at `100` and the value is at the upper bound of that range
+  - Because the first range ends at `100` and the value (`100`) is at the upper bound of that range
   - `map()` converts it to the upper bound of the new range, which is `255`
 - `map(50,0,100,0,255)` returns `127.5`
-  - Because the value is in the middle of the starting range
+  - Because the value (`50`) is in the middle of the starting range
   - And `127.5` is in the middle of the new range
 - `map(80,0,100,0,255)` returns `159.375`
-  - Because the value is 80% along the starting range
-  - And `159.375` is 80% along the finishing range
+  - Because the value (`80`) is 80% along the starting range
+  - And `159.375` is 80% along the new range
 
 ???
 
@@ -141,8 +153,14 @@ y = constrain(y + vy,0,height);
 
 ```javascript
 function map(value,startLow,startHigh,endLow,endHigh) {
+  // Work out what fraction the value is along the starting range
+  // taking account for the fact the starting value might not be 0
+  // and so functions as an offset
   var fractionOfStart = (value - startLow) / (startHigh - startLow);
+  // Calculate the result by using the same fraction in the new range
+  // again taking account for the fact the starting value might not be 0
   var result = endLow + fractionOfStart * (endHigh - endLow);
+  // Return the result
   return result;
 }
 ```
@@ -151,13 +169,13 @@ function map(value,startLow,startHigh,endLow,endHigh) {
 
 ## In context
 
-- Set the variable to a greyscale value based on where the mouse is on the x axis of the canvas
+Set the variable to a greyscale value based on where the mouse is on the x axis of the canvas
 
 ```javascript
 var fillGrey = map(mouseX,0,width,0,255)
 ```
 
-- Set the size of an ellipse relative to its distance from the centre of the canvas:
+Set the size of an ellipse relative to its distance from the centre of the canvas:
 
 ```javascript
 var d = dist(mouseX,mouseY,width/2,height/2);
@@ -165,7 +183,14 @@ var radius = map(d,0,width,10,100);
 ellipse(mouseX,mouseY,radius);
 ```
 
-- But really it comes down to seeing opportunities to use `map()` and remembering it exists
+Set the alpha of an enemy agent based on its health variable
+
+```javascript
+var enemyAlpha = map(enemyHealth,0,100,0,255);
+fill(255,0,0,enemyAlpha);
+```
+
+But really it comes down to seeing opportunities to use `map()` and remembering it exists
 
 ???
 

@@ -12,36 +12,54 @@
 
 ---
 
+## JavaScript Objects
 
-## (Advanced for now) There's one more weird thing
-
-- We'll deal with this much more next week, but just so we know...
-- ... JavaScript Objects can also have __functions__ in their properties
+- We've already seen the basic idea of an "object" in the form of JavaScript Objects
+- So far we've used them as a way to store a bunch of properties together:
 
 ```javascript
 var circle = {
-  position: {
-    x: 0,
-    y: 0
-  },
-  velocity: {
-    vx: 0,
-    vy: 0
-  }
+  x: 0,
+  y: 0,
+  vx: 0,
+  vy: 0,
+  maxSpeed: 1,
+  radius: 25
+}
+```
+
+- So we have circle __object__ which has properties to store its position, velocity, speed, and radius
+
+---
+
+## JavaScript Objects and Functions
+
+- ... JavaScript Objects can also have __functions__ in their properties!
+
+```javascript
+var circle = {
+  x: 0,
+  y: 0,
+  vx: 0,
+  vy: 0,
   maxSpeed: 1,
   radius: 25,
   sayHello: function () {
     console.log("Hello, world!");
   },
   sayGoodbye: function () {
-    console.log("Goodbye, world!");
+    console.log("Goodbye, (cruel) world!");
   }
 }
 ```
 
+???
+
+- Somewhat behind the scenes, it turns out that you can store __functions__ inside __variables__ because JavaScript allows for that
+
 ---
 
-## (Advanced for now) Calling an object's function
+## Calling an object's function
 
 - Once again, we use dot notation to call those functions:
 
@@ -52,25 +70,24 @@ circle.sayGoodbye();
 
 ---
 
-## (Advanced for now) Using an object's properties in its functions
+## Using an object's properties in its functions
+
+- Because we might want an object's __functions__ to use that object's __properties__, we need a way to refer to them inside those functions
 
 ```javascript
 var circle = {
-  position: {
-    x: 0,
-    y: 0
-  },
-  velocity: {
-    vx: 0,
-    vy: 0
-  }
+  x: 0,
+  y: 0,
+  vx: 0,
+  vy: 0,
   maxSpeed: 1,
   radius: 25,
   move: function () {
-    this.position.x += this.velocity.x;
+    this.x += this.vx;
+    this.y += this.vy;
   },
   display: function () {
-    ellipse(this.position.x,this.position.y,this.radius * 2);
+    ellipse(this.x,this.y,this.radius * 2);
   }
 }
 ```
@@ -79,7 +96,7 @@ var circle = {
 
 ---
 
-## (Advanced for now) Using the functions inside an object
+## Using the functions inside an object
 
 - So if we have the circle variable with the object from the last slide then we can __call__ its functions using dot notation as well!
 
@@ -88,8 +105,10 @@ var circle = { ... };
 
 function setup() {
   createCanvas(500,500);
-  circle.velocity.x = circle.maxSpeed;
-  circle.position.y = height/2;
+  circle.vx = circle.maxSpeed;
+  circle.vy = -circle.maxSpeed;
+  circle.x = width/2;
+  circle.y = height/2;
 }
 
 function draw() {
@@ -104,18 +123,19 @@ function draw() {
 
 ## OOP
 
-- Let's look at this idea of object oriented programming
-- It involves some new notation and syntax
+- So let's look at this idea of object oriented programming
+- It involves a little more new notation and syntax
 - But conceptually it's something that actually makes a lot of sense
 - And it solves a lot of problems in terms of keeping related data and functionality together!
+- Specifically, it's a lot like the above examples of JavaScript objects with properties and functions, but just a little bit better!
 
 ---
 
 ## Welcome to the real (virtual) world!
 
 - Object Oriented Programming (OOP) was a major revolution in software engineering
-- In a way it helped us move away from treating programmers like computers (procedural programming) and toward thinking of programs in more "human" terms as little worlds of interacting objects
-- It allows us to think about our programs with a more helpful metaphor than the flow of control
+- In a way it helped us move away from thinking about programs like computers (procedural programming) and toward thinking of programs in more "human" terms as little worlds of interacting objects
+- It allows us to think about our programs with a more helpful metaphor than just the flow of control from one function to the next
 
 ???
 
@@ -127,35 +147,35 @@ function draw() {
 ## Objection!
 
 - So what are the "objects" in OOP?
-- Well in reality, objects are distinct physical entities in the world (a person, a projector, a window, ...)
-- Objects have particular __properties__ (a person has an age, a height, a weight, ...)
+- Well in our world, objects are distinct physical entities in the world (a person, a projector, a window, ...)
+- Those objects have particular __properties__ (a person has an age, a height, a weight, ...)
 - And they have particular __functions__ (a projector can be turned on, project an image, play a sound, ...)
 --
 
 - Objects in programming are the same except __we__ can define them
 - And which properties and functions we choose to include in our implementation depend on what we're doing
-- (And yes, the __JavaScript Objects__ we saw recently are very much connected with what we're talking about here, we're going to talk about a more systematic way of creating them.)
+- (And yes, the __JavaScript Objects__ we saw earlier are pretty much like this already, we're going to talk about a more systematic way of creating them.)
 
 ---
 
 ## Other people's objects
 
-- In fact, objects are also amazing because __other people__ can define them __for__ us to save us work
-- For example when we use `loadImage()` we're creating an object that represents an image in our code
-- In fact, that's how __libraries__ in programming very often work: they create some special __object__ which you then use to access the special powers of the library
+- Objects are also amazing because __other people__ can define them __for__ us to save us work
+- For example when we use `new Audio()` we're creating an object that represents an audio file in our code, which we can then `.play()` and `.pause()` and set the `.loop` property of...
+- In fact, this is how __libraries__ in programming very often work: they create some special __object__ which you then use to access the powers of the library
 
 ---
 
-## "O Brave New World!"
+## "OOP Brave New World!"
 
-- So now we can start to think about programs as __worlds__ full of little __objects__ that have __properties__ and __functions__ and that can __interact__ with each other
+- So we can start to think about programs as __worlds__ full of little __objects__ that have __properties__ and __functions__ and that can __interact__ with each other
 - This is a big part of the solution to writing complicated code that interacts with itself and creates complex, interesting results
 - To actually implement this kind of programming we need some new notation/syntax
 - Which we might as well learn now!
 
 ???
 
-- Quote: Miranda in William Shakespeare's __The Tempest__</small>
+- Quote: Miranda in William Shakespeare's __The Tempest__. Sort of.
 
 ---
 
@@ -175,7 +195,7 @@ It encounters strange elongated creatures that seek to collide with it...
 
 --
 
-It bounces of them, asking itself... "why?""
+It bounces off them, asking itself... "why?"
 
 --
 
@@ -188,7 +208,7 @@ Yes, that's right, it's a Pong ball.
 - Thinking in objects can be a helpful way to design our programs
 - It allows to ask what __things__ there are in the program
 - And then to design __objects__ that will represent those things
-- And then to create the code for those __objects__ and see what happens
+- And then to create the code for those __objects__ to bring them to life
 
 ???
 
@@ -203,7 +223,7 @@ Yes, that's right, it's a Pong ball.
 - So if we start with this idea of a ball that bounces off walls and want to make it with OOP we need to ask what its __properties__ and __functions__ are... so... well?
 --
 
-- In terms of properties it will need a __position__, a __velocity__, a __size__, and perhaps a __colour__
+- In terms of properties it will need a __position__, a __velocity__, a __size__, and perhaps a __color__
 - In terms of functions it will need to __move__ (including bouncing) and it will need to __display__ itself
 --
 
@@ -227,7 +247,7 @@ function setup() {
 - We want to make a Ball that knows how to do all that stuff in our program
 - So we can just tell it "move!" and "display yourself!" and it will do it
 - This would be a new __type__ of value (or data), and we'd store it in a variable...
-- ... but... how do we make it?
+- Earlier we would have used an explicit JavaScript object, but now we'll do something different.
 
 ---
 
@@ -244,8 +264,9 @@ function setup() {
 
 - This is what it looks like when we make an __object__ in JavaScript (and many other languages)
 - Importantly we use the special word .hi[`new`] to say we want to make a __new object__
-- And we use a special function with the name of the __type__ of objects, .hi[`Ball()`] to create it
+- And we use a special function with the name of the __type__ of object, .hi[`Ball()`] to create it
 - That function is called the __constructor__ (it __makes__ a Ball in this case)
+- Note it is traditional for the constructor to start with a __capital letter__ (`Ball()` not `ball()`)
 
 ???
 
@@ -292,8 +313,8 @@ function draw() {
 }
 ```
 
-- Here's another new thing. We're talking to the ball by calling its methods...
-- But we do that by writing the variable with the Ball in it (`ball`)
+- As we saw earlier, we call the methods of an object using __do notation__
+- So we write the name of the variable with the Ball in it (`ball`)
 - Then a `.` (a dot)
 - Then the function call (`update()` and `display()`)
 
@@ -345,19 +366,24 @@ function Ball() {
   this.vy = 0;
   this.size = 10;
   this.speed = 5;
+}
 
-  this.update = function () {
-    // Move the ball here
-  }
+Ball.prototype.update = function () {
+  // Move the ball here
+}
 
-  this.display = function () {
-    // Display the ball here
-  }
+Ball.prototype.display = function () {
+  // Display the ball here
+}
+
+Ball.prototype.reset = function () {
+  // Reset the ball here
 }
 ```
 
 - This is what a __class__ definition looks like in JavaScript
-- It's a __function__ that knows how to create a Ball
+- It's a __function__ that knows how to create a Ball with properties
+- And then a set of __methods__ that can tell the Ball to do things
 
 ---
 
@@ -369,14 +395,14 @@ function Ball() {
 
 ## Methods
 
-- We can see there are __methods__ like `update`, `display`, and `reset`
+- We can see there are __methods__ like `update` and `display` and `reset`
 
 ---
 
 ## `this`
 
-- We can see a special word called `this` being used
-- We also see the magical word `this` which refers to the __current instance__
+- We can see a special word called `this` being used to set properties
+- `this` refers to the __current instance__
 - When we __use__ this class, `this` refers to the current object
 
 ---
@@ -390,6 +416,104 @@ function Ball() {
 
 - Or we can put it in a __new file__ with the name of the class - in this case `Ball.js`
 - If we do that we need to also go into `index.html` and add a script tag that includes `Ball.js` as well, so that our script can "see" it
+- Generally speaking we should use a new file for clarity
+
+---
+
+## Adding the class in a new file
+
+- Create a file in the `js/` folder called `Ball.js` (note the capital)
+- Put the Ball class code into that file and save it
+
+```
+project/
+index.html
+assets/
+css/
+js/
+libraries/
+Ball.js
+script.js
+```
+
+- Add the `<script>` tag referencing the `Ball.js` into `index.html` __before__ `script.js`
+
+```html
+<!-- My script(s) -->
+<script src="js/Ball.js"></script>
+<script src="js/script.js"></script>
+```
+
+---
+
+## See notes (`P` in slide view) for the three files right now
+
+???
+
+`index.html`
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+
+  <!-- CSS stylesheet(s) -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <!-- Library script(s) -->
+  <script src="js/libraries/p5.min.js"></script>
+
+  <!-- My script(s) -->
+  <script src="js/Ball.js"></script>
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <!-- HTML would go here if needed. -->
+</body>
+
+</html>
+```
+
+`js/Ball.js`
+```javascript
+function Ball() {
+  this.size = 10;
+  this.speed = 5;
+  this.x = 0;
+  this.y = 0;
+  this.vx = 0;
+  this.vy = 0;
+}
+
+Ball.prototype.update = function () {
+  // Move the ball here
+}
+
+Ball.prototype.display = function () {
+  // Display the ball here
+}
+
+Ball.prototype.reset = function () {
+  // Reset the ball here
+}
+```
+
+`js/script.js`
+```javascript
+var ball;
+
+function setup() {
+  createCanvas(640,480);
+  ball = new Ball();
+}
+
+function draw() {
+  ball.update();
+  ball.display();
+}
+```
 
 ---
 
@@ -407,12 +531,20 @@ function Ball() {
 
 ---
 
+- Perhaps the ball should be 10x10 pixels and have a speed of 10 pixels per frame...
+
+```javascript
+this.size = 10;
+this.speed = 10;
+```
+
+---
+
 - Perhaps the ball should start in the centre of the screen...
 
 ```javascript
 this.x = width/2;
 this.y = height/2;
-
 ```
 
 ---
@@ -430,7 +562,7 @@ this.vy = this.speed;
 - So the ball should move, check for bouncing vertically, and going off-screen horizontally for now...
 
 ```javascript
-this.update = function () {
+Ball.prototype.update = function () {
   this.x += this.vx;
   this.y += this.vy;
 
@@ -450,7 +582,7 @@ this.update = function () {
 - So that should display the ball in its current location
 
 ```javascript
-this.display = function () {
+Ball.prototype.display = function () {
   fill(255);
   rect(this.x,this.y,this.size,this.size);
 }
@@ -462,7 +594,7 @@ this.display = function () {
 - And set its velocity again
 
 ```javascript
-this.reset = function () {
+Ball.prototype.reset = function () {
   this.x = width/2;
   this.y = height/2;
 }
@@ -474,52 +606,43 @@ this.reset = function () {
 
 - So if we put all that together...
 
-__Code is in the notes__
+__Code is in the notes__ (`P` in slide view)
 
 ???
 
 `Ball.js`:
 
 ```javascript
-function Ball(x,y,vx,vy,size,speed) {
-  this.x = x;
-  this.y = y;
-  this.vx = vx;
-  this.vy = vy;
-  this.size = size;
-  this.speed = speed;
+function Ball() {
+  this.size = 10;
+  this.speed = 10;
+  this.x = width/2;
+  this.y = height/2;
+  this.vx = this.speed;
+  this.vy = this.speed;
+}
 
-  this.update = function () {
-    this.x += this.vx;
-    this.y += this.vy;
+Ball.prototype.update = function () {
+  this.x += this.vx;
+  this.y += this.vy;
 
-    if (this.x < 0 || this.x > width) {
-      this.reset();
-    }
-
-    if (this.y < 0 || this.y > height) {
-      this.vy = -this.vy;
-    }
+  if (this.x < 0 || this.x > width) {
+    this.reset();
   }
 
-  this.display = function () {
-    fill(255);
-    rect(this.x,this.y,this.size,this.size);
+  if (this.y < 0 || this.y > height) {
+    this.vy = -this.vy;
   }
+}
 
-  this.handleCollision = function(paddle) {
-    if (this.x + this.size > paddle.x && this.x < paddle.x + paddle.w) {
-      if (this.y + this.size > paddle.y && this.y < paddle.y + paddle.h) {
-        this.x -= this.vx;
-        this.vx = -this.vx;
-      }
-    }
-  }
+Ball.prototype.display = function () {
+  fill(255);
+  rect(this.x,this.y,this.size,this.size);
+}
 
-  this.reset = function () {
-    this.x = width/2;
-    this.y = height/2;
-  }
+Ball.prototype.reset = function () {
+  this.x = width/2;
+  this.y = height/2;
 }
 ```
 
@@ -567,18 +690,16 @@ Yeah. Arguments in the `Ball()` function (the __constructor__) that tell the bal
 ## Building a better constructor
 
 - It would make more sense to be able to pass some parameters to our `Ball()` constructor so we can say, for example, where we want our new ball to start and how fast it should be moving, and how big it is, etc...
-- We can add arguments to our constructor (and our methods) in the same way we already saw last week
+- We can add arguments to our constructor (and our methods) in the same way know already
 
 ```javascript
 function Ball(x,y,vx,vy,size,speed) {
+  this.size = size;
+  this.speed = speed;
   this.x = x;
   this.y = y;
   this.vx = vx;
   this.vy = vy;
-  this.size = size;
-  this.speed = speed;
-
-  ...
 }
 ```
 
@@ -659,15 +780,15 @@ function Paddle(x,y,w,h,speed) {
   this.w = w;
   this.h = h;
   this.speed = speed;
+}
 
-  this.handleInput = function() {
-  }
+Paddle.prototype.handleInput = function() {
+}
 
-  this.update = function() {
-  }
+Paddle.prototype.update = function() {
+}
 
-  this.display = function() {
-  }
+Paddle.prototype.display = function() {
 }
 ```
 
@@ -687,19 +808,17 @@ function Paddle(x,y,w,h,speed,downKey,upKey) {
   this.speed = speed;
   this.downKey = downKey;
   this.upKey = upKey;
-
-  ...
 }
 ```
 
 - Since we'll make more than one Paddle, we should assign its control keys in the constructor
 - We'll need to decide whether this should be a key code or a character...
-- keyCode is probably better
+- For this one we'll use a key code
 
 ---
 
 ```javascript
-this.handleInput = function() {
+Paddle.prototype.handleInput = function() {
   if (keyIsDown(this.upKey)) {
     this.vy = -this.speed;
   }
@@ -719,7 +838,7 @@ this.handleInput = function() {
 ---
 
 ```javascript
-this.update = function() {
+Paddle.prototype.update = function() {
   this.y += this.vy;
   this.y = constrain(this.y,0,height-this.h);
 }
@@ -731,7 +850,7 @@ this.update = function() {
 ---
 
 ```javascript
-this.display = function() {
+Paddle.prototype.display = function() {
   fill(255);
   rect(this.x,this.y,this.w,this.h);
 }
@@ -784,7 +903,7 @@ function draw() {
 
 In `Ball.js`:
 ```javascript
-this.handleCollision = function(paddle) {
+Ball.prototype.handleCollision = function(paddle) {
   if (this.x + this.size > paddle.x && this.x < paddle.x + paddle.w) {
     if (this.y + this.size > paddle.y && this.y < paddle.y + paddle.h) {
       this.x -= this.vx;
@@ -796,7 +915,7 @@ this.handleCollision = function(paddle) {
 
 ???
 
- - Note that the line `this.x -= this.vx` is used to move the ball back a timestep so it's no longer intersecting with the paddle - this will help it not become embedded in the paddle!
+- Note that the line `this.x -= this.vx` is used to move the ball back a timestep so it's no longer intersecting with the paddle - this will help it not become embedded in the paddle!
 
 ---
 
@@ -847,38 +966,38 @@ function Ball(x,y,vx,vy,size,speed) {
   this.vy = vy;
   this.size = size;
   this.speed = speed;
+}
 
-  this.update = function () {
-    this.x += this.vx;
-    this.y += this.vy;
+Ball.prototype.update = function () {
+  this.x += this.vx;
+  this.y += this.vy;
 
-    if (this.x < 0 || this.x > width) {
-      this.reset();
+  if (this.x < 0 || this.x > width) {
+    this.reset();
+  }
+
+  if (this.y < 0 || this.y > height) {
+    this.vy = -this.vy;
+  }
+}
+
+Ball.prototype.display = function () {
+  fill(255);
+  rect(this.x,this.y,this.size,this.size);
+}
+
+Ball.prototype.handleCollision = function(paddle) {
+  if (this.x + this.size > paddle.x && this.x < paddle.x + paddle.w) {
+    if (this.y + this.size > paddle.y && this.y < paddle.y + paddle.h) {
+      this.x -= this.vx;
+      this.vx = -this.vx;
     }
-
-    if (this.y < 0 || this.y > height) {
-      this.vy = -this.vy;
-    }
   }
+}
 
-  this.display = function () {
-    fill(255);
-    rect(this.x,this.y,this.size,this.size);
-  }
-
-  this.handleCollision = function(paddle) {
-    if (this.x + this.size > paddle.x && this.x < paddle.x + paddle.w) {
-      if (this.y + this.size > paddle.y && this.y < paddle.y + paddle.h) {
-        this.x -= this.vx;
-        this.vx = -this.vx;
-      }
-    }
-  }
-
-  this.reset = function () {
-    this.x = width/2;
-    this.y = height/2;
-  }
+Ball.prototype.reset = function () {
+  this.x = width/2;
+  this.y = height/2;
 }
 ```
 
@@ -894,28 +1013,28 @@ function Paddle(x,y,w,h,speed,downKey,upKey) {
   this.speed = speed;
   this.downKey = downKey;
   this.upKey = upKey;
+}
 
-  this.handleInput = function() {
-    if (keyIsDown(this.upKey)) {
-      this.vy = -this.speed;
-    }
-    else if (keyIsDown(this.downKey)) {
-      this.vy = this.speed;
-    }
-    else {
-      this.vy = 0;
-    }
+Paddle.prototype.handleInput = function() {
+  if (keyIsDown(this.upKey)) {
+    this.vy = -this.speed;
   }
+  else if (keyIsDown(this.downKey)) {
+    this.vy = this.speed;
+  }
+  else {
+    this.vy = 0;
+  }
+}
 
-  this.update = function() {
-    this.y += this.vy;
-    this.y = constrain(this.y,0,height-this.h);
-  }
+Paddle.prototype.update = function() {
+  this.y += this.vy;
+  this.y = constrain(this.y,0,height-this.h);
+}
 
-  this.display = function() {
-    fill(255);
-    rect(this.x,this.y,this.w,this.h);
-  }
+Paddle.prototype.display = function() {
+  fill(255);
+  rect(this.x,this.y,this.w,this.h);
 }
 ```
 

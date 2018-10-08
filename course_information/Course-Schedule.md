@@ -138,7 +138,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Extra - `push()` and `pop()` ([Slides](https://pippinbarr.github.io/cart253-2018/modules/extra-push-and-pop/index.html), [Notes](../modules/extra-push-and-pop/extra-push-and-pop.md))
 
 ## Homework
-### [Exercise 4](../exercises/Exercise-4.md) - Pong variation
+### [Exercise 4](../exercises/Exercise-4.md) - Pong Plus
 
 ---
 
@@ -148,13 +148,9 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Core - Object Oriented Programming ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-object-oriented-programming/index.html), [Notes](../modules/core-object-oriented-programming/core-object-oriented-programming.md))
 
-## Debugging - Object Oriented Programming
-
-## Game - ... ?
-
 ## Homework
-### Exercise 5 (coming soon)
-### Project 2 (coming soon))
+### Exercise 5 (Something with OOP Pong)
+### Project 2 (Something else with OOP Pong and Arrays from next week)
 
 ---
 
@@ -162,10 +158,8 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 
 ## Review
-## Core - Arrays
-## Core - `for` loops and arrays
-## Debugging - Arrays
-## Debugging - Review
+## Core - Arrays ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-arrays/index.html), [Notes](../modules/core-arrays/core-arrays.md))
+## Debugging - Summary
 ## Game - ...
 ## Exercise 6 - ...
 

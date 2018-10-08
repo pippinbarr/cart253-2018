@@ -266,6 +266,68 @@ function draw() {
 
 ---
 
+## The order matters
+
+```javascript
+function draw() {
+  background(200,250,200);
+  drawCaterpillar(100,100);
+}
+
+function drawCaterpillar(x,y) {
+  var segmentsDrawn = 0;
+  var nextX = x;
+  while (segmentsDrawn < numSegments) {
+    ellipse(nextX,y,segmentRadius*2);
+    nextX += segmentRadius * 1.5;
+    segmentsDrawn++;
+  }
+}
+```
+
+- When you call a function you've defined, make sure you put your parameters in the __same order as the arguments in the definition__
+- This is actually the only way JavaScript knows which parameters refers to which argument
+
+???
+
+- It's actually possible to omit parameters and still have a function work
+- When you call a function with too few parameters, the remaining arguments will be `undefined` and the function will run that way
+- So if we call
+
+```javascript
+drawCaterpillar(100);
+```
+
+- Then the function will be called with `x` as `100` (because `x` is the first parameters) and with `y` as `undefined`
+- This will mean the caterpillar won't appear on the screen, because you can't draw ellipses with an `undefined` position coordinate
+- If you __wanted__ to be able to omit the `y` perhaps because you'll just have a default value for it, you have to write that into the function:
+
+```javascript
+function drawCaterpillar(x,y) {
+  if (y === undefined) {
+    y = 100; // Set y to the default of 100 if it's not specified
+  }
+  var segmentsDrawn = 0;
+  var nextX = x;
+  while (segmentsDrawn < numSegments) {
+    ellipse(nextX,y,segmentRadius*2);
+    nextX += segmentRadius * 1.5;
+    segmentsDrawn++;
+  }
+}
+```
+
+- Now if we call
+
+```javascript
+drawCaterpillar(100);
+```
+
+- The function will run with `x` as `100` and `y` as `undefined`, but the `if` statement will catch the fact that no `y` was specified and set it to a default value of `100`
+- Again, note that we have to do this ourselves in the code, it doesn't happen automatically
+
+---
+
 ## Calling a function with arguments
 
 ```javascript
@@ -323,7 +385,6 @@ function drawCaterpillar(x,y,segments,radius) {
     nextX += radius * 1.5;
     segmentsDrawn++;
   }
-  noLoop();
 }
 ```
 
@@ -341,7 +402,6 @@ function drawCaterpillar(x,y,segments,radius,fillColor) {
     nextX += radius * 1.5;
     segmentsDrawn++;
   }
-  noLoop();
 }
 ```
 

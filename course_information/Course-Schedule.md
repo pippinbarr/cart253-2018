@@ -135,6 +135,8 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Extra - `constrain()` and `map()` ([Slides](https://pippinbarr.github.io/cart253-2018/modules/extra-constrain-and-map/index.html), [Notes](../modules/extra-constrain-and-map/extra-constrain-and-map.md))
 
+## Extra - `push()` and `pop()` ([Slides](https://pippinbarr.github.io/cart253-2018/modules/extra-push-and-pop/index.html), [Notes](../modules/extra-push-and-pop/extra-push-and-pop.md))
+
 ## Homework
 ### [Exercise 4](../exercises/Exercise-4.md) - Pong variation
 

@@ -38,8 +38,8 @@ var leftPaddle = {
   vx: 0,
   vy: 0,
   speed: 5,
-  upKey: 87, // The key code for W
-  downKey: 83 // The key code for S
+  upKeyCode: 87, // The key code for W
+  downKeyCode: 83 // The key code for S
 }
 
 // RIGHT PADDLE
@@ -54,8 +54,8 @@ var rightPaddle = {
   vx: 0,
   vy: 0,
   speed: 5,
-  upKey: 38, // The key code for the UP ARROW
-  downKey: 40 // The key code for the DOWN ARROW
+  upKeyCode: 38, // The key code for the UP ARROW
+  downKeyCode: 40 // The key code for the DOWN ARROW
 }
 
 // A variable to hold the beep sound we will play on bouncing
@@ -162,12 +162,12 @@ function handleInput(paddle) {
   // Check whether the upKeyCode is being pressed
   // NOTE how this relies on the paddle passed as a parameter having the
   // property .upKey
-  if (keyIsDown(this.upKeyCode)) {
+  if (keyIsDown(paddle.upKeyCode)) {
     // Move up
     paddle.vy = -paddle.speed;
   }
   // Otherwise if the .downKeyCode is being pressed
-  else if (keyIsDown(this.downKeyCode)) {
+  else if (keyIsDown(paddle.downKeyCode)) {
     // Move down
     paddle.vy = paddle.speed;
   }

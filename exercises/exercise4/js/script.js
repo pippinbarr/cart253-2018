@@ -38,8 +38,8 @@ var leftPaddle = {
   vx: 0,
   vy: 0,
   speed: 5,
-  upKey: 'W',
-  downKey: 'S'
+  upKey: 87, // The key code for W
+  downKey: 83 // The key code for S
 }
 
 // RIGHT PADDLE
@@ -54,8 +54,8 @@ var rightPaddle = {
   vx: 0,
   vy: 0,
   speed: 5,
-  upKey: 'O',
-  downKey: 'L'
+  upKey: 38, // The key code for the UP ARROW
+  downKey: 40 // The key code for the DOWN ARROW
 }
 
 // A variable to hold the beep sound we will play on bouncing
@@ -149,17 +149,6 @@ function draw() {
 // Takes one parameter: the paddle to handle.
 function handleInput(paddle) {
 
-  // Get the keycodes of the up and down keys for this paddle
-  // .charCodeAt(0) will tell us the ASCII code of the first
-  // character in the string it is applied to. Since our upKey
-  // and downKey properties are just one character, it'll give us
-  // the keyCode of the upKey and downKey
-
-  // NOTE how this relies on the paddle passed as a parameter having the
-  // properties .upKey and .downKey
-  var upKeyCode = paddle.upKey.charCodeAt(0);
-  var downKeyCode = paddle.downKey.charCodeAt(0);
-
   // Set the velocity based on whether one or neither of the keys is pressed
 
   // NOTE how we can change properties in the object, like .vy and they will
@@ -170,13 +159,15 @@ function handleInput(paddle) {
   // when we pass JAVASCRIPT OBJECTS into functions it's the object itself that
   // gets passed, so we can change its properties etc.
 
-  // Check whether the upKey is being pressed
-  if (keyIsDown(upKeyCode)) {
+  // Check whether the upKeyCode is being pressed
+  // NOTE how this relies on the paddle passed as a parameter having the
+  // property .upKey
+  if (keyIsDown(this.upKeyCode)) {
     // Move up
     paddle.vy = -paddle.speed;
   }
-  // Otherwise if the downKey is being pressed
-  else if (keyIsDown(downKeyCode)) {
+  // Otherwise if the .downKeyCode is being pressed
+  else if (keyIsDown(this.downKeyCode)) {
     // Move down
     paddle.vy = paddle.speed;
   }
@@ -266,6 +257,9 @@ function handleBallOffScreen() {
     // If it went off either side, reset it to the centre
     ball.x = width/2;
     ball.y = height/2;
+    // NOTE that we don't change its velocity here so it just
+    // carries on moving with the same velocity after its
+    // position is reset.
     // This is where we would count points etc!
   }
 }

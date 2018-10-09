@@ -31,7 +31,8 @@ would become
 ///////// NEW /////////
 
 // Set alpha based on health
-fill(255,0,0,map(health,0,100,0,255));
+var healthAlpha = map(health,0,100,0,255);
+fill(255,0,0,healthAlpha);
 // Set size based on health
 w = h * health;
 
@@ -49,7 +50,7 @@ As always, begin by downloading the start code ([exercise4.zip](exercise4.zip)).
 1. Improve the game by making the ball launch toward the paddle that won the most recent point with a random y velocity (e.g. if it went off the left side of the screen it should launch toward the righthand side with a random y vleocity). Make sure you keep your random y velocity within a range that makes the game still interesting to play (e.g. not too high and not too low)). Add a `reset()` function to handle this.
 1. Improve the game by making it visually and sonically interesting in some way (e.g. you could make it a metaphor by using images and sounds to convey an idea, or you could keep it abstract but use more interesting shapes, perhaps allow things to leave a trail, perhaps fill the paddles and balls with randomly generated "static", or something else)
 
-Optional challenges: Add a win condition that ends the game. Allow the paddles to move on the x axis. Make the ball move on y with a sine wave or perlin noise. Use the position the ball hits a paddle to influence its resulting y velocity. Allow paddles to also shoot a "bullet" at each other which destroys whatever it touches.
+Optional challenges: Add a win condition that ends the game. Allow the paddles to move on the x axis. Make the ball move on y with a sine wave or perlin noise. Use the relative position the ball hits a paddle to influence its resulting y velocity (e.g. hitting the ball off the edge might give it a sharper angle). Allow paddles to also shoot a "bullet" at each other which destroys whatever it touches.
 
 
 ## Starter Code

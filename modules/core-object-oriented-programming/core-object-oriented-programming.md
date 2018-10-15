@@ -36,7 +36,6 @@
 
 - Objects in programming are the same except __we__ can define them
 - And which properties and functions we choose to include in our implementation depend on what we're doing
-- Yes, the __JavaScript Objects__ we saw earlier do this already, now we're going to talk about a more systematic way of creating them.
 
 ---
 
@@ -121,7 +120,6 @@ function setup() {
 - We want to make a Ball that knows how to do all that stuff in our program
 - So we can just tell it "move!" and "display yourself!"
 - This would be a new __type__ of value (or data), and we'd store it in a variable...
-- Previously we would have used an explicit JavaScript object, but now we'll do something different.
 
 ---
 
@@ -161,7 +159,7 @@ function setup() {
 
 - Because it isn't
 - Right now, our program doesn't know how to create a new Ball
-- Instead of creating the ball __explicitly__ as an object, we're going to tell our program __how to create a new Ball__ instead
+- Where previously we might have explicitly created an object with properties, now we're going to tell our program __how to create a new Ball__ instead
 
 ---
 
@@ -221,14 +219,22 @@ function Ball() {
 ```
 
 - This first part of our class definition is a function called the __constructor__
-- It's the function we call when we want to make a new ball, e.g.
+- Any properties this kind of object is going to have should specified here
+- __Note how the properties have the special word `this` in front of them!__
+- When we're defining a __class__ like this, we refer to the object that will be created from the class as `this`
+- And so we set the properties of `this`
+
+---
+
+## Constructor
+
+- In fact, we can now see that it's the constructor function we call when we want to make a new ball, e.g.
 
 ```javascript
 var ball = new Ball();
 ```
 
-- And it sets all the Ball's properties to default values right now
-- Any properties this kind of object is going to have should specified here
+- As we saw, it sets all the Ball's properties to default values right now
 
 ---
 
@@ -244,7 +250,7 @@ this.speed = 5;
 ```
 
 - We can see there are __properties__ like `speed`, `size`, `position` and `velocity`
-- Note that they are all being set using the special `this` word because each of the properties is a variable that belongs to __this__ kind of object
+- Again, note that they are all being set using the special `this` word because each of the properties is a variable that belongs to __this__ hypothetical object that would be created from the class
 
 ---
 
@@ -473,6 +479,7 @@ function Ball() {
 - The `update` method should update the position with the velocity
 - The `display` method should draw the Ball on screen as a rectangle using the position and size properties
 - The `reset` method should set the position back to the centre of the canvas
+- Remember to use `this` whenever you refer to properties of the class
 - (Answer in the slide notes)
 
 ???
@@ -543,6 +550,8 @@ Ball.prototype.update = function () {
   }
 }
 ```
+
+- Again, notice how if we we want to call a method of a class from inside the class we put `this` in front of it because the method is a __method of the hypothetical object being created from the class__
 
 ---
 
@@ -869,9 +878,7 @@ Paddle.prototype.display = function() {
 
 ---
 
-## Integration
-
-- Now we can add a a paddle to the main code...
+## Adding a paddle
 
 ```javascript
 var ball1;

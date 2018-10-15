@@ -146,7 +146,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Review
 
-## Core - JavaScript Objects With Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/javascript-objects-with-functions/index.html), [Notes](../modules/javascript-objects-with-functions/javascript-objects-with-functions.md))
+## Extra - JavaScript Objects With Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/extra-javascript-objects-with-functions/index.html), [Notes](../modules/extra-javascript-objects-with-functions/extra-javascript-objects-with-functions.md))
 
 ## Core - Object Oriented Programming ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-object-oriented-programming/index.html), [Notes](../modules/core-object-oriented-programming/core-object-oriented-programming.md))
 

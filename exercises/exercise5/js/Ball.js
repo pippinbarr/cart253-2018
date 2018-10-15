@@ -29,14 +29,23 @@ Ball.prototype.update = function () {
   // Constrain y position to be on screen
   this.y = constrain(this.y,0,height-this.size);
 
-  // Check for going off screen and reset if so
-  if (this.x + this.size < 0 || this.x > width) {
-    this.reset();
-  }
-
   // Check for touching upper or lower edge and reverse velocity if so
   if (this.y === 0 || this.y + this.size === height) {
     this.vy = -this.vy;
+  }
+}
+
+// isOffScreen()
+//
+// Checks if the ball has moved off the screen and, if so, returns true.
+// Otherwise it returns false.
+Ball.prototype.isOffScreen = function () {
+  // Check for going off screen and reset if so
+  if (this.x + this.size < 0 || this.x > width) {
+    return true;
+  }
+  else {
+    return false;
   }
 }
 

@@ -148,15 +148,15 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Core - Object Oriented Programming ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-object-oriented-programming/index.html), [Notes](../modules/core-object-oriented-programming/core-object-oriented-programming.md))
 
+## Game - Basic OOP Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/game-basic-oop-pong/index.html), [Source Code](../games/game-basic-oop-pong/), [ZIP of Source Code](../games/game-basic-oop-pong.zip))
 
 ## Homework
-### [Exercise 5](../exercises/Exercise-5.md) (Something with OOP Pong)
-### [Project 2](../projects/Project-2.md) (Something else with OOP Pong and Arrays from next week)
+### [Exercise 5](../exercises/Exercise-5.md) - Pong Plus (Object-Oriented Edition)
+### [Project 2](../projects/Project-2.md) (Build a Better Pong)
 
 ---
 
 # Week 8 - Week of 22 October 2018
-
 
 ## Review
 

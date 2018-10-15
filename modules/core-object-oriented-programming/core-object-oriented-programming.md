@@ -6,145 +6,27 @@
 
 ## Today
 
-- Today is about the dominant approach to organising code in software engineering
+- Today is about a key approach to organising code in software engineering
 - It's called Object Oriented Programming (OOP)
 - It's pretty great
-
----
-
-## JavaScript Objects
-
-- We've already seen the basic idea of an "object" in the form of JavaScript Objects
-- So far we've used them as a way to store a bunch of properties together:
-
-```javascript
-var circle = {
-  x: 0,
-  y: 0,
-  vx: 0,
-  vy: 0,
-  maxSpeed: 1,
-  radius: 25
-}
-```
-
-- So we have circle __object__ which has properties to store its position, velocity, speed, and radius
-
----
-
-## JavaScript Objects and Functions
-
-- ... JavaScript Objects can also have __functions__ in their properties!
-
-```javascript
-var circle = {
-  x: 0,
-  y: 0,
-  vx: 0,
-  vy: 0,
-  maxSpeed: 1,
-  radius: 25,
-  sayHello: function () {
-    console.log("Hello, world!");
-  },
-  sayGoodbye: function () {
-    console.log("Goodbye, (cruel) world!");
-  }
-}
-```
-
-???
-
-- Somewhat behind the scenes, it turns out that you can store __functions__ inside __variables__ because JavaScript allows for that
-
----
-
-## Calling an object's function
-
-- Once again, we use dot notation to call those functions:
-
-```javascript
-circle.sayHello();
-circle.sayGoodbye();
-```
-
----
-
-## Using an object's properties in its functions
-
-- Because we might want an object's __functions__ to use that object's __properties__, we need a way to refer to them inside those functions
-
-```javascript
-var circle = {
-  x: 0,
-  y: 0,
-  vx: 0,
-  vy: 0,
-  maxSpeed: 1,
-  radius: 25,
-  move: function () {
-    this.x += this.vx;
-    this.y += this.vy;
-  },
-  display: function () {
-    ellipse(this.x,this.y,this.radius * 2);
-  }
-}
-```
-
-- We use a magical word called `this` inside a JavaScript object's functions to refer to __the object itself__
-
----
-
-## Using the functions inside an object
-
-- So if we have the circle variable with the object from the last slide then we can __call__ its functions using dot notation as well!
-
-```javascript
-var circle = { ... };
-
-function setup() {
-  createCanvas(500,500);
-  circle.vx = circle.maxSpeed;
-  circle.vy = -circle.maxSpeed;
-  circle.x = width/2;
-  circle.y = height/2;
-}
-
-function draw() {
-  circle.move();
-  circle.display();
-}
-```
-
-- How nice and organised that is!
-
----
-
-## OOP
-
-- So let's look at this idea of object oriented programming
-- It involves a little more new notation and syntax
-- But conceptually it's something that actually makes a lot of sense
-- And it solves a lot of problems in terms of keeping related data and functionality together!
-- Specifically, it's a lot like the above examples of JavaScript objects with properties and functions, but just a little bit better!
 
 ---
 
 ## Welcome to the real (virtual) world!
 
 - Object Oriented Programming (OOP) was a major revolution in software engineering
-- In a way it helped us move away from thinking about programs like computers (procedural programming) and toward thinking of programs in more "human" terms as little worlds of interacting objects
-- It allows us to think about our programs with a more helpful metaphor than just the flow of control from one function to the next
+- It allows us to think about our programs with a different metaphor than the flow of control from one function to the next
+- Instead we can think of programs in more "human" terms as little worlds of interacting objects
 
 ???
 
 - Note that OOP is still not a particularly __natural__ way of interacting with a computer
 - But it does at least allow us to think in terms of __systems__ of objects and agents, which is something
+- Also note that thinking of programs as a flow of control between __functions__ is also still a highly valued way of programming called __functional programming__
 
 ---
 
-## Objection!
+## Objects
 
 - So what are the "objects" in OOP?
 - Well in our world, objects are distinct physical entities in the world (a person, a projector, a window, ...)
@@ -154,24 +36,16 @@ function draw() {
 
 - Objects in programming are the same except __we__ can define them
 - And which properties and functions we choose to include in our implementation depend on what we're doing
-- (And yes, the __JavaScript Objects__ we saw earlier are pretty much like this already, we're going to talk about a more systematic way of creating them.)
-
----
-
-## Other people's objects
-
-- Objects are also amazing because __other people__ can define them __for__ us to save us work
-- For example when we use `new Audio()` we're creating an object that represents an audio file in our code, which we can then `.play()` and `.pause()` and set the `.loop` property of...
-- In fact, this is how __libraries__ in programming very often work: they create some special __object__ which you then use to access the powers of the library
+- Yes, the __JavaScript Objects__ we saw earlier do this already, now we're going to talk about a more systematic way of creating them.
 
 ---
 
 ## "OOP Brave New World!"
 
-- So we can start to think about programs as __worlds__ full of little __objects__ that have __properties__ and __functions__ and that can __interact__ with each other
+- So, we can start to think about programs as __worlds__ full of little __objects__ that have __properties__ and __functions__ and that can __interact__ with each other
 - This is a big part of the solution to writing complicated code that interacts with itself and creates complex, interesting results
 - To actually implement this kind of programming we need some new notation/syntax
-- Which we might as well learn now!
+- Which we will learn now!
 
 ???
 
@@ -213,22 +87,22 @@ Yes, that's right, it's a Pong ball.
 ???
 
 - Note that the objects don't have to represent visible, "solid" elements in our program, some of these things might be invisible.
-- Often we create objects whose entire job is to manage all the other objects, for example
+- Often we create objects whose entire job is to manage all the other objects, for example (in a videogame this is often called the `GameManager` object)
 
 ---
 
 
-## A ball
+## A Ball
 
 - So if we start with this idea of a ball that bounces off walls and want to make it with OOP we need to ask what its __properties__ and __functions__ are... so... well?
 --
 
-- In terms of properties it will need a __position__, a __velocity__, a __size__, and perhaps a __color__
-- In terms of functions it will need to __move__ (including bouncing) and it will need to __display__ itself
+- In terms of properties it will at least need a __position__, a __velocity__, and a __size__
+- In terms of functions it will need to __move__ (including bouncing) and it will need to __display__ itself on the screen
 --
 
-- Note: we actually call the __functions__ of an object its __methods__, so we'll try to use that term from now on
-- (It's not the end of the world if we forget, but just be aware it's sort of the "more correct" term here.)
+- Note: In OOP we often call the __functions__ of an object its __methods__
+- But JavaScript is pretty keen on __functions__ so we can continue to use that term, just be aware you might hear people talk about "methods" and they mean the functions of an object
 
 ---
 
@@ -239,15 +113,15 @@ var ball;
 
 function setup() {
   createCanvas(640,480);
-  ball = uuhhhhhhhhhhhh....
+  ...
 }
 ```
 --
 
 - We want to make a Ball that knows how to do all that stuff in our program
-- So we can just tell it "move!" and "display yourself!" and it will do it
+- So we can just tell it "move!" and "display yourself!"
 - This would be a new __type__ of value (or data), and we'd store it in a variable...
-- Earlier we would have used an explicit JavaScript object, but now we'll do something different.
+- Previously we would have used an explicit JavaScript object, but now we'll do something different.
 
 ---
 
@@ -262,19 +136,15 @@ function setup() {
 }
 ```
 
-- This is what it looks like when we make an __object__ in JavaScript (and many other languages)
+- This is what it looks like when we create a new __object__ in JavaScript (and many other languages) using OOP
 - Importantly we use the special word .hi[`new`] to say we want to make a __new object__
 - And we use a special function with the name of the __type__ of object, .hi[`Ball()`] to create it
-- That function is called the __constructor__ (it __makes__ a Ball in this case)
+- That function is called the __constructor__ (it __creates__ a Ball in this case)
 - Note it is traditional for the constructor to start with a __capital letter__ (`Ball()` not `ball()`)
 
-???
-
-- Note how the first letter of the constructor method is capitalised? This is standard.)
-
 ---
 
-## Let there be Ball!
+## Let there be Ball! :(
 
 ```javascript
 var ball;
@@ -283,78 +153,28 @@ function setup() {
   createCanvas(640,480);
   ball = new Ball();
 }
-
-function draw() {
-  Hey ball...
-  Move yourself...
-  and then display yourself...
-}
 ```
 
-- Now that we have made a Ball, we want to __use__ it in our program
-- But how do we talk to it?
-- In our imagination it __knows__ how to move and display itself, but how do we ask it to do those things?
+- When we run this, the JavaScript console tells us something helpful:
 
----
+`Ball is not defined`
 
-## Let there be Ball!
-
-```javascript
-var ball;
-
-function setup() {
-  createCanvas(640,480);
-  ball = new Ball();
-}
-
-function draw() {
-  ball.update();
-  ball.display();
-}
-```
-
-- As we saw earlier, we call the methods of an object using __do notation__
-- So we write the name of the variable with the Ball in it (`ball`)
-- Then a `.` (a dot)
-- Then the function call (`update()` and `display()`)
-
-???
-
-- This is called __dot notation__ and is common to most forms of object-oriented programming
-- We've already seen is a few times now
-
----
-
-## Let there be Ball!
-
-```javascript
-var ball;
-
-function setup() {
-  createCanvas(640,480);
-  ball = new Ball();
-}
-
-function draw() {
-  ball.update();
-  ball.display();
-}
-```
-
-- Okay so we're done right?
-- We created a variable called `ball`
-- We put a new `Ball` object into the variable `ball`
-- And we called `ball`'s methods in our `draw()` loop
+- Because it isn't
+- Right now, our program doesn't know how to create a new Ball
+- Instead of creating the ball __explicitly__ as an object, we're going to tell our program __how to create a new Ball__ instead
 
 ---
 
 ## Ball? What Ball?
 
-- Oh yeah, our program doesn't know what a `Ball` is
-- It knows about numbers, strings, booleans, images...
+- So, our program doesn't know what a `Ball` is
+- It knows about numbers, strings, booleans, images, Audio...
 - But it doesn't know about `Ball`
 - We need to tell JavaScript what a `Ball` is and how it works
-- We need to __define the class__ called `Ball`
+- We need to __define the how a Ball works__
+- In OOP this is called defining a __class__
+- A __class__ specifies how some type of object in our program, like a ball, can be created and used
+- So we need a `Ball` class
 
 ---
 
@@ -387,36 +207,116 @@ Ball.prototype.reset = function () {
 
 ---
 
+## Constructor
+
+```javascript
+function Ball() {
+  this.x = 0;
+  this.y = 0;
+  this.vx = 0;
+  this.vy = 0;
+  this.size = 10;
+  this.speed = 5;
+}
+```
+
+- This first part of our class definition is a function called the __constructor__
+- It's the function we call when we want to make a new ball, e.g.
+
+```javascript
+var ball = new Ball();
+```
+
+- And it sets all the Ball's properties to default values right now
+- Any properties this kind of object is going to have should specified here
+
+---
+
 ## Properties
 
+```javascript
+this.x = 0;
+this.y = 0;
+this.vx = 0;
+this.vy = 0;
+this.size = 10;
+this.speed = 5;
+```
+
 - We can see there are __properties__ like `speed`, `size`, `position` and `velocity`
+- Note that they are all being set using the special `this` word because each of the properties is a variable that belongs to __this__ kind of object
 
 ---
 
 ## Methods
 
-- We can see there are __methods__ like `update` and `display` and `reset`
+```javascript
+Ball.prototype.update = function () {
+  // Move the ball here
+}
+
+Ball.prototype.display = function () {
+  // Display the ball here
+}
+
+Ball.prototype.reset = function () {
+  // Reset the ball here
+}
+```
+
+- We can see there are three __methods__ like `update` and `display` and `reset`
+- Each method is a __function__ that we define in the special way as above
+- For now it's probably best to just mimic this syntax rather than dive too deep into JavaScript and prototypes, but do read about it online if you want to
+
+???
+
+- As we can see, each method is a __property__ that is assigned a function
+- However these properties are not directly on our __Ball__ class
+- Instead they are defined on a property of the Ball class called `prototype`
+- This is because JavaScript secretly isn't quite a true object-oriented language
+- There is a lot of information online you can read about prototypes and JavaScript
+- But it's also okay to not pay attention for now
 
 ---
 
-## `this`
+## A Ball class
 
-- We can see a special word called `this` being used to set properties
-- `this` refers to the __current instance__
-- When we __use__ this class, `this` refers to the current object
+```javascript
+function Ball() {
+  this.x = 0;
+  this.y = 0;
+  this.vx = 0;
+  this.vy = 0;
+  this.size = 10;
+  this.speed = 5;
+}
+
+Ball.prototype.update = function () {
+  // Move the ball here
+}
+
+Ball.prototype.display = function () {
+  // Display the ball here
+}
+
+Ball.prototype.reset = function () {
+  // Reset the ball here
+}
+```
+
+- So, this is a definition of a `Ball` class with properties and methods
 
 ---
 
 ## Where to put it?
 
-- This code will mean our earlier code relying on `new Ball()` will work now
-- Because we've defined `Ball()`, the function that creates our Ball objects
-- We can either put this class definition at the __bottom__ of our scripts
+- This code is what we needed for `new Ball()` to work
+- Because we've defined `Ball()`, the __constructor__ function that creates Ball objects
+- We __can__ put this class definition in `script.js` as well
 --
 
-- Or we can put it in a __new file__ with the name of the class - in this case `Ball.js`
+- __But__ it's probably better to put it in a __new file__ with the name of the class - in this case `Ball.js`
 - If we do that we need to also go into `index.html` and add a script tag that includes `Ball.js` as well, so that our script can "see" it
-- Generally speaking we should use a new file for clarity
 
 ---
 
@@ -427,16 +327,16 @@ Ball.prototype.reset = function () {
 
 ```
 project/
-index.html
-assets/
-css/
-js/
-libraries/
-Ball.js
-script.js
+  index.html
+  assets/
+  css/
+  js/
+    libraries/
+    Ball.js
+    script.js
 ```
 
-- Add the `<script>` tag referencing the `Ball.js` into `index.html` __before__ `script.js`
+- Add a `<script>` tag referencing the `Ball.js` into `index.html` __before__ `script.js`
 
 ```html
 <!-- My script(s) -->
@@ -446,7 +346,9 @@ script.js
 
 ---
 
-## See notes (`P` in slide view) for the three files right now
+## All together...
+
+-Slide notes (`P` in slide view) have all three files updated in this way
 
 ???
 
@@ -517,7 +419,7 @@ function draw() {
 
 ---
 
-## Run it!
+## Let there be Ball!
 
 - If we run our code with `Ball()` added in...
 --
@@ -527,39 +429,105 @@ function draw() {
 --
 
 - Because the Ball we defined doesn't do anything and has no representation on the screen.
-- We need to improve the class definition so we get more interesting Balls.
+- We need to improve the class so we get more interesting Balls.
 
 ---
 
-- Perhaps the ball should be 10x10 pixels and have a speed of 10 pixels per frame...
+## Activity
+
+- Set the initial properties of the Ball to more interesting default values in the __constructor__ function
+- For now give it a size and speed of `10`, an initial position in the centre of the canvas, and an initial velocity of `speed` in the x and y axes
+- Don't forget to use `this` when setting or referring to the properties
+- Example in the slide notes for this slide
+
+???
 
 ```javascript
-this.size = 10;
-this.speed = 10;
+function Ball() {
+  this.size = 10;
+  this.speed = 10;
+  this.x = width/2;
+  this.y = height/2;
+  this.vx = this.speed;
+  this.vy = this.speed;
+}
 ```
 
 ---
 
-- Perhaps the ball should start in the centre of the screen...
+## Go Ball!
+
+- Now when we run the program...
+--
+
+- Nothing happens again. Because...
+--
+
+- The __methods__ of the Ball class don't tell the Ball how to do anything at all, they're empty
+
+---
+
+## Activity
+
+- Define the three methods of the `Ball` class
+- The `update` method should update the position with the velocity
+- The `display` method should draw the Ball on screen as a rectangle using the position and size properties
+- The `reset` method should set the position back to the centre of the canvas
+- (Answer in the slide notes)
+
+???
 
 ```javascript
-this.x = width/2;
-this.y = height/2;
+function Ball() {
+  this.size = 10;
+  this.speed = 10;
+  this.x = width/2;
+  this.y = height/2;
+  this.vx = this.speed;
+  this.vy = this.speed;
+}
+
+Ball.prototype.update = function () {
+  this.x += this.vx;
+  this.y += this.vy;
+}
+
+Ball.prototype.display = function () {
+  fill(255);
+  rect(this.x,this.y,this.size,this.size);
+}
+
+Ball.prototype.reset = function () {
+  this.x = width/2;
+  this.y = height/2;
+}
 ```
 
 ---
 
-- Perhaps it can start moving down and to the right...
+## Go Ball!
 
-```javascript
-this.vx = this.speed;
-this.vy = this.speed;
-```
+- Now when we run the program...
+--
+
+- The ball moves!!
+- And it keeps going...
+- Off the screen...
+--
+
+- In Pong we want the ball to bounce on the upper and lower edges
+- And when the ball goes off the left or right edges we want to reset it
 
 ---
 
-- Every frame we call the `update()` method
-- So the ball should move, check for bouncing vertically, and going off-screen horizontally for now...
+## Activity
+
+- Improve the `update` method so that it
+  - Reverses the ball's velocity properties if it touches the top or bottom of the screen
+  - Resets the ball's position if it goes off the left or right of the screen (remember you can use the `reset` method, but you need to use `this` to call it)
+- Example answer in the notes
+
+???
 
 ```javascript
 Ball.prototype.update = function () {
@@ -578,35 +546,9 @@ Ball.prototype.update = function () {
 
 ---
 
-- And every frame we'll call the `display()` method too
-- So that should display the ball in its current location
-
-```javascript
-Ball.prototype.display = function () {
-  fill(255);
-  rect(this.x,this.y,this.size,this.size);
-}
-```
-
----
-
-- Resetting the ball should move it back to the centre
-- And set its velocity again
-
-```javascript
-Ball.prototype.reset = function () {
-  this.x = width/2;
-  this.y = height/2;
-}
-```
-
----
-
 ## All together now...
 
-- So if we put all that together...
-
-__Code is in the notes__ (`P` in slide view)
+__Complete code to this point is in the notes__ (`P` in slide view)
 
 ???
 
@@ -648,9 +590,17 @@ Ball.prototype.reset = function () {
 
 ---
 
-## Multiball action!
+## It's a Ball!
 
-We should be able to have __multiple instances__ of Ball now!
+- So the Ball class is now defined enough that we can create a ball and call its methods to have it move and bounce on the screen
+- That is, we're back to where we were with a simpler version of a JavaScript Object where we defined all this stuff explicitly
+- But the true magic of Object Oriented Programming is the idea that we can have __more than one object of the same type__
+- Now that our program knows how to make a Ball, we can make __more than one__
+- Each time we make a new Ball __object__ from the Ball __class__ using `new`
+
+---
+
+## Multiball action!
 
 ```javascript
 var ball1;
@@ -677,20 +627,33 @@ __DANG IT!__
 What went wrong?
 --
 
-Yeah. Both balls have the same `x`, `y`, `vx`, and `vy`.
+Yeah. Both balls have the same position and velocity.
 --
 
 How do we fix it?
 --
 
-Yeah. Arguments in the `Ball()` function (the __constructor__) that tell the ball where to start
+Yeah. Arguments in the `Ball()` function (the __constructor__) that tell the ball where to start.
 
 ---
 
 ## Building a better constructor
 
 - It would make more sense to be able to pass some parameters to our `Ball()` constructor so we can say, for example, where we want our new ball to start and how fast it should be moving, and how big it is, etc...
-- We can add arguments to our constructor (and our methods) in the same way know already
+- We can add arguments to our constructor in the same way know already because it's just another function
+
+---
+
+## Activity
+
+- Add the following arguments to the Ball constructor and assign them to the correct properties inside it:
+  - An x and y position
+  - An x and y velocity
+  - A size
+  - A speed
+- Answer in the slide notes
+
+???
 
 ```javascript
 function Ball(x,y,vx,vy,size,speed) {
@@ -705,9 +668,9 @@ function Ball(x,y,vx,vy,size,speed) {
 
 ---
 
-## And so...
+## True multiball action!
 
-Now we can make our two `Ball` objects and give them __different parameters__
+Now we can make our two `Ball` objects and give their constructors __different parameters__ so they behave distinctly...
 
 ```javascript
 var ball1;
@@ -728,7 +691,7 @@ function draw() {
 }
 ```
 
-__They both act like bouncing balls! OOP!__
+__They both act like bouncing balls!__
 
 ---
 
@@ -737,8 +700,9 @@ __They both act like bouncing balls! OOP!__
 - Let's go over these ideas again now we know what they look like...
 - A `class` is the __abstract definition__ of what something (like a ball) can do, including properties and method
 - So the class `Ball` defines the __idea__ of a ball
-- We define classes in JavaScript by creating a __function__ with the name of the class
-- An `object` is a specific __instance__ of a class that exists in your running program
+- We define classes in JavaScript by creating a __constructor function__ with the name of the class
+- An __object__ is a specific __instance__ of a class that exists in your running program
+- We create __instances__ or __objects__ of a __class__ using `new` and the __constructor__
 - So the variable `ball1` contains an __object__ that actually exists and does things in your program (like bounce around), so does `ball2`
 
 ---
@@ -748,7 +712,10 @@ __They both act like bouncing balls! OOP!__
 - Generally speaking when we're making a little world we probably want more than __one__ kind of thing
 - Pong, for example, has __two__ kinds of things: one ball (usually) and two paddles (usually)
 - Our current Ball has some of the behaviour of a Pong ball already (what is it missing?)
-- How would we add a Paddle class as well?
+--
+
+- A Paddle, so...
+- We need to add __another class definition__, this time for a `Paddle`
 - Maybe it could have the option of being controller by the mouse or the arrow keys?
 - Let's do it?
 
@@ -766,10 +733,12 @@ __They both act like bouncing balls! OOP!__
 --
 
 - Paddles have positions, velocities, and dimensions... (properties)
-- Paddles can be controlled by the player (method)
-- Paddles can bounce Balls in the opposite direction if they collide (method)
+- Paddles can be controlled by the player, move, and display on screen (methods)
+- Paddles also introduce the idea of bouncing Balls in the opposite direction if they collide (another method)
 
 ---
+
+## Basic paddle class
 
 ```javascript
 function Paddle(x,y,w,h,speed) {
@@ -792,10 +761,13 @@ Paddle.prototype.display = function() {
 }
 ```
 
-- And we'll add a `handleBounce()` method to our Ball a bit later
-- For now, let's get the controls working...
+- We'll actually add a `handleBounce()` method to our `Ball` class a bit later
+- For now, let's get the controls working.
+- How would we do that?
 
 ---
+
+## Defining input keys
 
 ```javascript
 function Paddle(x,y,w,h,speed,downKey,upKey) {
@@ -817,6 +789,18 @@ function Paddle(x,y,w,h,speed,downKey,upKey) {
 
 ---
 
+## Handling input
+
+- Now we need to define the `handleInput` method that handles input for this paddle
+- What will it need to do?
+--
+
+- It will need to check which keys are pressed and set the paddle's velocity accordingly
+
+---
+
+## `handleInput` definition
+
 ```javascript
 Paddle.prototype.handleInput = function() {
   if (keyIsDown(this.upKey)) {
@@ -837,6 +821,18 @@ Paddle.prototype.handleInput = function() {
 
 ---
 
+## Updating
+
+- Now we need to define how the paddle gets updated each frame, just like the ball
+- Mostly that means it needs to...
+--
+
+move.
+
+---
+
+## `update` definition
+
 ```javascript
 Paddle.prototype.update = function() {
   this.y += this.vy;
@@ -844,10 +840,23 @@ Paddle.prototype.update = function() {
 }
 ```
 
-- We should have an `update` method for our paddle that moves it according to velocity
-- And while we're here we can constrain the paddle so it doesn't go off the screen...
+- Our `update` method for our paddle moves it according to velocity
+- And while we're here we can `constrain()` the paddle so it doesn't go off the screen...
 
 ---
+
+## Displaying the paddle
+
+- Finally we need to actually be able to see our paddle on the screen
+- Otherwise the game will be a bit hard to play
+- So we need to...
+--
+
+display it using a shape (or an image).
+
+---
+
+## `display` definition
 
 ```javascript
 Paddle.prototype.display = function() {
@@ -856,10 +865,11 @@ Paddle.prototype.display = function() {
 }
 ```
 
-- And of course we should display the paddle on screen
 - Just a rectangle will do nicely for now
 
 ---
+
+## Integration
 
 - Now we can add a a paddle to the main code...
 
@@ -867,7 +877,6 @@ Paddle.prototype.display = function() {
 var ball1;
 var ball2;
 var leftPaddle;
-var rightPaddle;
 
 function setup() {
   createCanvas(640,480);
@@ -893,13 +902,29 @@ function draw() {
 
 ---
 
-## Bouncing
+## Ghost Pong!
 
-- And "finally" we should be able to check for collisions between a Ball and a Paddle
-- It's debatable whether the method to handle this should be in the Ball class or the Paddle class
-- But let's put it in the Ball class this time (I imagine it as being the Ball deciding how to bounce when it hits something)
+- Actually this game is a lot like Pippin's __Ghost Pong__ game
+- Because the ball doesn't bounce off the paddle!
+- This makes sense given that there's nowhere in our code that defines what should happen if the ball and paddle overlap
+- So we'll need to introduce another method to handle this situation
 
 ---
+
+## Bouncing
+
+- We should be able to check for collisions between a Ball and a Paddle
+- It's debatable whether the method to handle this should be in the Ball class or the Paddle class
+- But let's put it in the Ball class this time (I imagine it as being the Ball deciding how to bounce when it hits something)
+- It will need to do what?
+--
+
+- Check whether the ball and paddle overlap, and reverse the x velocity of the ball if so
+- Primitive, but enough for now
+
+---
+
+## `handleCollision` definition
 
 In `Ball.js`:
 ```javascript
@@ -915,7 +940,8 @@ Ball.prototype.handleCollision = function(paddle) {
 
 ???
 
-- Note that the line `this.x -= this.vx` is used to move the ball back a timestep so it's no longer intersecting with the paddle - this will help it not become embedded in the paddle!
+- Note that the line `this.x -= this.vx` is used to move the ball back to where it was in the previous frame so it's no longer intersecting with the paddle - this will help it not become embedded in the paddle!
+- (Though it's not perfect.)
 
 ---
 
@@ -932,6 +958,14 @@ __See game code for "Basic OO Pong"__
 - An __object__ is a specific __instance__ of a class that is created when your program runs, it is a "real thing" in the program with proper values in its properties and which can meaningfully have its methods called to make something happen
 - `Paddle` is a __class__ (the idea of a how a paddle words), but `leftPaddle` and `rightPaddle` are __objects__ or __instances__ of the `Paddle` class - they actually exist when the program runs
 - The __objects__ we create with a __class__ are in fact __JavaScript__ objects, it's "just" a special and incredibly organised way of creating them
+
+---
+
+## Other people's objects
+
+- Finally, objects are also amazing because __other people__ can define them __for__ us to save us work
+- For example when we use `new Audio()` we're creating an object that represents an audio file in our code, which we can then `.play()` and `.pause()` and set the `.loop` property of...
+- In fact, this is how __libraries__ in programming very often work: they create some special __object__ which you then use to access the powers of the library
 
 ---
 

@@ -150,8 +150,8 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 
 ## Homework
-### Exercise 5 (Something with OOP Pong)
-### Project 2 (Something else with OOP Pong and Arrays from next week)
+### [Exercise 5](../exercises/Exercise-5.md) (Something with OOP Pong)
+### [Project 2](../projects/Project-2.md) (Something else with OOP Pong and Arrays from next week)
 
 ---
 
@@ -166,7 +166,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Game - Predator Prey ([Game](https://pippinbarr.github.io/cart253-2018/games/game-predator-prey/index.html), [Source Code](../games/game-predator-prey/), [ZIP of Source Code](../games/game-predator-prey.zip))
 
-## Exercise 6 - ...
+## Exercise 6 - Something with Predator Prey
 
 ---
 

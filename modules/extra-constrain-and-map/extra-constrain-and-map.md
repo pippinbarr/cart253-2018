@@ -210,14 +210,13 @@ ellipse(mouseX,mouseY,radius);
 
 ---
 
-## No order required
+## Order matters
 
-- It's more natural to think of giving the ranges to `constrain()` and `map()` with a low value and then a high value
-- But in fact neither function requires that, so you can also specify ranges as high and then low
-- This doesn't make any difference with `constrain()`
+- It's more natural to think of giving the ranges to `map()` with a low value and then a high value
+- But in fact it doesn't require that, so you can also specify ranges as high and then low
 - But it __does__ make a difference with `map()` because it changes the way the ranges are converted
-- `map(10,0,100,0,200)` is `20`
-- But `map(10,0,100,200,0)` is `180` (because `10` is `0.1` of the first range, and `0.1` along the second range goes from `200` toward `0` which gives us `180`)
+  - `map(10,0,100,0,200)` is `20`
+  - But `map(10,0,100,200,0)` is `180` (because `10` is `0.1` of the first range, and `0.1` along the second range goes from `200` toward `0` which gives us `180`)
 
 ---
 

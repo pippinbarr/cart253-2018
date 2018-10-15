@@ -84,6 +84,15 @@ function setup() {
 
 ---
 
+## `.play()` and the "autoplay" restriction in Browser
+
+- Many browsers restrict the playing of sounds (and videos) on webpages by requiring that the user of the page __interact__ (press a key, click the mouse) with it before a sound can be played
+- This means, for instance, that playing a sound in `setup()` won't work, because the user hasn't interacted with the page yet
+- The __solution__ to this is often to require some kind of interaction from the user before your program starts playing sounds
+- Something like a "Click to Start" screen at the beginning of the program could work this way. The user clicks, the program starts, and any soundfiles can now be played.
+
+---
+
 ## `.pause()`
 
 - To __pause__ a playing sound we use... `pause()`

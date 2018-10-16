@@ -27,6 +27,8 @@ As always, begin by downloading the start code ([project2.zip](project2.zip)). A
 
 These challenges represent the __minimum__ changes to put into the game. As you work on it, allow yourself think about other things that would be fun and interesting to include in the game and implement them to get a high grade. As always, seek help to get these things done when you need it.
 
+- Remember the Style Guide and make sure you code looks nice!
+
 
 ## Starter Code (Pong)
 
@@ -49,7 +51,7 @@ Grading for projects will consider the following categories equally:
 - __Runs__ and __implements the challenges required__
 - Has __suitable commenting for all added/changed code__
 - Includes a minimum of one initial commit of the template code, and commit messages for units of work as you do them (more commits is better), all commits must have a __descriptive message__ prefixed with "P2: "
-- Uses __good naming__ for added variables, functions, properties, methods, and classes
+- Uses __good style__, including the naming of variables and functions and the use of white-space in the code
 - Is __well structured__, with new code added in sensible places in sensible orders, and with functions and classes used to make the code modular and repeatable, classes should be in new files
 
 Each element is equally weighted in your the grade for the project and will be graded as follows:

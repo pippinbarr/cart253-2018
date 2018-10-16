@@ -102,6 +102,7 @@ function draw() {
 
 - In programming we have many opportunities to name things
 - This most notably includes variables, properties, functions, and classes
+- And this includes remembering conventions such as `camelCase` for variable, property, and function names, and `FirstLetterCapitalization` for class filenames and constructor functions
 - As with other matters of style, we try to use good names for these things because it helps us and everyone else understand how the program works, it makes everyone's life easier
 
 ---

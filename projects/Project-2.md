@@ -48,7 +48,7 @@ https://github.com/pippinbarr/cart253-2018/issues
 
 Grading for projects will consider the following categories:
 
-- __Implementation__ (40%)- the code runs, meets the challenges set, includes any further changes, has no errors, etc.
+- __Implementation__ (40%)- the code runs, meets the challenges set, includes any further changes, has no errors, is interesting/creative, etc.,
 - __Structure__ (30%) - the code is well organised, makes good use of variables, functions, object-oriented programming, has comments indicating new code, etc.
 - __Style__ (30%) - the code is well-commented, well-formatted and indented, uses good names for variables, functions, classes, etc., and has a good number of commits with well-written commit messages (commits include the prefix "P2:")
 
@@ -58,4 +58,4 @@ Each category for the project and will be graded as follows:
 - __Good__ (B-range) - Meets requirements with some minor issues
 - __Adequate__ (C-range) - Meets requirements but with clear issues
 - __Poor__ (D-range) - Barely meets requirements
-- __Non-submission / Unacceptable__ (F / 0%)
+- __Non-submission / Unacceptable__ (F)

@@ -57,4 +57,4 @@ Each category for the project and will be graded as follows:
 - __Good__ (B-range) - Meets requirements with some minor issues
 - __Adequate__ (C-range) - Meets requirements but with clear issues
 - __Poor__ (D-range) - Barely meets requirements
-- __Non-submission / Unacceptable__ (F / 0%)
+- __Non-submission / Unacceptable__ (F)

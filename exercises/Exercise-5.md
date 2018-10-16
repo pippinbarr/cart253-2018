@@ -49,18 +49,16 @@ https://github.com/pippinbarr/cart253-2018/issues
 
 ## Grading
 
-Grading for exercises will consider the following categories equally:
+Grading for exercises will consider the following categories:
 
-- __Runs__ and __implements the challenges required__
-- Has __suitable commenting for all added/changed code and functions__
-- Includes a minimum of one initial commit of the template code, and at least __one commit message per challenge addressed__, all commits must have a __descriptive message__ prefixed with "Ex5: "
-- Uses __good style__, including the naming of variables and functions and the use of white-space in the code
-- Is __well structured__, with new code added in sensible places in sensible orders, uses functions and objects where appropriate to keep code organised, uses new files for new classes
+- __Implementation__ (40%)- the code runs, meets the challenges set, includes any further changes, has no errors, is interesting/creative, etc.,
+- __Structure__ (30%) - the code is well organised, makes good use of variables, functions, object-oriented programming, has comments indicating new code, etc.
+- __Style__ (30%) - the code is well-commented, well-formatted and indented, uses good names for variables, functions, classes, etc., and has a good number of commits with well-written commit messages (commits include the prefix "P2:")
 
 Each element is equally weighted in your the grade for the exercise and will be graded as follows:
 
-- __Excellent__ (A / 100%) - Meets requirements perfectly
-- __Good__ (B / 75%) - Meets requirements with some minor issues
-- __Adequate__ (C / 50%) - Meets requirements but with clear issues
-- __Poor__ (D / 25%) - Barely meets requirements
-- __Non-submission / Unacceptable__ (F / 0%)
+- __Excellent__ (A-range) - Meets requirements perfectly
+- __Good__ (B-range) - Meets requirements with some minor issues
+- __Adequate__ (C-range) - Meets requirements but with clear issues
+- __Poor__ (D-range) - Barely meets requirements
+- __Non-submission / Unacceptable__ (F)

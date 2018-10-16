@@ -54,7 +54,7 @@ Grading for exercises will consider the following categories equally:
 - __Runs__ and __implements the challenges required__
 - Has __suitable commenting for all added/changed code and functions__
 - Includes a minimum of one initial commit of the template code, and at least __one commit message per challenge addressed__, all commits must have a __descriptive message__ prefixed with "Ex5: "
-- Uses __good naming__ for added variables, functions, and object properties and methods
+- Uses __good style__, including the naming of variables and functions and the use of white-space in the code
 - Is __well structured__, with new code added in sensible places in sensible orders, uses functions and objects where appropriate to keep code organised, uses new files for new classes
 
 Each element is equally weighted in your the grade for the exercise and will be graded as follows:

@@ -27,6 +27,7 @@ As always, begin by downloading the start code ([project1.zip](project1.zip)). A
 
 - Make sure you use functions to better organise your code!
 - Don't limit yourself to the above five challenges, if you've got the time, make the game even better!
+- Remember the Style Guide and make sure you code looks nice!
 
 ## Starter Code (Chaser)
 
@@ -49,8 +50,8 @@ Grading for projects will consider the following categories equally:
 - __Runs__ and __implements the challenges required__
 - Has __suitable commenting for all added/changed code__
 - Includes a minimum of one initial commit of the template code, and commit messages for units of work as you do them (more commits is better), all commits must have a __descriptive message__ prefixed with "P1"
-- Uses __good naming__ for added variables and functions
-- Is __well structured__, with new code added in sensible places in sensible orders, and with functions used to make the code modular and repeatable
+- Uses __good style__, including the naming of variables and functions and the use of white-space in the code
+- Is __well structured__, with new code added in sensible places in sensible orders, and with functions and classes used to make the code modular and repeatable
 
 Each element is equally weighted in your the grade for the project and will be graded as follows:
 

@@ -146,11 +146,13 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Review
 
-## Extra - JavaScript Objects With Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/extra-javascript-objects-with-functions/index.html), [Notes](../modules/extra-javascript-objects-with-functions/extra-javascript-objects-with-functions.md))
-
 ## Core - Object Oriented Programming ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-object-oriented-programming/index.html), [Notes](../modules/core-object-oriented-programming/core-object-oriented-programming.md))
 
+## Core - Style Guide ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-style-guide/index.html), [Notes](../modules/core-style-guide/core-style-guide.md))
+
 ## Game - Basic OOP Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/game-basic-oop-pong/index.html), [Source Code](../games/game-basic-oop-pong/), [ZIP of Source Code](../games/game-basic-oop-pong.zip))
+
+## Extra - JavaScript Objects With Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/extra-javascript-objects-with-functions/index.html), [Notes](../modules/extra-javascript-objects-with-functions/extra-javascript-objects-with-functions.md))
 
 ## Homework
 ### [Exercise 5](../exercises/Exercise-5.md) - Pong Plus (Object-Oriented Edition)

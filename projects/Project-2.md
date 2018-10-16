@@ -1,4 +1,4 @@
-# Project 1 - Build a Better Pong
+# Project 2 - Build a Better Pong
 
 __Grade__: 20% of final grade (see grading guidelines at bottom)  
 __Deadline__: 11:59PM on the day of class on week of 5 November 2018. (Three weeks.)

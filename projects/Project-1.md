@@ -45,18 +45,16 @@ https://github.com/pippinbarr/cart253-2018/issues
 
 ## Grading
 
-Grading for projects will consider the following categories equally:
+Grading for projects will consider the following categories:
 
-- __Runs__ and __implements the challenges required__
-- Has __suitable commenting for all added/changed code__
-- Includes a minimum of one initial commit of the template code, and commit messages for units of work as you do them (more commits is better), all commits must have a __descriptive message__ prefixed with "P1"
-- Uses __good style__, including the naming of variables and functions and the use of white-space in the code
-- Is __well structured__, with new code added in sensible places in sensible orders, and with functions and classes used to make the code modular and repeatable
+- __Implementation__ (40%)- the code runs, meets the challenges set, includes any further changes, has no errors, etc.
+- __Structure__ (30%) - the code is well organised, makes good use of variables, functions, object-oriented programming, has comments indicating new code, etc.
+- __Style__ (30%) - the code is well-commented, well-formatted and indented, uses good names for variables, functions, classes, etc., and has a good number of commits with well-written commit messages (commits include the prefix "P2:")
 
-Each element is equally weighted in your the grade for the project and will be graded as follows:
+Each category for the project and will be graded as follows:
 
-- __Excellent__ (A / 100%) - Meets requirements perfectly
-- __Good__ (B / 75%) - Meets requirements with some minor issues
-- __Adequate__ (C / 50%) - Meets requirements but with clear issues
-- __Poor__ (D / 25%) - Barely meets requirements
+- __Excellent__ (A-range) - Meets requirements perfectly
+- __Good__ (B-range) - Meets requirements with some minor issues
+- __Adequate__ (C-range) - Meets requirements but with clear issues
+- __Poor__ (D-range) - Barely meets requirements
 - __Non-submission / Unacceptable__ (F / 0%)

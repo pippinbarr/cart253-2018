@@ -55,7 +55,7 @@ Grading for exercises will consider the following categories:
 - __Structure__ (30%) - the code is well organised, makes good use of variables, functions, object-oriented programming, has comments indicating new code, etc.
 - __Style__ (30%) - the code is well-commented, well-formatted and indented, uses good names for variables, functions, classes, etc., and has a good number of commits with well-written commit messages (commits include the prefix "P2:")
 
-Each element is equally weighted in your the grade for the exercise and will be graded as follows:
+Each element will be graded as follows:
 
 - __Excellent__ (A-range) - Meets requirements perfectly
 - __Good__ (B-range) - Meets requirements with some minor issues

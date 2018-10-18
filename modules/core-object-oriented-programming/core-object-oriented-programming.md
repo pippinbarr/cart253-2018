@@ -118,7 +118,8 @@ function setup() {
 --
 
 - We want to make a Ball that knows how to do all that stuff in our program
-- So we can just tell it "move!" and "display yourself!"
+- Previous we would have created an explicit object, but they don't know how to __do__ anything, they just have properties (for now)
+- We want to be able tell our Ball to "move!" and "display yourself!"
 - This would be a new __type__ of value (or data), and we'd store it in a variable...
 
 ---
@@ -170,7 +171,7 @@ function setup() {
 - But it doesn't know about `Ball`
 - We need to tell JavaScript what a `Ball` is and how it works
 - We need to __define the how a Ball works__
-- In OOP this is called defining a __class__
+- In OOP this is called __defining a class__
 - A __class__ specifies how some type of object in our program, like a ball, can be created and used
 - So we need a `Ball` class
 
@@ -178,12 +179,12 @@ function setup() {
 
 ```javascript
 function Ball() {
+  this.size = 10;
+  this.speed = 5;
   this.x = 0;
   this.y = 0;
   this.vx = 0;
   this.vy = 0;
-  this.size = 10;
-  this.speed = 5;
 }
 
 Ball.prototype.update = function () {
@@ -209,12 +210,12 @@ Ball.prototype.reset = function () {
 
 ```javascript
 function Ball() {
+  this.size = 10;
+  this.speed = 5;
   this.x = 0;
   this.y = 0;
   this.vx = 0;
   this.vy = 0;
-  this.size = 10;
-  this.speed = 5;
 }
 ```
 
@@ -228,7 +229,7 @@ function Ball() {
 
 ## Constructor
 
-- In fact, we can now see that it's the constructor function we call when we want to make a new ball, e.g.
+- In fact, we can now see that it's the constructor function `Ball()` we call when we want to make a new ball, e.g.
 
 ```javascript
 var ball = new Ball();
@@ -241,15 +242,15 @@ var ball = new Ball();
 ## Properties
 
 ```javascript
+this.size = 10;
+this.speed = 5;
 this.x = 0;
 this.y = 0;
 this.vx = 0;
 this.vy = 0;
-this.size = 10;
-this.speed = 5;
 ```
 
-- We can see there are __properties__ like `speed`, `size`, `position` and `velocity`
+- We can see there are __properties__ like speed, size, position and velocity
 - Again, note that they are all being set using the special `this` word because each of the properties is a variable that belongs to __this__ hypothetical object that would be created from the class
 
 ---
@@ -352,9 +353,56 @@ project/
 
 ---
 
+## Using the Ball class
+
+```javascript
+var ball;
+
+function setup() {
+  createCanvas(640,480);
+  ball = new Ball();
+}
+
+function draw() {
+  background(0);
+  ball.update();
+  ball.display();
+}
+```
+
+- We create our ball __object__ by using the Ball __class__'s __constructor__ function
+- Then we can call the ball's __methods__ (functions) using the same __dot notation__ we've used to access the __properties__ of objects before
+
+---
+
+## For the record: Accessing objects' properties
+
+```javascript
+var ball;
+
+function setup() {
+  createCanvas(640,480);
+  ball = new Ball();
+}
+
+function draw() {
+  background(0);
+  ball.size = ball.size + 1;
+  ball.update();
+  ball.display();
+}
+```
+
+- We __can__ directly access the ball's properties using standard dot notation too
+- Some people will tell you __not__ to do this kind of "meddling" inside an object
+- Instead they would suggest you should write a __method__ to handle anything you want to do with the object (like change its size)
+- We won't be that strict in this course, but be aware people can feel that way
+
+---
+
 ## All together...
 
--Slide notes (`P` in slide view) have all three files updated in this way
+__Slide notes (`P` in slide view) have all three files updated in this way__
 
 ???
 
@@ -418,6 +466,7 @@ function setup() {
 }
 
 function draw() {
+  background(0);
   ball.update();
   ball.display();
 }
@@ -441,21 +490,38 @@ function draw() {
 
 ## Activity
 
-- Set the initial properties of the Ball to more interesting default values in the __constructor__ function
-- For now give it a size and speed of `10`, an initial position in the centre of the canvas, and an initial velocity of `speed` in the x and y axes
-- Don't forget to use `this` when setting or referring to the properties
-- Example in the slide notes for this slide
+__Define the three methods of the `Ball` class__
+
+- The `update` method should update the position with the velocity
+- The `display` method should draw the Ball on screen as a rectangle using the position and size properties
+- The `reset` method should set the position to the centre of the canvas
+- Remember to use `this` whenever you refer to properties of the class
+- (Answer in the slide notes)
 
 ???
 
 ```javascript
 function Ball() {
   this.size = 10;
-  this.speed = 10;
+  this.speed = 5;
+  this.x = 0;
+  this.y = 0;
+  this.vx = 0;
+  this.vy = 0;
+}
+
+Ball.prototype.update = function () {
+  this.x += this.vx;
+  this.y += this.vy;
+}
+
+Ball.prototype.display = function () {
+  rect(this.x,this.y,this.size,this.size);
+}
+
+Ball.prototype.reset = function () {
   this.x = width/2;
   this.y = height/2;
-  this.vx = this.speed;
-  this.vy = this.speed;
 }
 ```
 
@@ -466,20 +532,22 @@ function Ball() {
 - Now when we run the program...
 --
 
-- Nothing happens again. Because...
+- It displays, but nothing happens
+- Because...
 --
 
-- The __methods__ of the Ball class don't tell the Ball how to do anything at all, they're empty
+- The starting properties of the ball give it a velocity of 0
+- So it won't move
 
 ---
 
 ## Activity
 
-- Define the three methods of the `Ball` class
-- The `update` method should update the position with the velocity
-- The `display` method should draw the Ball on screen as a rectangle using the position and size properties
-- The `reset` method should set the position back to the centre of the canvas
-- Remember to use `this` whenever you refer to properties of the class
+__Set more interesting starting properties in the `Ball` class__
+
+- Set the starting x and y position to the centre of the canvas (you can use `width` and `height` safely)
+- Set the starting x and y velocity to be the `speed` property
+- Remember to this `this` whenever you refer to any property of the Ball class
 - (Answer in the slide notes)
 
 ???
@@ -487,7 +555,7 @@ function Ball() {
 ```javascript
 function Ball() {
   this.size = 10;
-  this.speed = 10;
+  this.speed = 5;
   this.x = width/2;
   this.y = height/2;
   this.vx = this.speed;
@@ -500,7 +568,6 @@ Ball.prototype.update = function () {
 }
 
 Ball.prototype.display = function () {
-  fill(255);
   rect(this.x,this.y,this.size,this.size);
 }
 
@@ -529,10 +596,11 @@ Ball.prototype.reset = function () {
 
 ## Activity
 
-- Improve the `update` method so that it
-  - Reverses the ball's velocity properties if it touches the top or bottom of the screen
-  - Resets the ball's position if it goes off the left or right of the screen (remember you can use the `reset` method, but you need to use `this` to call it)
-- Example answer in the notes
+__Improve the `update` method to include Pong behaviour__
+
+- Reverse the ball's y velocity if it touches the top or bottom of the screen
+- Reset the ball's position if it goes off the left or right of the screen (remember you can use the `reset` method, but you need to use `this` to call it)
+- (Example answer in the notes)
 
 ???
 
@@ -557,7 +625,7 @@ Ball.prototype.update = function () {
 
 ## All together now...
 
-__Complete code to this point is in the notes__ (`P` in slide view)
+__Complete Ball.js code to this point is in the notes__ (`P` in slide view)
 
 ???
 
@@ -587,7 +655,6 @@ Ball.prototype.update = function () {
 }
 
 Ball.prototype.display = function () {
-  fill(255);
   rect(this.x,this.y,this.size,this.size);
 }
 
@@ -649,18 +716,19 @@ Yeah. Arguments in the `Ball()` function (the __constructor__) that tell the bal
 ## Building a better constructor
 
 - It would make more sense to be able to pass some parameters to our `Ball()` constructor so we can say, for example, where we want our new ball to start and how fast it should be moving, and how big it is, etc...
-- We can add arguments to our constructor in the same way know already because it's just another function
+- We can add arguments to our constructor in the same way know already because it's just another function!
 
 ---
 
 ## Activity
 
-- Add the following arguments to the Ball constructor and assign them to the correct properties inside it:
-  - An x and y position
-  - An x and y velocity
-  - A size
-  - A speed
-- Answer in the slide notes
+__Add the arguments to the Ball constructor and assign them to the correct properties__
+
+- An x and y position
+- An x and y velocity
+- A size
+- A speed
+- (Answer in the slide notes)
 
 ???
 
@@ -670,8 +738,8 @@ function Ball(x,y,vx,vy,size,speed) {
   this.speed = speed;
   this.x = x;
   this.y = y;
-  this.vx = vx;
-  this.vy = vy;
+  this.vx = this.speed;
+  this.vy = this.speed;
 }
 ```
 
@@ -719,8 +787,8 @@ __They both act like bouncing balls!__
 ## Multiple classes and objects
 
 - Generally speaking when we're making a little world we probably want more than __one__ kind of thing
-- Pong, for example, has __two__ kinds of things: one ball (usually) and two paddles (usually)
-- Our current Ball has some of the behaviour of a Pong ball already (what is it missing?)
+- Pong, for example, has __two__ kinds of things...
+- Our current Ball has some of the behaviour of a Pong ball already, but what is it missing?
 --
 
 - A Paddle, so...

@@ -13,7 +13,7 @@
 
 ## Game - Predator Prey ([Game](https://pippinbarr.github.io/cart253-2018/games/game-predator-prey/index.html), [Source Code](../games/game-predator-prey/), [ZIP of Source Code](../games/game-predator-prey.zip))
 
-## Exercise 6 - Predator Prey Plus
+### [Exercise 6](../exercises/Exercise-6.md) - Debugging Pong
 
 ---
 

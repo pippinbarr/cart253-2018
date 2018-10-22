@@ -1,3 +1,80 @@
+
+# Present
+
+# Week 8 - Week of 22 October 2018
+
+## Review
+
+## Core - Arrays ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-arrays/index.html), [Notes](../modules/core-arrays/core-arrays.md))
+
+## Debugging - Guide
+
+## Broken Game - Basic OOP Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/broken-game-basic-oop-pong/index.html), [Source Code](../games/broken-game-basic-oop-pong/), [ZIP of Source Code](../games/broken-game-basic-oop-pong.zip))
+
+## Game - Predator Prey ([Game](https://pippinbarr.github.io/cart253-2018/games/game-predator-prey/index.html), [Source Code](../games/game-predator-prey/), [ZIP of Source Code](../games/game-predator-prey.zip))
+
+## Exercise 6 - Predator Prey Plus
+
+---
+
+# Future
+
+# Week 9 - Week of 29 October 2018
+
+## Review
+## Graphics - Transformations
+## Physics - Polar coordinates and velocity
+## Game - Spacelove!
+## Other
+
+---
+
+# Week 10 - Week of 5 November 2018
+
+## Project 2 due tonight
+
+## Review
+## Project 3 assigned
+## Exercise 7 - ...
+
+---
+
+# Week 11 - Week of 12 November 2018
+
+## Review
+## Libraries - Introducing Libraries
+## Libraries - Library workflow
+## Libraries - Finding libraries
+## Sound - Howler
+## Sound - Gibber
+## Exercise 8 - ...
+
+---
+
+# Week 12 - Week of 19 November 2018
+
+## Review
+## Release - Full screen
+## Release - Integrating with HTML
+## Release - Electron
+
+---
+
+# Week 13 - Week of 26 November 2018
+
+## Requests
+## Studio
+
+---
+
+# Week 14 - Week of 3 December 2018
+
+## Project 3 due this week
+
+---
+
+# Past
+
 # Week 1 - Week of 3 September 2018
 
 ## Introductions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/introductions/index.html), [Notes](../modules/introductions/introductions.md))
@@ -157,71 +234,3 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Homework
 ### [Exercise 5](../exercises/Exercise-5.md) - Pong Plus (Object-Oriented Edition)
 ### [Project 2](../projects/Project-2.md) (Build a Better Pong)
-
----
-
-# Week 8 - Week of 22 October 2018
-
-## Review
-
-## Core - Arrays ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-arrays/index.html), [Notes](../modules/core-arrays/core-arrays.md))
-
-## Debugging - Summary
-
-## Game - Predator Prey ([Game](https://pippinbarr.github.io/cart253-2018/games/game-predator-prey/index.html), [Source Code](../games/game-predator-prey/), [ZIP of Source Code](../games/game-predator-prey.zip))
-
-## Exercise 6 - Something with Predator Prey
-
----
-
-# Week 9 - Week of 29 October 2018
-
-## Review
-## Graphics - Transformations
-## Physics - Polar coordinates and velocity
-## Game - Spacelove!
-## Other
-
----
-
-# Week 10 - Week of 5 November 2018
-
-## Project 2 due tonight
-
-## Review
-## Project 3 assigned
-## Exercise 7 - ...
-
----
-
-# Week 11 - Week of 12 November 2018
-
-## Review
-## Libraries - Introducing Libraries
-## Libraries - Library workflow
-## Libraries - Finding libraries
-## Sound - Howler
-## Sound - Gibber
-## Exercise 8 - ...
-
----
-
-# Week 12 - Week of 19 November 2018
-
-## Review
-## Release - Full screen
-## Release - Integrating with HTML
-## Release - Electron
-
----
-
-# Week 13 - Week of 26 November 2018
-
-## Requests
-## Studio
-
----
-
-# Week 14 - Week of 3 December 2018
-
-## Project 3 due this week

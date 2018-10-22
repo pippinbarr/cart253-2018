@@ -22,9 +22,13 @@
 # Week 9 - Week of 29 October 2018
 
 ## Review
-## Graphics - Transformations
+
+## Graphics - Transformations ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-transformations/index.html), [Notes](../modules/graphics-transformations/graphics-transformations.md))
+
 ## Physics - Polar coordinates and velocity
+
 ## Game - Spacelove!
+
 ## Other
 
 ---

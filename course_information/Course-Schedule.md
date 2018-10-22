@@ -9,9 +9,9 @@
 
 ## Debugging - Guide ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-guide/index.html), [Notes](../modules/debugging-guide/debugging-guide.md))
 
-## Broken Game - Basic OOP Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/broken-game-basic-oop-pong/index.html), [Source Code](../games/broken-game-basic-oop-pong/), [ZIP of Source Code](../games/broken-game-basic-oop-pong.zip))
-
 ## Game - Predator Prey ([Game](https://pippinbarr.github.io/cart253-2018/games/game-predator-prey/index.html), [Source Code](../games/game-predator-prey/), [ZIP of Source Code](../games/game-predator-prey.zip))
+
+## Broken Game - Basic OOP Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/broken-game-basic-oop-pong/index.html), [Source Code](../games/broken-game-basic-oop-pong/), [ZIP of Source Code](../games/broken-game-basic-oop-pong.zip))
 
 ### [Exercise 6](../exercises/Exercise-6.md) - Debugging Pong
 

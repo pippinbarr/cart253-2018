@@ -3,23 +3,25 @@
 Predator-Prey
 Pippin Barr
 
-A (very primitive) simulation of a predator in amongst
-a whole lot of prey. The predator is controlled by the
-users with the keyboard, the prey move around on their own.
+A (very primitive) simulation of a predator we can feed
+prey by adding them to the world. The predator and prey are controlled by
+Perlin noise.
+
 If the predator overlaps a prey it "eats" it, reducing its
 health and increasing the health of the predator. The
-predator also losing health continuous just through
+predator is also losing health continuous just through
 existing.
 
 ***********************************************/
 
-// A variable to store the predator object we will instantiate
-var predator;
+// An array to store the predato object we will instantiate
+var predators;
 
-// The number of prey we begin with
-var numPrey = 100;
-// An empty array to store the prey objects we will instantiate
+// An empty array to store the prey objects we will instantiate for feeding
 var prey = [];
+
+// The number of prey we'll add to the simulation per click
+var numPreyPerClick = 5;
 
 // preload()
 //
@@ -35,13 +37,6 @@ function setup() {
   createCanvas(500,500);
   // Instantiate the predator using the constructor
   predator = new Predator(width/2,height/2,25,5,color(255,0,0));
-  // Run a loop numPrey times to create each prey
-  for (var i = 0; i < numPrey; i++) {
-    // Instantiate a new prey object
-    var newPrey = new Prey(random(0,width),random(0,height),5,7,color(0,0,255));
-    // Put the prey object into the array
-    prey.push(newPrey);
-  }
 }
 
 // draw()
@@ -51,8 +46,7 @@ function setup() {
 function draw() {
   background(200);
 
-  // Handle the predator's input, movement, and display
-  predator.handleInput();
+  // Handle the predator's movement and display
   predator.update();
   predator.display();
 
@@ -70,5 +64,21 @@ function draw() {
         predator.eat(prey[i]);
       }
     }
+  }
+}
+
+// mousePressed()
+//
+// We add a number of prey to the simulation near the mouse click location
+function mousePressed() {
+  // Use a for loop to add numPreyPerClick's worth of prey
+  for (var i = 0; i < numPreyPerClick; i++) {
+    // Choose a starting position randomly offset from the click location
+    var x = mouseX + random(-10,10);
+    var y = mouseY + random(-10,10);
+    // Create the prey object
+    var newPrey = new Prey(x,y,5,2,color(0,0,255));
+    // Add the prey object to the prey array
+    prey.push(newPrey);
   }
 }

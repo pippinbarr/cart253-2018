@@ -3,7 +3,7 @@
 Predator
 
 A class that defines how a predator behaves in this
-simulation. Mostly that means handling input, updating,
+simulation. Mostly that means updating,
 displaying, and handling overlaps and eating.
 
 ***********************************************/
@@ -17,6 +17,8 @@ function Predator(x,y,radius,maxSpeed,fillColor) {
   // Movement: Position, velocity, maximum speed
   this.x = x;
   this.y = y;
+  this.tx = random(1000);
+  this.ty = random(1000);
   this.vx = 0;
   this.vy = 0;
   this.maxSpeed = maxSpeed;
@@ -26,38 +28,6 @@ function Predator(x,y,radius,maxSpeed,fillColor) {
   // Life: health and alive flag
   this.health = 100;
   this.alive = true;
-}
-
-// handleInput()
-//
-// Checks which arrow keys are pressed and updates
-// the predator's velocity accordingly.
-Predator.prototype.handleInput = function () {
-  if (!this.alive) {
-    return;
-  }
-
-  // Standard code for updating movement based on keys.
-
-  if (keyIsDown(LEFT_ARROW)) {
-    this.vx = -this.maxSpeed;
-  }
-  else if (keyIsDown(RIGHT_ARROW)) {
-    this.vx = this.maxSpeed;
-  }
-  else {
-    this.vx = 0;
-  }
-
-  if (keyIsDown(UP_ARROW)) {
-    this.vy = -this.maxSpeed;
-  }
-  else if (keyIsDown(DOWN_ARROW)) {
-    this.vy = this.maxSpeed;
-  }
-  else {
-    this.vy = 0;
-  }
 }
 
 // overlap(prey)
@@ -103,6 +73,13 @@ Predator.prototype.update = function () {
   if (!this.alive) {
     return;
   }
+
+  // Calculate velocity from Perlin noise
+  this.vx = map(noise(this.tx),0,1,-this.maxSpeed,this.maxSpeed);
+  this.vy = map(noise(this.ty),0,1,-this.maxSpeed,this.maxSpeed);
+
+  this.tx += 0.01;
+  this.ty += 0.01;
 
   // Move
   this.x += this.vx;

@@ -3,8 +3,6 @@
 
 # Week 8 - Week of 22 October 2018
 
-## Review
-
 ## Core - Arrays ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-arrays/index.html), [Notes](../modules/core-arrays/core-arrays.md))
 
 ## Debugging - Guide ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-guide/index.html), [Notes](../modules/debugging-guide/debugging-guide.md))
@@ -13,7 +11,9 @@
 
 ## Broken Game - Basic OOP Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/broken-game-basic-oop-pong/index.html), [Source Code](../games/broken-game-basic-oop-pong/), [ZIP of Source Code](../games/broken-game-basic-oop-pong.zip))
 
+## Homework
 ### [Exercise 6](../exercises/Exercise-6.md) - Debugging Pong
+### [Project 2](../projects/Project-2.md) (Build a Better Pong)
 
 ---
 
@@ -21,15 +21,16 @@
 
 # Week 9 - Week of 29 October 2018
 
-## Review
-
 ## Graphics - Transformations ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-transformations/index.html), [Notes](../modules/graphics-transformations/graphics-transformations.md))
 
-## Physics - Polar coordinates and velocity
+## Physics - Polar coordinates and velocity ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-polar-coordinates-and-velocity/index.html), [Notes](../modules/physics-polar-coordinates-and-velocity/physics-polar-coordinates-and-velocity.md))
 
-## Game - Spacelove!
+## Game - Spacelove! (Coming soon!)
 
-## Other
+## Core - Array tricks ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-array-tricks/index.html), [Notes](../modules/core-array-tricks/core-array-tricks.md))
+
+## Homework
+### [Project 2](../projects/Project-2.md) (Build a Better Pong)
 
 ---
 
@@ -37,27 +38,29 @@
 
 ## Project 2 due tonight
 
-## Review
-## Project 3 assigned
-## Exercise 7 - ...
+## Homework
+### Project 3 - Coming soon
+### Exercise 7 - Coming soon
 
 ---
 
 # Week 11 - Week of 12 November 2018
 
-## Review
 ## Libraries - Introducing Libraries
 ## Libraries - Library workflow
 ## Libraries - Finding libraries
 ## Sound - Howler
 ## Sound - Gibber
-## Exercise 8 - ...
+
+## Homework
+### Project 3 - Coming soon
+### Exercise 8 - Coming soon
 
 ---
 
 # Week 12 - Week of 19 November 2018
 
-## Review
+
 ## Release - Full screen
 ## Release - Integrating with HTML
 ## Release - Electron
@@ -102,8 +105,6 @@
 
 # Week 2 - Week of 10 September 2018
 
-## Review
-
 ## Core - Time ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-time/index.html), [Notes](../modules/core-time/core-time.md))
 
 ## Core - Variables ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-variables/index.html), [Notes](../modules/core-variables/core-variables.md))
@@ -130,7 +131,6 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 # Week 3 - Week of 17 September 2018
 
-## Review
 ## Physics - Motion ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-motion/index.html), [Notes](../modules/physics-motion/physics-motion.md))
 
 ## Core - Conditionals ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-conditionals/index.html), [Notes](../modules/core-conditionals/core-conditionals.md))
@@ -159,8 +159,6 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ---
 
 # Week 4 - Week of 24 September 2018
-
-## Review
 
 ## Core - `while` loops ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-while-loops/index.html), [Notes](../modules/core-while-loops/core-while-loops.md))
 
@@ -224,8 +222,6 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ---
 
 # Week 7 - Week of 15 October 2018
-
-## Review
 
 ## Core - Object Oriented Programming ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-object-oriented-programming/index.html), [Notes](../modules/core-object-oriented-programming/core-object-oriented-programming.md))
 

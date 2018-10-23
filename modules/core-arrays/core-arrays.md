@@ -27,10 +27,10 @@
 ball1 = new Ball(10,10,2,2,10,2);
 ball2 = new Ball(20,10,2,2,10,2);
 ball3 = new Ball(30,10,2,2,10,2);
-bouncer4 = new Ball(40,10,2,2,10,2);
+ball4 = new Ball(40,10,2,2,10,2);
 ...
-bouncer99 = new Ball(990,10,2,2,10,2);
-bouncer100 = new Ball(1000,10,2,2,10,2);
+ball99 = new Ball(990,10,2,2,10,2);
+ball100 = new Ball(1000,10,2,2,10,2);
 ```
 
 ---
@@ -38,7 +38,7 @@ bouncer100 = new Ball(1000,10,2,2,10,2);
 ## Worserer and worserer...
 
 ```javascript
-void draw() {
+function draw() {
   ball1.update();
   ball2.update();
   ball3.update();
@@ -118,7 +118,7 @@ var numbers = [];
 
 ???
 
-- Note that like with variables, JavaScript doesn't check what __type__ of thing you put in an array, so you __could__ store some numbers, some truth values, some objects, etc. all in the __same array__, but you should probably avoid it.
+- Note that like with variables, JavaScript doesn't check what __type__ of thing you put in an array, so you __could__ store some numbers, some truth values, some objects, etc. all in the __same array__, but you should probably afunction it.
 
 ---
 
@@ -389,7 +389,7 @@ var images = [loadImage("image1.png"),loadImage("image2.png"),loadImage("image3.
 ## Arrays can store objects in them!
 
 ```javascript
-Ball balls = [
+var balls = [
   new Ball(10,10,2,2,10,2),
   new Ball(20,10,2,2,10,2),
   new Ball(30,10,2,2,10,2)
@@ -400,7 +400,7 @@ Ball balls = [
 - Note that you can declare an array like the above with each element of the array on a new line, which can make your code more readable. Compare that to:
 
 ```javascript
-Ball balls = [new Ball(10,10,2,2,10,2),new Ball(20,10,2,2,10,2),new Ball(30,10,2,2,10,2),new Ball(40,10,2,2,10,2)];
+var balls = [new Ball(10,10,2,2,10,2),new Ball(20,10,2,2,10,2),new Ball(30,10,2,2,10,2),new Ball(40,10,2,2,10,2)];
 ```
 
 ---
@@ -430,7 +430,7 @@ balls[99] = new Ball(1000,10,2,2,10,2);
 - We use it like this:
 
 ```javascript
-Ball balls = [];
+var balls = [];
 balls.push(new Ball(10,10,2,2,10,2));
 balls.push(new Ball(20,10,2,2,10,2));
 balls.push(new Ball(30,10,2,2,10,2));
@@ -510,7 +510,7 @@ for (var i = 0; i < 100; i++) {
 - We can use this `for`-looping through an array trick __everywhere__
 
 ```javascript
-void draw() {
+function draw() {
   for (var i = 0; i < 100; i++) {
     balls[i].update();
     balls[i].display();
@@ -526,7 +526,7 @@ void draw() {
 - So a better version of the previous loop would actually be
 
 ```javascript
-void draw() {
+function draw() {
   for (var i = 0; i < balls.length; i++) {
     balls[i].update();
     balls[i].display();

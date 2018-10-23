@@ -26,7 +26,7 @@ We constantly need to __debug__ our work
 
 ## Debugging!
 
-- Debugging it the process of going through our code and getting rid of all the bugs
+- Debugging is the process of going through our code and getting rid of all the bugs
 - Programming basically __is__ debugging
 - Debugging is actually pretty fun once you get used to it
 - One big part of debugging is just knowing the kinds of things that can go wrong
@@ -465,15 +465,6 @@ Ball.prototype.isOffScreen = function () {
 - This is probably only a good idea if you __understand__ why it doesn't work
 - But it can be an interesting design process to consider: __not all unexpected behaviour in your code is necessarily bad__
 - So long as you (eventually) understand it
-
----
-
-## Let's do this
-
-- I broke the crap out of Pong
-- Let's fix it!
-- [Broken Pong Example Code](https://github.com/pippinbarr/cart253-2018/raw/master/games/broken-game-basic-oop-pong.zip)
-- [Working Pong Example Code](https://github.com/pippinbarr/cart253-2018/raw/master/games/game-basic-oop-pong.zip)
 
 ---
 

@@ -308,10 +308,10 @@ Gives us `11`
 var numbers = [1, 2, 3, 5, 7, 11, 13, 17, 19, 23];
 
 if (numbers[2] < numbers[3]) {
-  println("Element at index 2 is less than element at index 3");
+  console.log("Element at index 2 is less than element at index 3");
 }
 else {
-  println("Element at index 2 is greater than element at index 3");
+  console.log("Element at index 2 is greater than element at index 3");
 }
 ```
 
@@ -329,10 +329,10 @@ var numbers = [1, 2, 3, 5, 7, 11, 13, 17, 19, 23];
 numbers[2] = numbers[2] * numbers[4];
 
 if (numbers[2] < numbers[3]) {
-  println("Element at index 2 is less than element at index 3");
+  console.log("Element at index 2 is less than element at index 3");
 }
 else {
-  println("Element at index 2 is greater than element at index 3");
+  console.log("Element at index 2 is greater than element at index 3");
 }
 ```
 
@@ -392,7 +392,7 @@ var images = [loadImage("image1.png"),loadImage("image2.png"),loadImage("image3.
 var balls = [
   new Ball(10,10,2,2,10,2),
   new Ball(20,10,2,2,10,2),
-  new Ball(30,10,2,2,10,2)
+  new Ball(30,10,2,2,10,2),
   new Ball(40,10,2,2,10,2)
 ];
 ```

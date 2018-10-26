@@ -588,4 +588,20 @@ function draw() {
 
 ---
 
+## Addendum: `console.log()` and arrays
+
+- `console.log()` is excellent for printing out the values in an array, which is very helpful for debugging
+- As in:
+
+```javascript
+var array = [1,2,9,2,5,7,4,23,2];
+console.log(array);
+```
+
+- If you look at the output in the JavaScript console, you'll see the values in the array nicely printed out
+- If you click the little arrow next to the array name in the console, you can display the whole array element by element, too
+- If you have more complex elements in the array (like objects), clicking the arrow will show much more detailed views of the objects
+
+---
+
 # Fin.

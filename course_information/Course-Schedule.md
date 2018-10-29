@@ -38,9 +38,9 @@
 
 ## Libraries - Introducing Libraries
 ## Libraries - Library workflow
-## Libraries - Finding libraries
-## Sound - Howler
-## Sound - Gibber
+## Libraries - Example 1
+## Libraries - Example 2
+## Libraries - Example 3
 
 ## Homework
 ### Project 3 - Coming soon
@@ -50,10 +50,8 @@
 
 # Week 12 - Week of 19 November 2018
 
-
-## Release - Full screen
-## Release - Integrating with HTML
-## Release - Electron
+## Requests
+## Studio
 
 ---
 
@@ -64,7 +62,7 @@
 
 ---
 
-# Week 14 - Week of 3 December 2018
+# NO CLASS - Week 14 - Week of 3 December 2018
 
 ## Project 3 due this week
 

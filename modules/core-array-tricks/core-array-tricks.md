@@ -10,6 +10,8 @@
 
 - Choosing a random element in an array
 - Cycling through an array
+- Pushing, popping, shifting, and unshifting
+
 
 ---
 
@@ -167,6 +169,84 @@ function mousePressed() {
 - `10 % 3 === 1` because `3` divides into `10` three times with `1` left over
 - `10 % 7 === 3` because `7` divides into `10` once with `3` left over
 - `7 % 10 === 7` because `10` divides into `7` zero times with `7` left over
+
+---
+
+## We're not just `push()`ing anymore
+
+- We've seen we can use `push()` with an array to add an element to the end
+
+```javascript
+var numbers = [1,2,3,4,5];
+numbers.push(6);
+// numbers === [1,2,3,4,5,6]
+```
+
+- This is a handy way to dynamically add things onto the array
+- And there are three related functions that it's worth knowing about
+
+---
+
+## `pop()`
+
+- The corollary of `push()` is `pop()`
+- It __removes__ the last element in an array and returns is
+
+```javascript
+var numbers = [1,2,3,4,5];
+var last = numbers.pop();
+// last === 5
+// numbers === [1,2,3,4]
+```
+
+- It's important to note that `pop()` both __returns__ the value at the end of the array, and __removes__ that value from the array
+- It __changes__ the array
+
+???
+
+- Together, `push()` and `pop()` allow us to treat an array as a __stack__
+- A stack is an important data-type in computer science
+- It operates according to LIFO - "last in, first out"
+- That is, when you add stuff it goes to the top of the pile, so when you remove something, it'll be the most recently added thing
+
+---
+
+## `unshift()` and `shift()`
+
+- `push()` and `pop()` do their thing at the __end__ of an array
+- `unshift()` and `shift()` do their thing at the __start__ of an array
+
+```javascript
+var numbers = [1,2,3,4,5];
+numbers.unshift(0);
+// numbers === [0,1,2,3,4,5]
+
+var first = numbers.shift();
+// first === 0
+// numbers === [1,2,3,4,5]
+```
+
+???
+
+- Assuming we imagine the priority of the elements in an array to move from right to left (e.g. the elements at the start of the array are at the "head of the queue") we can use these functions to implement queuing
+- When we add something, we should add it to the __end__ of the array because it should be last in the queue, so we use `push()`
+- When we take something off, we should remove it from the __front__ of the array, because it is first in the queue, so we use `shift()`
+- (If you wanted the front of the queue to be at the end of the array you'd use `unshift()` and `pop()` instead.)
+
+---
+
+## There are more
+
+- Other very helpful array methods include
+  - `indexOf()`
+  - `slice()`
+  - `concat()`
+  - `every()`
+  - `map()`
+  - `splice()`
+  - `join()` (and `split()` for strings)
+  - ... and more!
+
 
 ---
 

@@ -1,42 +1,32 @@
 
 # Present
 
-# Week 8 - Week of 22 October 2018
-
-## Core - Arrays ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-arrays/index.html), [Notes](../modules/core-arrays/core-arrays.md))
-
-## Debugging - Guide ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-guide/index.html), [Notes](../modules/debugging-guide/debugging-guide.md))
-
-## Game - Predator Prey ([Game](https://pippinbarr.github.io/cart253-2018/games/game-predator-prey/index.html), [Source Code](../games/game-predator-prey/), [ZIP of Source Code](../games/game-predator-prey.zip))
-
-## Broken Game - Basic OOP Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/broken-game-basic-oop-pong/index.html), [Source Code](../games/broken-game-basic-oop-pong/), [ZIP of Source Code](../games/broken-game-basic-oop-pong.zip))
-
-## Homework
-### [Exercise 6](../exercises/Exercise-6.md) - Debugging Pong
-### [Project 2](../projects/Project-2.md) (Build a Better Pong)
-
----
-
-# Future
-
 # Week 9 - Week of 29 October 2018
 
 ## Graphics - Transformations ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-transformations/index.html), [Notes](../modules/graphics-transformations/graphics-transformations.md))
 
 ## Physics - Polar coordinates and velocity ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-polar-coordinates-and-velocity/index.html), [Notes](../modules/physics-polar-coordinates-and-velocity/physics-polar-coordinates-and-velocity.md))
 
-## Game - Spacelove! (Coming soon!)
-
 ## Core - Array tricks ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-array-tricks/index.html), [Notes](../modules/core-array-tricks/core-array-tricks.md))
+
+## Game - Spacelove! ([Game](https://pippinbarr.github.io/cart253-2018/games/game-spacelove/index.html), [Source Code](../games/game-spacelove/), [ZIP of Source Code](../games/game-spacelove.zip))
+
+## Studio
+### [Exercise 6](../exercises/Exercise-6.md)
+### [Project 2](../projects/Project-2.md) (Build a Better Pong)
 
 ## Homework
 ### [Project 2](../projects/Project-2.md) (Build a Better Pong)
 
 ---
 
+# Future
+
 # Week 10 - Week of 5 November 2018
 
-## Project 2 due tonight
+## Studio
+
+## [Project 2](../projects/Project-2.md) due tonight
 
 ## Homework
 ### Project 3 - Coming soon
@@ -233,4 +223,20 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Homework
 ### [Exercise 5](../exercises/Exercise-5.md) - Pong Plus (Object-Oriented Edition)
+### [Project 2](../projects/Project-2.md) (Build a Better Pong)
+
+---
+
+# Week 8 - Week of 22 October 2018
+
+## Core - Arrays ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-arrays/index.html), [Notes](../modules/core-arrays/core-arrays.md))
+
+## Debugging - Guide ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-guide/index.html), [Notes](../modules/debugging-guide/debugging-guide.md))
+
+## Game - Predator Prey ([Game](https://pippinbarr.github.io/cart253-2018/games/game-predator-prey/index.html), [Source Code](../games/game-predator-prey/), [ZIP of Source Code](../games/game-predator-prey.zip))
+
+## Broken Game - Basic OOP Pong ([Game](https://pippinbarr.github.io/cart253-2018/games/broken-game-basic-oop-pong/index.html), [Source Code](../games/broken-game-basic-oop-pong/), [ZIP of Source Code](../games/broken-game-basic-oop-pong.zip))
+
+## Homework
+### [Exercise 6](../exercises/Exercise-6.md) - Debugging Pong
 ### [Project 2](../projects/Project-2.md) (Build a Better Pong)

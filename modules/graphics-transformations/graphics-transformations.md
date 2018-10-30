@@ -249,6 +249,7 @@ function draw() {
 - `translate()` the origin to the centre of the rectangle and __then__ rotate it
 --
 
+
 ```javascript
 function setup() {
   createCanvas(500,500);

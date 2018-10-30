@@ -35,8 +35,9 @@
 
 ```javascript
 var rightAngleInRadians = radians(90);
-
+// rightAngleInRadians === π / 2 === 1.5708
 var rightAngleInDegrees = degrees(rightAngleInRadians);
+// rightAngleInDegrees === 90
 ```
 
 ---
@@ -59,10 +60,14 @@ function setup() {
 function draw() {
   var y = height/2 + (sin(angle) * height/2);
   ellipse(x,y,10,10);
-  x++;
-  angle += 0.05;
+  x++; // Move to the right
+  angle += 0.05; // Increase the angle to oscillate
 }
 ```
+
+???
+
+- Now we can look at what `cos()` and `tan()` look like too...
 
 ---
 
@@ -92,8 +97,8 @@ function draw() {
 
 ## Oscillating color...
 
-- The numbers that come out of `sin()` as you increase the angle are just more numbers (between `-1` and `1` this time)
-- You can apply these numbers to something else...
+- If we use the `map()` function, we can convert from the -1..1 range into any other range that suits us
+- Like colours...
 
 ```javascript
 var angle = 0;
@@ -106,7 +111,7 @@ function setup() {
 }
 
 function draw() {
-  var fillColor = color(map(sin(angle),-1,1,0,255),map(cos(angle),-1,1,0,255,0),0);
+  var fillColor = color(map(sin(angle),-1,1,0,255),map(cos(angle),-1,1,0,255,0),200);
   fill(fillColor);
   ellipse(width/2,height/2,radius*2);
   angle += 0.05;
@@ -117,23 +122,25 @@ function draw() {
 
 ## Oscillating text size...
 
-- The numbers that come out of `sin()` as you increase the angle are just more numbers (between `-1` and `1` this time)
-- You can apply these numbers to something else...
+- Or like text sizes...
 
 ```javascript
 var angle = 0;
 var string = "Trick or treat?";
+var minTextSize = 24;
+var maxTextSize = 100;
 
 function setup() {
   createCanvas(600,600);
   background(0);
-  fill(255);
   stroke(0);
   textAlign(CENTER,CENTER);
 }
 
 function draw() {
-  textSize(map(sin(angle),-1,1,12,64));
+  var fillColor = color(map(sin(angle),-1,1,0,255),map(cos(angle),-1,1,0,255,0),200);
+  fill(fillColor);
+  textSize(map(sin(angle),-1,1,minTextSize,maxTextSize));
   text(string,width/2,height/2);
   angle += 0.05;
 }
@@ -154,7 +161,6 @@ function draw() {
 --
 
 - And it could be useful to put it somewhere else, depending on what you're doing
-- It might be helpful to have it in the centre of the window, for instance, if you're drawing symmetric things
 
 ---
 
@@ -182,13 +188,13 @@ function setup() {
 ```
 --
 
-So `translate(x,y)` __moves__ the origin to the location specified.
+- So `translate(x,y)` __moves__ the origin to the location specified.
 
 ---
 
 ## Move it, move it
 
-- Actually `translate(x,y)` is cumulative, compare:
+- In fact, `translate(x,y)` is cumulative, compare:
 
 ```javascript
 function draw() {
@@ -205,14 +211,14 @@ function draw() {
 }
 ```
 
-(Note: `translate()` gets reset at the start of `draw()` each time)
+- Note: `translate()` gets reset at the start of `draw()` each time
 
 
 ---
 
 ## You spin me right round...
 
-- Being able to control where the origin is useful for __rotation__
+- Being able to control where the origin is notably useful for __rotation__
 - Using a function called `rotate()`
 
 ```javascript
@@ -228,7 +234,7 @@ function draw() {
 ```
 --
 
-- Wait what? We probably thought this would rotate the rectangle around __its own centre__
+- We probably thought this would rotate the rectangle around __its own centre__
 - But... no.
 - In p5 things rotate __around the origin__
 
@@ -262,7 +268,8 @@ function draw() {
 
 ## You spin me right round the origin and the origin is at `0,0`
 
-- When we `translate()` the origin, we need to remember that `0,0` is now in a new location, so
+- When we `translate()` the origin, we need to remember that `0,0` is now in a new location
+- In fact `0,0` is exactly in the location we want to draw our square, so...
 
 ```javascript
 function setup() {
@@ -308,7 +315,7 @@ function draw() {
 - `scale(0.5)` scales things down to half their size
 --
 
-- But it scales things __around the origin__
+- But, like `rotate()`, it works based on __the origin__
 - So, same rules apply
 
 ---
@@ -337,13 +344,14 @@ function draw() {
 ## Didn't I hear something about a 3rd dimension?
 
 - p5 can do things in 3D as well as in 2D
-- For now, know that you need to tell p5 to use 3D specifically in the `createCanvas()` function:
+- We won't go too deep into this here, but let's at least test the waters...
+- First, you need to tell p5 to use 3D specifically in the `createCanvas()` function:
 
 ```javascript
 createCanvas(640,480,WEBGL);
 ```
 
-- __Important__: When you're using `WEBGL` the __origin is in the centre of the canvas by default__
+- __Really important__: When you're using `WEBGL` the __origin starts in the CENTRE of the canvas by default__
 
 ---
 
@@ -352,11 +360,11 @@ createCanvas(640,480,WEBGL);
 - You can use `translate()`, `rotate()`, and `scale()` in all three dimensions...
 
 ```javascript
-translate(x,y,z);
-rotateX(angle);
-rotateY(angle);
-rotateZ(angle);
-scale(xScale,yScale,zScale);
+translate(x,y,z); // move the origin in three dimensions
+rotateX(angle); // rotate around the x-axis
+rotateY(angle); // rotate around the y-axis
+rotateZ(angle); // rotate around the z-axis (the one pointing out of the screen)
+scale(xScale,yScale,zScale); // scale around the origin
 ```
 
 - Note that rotation has __three separate functions__, one for each axis
@@ -380,7 +388,7 @@ sphere(100); // Draw a sphere with a radius of 100 at the origin
 
 - And cylinders and cones and tori, oh my!
 - Again, most of the time you'll want to __translate__ the origin, apply rotation and scale, then draw your thing...
-- Refer to the reference for details on these
+- __Refer to the reference for details__
 
 ---
 
@@ -396,7 +404,6 @@ function setup() {
 
 function draw() {
   background(0);
-  translate(width/2,height/2,0); // Translating in THREE DIMENSIONS!
   rotateX(radians(45));
   rotateY(angle);
   scale(scaleFactor);
@@ -411,8 +418,8 @@ function draw() {
 ## How about...
 
 ```javascript
-var angle1 = 0.0;
-var angle2 = 0.0;
+var angleX = 0.0;
+var angleY = 0.0;
 
 function setup() {
   createCanvas(500,500,WEBGL);
@@ -420,13 +427,13 @@ function setup() {
 
 function draw() {
   background(0);
-  rotateY(angle1);
+  rotateY(angleY);
   box(60);
-  translate(50,50);
-  rotateX(angle2);
+  translate(50,0,50); // Translation in 3D!
+  rotateX(angleX);
   box(30);
-  angle1 += 0.01;
-  angle2 -= 0.01;
+  angleX += 0.01;
+  angleY -= 0.01;
 }
 ```
 --
@@ -446,7 +453,7 @@ function draw() {
 ## Return of the `push()` and `pop()`
 
 - Just as we can keep __styles__ from affecting the rest of the program by keeping them inside a `push()` and a `pop()`...
-- It turns out we can do the same for __transformations__
+- It turns out we can do the same for all these __transformations__
 - So if we surround a set of transformations and the drawing instruction they apply to with `push()` and `pop()` the transformations will __only__ apply to that drawing instruction...
 
 ---
@@ -454,8 +461,8 @@ function draw() {
 ## Separate rotations
 
 ```javascript
-var angle1 = 0.0;
-var angle2 = 0.0;
+var angleX = 0.0;
+var angleY = 0.0;
 
 function setup() {
   createCanvas(500,500,WEBGL);
@@ -464,17 +471,16 @@ function setup() {
 function draw() {
   background(0);
   push();
-  translate(250,250);
-  rotateY(angle1);
+  rotateY(angleY);
   box(60);
   pop();
   push();
-  translate(50,50);
-  rotateX(angle2);
+  translate(50,0,50);
+  rotateX(angleX);
   box(30);
   pop();
-  angle1 += 0.01;
-  angle2 -= 0.01;
+  angleX += 0.01;
+  angleY -= 0.01;
 }
 ```
 
@@ -489,9 +495,51 @@ function draw() {
 
 ---
 
-## Nested pushing and popping...
+## Activity: That's no cubic moon...
 
-- Here's an amazing example from the book __Learning Processing__ that mesmerises me
+Write a script that draws
+- A "sun cube" in the centre of the screen (make it yellow)
+- A "planet cube" that rotates around the sun cube (maybe make it blue)
+- A "moon cube" that rotates around the planet cube (maybe that can be grey)
+
+Possible solution in slide notes.
+
+???
+
+```javascript
+var sunAngle = 0.0;
+var planetAngle = 0.0;
+var moonAngle = 0.0;
+
+function setup() {
+  createCanvas(500,500,WEBGL);
+}
+
+function draw() {
+  background(0);
+  push();
+  rotateY(sunAngle);
+  fill(255,255,0);
+  box(100);
+  translate(150,0,0);
+  rotateY(planetAngle);
+  fill(0,0,255);
+  box(50);
+  translate(75,0,0);
+  rotateY(moonAngle);
+  fill(200,200,200);
+  box(25);
+  sunAngle += 0.01;
+  planetAngle -= 0.05;
+  moonAngle -= 0.005;
+}
+```
+
+---
+
+## (Advanced) Nested pushing and popping...
+
+- Here's an amazing example from the book __Learning Processing__ (which is about Processing, the Java-based programming environment that p5 is based on) that mesmerizes me
 - On a good day I even understand it
 - (See notes.)
 

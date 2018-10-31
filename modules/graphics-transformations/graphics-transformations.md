@@ -188,13 +188,14 @@ function setup() {
 ```
 --
 
-- So `translate(x,y)` __moves__ the origin to the location specified.
+- So `translate(x,y)` __moves__ the origin.
+- It kind of seems like it moves the origin __to__ the coordinates specified... but...
 
 ---
 
-## Move it, move it
+## `translate(x,y)` is cumulative
 
-- In fact, `translate(x,y)` is cumulative, compare:
+- Compare:
 
 ```javascript
 function draw() {
@@ -211,6 +212,7 @@ function draw() {
 }
 ```
 
+- So `translate()` moves the origin __by the amount specified__ from where it is at that time
 - Note: `translate()` gets reset at the start of `draw()` each time
 
 

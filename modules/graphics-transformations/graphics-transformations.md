@@ -545,11 +545,49 @@ function draw() {
 - What if you were to draw this little planet system so the rotation happened on the z-axis?
 - What if you deleted the `background()` instruction?
 - What if you only drew the moon?
-- What if you introduced some extra, `random()` `translate()` commands on the `x` and `y` axes to destabilize the orbits?
+- What if you introduced some extra `translate()` commands on the `x` and `y` axes that use `random()` or even trigonometry to destabilize the orbits?
 - What if you randomized the fill of the moon?
 - What if it was a sphere instead?
 - What if you added an extra rotation command on the `x` or `y` axes?
 - Etsy Store Here We Come!
+- (Example in slide notes.)
+
+???
+
+```javascript
+var sunAngle = 0.0;
+var planetAngle = 0.0;
+var moonAngle = 0.0;
+var planetWaveAngle = 0.0;
+var moonWaveAngle = 0.0;
+var totalAngle = 0;
+
+function setup() {
+  createCanvas(windowWidth,windowHeight,WEBGL);
+}
+
+function draw() {
+  rotateX(totalAngle);
+  rotateZ(sunAngle);
+  fill(255,255,0);
+  translate(150 + random(-10,10),sin(planetWaveAngle) * 50,0);
+  rotateZ(planetAngle);
+  fill(0,0,255);
+  translate(75 + random(-5,5),random(-5,5),0);
+  rotateZ(moonAngle);
+  noStroke();
+  fill(random(100,255),random(100,200),0);
+  translate(sin(moonWaveAngle) * 40,0,0);
+  sphere(20);
+  sunAngle += 0.01;
+  planetAngle -= 0.06;
+  moonAngle -= 0.05;
+
+  planetWaveAngle += 0.1;
+  moonWaveAngle += 0.05;
+  totalAngle += random(0.01,0.1);
+}
+```
 
 ---
 

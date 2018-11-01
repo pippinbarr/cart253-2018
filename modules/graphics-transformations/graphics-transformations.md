@@ -540,6 +540,19 @@ function draw() {
 
 ---
 
+## Generative Art for Cheap!
+
+- What if you were to draw this little planet system so the rotation happened on the z-axis?
+- What if you deleted the `background()` instruction?
+- What if you only drew the moon?
+- What if you introduced some extra, `random()` `translate()` commands on the `x` and `y` axes to destabilize the orbits?
+- What if you randomized the fill of the moon?
+- What if it was a sphere instead?
+- What if you added an extra rotation command on the `x` or `y` axes?
+- Etsy Store Here We Come!
+
+---
+
 ## (Advanced) Nested pushing and popping...
 
 - Here's an amazing example from the book __Learning Processing__ (which is about Processing, the Java-based programming environment that p5 is based on) that mesmerizes me

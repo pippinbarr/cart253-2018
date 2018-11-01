@@ -40,7 +40,6 @@
 ## Libraries - Library workflow
 ## Libraries - Example 1
 ## Libraries - Example 2
-## Libraries - Example 3
 
 ## Homework
 ### Project 3 - Coming soon
@@ -50,7 +49,9 @@
 
 # Week 12 - Week of 19 November 2018
 
-## Requests
+## Libraries - Example 3
+## Libraries - Example 4
+
 ## Studio
 
 ---

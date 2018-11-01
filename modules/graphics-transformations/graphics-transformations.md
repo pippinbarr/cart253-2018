@@ -40,6 +40,14 @@ var rightAngleInDegrees = degrees(rightAngleInRadians);
 // rightAngleInDegrees === 90
 ```
 
+- Or you can even use `angleMode(DEGREES)` to make p5 use degrees in all its functions
+
+```javascript
+sin(90); // This will use 90 radians - bad!
+angleMode(DEGREES);
+sin(90); // This will now correctly use 90 degrees
+```
+
 ---
 
 ## Better keep it oscillated

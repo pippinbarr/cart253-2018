@@ -1,58 +1,44 @@
 
 # Present
 
-# Week 9 - Week of 29 October 2018
+# Week 10 - Week of 5 November 2018
 
-## Graphics - Transformations ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-transformations/index.html), [Notes](../modules/graphics-transformations/graphics-transformations.md))
-
-## Physics - Polar coordinates and velocity ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-polar-coordinates-and-velocity/index.html), [Notes](../modules/physics-polar-coordinates-and-velocity/physics-polar-coordinates-and-velocity.md))
-
-## Core - Array tricks ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-array-tricks/index.html), [Notes](../modules/core-array-tricks/core-array-tricks.md))
-
-## Game - Spacelove! ([Game](https://pippinbarr.github.io/cart253-2018/games/game-spacelove/index.html), [Source Code](../games/game-spacelove/), [ZIP of Source Code](../games/game-spacelove.zip))
+## [Project 2](../projects/Project-2.md) due tonight
 
 ## Studio
-### [Exercise 6](../exercises/Exercise-6.md)
-### [Project 2](../projects/Project-2.md) (Build a Better Pong)
 
 ## Homework
-### [Project 2](../projects/Project-2.md) (Build a Better Pong)
+### [Project 3](../projects/Project-3.md) - The Grand Finale
+### [Exercise 7](../exercises/Exercise-7.md) - Project 3 Prototype 1
 
 ---
 
 # Future
 
-# Week 10 - Week of 5 November 2018
-
-## Studio
-
-## [Project 2](../projects/Project-2.md) due tonight
-
-## Homework
-### Project 3 - Coming soon
-### Exercise 7 - Coming soon
-
----
-
 # Week 11 - Week of 12 November 2018
 
 ## Libraries - Introducing Libraries
-## Libraries - Library workflow
+
 ## Libraries - Example 1
+
 ## Libraries - Example 2
 
 ## Homework
-### Project 3 - Coming soon
-### Exercise 8 - Coming soon
+### [Project 3](../projects/Project-3.md) - The Grand Finale
+### Exercise 8 - Project 3 Prototype 2
 
 ---
 
 # Week 12 - Week of 19 November 2018
 
 ## Libraries - Example 3
+
 ## Libraries - Example 4
 
 ## Studio
+
+## Homework
+### [Project 3](../projects/Project-3.md) - The Grand Finale
 
 ---
 
@@ -61,11 +47,14 @@
 ## Requests
 ## Studio
 
+## Homework
+### [Project 3](../projects/Project-3.md) - The Grand Finale
+
 ---
 
 # NO CLASS - Week 14 - Week of 3 December 2018
 
-## Project 3 due this week
+## [Project 3](../projects/Project-3.md) is due this week
 
 ---
 
@@ -238,4 +227,23 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Homework
 ### [Exercise 6](../exercises/Exercise-6.md) - Debugging Pong
+### [Project 2](../projects/Project-2.md) (Build a Better Pong)
+
+---
+
+# Week 9 - Week of 29 October 2018
+
+## Graphics - Transformations ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-transformations/index.html), [Notes](../modules/graphics-transformations/graphics-transformations.md))
+
+## Physics - Polar coordinates and velocity ([Slides](https://pippinbarr.github.io/cart253-2018/modules/physics-polar-coordinates-and-velocity/index.html), [Notes](../modules/physics-polar-coordinates-and-velocity/physics-polar-coordinates-and-velocity.md))
+
+## Core - Array tricks ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-array-tricks/index.html), [Notes](../modules/core-array-tricks/core-array-tricks.md))
+
+## Game - Spacelove! ([Game](https://pippinbarr.github.io/cart253-2018/games/game-spacelove/index.html), [Source Code](../games/game-spacelove/), [ZIP of Source Code](../games/game-spacelove.zip))
+
+## Studio
+### [Exercise 6](../exercises/Exercise-6.md)
+### [Project 2](../projects/Project-2.md) (Build a Better Pong)
+
+## Homework
 ### [Project 2](../projects/Project-2.md) (Build a Better Pong)

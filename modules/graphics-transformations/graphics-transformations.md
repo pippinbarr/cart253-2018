@@ -53,7 +53,7 @@ sin(90); // This will now correctly use 90 degrees
 ## Better keep it oscillated
 
 - A great feature of trigonometric functions is __oscillation__
-- Functions like __sine__ and __cosine__ oscillate between `-1` and `1` as the angle you give them changes
+- Functions like __sine__ and __cosine__ oscillate between `-1` and `1` as the angle you give them increases (or decreases)
 
 ```javascript
 var angle = 0;
@@ -69,7 +69,7 @@ function draw() {
   var y = height/2 + (sin(angle) * height/2);
   ellipse(x,y,10,10);
   x++; // Move to the right
-  angle += 0.05; // Increase the angle to oscillate
+  angle += 0.05; // Increase the angle, causing the sine function to oscillate
 }
 ```
 

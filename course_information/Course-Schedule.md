@@ -19,7 +19,7 @@
 
 ## Libraries - Introducing Libraries ([Slides](https://pippinbarr.github.io/cart253-2018/modules/libraries-introducing-libraries/index.html), [Notes](../modules/libraries-introducing-libraries/libraries-introducing-libraries.md))
 
-## Libraries - p5.sound
+## Libraries - p5.sound ([Slides](https://pippinbarr.github.io/cart253-2018/modules/libraries-p5-sound/index.html), [Notes](../modules/libraries-p5-sound/libraries-p5-sound.md))
 
 ## Homework
 ### [Project 3](../projects/Project-3.md) - The Grand Finale

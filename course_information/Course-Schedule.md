@@ -17,11 +17,9 @@
 
 # Week 11 - Week of 12 November 2018
 
-## Libraries - Introducing Libraries
+## Libraries - Introducing Libraries ([Slides](https://pippinbarr.github.io/cart253-2018/modules/libraries-introducing-libraries/index.html), [Notes](../modules/libraries-introducing-libraries/libraries-introducing-libraries.md))
 
-## Libraries - Example 1
-
-## Libraries - Example 2
+## Libraries - p5.sound
 
 ## Homework
 ### [Project 3](../projects/Project-3.md) - The Grand Finale

@@ -23,7 +23,7 @@ The actual nature of your prototype will of course depend on your idea for your 
 - Communicate an idea (e.g. the interactive experience should be about something specific)
 - Include a description of where you envisage the project going from this prototype at the top of your script file (e.g. you have an initial understanding of the larger project as well the prototype)
 
-In short, it should be reflective of one part of a larger idea for a project. Note that the scale of work for the prototype should be roughly equivalent to past exercises (with the understanding that you are not starting with specific code to change).
+In short, it should be reflective of one part of a larger idea for a project. Note that the scale of work for the prototype should be roughly equivalent to past exercises (with the understanding that you are not starting with specific code to change). It is perfectly acceptable to cannabalise pre-existing code from the course and your own previous work, just make sure you indicate this in your commenting.
 
 
 ## Submission

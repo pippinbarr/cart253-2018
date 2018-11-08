@@ -1,7 +1,7 @@
 # Exercise 7 - Project 3 Prototype 1
 
 __Grade__: 2.5% of final grade (see grading guidelines at bottom)  
-__Deadline__: 11:59PM on the day of class on week of 29 October 2018.
+__Deadline__: 11:59PM on the day of class on week of 15 November 2018.
 
 ## Brief
 

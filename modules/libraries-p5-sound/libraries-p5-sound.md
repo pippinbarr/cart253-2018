@@ -279,6 +279,43 @@ osc.freq(constrain(map(mouseX,0,width,110,440),110,440));
 
 ---
 
+## Oscillators within oscillators
+
+- We could drive the frequency of an audio oscillator with the output of an oscillating function like `sin()`!
+
+```javascript
+var osc;
+var freqBase = 440;
+var freqRange = 110;
+var freqChangeRate = 0.1;
+var theta = 0;
+
+function setup() {
+  osc = new p5.Oscillator();
+  osc.setType('sine');
+  osc.freq(freqBase);
+  osc.amp(1);
+  osc.start();
+}
+
+function draw() {
+  var newFreq = freqBase + (sin(theta) * freqRange);
+  osc.freq(newFreq);
+  theta += freqChangeRate;
+}
+```
+
+???
+
+- Here we create a standard sine-wave oscillator and set it up to play a tone of the base frequency of 440Hz
+- In the draw loop we calculate a new frequency each time by using the `sin()` function with an increase angle `theta`
+- Because `sin()` oscillates between `-1` and `1`, calculating `(sin(theta) * freqRange)` returns numbers oscillating between `-freqRange` and `freqRange`
+- If we add that to the base frequency `freqBase` we get a sound that goes below and above the base frequency by the range, over time
+- It sounds like a siren!
+- Changing the base, range, and rate, all affect what the resulting sound is - play around!
+
+---
+
 ## There is a lot more
 
 - If you look again at the `p5.sound` homepage, you can see there are a __lot__ of possibilities here

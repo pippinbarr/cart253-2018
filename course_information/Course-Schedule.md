@@ -21,6 +21,8 @@
 
 ## Libraries - p5.sound ([Slides](https://pippinbarr.github.io/cart253-2018/modules/libraries-p5-sound/index.html), [Notes](../modules/libraries-p5-sound/libraries-p5-sound.md))
 
+## Game - Where's Invisible Sausage Dog? ([Game](https://pippinbarr.github.io/cart253-2018/games/game-wheres-invisible-sausage-dog/index.html), [Source Code](../games/game-wheres-invisible-sausage-dog/), [ZIP of Source Code](../games/game-wheres-invisible-sausage-dog.zip))
+
 ## Homework
 ### [Project 3](../projects/Project-3.md) - The Grand Finale
 ### Exercise 8 - Project 3 Prototype 2
@@ -164,7 +166,7 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 - Please read the exercise carefully, some people simply missed doing one or more of the challenges
 - Be careful with your variable naming: `image` and `string` are not good variable names, the name should describe specifically what the variable is for
 
-## Core - Functions with parameters and return values ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-functions-with-parameters-and-return-values/index.html), [Notes](../modules/core-functions-with-parameters-and-return-values/core-functions-with-parameters-and-return-values.md))
+## Core - Functions with arguments and return values ([Slides](https://pippinbarr.github.io/cart253-2018/modules/core-functions-with-arguments-and-return-values/index.html), [Notes](../modules/core-functions-with-arguments-and-return-values/core-functions-with-arguments-and-return-values.md))
 
 ## Debugging - Functions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/debugging-functions/index.html), [Notes](../modules/debugging-functions/debugging-functions.md))
 

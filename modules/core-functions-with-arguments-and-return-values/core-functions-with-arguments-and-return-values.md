@@ -1,12 +1,12 @@
 ### Core / CART 253 / Fall 2018 / Pippin Barr
 
-# Functions with parameters and return values
+# Functions with arguments and return values
 
 ---
 
 ## In this module
 
-- Giving functions parameters
+- Giving functions arguments
 - Returning values from functions
 
 ---
@@ -136,9 +136,9 @@ function draw() {
 
 ---
 
-## Parameters
+## Arguments
 
-- Lots of functions only make sense if you can give them __parameters__
+- Lots of functions only make sense if you can give them __arguments__
 - We don't get a rectangle if we just call `rect();` because it doesn't make sense
 - We call `rect(0,0,100,100);` and specify __where__ the rectangle should be and what __dimensions__ it should have
 - We want something like that for `drawCaterpillar()`
@@ -196,8 +196,8 @@ function drawCaterpillar(x,y) {
 }
 ```
 
-- Inside the parentheses we have a __comma-separated list of the parameters this function takes__
-- These are called the __arguments__ when we're defining a function
+- Inside the parentheses we have a __comma-separated list of the arguments this function takes__
+- These are called the __parameters__ when we're defining a function
 - We can see that this function expects some parameters called `x` and a `y`
 - Because they're well-named, they're pretty self-explanatory, right?
 - They refer to the position and size of the avatar to be drawn
@@ -224,9 +224,9 @@ function drawCaterpillar(x,y) {
 ```
 
 - After the parameters are defined inside the parentheses, we have the usual curly brackets containing the code of the function
-- There we can see that we are __using the arguments just like variables__
-- When the function is __called__ with actual values for the parameters, those arguments will contain those values
-- But when we're __defining__ the function, we don't know ahead of time what those parameters could be, so we use them like variables
+- There we can see that we are __using the parameters just like variables__
+- When the function is __called__ with actual values, the parameters will contain those values
+- But when we're __defining__ the function, we don't know ahead of time what the values could be, so we write the function in terms of the parameters, using them like variables
 
 ---
 
@@ -244,12 +244,12 @@ function draw() {
 
 - Yep. Doesn't work.
 - Unfortunately it doesn't __crash__ our program, it just doesn't do what we want
-- That's because in JavaScript if we don't include a parameter in a function call, it will just get set to `undefined`
-- And if a parameter for `ellipse()` is undefined, it just doesn't draw the ellipse (and doesn't complain!)
+- That's because in JavaScript if we don't include a argument in a function call, it will just get set to `undefined`
+- And if a argument for `ellipse()` is undefined, it just doesn't draw the ellipse (and doesn't complain!)
 
 --
 
-__So we need to put parameters into our function call__
+__So we need to put arguments into our function call__
 
 ---
 
@@ -285,20 +285,20 @@ function drawCaterpillar(x,y) {
 }
 ```
 
-- When you call a function you've defined, make sure you put your parameters in the __same order as the arguments in the definition__
-- This is actually the only way JavaScript knows which parameters refers to which argument
+- When you call a function you've defined, make sure you put your arguments in the __same order as the parameters in the definition__
+- This is actually the only way JavaScript knows which argument is intended for which parameter
 
 ???
 
-- It's actually possible to omit parameters and still have a function work
-- When you call a function with too few parameters, the remaining arguments will be `undefined` and the function will run that way
+- It's actually possible to omit arguments and still have a function work
+- When you call a function with too few arguments, the remaining parameters the function expects will be `undefined` and the function will run that way
 - So if we call
 
 ```javascript
 drawCaterpillar(100);
 ```
 
-- Then the function will be called with `x` as `100` (because `x` is the first parameters) and with `y` as `undefined`
+- Then the function will be called with `x` as `100` (because `x` is the first parameter) and with `y` as `undefined`
 - This will mean the caterpillar won't appear on the screen, because you can't draw ellipses with an `undefined` position coordinate
 - If you __wanted__ to be able to omit the `y` perhaps because you'll just have a default value for it, you have to write that into the function:
 
@@ -338,9 +338,9 @@ function draw() {
 }
 ```
 
-- Even better! We can draw __two__ caterpillars in different places using the parameters!
+- Even better! We can draw __two__ caterpillars in different places using arguments!
 - Notice, too, how we don't need to be able to __see__ the `drawCaterpillar()` function definition itself to use it
-- So long as we __know how it works__
+- So long as we __know how it works__, and we know the arguments it expects!
 - This is a strong case for __good documentation__ like sensible comments that explain your functions!
 
 ---
@@ -371,10 +371,11 @@ function draw() {
 - If you want `draw()` to start up again, you can call... `loop()`
 ---
 
-## As many arguments as you want!
+## As many parameters as you want!
 
 - Currently there are other aspects of drawing a caterpillar we probably want to control
-- Like how many segments it is, maybe what size the segments should be...
+- Like how many segments it is, maybe what size the segments should be, ...
+- So we could add further parameters to the function definition for those...
 
 ```javascript
 function drawCaterpillar(x,y,segments,radius) {

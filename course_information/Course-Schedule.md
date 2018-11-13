@@ -1,20 +1,6 @@
 
 # Present
 
-# Week 10 - Week of 5 November 2018
-
-## [Project 2](../projects/Project-2.md) due tonight
-
-## Studio
-
-## Homework
-### [Project 3](../projects/Project-3.md) - The Grand Finale
-### [Exercise 7](../exercises/Exercise-7.md) - Project 3 Prototype 1
-
----
-
-# Future
-
 # Week 11 - Week of 12 November 2018
 
 ## Libraries - Introducing Libraries ([Slides](https://pippinbarr.github.io/cart253-2018/modules/libraries-introducing-libraries/index.html), [Notes](../modules/libraries-introducing-libraries/libraries-introducing-libraries.md))
@@ -25,9 +11,14 @@
 
 ## Homework
 ### [Project 3](../projects/Project-3.md) - The Grand Finale
-### Exercise 8 - Project 3 Prototype 2
+### [Exercise 8](../exercises/Exercise-8.md) - Project 3 Prototype 2
+
 
 ---
+---
+
+
+# Future
 
 # Week 12 - Week of 19 November 2018
 
@@ -247,3 +238,15 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 
 ## Homework
 ### [Project 2](../projects/Project-2.md) (Build a Better Pong)
+
+---
+
+# Week 10 - Week of 5 November 2018
+
+## [Project 2](../projects/Project-2.md) due tonight
+
+## Studio
+
+## Homework
+### [Project 3](../projects/Project-3.md) - The Grand Finale
+### [Exercise 7](../exercises/Exercise-7.md) - Project 3 Prototype 1

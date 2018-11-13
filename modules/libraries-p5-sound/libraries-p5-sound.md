@@ -93,7 +93,7 @@
 ## Futher investigation
 
 - All this enabled us to get a __deeper picture__ of this aspect of the `p5.sound` library...
-- ... and to start to __envisage how we might use it__ (we see we can play sounds, pause them, loop them, reverse them, beat detect them, pan them, change their playback rate, etc.)
+- ... and to start to __envisage how we might use it__ (we see we can play sounds, pause them, loop them, reverse them, use beat detection on them, pan them, change their playback rate, etc.)
 
 ---
 
@@ -104,7 +104,7 @@
 - Most libraries provide some kind of __download link__ to the library file on their homepage, but `p5.sound` __doesn't__, which is annoying
 - In fact, `p5.sound` is "built in" to the default p5 library distribution, so to get it we need to download p5
 - So we go to the __Download__ page on the p5 website
-- And we download `p5.js complete` because we can see in its notes that it include `p5.sound`
+- And we download `p5.js complete` because we can see in its notes that it includes `p5.sound`
 
 ---
 
@@ -115,7 +115,7 @@
 - ... and inside that folder we find the files `p5.sound.js` and `p5.sound.min.js`
 --
 
-- (Remember that these are the __same library__, but the `min` version is a smaller filesize.)
+- (Remember that these are the __same library__, but the `min` version is a smaller file size.)
 
 ---
 
@@ -123,9 +123,9 @@
 
 - To add `p5.sound` to a project we need to
 
-1. Set up a basic project by __downloading the template project__
+1. Set up a basic project by __downloading our p5 template project__
 2. Copy `p5.sound.min.js` into our `libraries/` folder (since it's a library)
-3. Add a `<script>` tag in `index.html` that points to the `p5.sound.min.js` file, so it is included in our program (an obvious place is just under the p5 library itself)
+3. Add a `<script>` tag in `index.html` that points to the `p5.sound.min.js` file, so it's part of our program (an obvious place is just under the p5 library itself)
 
 ```html
 <!-- Library script(s) -->
@@ -209,9 +209,28 @@ function setup() {
 
 ## Changing rate
 
-- One of the functino available for `p5.SoundFile` was `rate()` which sounds pretty fun
-- Let's use `map()` to connect `rate()` to the position of the mouse
-- While we're at it, let's loop the sound by using `mySound.loop()` instead of `mySound.play()`
+- One of the functions available for `p5.SoundFile` was `rate()` which sounds pretty fun...
+- Let's also loop the sound by using `mySound.loop()` instead of `mySound.play()`...
+
+```javascript
+var mySound;
+
+function preload() {
+  mySound = loadSound('assets/sounds/bark.wav');
+}
+
+function setup() {
+  mySound.setVolume(0.1);
+  mySound.rate(0.5);
+  mySound.loop();
+}
+```
+
+---
+
+## Changing rate interactively
+
+- Let's use `map()` to connect `rate()` to the position of the mouse for some interactivity!
 
 ```javascript
 var mySound;
@@ -230,17 +249,19 @@ function draw() {
 }
 ```
 
+---
+
 ## Bigger victories
 
 - That is already surprisingly evocative and fun to play around with!
-- Crucially this involves the combination of the __power of the library__ (to loop a sound and changes its rate dynamically while it plays) with the __power of our programming__ (our knowledge of the `map()` function and how we can use it to convert from one kind of number to another)
+- Crucially this involves the combination of the __power of the library__ (to loop a sound and change its rate dynamically while it plays) with the __power of our programming__ (our knowledge of the `map()` function and how we can use it to convert from one kind of number to another)
 - `rate()` is just __fun__
 
 ---
 
 ## Oscillator base sample code
 
-- One of the objects provided by `p5.sound` is `p5.Oscillator`
+- Another of the objects provided by `p5.sound` is `p5.Oscillator`
 - The [page for that object](https://p5js.org/reference/#/p5.Oscillator) has a pretty complicated amount of example code
 - So to start with we might just paste that in to see what happens...
 --
@@ -255,7 +276,7 @@ function draw() {
 - It sets the new oscillator object with default settings, including a waveform type of `"sine"`, a frequency of `240` Hz, an amplitude of `0` (so it's silent)
 - Then it calls `osc.start()` which (if we look at the page) is how you start an oscillator playing
 - In the `mouseClicked()` function we see that clicking either turns the amplitude up or down
-- We also learn that the amplitude can take a second parameter that tells it to change to the target amiplitude __over time__ which is cool!
+- We also learn that the amplitude can take a second parameter that tells it to change to the target amplitude __over time__ which is cool!
 
 ---
 
@@ -265,17 +286,64 @@ function draw() {
 - And reading further we see the (fairly small) set of methods we can use
 - Or we might want to do some `map()`ing in the `draw()` loop again and change the frequency based on the mouse position?
 
+---
+
+## Theramin!
+
 ```javascript
-osc.freq(constrain(map(mouseX,0,width,110,440),110,440));
+var osc;
+
+function setup() {
+  createCanvas(500,500);
+  osc = new p5.Oscillator();
+  osc.setType('sine');
+  osc.freq(110);
+  osc.amp(1);
+  osc.start();
+}
+
+function draw() {
+  background(0);
+  osc.freq(constrain(map(mouseY,0,height,440,110),110,440));
+}
 ```
 
 - This is officially an instrument!
-- We could even make a hearing test...
 
 ???
 
-- Why did I use `constrain()`? Because `mouseX` can be higher than `width` for a small canvas size, and this will cause the output of `map()` to be higher than the specified range - `constrain()` makes sure it stays within the specified range
-- How would we make a hearing test? If we set the top of the range to a very high frequency we could gradually increase it with the mouse and see when peope stop being able to hear it...
+- Actually a theramin also lets you control volume, so we'd need to add code to map the mouseX to the amplitude?
+- And we should probably draw a theramin?
+- Why did I use `constrain()`? Because `mouseY` can be higher than `height` for a small canvas size, and this will cause the output of `map()` to be higher than the specified range - `constrain()` makes sure it stays within the specified range
+
+---
+
+## Hearing test!
+
+- Just for fun
+
+```javascript
+var osc;
+var frequency = 440;
+
+function setup() {
+  createCanvas(500,500);
+  osc = new p5.Oscillator();
+  osc.setType('sine');
+  osc.freq(frequency);
+  osc.amp(1);
+  osc.start();
+}
+
+function draw() {
+  background(0);
+}
+
+function keyPressed() {
+  frequency += 20;
+  osc.freq(frequency);
+}
+```
 
 ---
 
@@ -313,6 +381,7 @@ function draw() {
 - If we add that to the base frequency `freqBase` we get a sound that goes below and above the base frequency by the range, over time
 - It sounds like a siren!
 - Changing the base, range, and rate, all affect what the resulting sound is - play around!
+- You could map all these things to interactions!
 
 ---
 

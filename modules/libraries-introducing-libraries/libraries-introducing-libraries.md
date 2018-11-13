@@ -83,11 +83,22 @@ window.setTimeout(function() {
 
 - It keeps going...
 - If we ask the `document` object for a specific __element__ on the current page, we get back a Document Element Object
+
+```javascript
+var element = document.getElementById("myDiv");
+```
+
 - This, in turn, has its own methods and properties, such as finding out its attributes, retrieving its children or parent or siblings, getting its size on screen, adding and removing sub-elements, and on and on
 - That is, we have a representation in JavaScript objects of the document being displayed, element by element
 - And this is how we can use JavaScript to directly manipulate the contents of a webpage
 
 ???
+
+- The example here assumes the webpage our JavaScript is running on has a div with an id of "myDiv", e.g.
+
+```html
+<div id="myDiv">This is my div. There are many like it. But this one is mine.</div>
+```
 
 - Here is a list of the methods and properties of a Document Element Object: https://www.w3schools.com/jsref/dom_obj_all.asp
 
@@ -98,7 +109,8 @@ window.setTimeout(function() {
 - So this is very powerful
 - When we run JavaScript in a browser, we have automatic access to some predefined objects that give us a huge amount of access and control over the window and the webpage being displayed in it
 - We do things to the window via the `window` object, we do things to the webpage via the `document` object, and often we do things to the webpage more specifically by manipulating Document Element Objects
-- This is a whole thing - for now just be aware of it
+- Based on the way the magical people behind the scenes wrote properties and methods on these objects, we can accomplish all kinds of things!
+- (We just have to read a lot of documentation to find out what the properties and methods are!)
 
 ---
 
@@ -137,15 +149,16 @@ function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
-    ctx.strokeRect(50, 50, 50, 50);
+    ctx.strokeRect(0, 0, 100, 100);
   }
 }
 ```
 
-- The p5 library is making it __much easier to do what we want__
+- The p5 library is making it __easier to do what we want__
 
 ???
 
+- For one thing, p5 __assumes__ we're drawing things on the canvas, so we don't have to directly deal with the canvas context as above
 - Under the hood, the p5 library is basically ending up running the more complicated code, but it __hides it from us__ so we don't need to worry about it as part of our program
 
 ---
@@ -153,7 +166,7 @@ function draw() {
 ## Thanks, libraries!
 
 - That's what libraries are for: they make it easier to do what we want
-- They make it possible for us to achieve complicated tasks like loading an image, or drawing a shape, or synthesising a sound, without needing to know how to do it from the ground up
+- They make it possible for us to achieve more complicated tasks like loading an image, or drawing a shape, or synthesising a sound, without needing to know how to do it from the ground up
 - They hide scary things from us, and we love them for it
 
 ---

@@ -1,11 +1,13 @@
-# Exercise 7 - Project 3 Prototype 1
+# Exercise 8 - Project 3 Prototype 2
 
 __Grade__: 2.5% of final grade (see grading guidelines at bottom)  
-__Deadline__: 11:59PM on the day of class on week of 11 November 2018.
+__Deadline__: 11:59PM on the day of class on week of 19 November 2018.
 
 ## Brief
 
-Conceptualise, design, and implement a prototype of a specific aspect of Project 3. This should be a specific slice of what you envisage for your final project: use the exercise to explore one key idea/interaction/visual effect/something you want to include in the final project and to implement it as a working, well-constructed prototype. As such, this exercise is an opportunity to come up with and explore one idea for the project (note that it is not mandatory to actually include this idea in the final project itself).
+In short: __create a new and different prototype for a part of Project 3__. This should __not__ be the same as what you produced for Exercise 7.
+
+In longer: conceptualise, design, and implement a prototype of a different specific aspect of Project 3. This should be a specific slice of what you envisage for your final project: use the exercise to explore one key idea/interaction/visual effect/something you want to include in the final project and to implement it as a working, well-constructed prototype. As such, this exercise is an opportunity to come up with and explore one idea for the project (note that it is not mandatory to actually include this idea in the final project itself).
 
 
 ## Learning objectives

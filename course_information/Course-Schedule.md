@@ -9,6 +9,8 @@
 
 ## Game - Where's Invisible Sausage Dog? ([Game](https://pippinbarr.github.io/cart253-2018/games/game-wheres-invisible-sausage-dog/index.html), [Source Code](../games/game-wheres-invisible-sausage-dog/), [ZIP of Source Code](../games/game-wheres-invisible-sausage-dog.zip))
 
+## Course Evaluation (via MyConcordia Portal at http://my.concordia.ca)
+
 ## Homework
 ### [Project 3](../projects/Project-3.md) - The Grand Finale
 ### [Exercise 8](../exercises/Exercise-8.md) - Project 3 Prototype 2

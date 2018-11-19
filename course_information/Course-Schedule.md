@@ -1,20 +1,6 @@
 
 # Present
 
-# Week 11 - Week of 12 November 2018
-
-## Libraries - Introducing Libraries ([Slides](https://pippinbarr.github.io/cart253-2018/modules/libraries-introducing-libraries/index.html), [Notes](../modules/libraries-introducing-libraries/libraries-introducing-libraries.md))
-
-## Libraries - p5.sound ([Slides](https://pippinbarr.github.io/cart253-2018/modules/libraries-p5-sound/index.html), [Notes](../modules/libraries-p5-sound/libraries-p5-sound.md))
-
-## Game - Where's Invisible Sausage Dog? ([Game](https://pippinbarr.github.io/cart253-2018/games/game-wheres-invisible-sausage-dog/index.html), [Source Code](../games/game-wheres-invisible-sausage-dog/), [ZIP of Source Code](../games/game-wheres-invisible-sausage-dog.zip))
-
-## Course Evaluation (via MyConcordia Portal at http://my.concordia.ca)
-
-## Homework
-### [Project 3](../projects/Project-3.md) - The Grand Finale
-### [Exercise 8](../exercises/Exercise-8.md) - Project 3 Prototype 2
-
 
 ---
 ---
@@ -24,11 +10,13 @@
 
 # Week 12 - Week of 19 November 2018
 
-## Libraries - Example 3
+## Graphics - The webpage ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-the-webpage/index.html), [Notes](../modules/graphics-the-webpage/graphics-the-webpage.md))
 
-## Libraries - Example 4
+## Experiment - Physical Texts ([Online](https://pippinbarr.github.io/cart253-2018/experiments/experiment-physical-texts/index.html), [Source Code](../experiments/experiment-physical-texts/), [ZIP of Source Code](../experiments/experiment-physical-texts.zip))
 
 ## Studio
+
+## Course Evaluation (via MyConcordia Portal at http://my.concordia.ca)
 
 ## Homework
 ### [Project 3](../projects/Project-3.md) - The Grand Finale
@@ -252,3 +240,19 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Homework
 ### [Project 3](../projects/Project-3.md) - The Grand Finale
 ### [Exercise 7](../exercises/Exercise-7.md) - Project 3 Prototype 1
+
+---
+
+# Week 11 - Week of 12 November 2018
+
+## Libraries - Introducing Libraries ([Slides](https://pippinbarr.github.io/cart253-2018/modules/libraries-introducing-libraries/index.html), [Notes](../modules/libraries-introducing-libraries/libraries-introducing-libraries.md))
+
+## Libraries - p5.sound ([Slides](https://pippinbarr.github.io/cart253-2018/modules/libraries-p5-sound/index.html), [Notes](../modules/libraries-p5-sound/libraries-p5-sound.md))
+
+## Game - Where's Invisible Sausage Dog? ([Game](https://pippinbarr.github.io/cart253-2018/games/game-wheres-invisible-sausage-dog/index.html), [Source Code](../games/game-wheres-invisible-sausage-dog/), [ZIP of Source Code](../games/game-wheres-invisible-sausage-dog.zip))
+
+## Course Evaluation (via MyConcordia Portal at http://my.concordia.ca)
+
+## Homework
+### [Project 3](../projects/Project-3.md) - The Grand Finale
+### [Exercise 8](../exercises/Exercise-8.md) - Project 3 Prototype 2

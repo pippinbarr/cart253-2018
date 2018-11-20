@@ -12,7 +12,7 @@
 
 ## Graphics - The webpage ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-the-webpage/index.html), [Notes](../modules/graphics-the-webpage/graphics-the-webpage.md))
 
-## Experiment - Physical Texts ([Online](https://pippinbarr.github.io/cart253-2018/experiments/experiment-physical-texts/index.html), [Source Code](../experiments/experiment-physical-texts/), [ZIP of Source Code](../experiments/experiment-physical-texts.zip))
+## Experiment - Physical Texts ([Online](https://pippinbarr.github.io/cart253-2018/experiments/physical-texts/index.html), [Source Code](../experiments/physical-texts/), [ZIP of Source Code](../experiments/physical-texts.zip))
 
 ## Studio
 

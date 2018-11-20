@@ -9,7 +9,6 @@ __Note:__
 ## Templates
 
 - [template-p5-project.zip](https://github.com/pippinbarr/cart253-2018/raw/master/templates/template-p5-project.zip) - The standard project template
-- [template-p5-project-with-p5-sound.zip](https://github.com/pippinbarr/cart253-2018/raw/master/templates/template-p5-project-with-p5-sound.zip) - The standard project template with the p5.sound library included
 
 ## Software Shortcuts
 

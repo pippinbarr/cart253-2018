@@ -25,7 +25,6 @@
 
 # Week 13 - Week of 26 November 2018
 
-## Requests
 ## Studio
 
 ## Homework

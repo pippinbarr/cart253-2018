@@ -1,6 +1,18 @@
 let moveFrames = 45; // Number of frames to move one tile
 let tileSize = 50;
 let cube;
+let soundParams =  {
+  attackLevel: 1,
+  releaseLevel: 0,
+  attack: 0.05,
+  decay: 0.01,
+  sustain: 0.2,
+  release: 0.3,
+  freq: 444
+};
+
+let tone;
+let sine;
 
 function setup() {
   createCanvas(windowWidth,windowHeight,WEBGL);
@@ -13,6 +25,13 @@ function setup() {
     size: tileSize,
     rotating: false
   }
+  tone = new p5.Env();
+  tone.setADSR(soundParams.attack,soundParams.decay,soundParams.sustain,soundParams.release);
+  tone.setRange(soundParams.attackLevel,soundParams.releaseLevel);
+  sine = new p5.Oscillator('sine');
+  sine.amp(tone);
+  sine.start();
+  sine.freq(soundParams.freq);
 }
 
 function draw() {
@@ -78,6 +97,8 @@ function drawCube() {
 
     // If it has finished its rotation, reset everything and move it
     if (abs(cube.angle.y) >= PI/2 || abs(cube.angle.x) >= PI/2) {
+      // sine.freq(soundParams.freq + (cube.position.x/cube.position.y)/tileSize * 20);
+      tone.play();
       cube.position.add(cube.destination);
       translate(cube.position);
       cube.angle.set(0,0,0);

@@ -1,45 +1,4 @@
 
-# Present
-
-
----
----
-
-
-# Future
-
-# Week 12 - Week of 19 November 2018
-
-## Graphics - The webpage ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-the-webpage/index.html), [Notes](../modules/graphics-the-webpage/graphics-the-webpage.md))
-
-## Experiment - Physical Texts ([Online](https://pippinbarr.github.io/cart253-2018/experiments/physical-texts/index.html), [Source Code](../experiments/physical-texts/), [ZIP of Source Code](../experiments/physical-texts.zip))
-
-## Studio
-
-## Course Evaluation (via MyConcordia Portal at http://my.concordia.ca)
-
-## Homework
-### [Project 3](../projects/Project-3.md) - The Grand Finale
-
----
-
-# Week 13 - Week of 26 November 2018
-
-## Studio
-
-## Homework
-### [Project 3](../projects/Project-3.md) - The Grand Finale
-
----
-
-# NO CLASS - Week 14 - Week of 3 December 2018
-
-## [Project 3](../projects/Project-3.md) is due this week
-
----
-
-# Past
-
 # Week 1 - Week of 3 September 2018
 
 ## Introductions ([Slides](https://pippinbarr.github.io/cart253-2018/modules/introductions/index.html), [Notes](../modules/introductions/introductions.md))
@@ -255,3 +214,34 @@ Sabine Rosenberg, the Lab Coordinator, will be visiting us at 17:20 to introduce
 ## Homework
 ### [Project 3](../projects/Project-3.md) - The Grand Finale
 ### [Exercise 8](../exercises/Exercise-8.md) - Project 3 Prototype 2
+
+
+# Week 12 - Week of 19 November 2018
+
+## Graphics - The webpage ([Slides](https://pippinbarr.github.io/cart253-2018/modules/graphics-the-webpage/index.html), [Notes](../modules/graphics-the-webpage/graphics-the-webpage.md))
+
+## Experiment - Physical Texts ([Online](https://pippinbarr.github.io/cart253-2018/experiments/physical-texts/index.html), [Source Code](../experiments/physical-texts/), [ZIP of Source Code](../experiments/physical-texts.zip))
+
+## Studio
+
+## Course Evaluation (via MyConcordia Portal at http://my.concordia.ca)
+
+## Homework
+### [Project 3](../projects/Project-3.md) - The Grand Finale
+
+---
+
+# Week 13 - Week of 26 November 2018
+
+## Studio
+
+## Homework
+### [Project 3](../projects/Project-3.md) - The Grand Finale
+
+---
+
+# NO CLASS - Week 14 - Week of 3 December 2018
+
+## [Project 3](../projects/Project-3.md) is due this week
+
+---
